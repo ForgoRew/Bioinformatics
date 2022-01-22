@@ -1,4 +1,4 @@
-# Základy biochemie
+# ***Základy biochemie***
 ![](https://images.newscientist.com/wp-content/uploads/2019/10/22153920/biochemistry-shutterstock_187967735_web.jpg)
 # 01
 1. Které vazby v biomolekulách jsou polární a proč?
@@ -413,6 +413,102 @@ Přikládám otázky pro přípravu na přednášku v příštím týdnu – 15.
 
 >Těším se na shledanou,
 Martin Kalous
+
+# 07 Oxidační fosforylace
+
+
+> Milí přátelé,
+> Přikládám otázky pro přípravu na přednášku v příštím týdnu – 22. 11. 2021. Otázky se týkají tématu Z07 – Oxidační fosforylace. Poslechněte si prezentace k tomuto tématu a připravte si odpovědi na následující otázky:
+
+1. Kde je lokalizován systém oxidační fosforylace (OXFOS)? Rozdíl mezi pro- a eukaryoty.
+    -  eukaryota mají celý systém na vnitřní membráně mitochondrií
+    -  prokaryota jej mají na plazmatické membráně
+
+2. Jaká je struktura mitochondrií a jaké jsou vlastnosti nezbytné pro fungování OXFOS
+    - vnější membrána (volně propustná pro menší molekuly)
+    - vnitřní membrána (neprostupná) - obsahuje ADP-ATP transportázy, ATP syntázy a různé membránové přenašeče, elektronové přenašeče 1-4
+    - krysty (vchlípení vnitřní membrány dovnitř mitochondrie)
+    - matrix (vnitromembránový a mezimembránový) - obsahuje pyruvát dehydrogenázový komplex, enzymy citrátového cyklu, enzymy pro beta-oxidaci mastných kyselin, enzymy pro oxidaci aminokyselin, různé metabolické intermediáty (meziprodukty), ATP, ADP, Ca2+, Na+ etc.
+    - ribozomy - mitochondrie si menší část proteinu vyrábí sama a větší část je do ní transportována
+
+3. Ze kterých komplexů se skládá elektrontransportní řetězec?
+   - I. NADH-CoQ reduktáza: redukuje NADH+H+ a nabíjí CoQ
+   - II. Succinát-CoQ reduktáza: oxiduje Succinát na Fumarát a nabíjí (redukuje) CoQ
+   - III. CoQH2 cytochrom c oxido-reduktáza: redukuje CoQ
+   - IV. Cytochrom c oxidáza
+
+4. Proč v tomto řetězci putují elektrony tak, jak putují?
+ - protože musí využít co nejvíc svoji energii
+ - přenašeče zároveň pumpují protony z jedné strany membrány na druhou
+ - - v gradientu protonů je "uchována" energie z těchto přenosů
+5. Co jsou to redoxní pumpy a jak a co pumpují?
+ - [souhrnný článek o proteinových pumpách na wiki](https://cs.wikipedia.org/wiki/Protonov%C3%A1_pumpa)
+ - pumpují protony (H+ ionty),
+ - využívají k tomu elektronový redox potenciál
+
+6. Jaké typy redoxních center naleznete v elektrontransportním řetězci?
+
+7. Jaká je struktura a funkce jednotlivých komplexů elektrontransportního řetězce?
+
+ a) Komplex I
+  - obsahuje více Fe-s center, které přenášejí elektrony z NADH+H+
+  - má 2 podjednotky
+  - ve 2. podjednotce se přenese elektron na CoQ a přepumpují 4H+ do mezimembránové matrix
+
+ b) Komplex II
+  - jediný ne-transmembránový komplex elektrotransportního řetězce
+  - má jen jeden segment
+  - přijme succinát, dehydrogenuje ho na fumarát
+  - nabije CoQ
+
+ c) Komplex III
+  - poměrně složitý, vícepodjednotkový komplex
+  - obsahuje hemy B, přenáší elektrony na cyt-c
+  - probíhá na něm "Q" cyklus, který umožní vypustit 2x 2H+ na jeden svůj běh
+
+ d) Komplex IV
+  - má 4 podjednotky
+  - získá 4 e- ze 4Cyt-c
+  - transportovány přes 4 redoxní centra a 2 hemové skupiny
+  - výsledek -> 10H+ z 1 NADH+H+, z FADH2 jen 6H+
+
+8. Jaký je podíl mtDNA na kódování podjednotek komplexů OXFOS?
+ - "OXFOS" znamená "oxidativní fosforylace", v otázce jde tedy o proteiny kompexů I-V (vč. FoF1 ATP syntázy)
+ - [prezentace, v místě, kde se to vysvětluje](https://youtu.be/ioHTdGxBoMo?t=3594)
+ - 13/83 podjednotek je kódováno v mtDNA 
+
+9.  V čem spočívá chemiosmotický princip mitochondriální syntézy ATP?
+ - vysoká koncentrace protonů H+ v mezimembránové matrix vytváří velký chemiosmotický gradient
+ - to je využito k rozběhnutí FoF1 ATP syntézy, která propouští proteiny zpět na vnitřní stranu membrány a syntetizuje ATP
+
+10. Jaká je základní struktura FoF1 ATP syntázy?
+ - má alpha až epsilon podjednotky, které vytvářejí dohromady strukturu jako lízátko na špejli
+
+11. Jaký je mechanismus syntézy ATP tímto komplexem (rotační model)?
+ - ve třech krocích je navázáno ADP, spojeno s fosfátem za vzniku ATP a odchází
+ - to je dáno díky rotaci alpha, beta a gama podjednotek (v Fo části syntázy)
+ - postranní kanál - podjednotka _a_
+ - postranní stonek - podjednotka _b_
+ - rotor propojený s gama částí - _c_
+ - _a_+_b_ + alpha,beta hexamer -> stator
+
+12. Jaké jsou možné způsoby reoxidace glykolytického NADH v mitochondriích?
+ - za redukce malátu na oxaloacetát (malát-aspartátový člunek)
+
+13. Jaký je celkový energetický zisk (v molekulách ATP) při oxidaci jedené molekulu glukózy?
+ - 1 glukóza = 2ATP substrátovou fosforylací, 2GTP (stejná energie jako ATP), 24e-
+   - 10 NADH, 2 FADH2
+   - transport 2e- přes I-IV vede k translokaci 10H+
+   - transport 2e- přes II-IV vede k translokaci 6H+
+   - -> 
+   - syntéza a export 1 ATP stojí 3+1 H+
+   - 1 NADH -> 2.5 ATP
+   - 1 FADH2 -> 1.5 ATP
+   - celkem 32 ATP pro malát - aspartátové kyvadlo
+   - nebo 32 - 2 = 30 ATP pro glycerolfosfátové kyvadlo
+
+>Těším se opět na shledanou,
+>Martin Kalous
 
 
 
