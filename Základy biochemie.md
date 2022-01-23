@@ -383,33 +383,42 @@ Přikládám otázky pro přípravu na přednášku v příštím týdnu – 15.
 8. Jaký je význam jednotlivých reakcí cyklu kyseliny citronové?
  - [přednáška v čase 49:34](https://youtu.be/WkyhKlNwAA0?t=2974)
 ![citrátový cyklus jako obrázek](https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/marketing/global/images/technical-documents/articles/research-and-disease-areas/metabolism-research/TCA-krebs-cycle1/TCA-krebs-cycle1.png)
+
     a) citrát syntáza
     - acetyl-CoA se spojí s oxaloacetátem za spotřeby vody a odštěpením CO2
     - vznik citrátu
+
     b) akonitáza
     - z citrátu na cis-akonitát
     - z cis-akonitátu na isocitrát, který má oproti citrátu přesunutou skupinu -OH z 2. uhlíku na 3.
     - ve výše zmíněných reakcích je odštěpena a přidána molekula vody
+
     c) isocitrát dehydrogenáza
     - dekarboxylace na alpha-ketoglutarát (odštěpené CO2 a nabitý jeden NADH+H+)
+
     d) a-ketoglutarát dehydrogenáza
     - opět dekarboxylace a nabití NADH+H+
     - přidaný -CoA
     - vznik Succinyl-CoA
+
     e) sukcinyl CoA syntetáza
     - odštěpený CoA
     - substrátová fosforylace GTP
     - -> Sukcinát
+
     f) sukcinát dehydrogenáza
     - nabití FADH2
     - vznik dvojné vazby na uhlících -> Fumarát
+
     g) fumaráza
     - hydratace
     - přidání -OH skupiny
     - nasycení dvojné vazby
+
     h) malát dehydrogenáza
     - nabije NADH+H+
     - vznik oxaloacetátu
+
 9. Jak je cyklus regulován?
  - citrátsynthasa,
  - isocitrátdehydrogenasa a
@@ -418,7 +427,6 @@ Přikládám otázky pro přípravu na přednášku v příštím týdnu – 15.
  - některé enzymy jsou inhibovány redukovanými koenzymy (např. při nedostatku kyslíku)
 10. Co jsou to anaplerotické reakce a které znáte?
  - doplňující reakce, umožňují doplnit meziprodukty Krebsova cyklu
- - pyruvát -> oxaloacetát
  - pyruvát -> malát
  - fosfoenolpyruvát -> oxaloacetát
 11. Co je to glyoxalátový cyklus a jaký je jeho význam?
