@@ -1,6 +1,18 @@
 # ***Základy biochemie***
 ![](https://images.newscientist.com/wp-content/uploads/2019/10/22153920/biochemistry-shutterstock_187967735_web.jpg)
 
+- [***Základy biochemie***](#základy-biochemie)
+- [01 Prolog a prerekvizity, voda a aminokyseliny](#01-prolog-a-prerekvizity-voda-a-aminokyseliny)
+- [02 A Proteiny - struktura](#02-a-proteiny---struktura)
+- [02 B Proteiny - struktura a funkce](#02-b-proteiny---struktura-a-funkce)
+- [03 Proteiny - enzymologie](#03-proteiny---enzymologie)
+- [04 Sacharidy](#04-sacharidy)
+- [05 Glykogen](#05-glykogen)
+- [06 Cyklus kyseliny citronové](#06-cyklus-kyseliny-citronové)
+- [07 Oxidační fosforylace](#07-oxidační-fosforylace)
+- [08 Fotosyntéza a 09 Alternativní dráhy sacharidů](#08-fotosyntéza-a-09-alternativní-dráhy-sacharidů)
+- [10 Lipidy a membrány](#10-lipidy-a-membrány)
+
 # 01 Prolog a prerekvizity, voda a aminokyseliny
 1. Které vazby v biomolekulách jsou polární a proč?
  - jsou to vazby mezi ionty, molekuly, které mají náboj inukovaný díky nějakému velmi elektronegativnímu atomu a podobně.
