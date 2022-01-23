@@ -1,6 +1,6 @@
 # ***Základy biochemie***
 ![](https://images.newscientist.com/wp-content/uploads/2019/10/22153920/biochemistry-shutterstock_187967735_web.jpg)
-# 01
+# 01 Prolog a prerekvizity, voda a aminokyseliny
 1. Které vazby v biomolekulách jsou polární a proč?
  - jsou to vazby mezi ionty, molekuly, které mají náboj inukovaný díky nějakému velmi elektronegativnímu atomu a podobně.
 2. Proč existuje na molekule vody dipólový moment? Co určuje tvar molekuly vody?
@@ -35,7 +35,7 @@
 14. Které posttranslační modifikace AK znáte?
  - fosforylace, metylace, acetylace, hydroxylace
 
-# 02 A
+# 02 A Proteiny - struktura
 1. Jaká reakce vede ke vzniku peptidové vazby, jak se liší peptidová a isopeptidová vazba?
  - peptidová vazba je standardní vazba ak v proteinu. Isopeptidová vazba funguje na stejném principu (NH2+COOH)->(NHCO), ale vzniká u postranních řetězců ak (lysin + kys. asparagová)
 2. Vlastnosti peptidové vazby.
@@ -58,7 +58,7 @@
 12. Co to znamená, že skládání proteinů probíhá hierarchicky?
 13. Jak se může lišit skládání proteinu in vitro od situace uvnitř buňky?
 
-# 02 B
+# 02 B Proteiny - struktura a funkce
 1. Na jakém principu interagují helixy ve dvojité nadšroubovici - například v protofibrilách keratinu nebo tropomyosinu?
  - vodíkové můstky hydroxyprolinu, 
 2. Na jakém principu funguje trvalá ondulace (vlasů u kadeřníka)?
@@ -90,7 +90,7 @@
 15. Jaký je princip krátkodobé adaptace na vysokou nadmořskou výšku
  - zvýšená koncentrace 2,3-bisfosfoglycerové kyseliny (kofaktor Hb), která zvyšuje afinitu kyslíku k vazebným místům Hb.
 
-# 03
+# 03 Proteiny - enzymologie
 [PDF přednášky](https://dl2.cuni.cz/pluginfile.php/327341/mod_resource/content/8/Bzaklady03-2020%20animace.pdf)
 1. Které čtyři vlastnosti enzymů jsou zejména důležité pro živé organismy a proč?
  - katalyzují reakce:
@@ -128,9 +128,9 @@
 10. Proč je právě ATP „základním energetickým platidlem“ ? Bylo by možno jej nahradit jiným NTP?
  - ATP není jediná možnost. Existuje např. GTP a další. ATP je ale nejpoužívanější ze všech NTP. Jestli by to bylo i výhodné v prezentaci není.
 
-# 04 
-Můj comment: Jan Brábek, který má 04, 05 a 06-tou přednášku nemá moc informací v prezentacích, ale hodně na videích.
-U sacharidů jsme se na střední učili označovat místa v sacharidech pomocí číslování uhlíků, což se i tady dost využívá. Zapisuju to jako např. na 4C se stalo, čímž myslím, že na 4. uhlíku se stalo XY :D
+# 04 Sacharidy
+Můj comment: Jan Brábek, který má 04, 05, 10 a 11-tou přednášku nemá moc informací v prezentacích, ale hodně na videích.
+U sacharidů jsme se na střední učili označovat místa v sacharidech pomocí číslování uhlíků, což tady dost využívám... Zapisuju to jako např. na 4C se stalo, čímž myslím, že na 4. uhlíku se stalo XY :D
 
 > Milí přátelé,
 > zasílám vám otázky pro přípravu na přespříští týden - poslechněte si prezentace k tématu Monosacharidy a glykolýza a připravte si odpovědi na uvedené otázky:
@@ -326,7 +326,7 @@ U sacharidů jsme se na střední učili označovat místa v sacharidech pomocí
  - choroby spojené s poruchou metabolismu glykogenu
  - Mc Ardle's disease -> pomalý nástup vzniku glukózy z glykogenu - disfunkční svalová glykogenfosforyláza
 
-# 06
+# 06 Cyklus kyseliny citronové
 [prezentace](https://dl2.cuni.cz/pluginfile.php/333456/mod_resource/content/2/KC-z20.pdf)
 [přednáška](https://youtu.be/WkyhKlNwAA0)
 
@@ -415,7 +415,8 @@ Přikládám otázky pro přípravu na přednášku v příštím týdnu – 15.
 Martin Kalous
 
 # 07 Oxidační fosforylace
-
+[prezentace](https://dl2.cuni.cz/pluginfile.php/198124/mod_resource/content/2/oxfos-z20.pdf)
+[přednáška](https://www.youtube.com/watch?v=ioHTdGxBoMo)
 
 > Milí přátelé,
 > Přikládám otázky pro přípravu na přednášku v příštím týdnu – 22. 11. 2021. Otázky se týkají tématu Z07 – Oxidační fosforylace. Poslechněte si prezentace k tomuto tématu a připravte si odpovědi na následující otázky:
@@ -469,8 +470,8 @@ Martin Kalous
  d) Komplex IV
   - má 4 podjednotky
   - získá 4 e- ze 4Cyt-c
-  - transportovány přes 4 redoxní centra a 2 hemové skupiny
-  - výsledek -> 10H+ z 1 NADH+H+, z FADH2 jen 6H+
+  - transportovány přes 4 redoxní centra a 2 hemové skupiny -> 4 H+ na 4 Cyt-c
+  - výsledek -> 10H+ z 1 NADH+H+, z 1 FADH2 jen 6H+
 
 8. Jaký je podíl mtDNA na kódování podjednotek komplexů OXFOS?
  - "OXFOS" znamená "oxidativní fosforylace", v otázce jde tedy o proteiny kompexů I-V (vč. FoF1 ATP syntázy)
@@ -509,6 +510,128 @@ Martin Kalous
 
 >Těším se opět na shledanou,
 >Martin Kalous
+
+# 08 Fotosyntéza a 09 Alternativní dráhy sacharidů
+
+Pozn.: 1.-8. otázka je z #08 a 9.-14 otázka je z #09
+
+[prezentace - fotosyntéza](https://dl2.cuni.cz/pluginfile.php/198125/mod_resource/content/1/Fotosyn-z19.pdf)
+[prezentace - alternativní dráhy sacharidů](https://dl2.cuni.cz/pluginfile.php/198126/mod_resource/content/1/OtherSach-z19.pdf)
+[přednáška - spojená i s dalším tématem](https://youtu.be/bDs5On5ux20)
+
+
+> Milí přátelé,
+
+> Přikládám otázky pro přípravu na přednášku v příštím týdnu – 29. 11. 2021. Otázky se týkají tématu Z08/09 – Fotosyntéza/Alternativní dráhy sacharidů. Poslechněte si prezentace k tomuto tématu a připravte si odpovědi na následující otázky:
+
+1. Jaká je struktura chloroplastů, kolik kompartmentů zde rozlišujeme?
+ - podobně jako mitochondrie má i chloroplast vnitřní a vnější membránu,
+ - stroma ... ve vnitřním prostoru chloroplastu je ne "matrix" jako u mitochondrie, ale "stroma",
+ - thylakoidy ... struktury uvnitř chloroplastu, kde probíhá fotosyntéza
+ - grana ... thylakoidy, vytvářející "palačinkové" struktury
+ - granula škrobu ... škrob, uložený přímo v chloroplastu
+ - dále chloroplast obsahuje vlastní DNA a ribozomy
+
+2. Jaký je rozsah vlnové délky světla využitelného pro fotosyntézu?
+ - chlorofyl *a* a *b* pokrývají téměř celé spektrum viditelného světla
+ - 380-700nm (viditelné světlo má ~380-750nm)
+
+3. Jaké fotosyntetické pigmenty znáte, které jsou základní a které pomocné?
+ - chlorofyl *a* a chlorofyl *b* jsou základní pigmenty (dále např. phycoerythrin je v červených řasách)
+ - dále je využíván např. ß-karoten
+
+4. Jaká jsou absorpční maxima jednotlivých pigmentů a proč jsou rostliny většinou zelené?
+ - chlorofyly *a*, *b* i ß-karoten mají svá maxima u nižších vlnových délek - 400-500 nm
+ - chlorofyly *a*, *b* pak zachycují s menší účinností světlo mezi 500-600 nm
+ - poté zase nabývají vyšší účinnosti při 600-700 nm
+
+ - rostliny jsou zelené, protože zelené světlo je právě mezi 500-560nm, kde chlorofyly zachytávají jen menší množství světla
+
+5. Jaké typy fotosystémů známe u prokaryot a jak jsou uspořádány u eukaryot?
+ - fotosystém purpurových bakterií
+ - fotosystém zelených sirných bakterií (bakterií chlorobi)
+ - reakční centrum zachytí kvantum světelné energie
+ - excituje se
+ - vyhodí elektron na přenašeč - u purp. bakteriích Pheophytin -> CoQ, u chlorobi rovnou CoQ
+ - protonová pumpa (Cytc complex) -> přenesení H+ přes membránu, elektron se s Cytc vrací na reakční centrum
+ - u zelenosirných bakterií (chlorobi) se může excitovaný elektron rovnou (acyklicky) použít přes feredoxin na oxidaci NADH+H+
+
+ - u eukaryot jsou tyto systémy spojené do systému *Z*
+   - fotosystém II a fotosystém I (v tomto pořadí jsou řetězené)
+   - ve dvou fázích se excituje elektron
+   - ve fotosystému II se vytváří protonový gradient
+   - ve fotosystému I se oxiduje NADPH
+
+6. Kde jsou tyto fotosystémy v chloroplastech lokalizovány?
+ - v membráně tylakoidu (většinou v granech)
+
+7. Co je hlavními produkty světelné fáze fotosyntézy?
+ - ATP
+
+8. Jaká jsou hlavní stádia fixace CO2 u fotosyntetizujících organismů?
+ - jsou známy 3 možnosti fixace CO2 - Calvinův cyklus, Hatch-Slackův cyklus a CAM cyklus
+ - v přednášce je zmíněn Calvinův cyklus, protože je relativně nejběžnější
+
+ a. K čemu dochází v první fázi?
+ - fixace CO2 - na Ribulóza 1,5-fosfát (enzymem Rubisco), rozdělení 6C na 2x 3C molekuly (fosfoglycerát)
+ b. K čemu dochází ve druhé fázi?
+ - redukce - využívá se NADPH+H, vzniká glyceraldehyd 3-fosfát - ten může odejít k syntéze dalších molekul, nebo jít do 3. fáze
+ c. K čemu dochází ve třetí fázi?
+ - regenerace - vzniká Ribulóza 1,5-fosfát (z 5 trióz vzniknou 3 pentózy)
+
+9. V čem se liší glukoneogeneze od glykolýzy?
+ - jde o to nějakým způsobem získat 3-fosfoglycerát
+ - ten může vznikat přímo z fotosyntézy
+ - nebo jako meziprodukt citrátového cyklu (ten může využívat ke svému chodu i aminokyseliny)
+   - živočichové mohou získávat pyruvát z laktátu (pokud předtím měli anaerobní glykolýzu)
+ - z 3-fosfoglycerátu je pak syntetizována glukóza 6-fosfát
+   - syntéza probíhá vpodstatě zrcadlově, ale jsou tu 3 vysoce makroergní reakce glukoneogeneze, které se musí řešit jinak
+   - pyruvátkinázová reakce -> stojí ATP a GTP
+   - hexokinázová reakce a ribózafosfát kinázová reakce -> fosfatázy prostě odštěpí fosfát
+
+10. Kde je v buňce glukoneogeneze lokalizována?
+ - mitochondrie a cytosol
+
+11. Mohou být z tuků syntetizovány cukry?
+ - ano - z glycerolu (jde na dihydroxyaceton-fosfát) + acetyl-CoA je palivo citrátového cyklu
+
+12. Jaké jsou hlavní produkty pentózofosfátové dráhy?
+ - ribóza-5-fosfát, redukční ekvivalenty (NADPH)
+
+13. Jak souvisí pentózofosfátová dráha se zametáním volných kyslíkových radikálů?
+ - glutathion je molekula, která umí vychytávat volné kyslíkové radikály, ale potřebuje spotřebovávat NADPH aby se sama redukovala
+
+14. Co je to Cori cyklus?
+ - Coriho cyklus slouží k odbourávání laktátu, viz přednáška #5 Glykogen
+
+> Těším se opět na shledanou,
+> Martin Kalous
+
+# 10 Lipidy a membrány
+
+[prezentace](https://dl2.cuni.cz/pluginfile.php/198127/mod_resource/content/1/BZ12_Lipidy.pdf)
+[přednáška](https://www.youtube.com/watch?v=O5PNZnhcvZ4)
+
+Milí přátelé,
+
+Přikládám otázky pro přípravu na přednášku o lipidech 6.12.  Poslechněte si prezentace k tomuto tématu a připravte si odpovědi na následující otázky:
+
+    Jakou strukturu mají živočišné tuky?
+    Co jsou vosky, jaké znáte zástupce?
+    Jaké znáte zástupce terpenů?
+    Jak dělíme membránové lipidy?
+    Co víte o složení a stavbě biomembrán?
+    Co víte o vlivu lipidů na vlastnosti biomembrán?
+    Co víte o difúzi lipidů v biomembránách?
+    Jaká je struktura a funkce fosfolipidů?
+    Jak jsou fosfolipidy odbourávány?
+    Jak jsou fosfolipidy syntetizovány?
+    Jaká je struktura a funkce sfingolipidů?
+    Co se děje při poruchách odbourávání glykosfingolipidů?
+
+S pozdravem,
+
+Jan Brábek
 
 
 
