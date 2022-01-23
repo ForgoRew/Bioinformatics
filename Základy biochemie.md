@@ -1,5 +1,6 @@
 # ***Základy biochemie***
 ![](https://images.newscientist.com/wp-content/uploads/2019/10/22153920/biochemistry-shutterstock_187967735_web.jpg)
+
 # 01 Prolog a prerekvizity, voda a aminokyseliny
 1. Které vazby v biomolekulách jsou polární a proč?
  - jsou to vazby mezi ionty, molekuly, které mají náboj inukovaný díky nějakému velmi elektronegativnímu atomu a podobně.
@@ -27,7 +28,7 @@
 10. Které charakteristiky AK lze odvodit z jejich struktur?
  - jsou to nabité molekuly, jejich R skupiny mohou být také nabité...
 11. Které AK jsou nabité při fyziologickém pH?
- - 
+ - `TODO`
 12. Jak lze popsat disociaci skupin alaninu se znalostí hodnot disociačních konstant dvou disociovatelných skupin?
  - má dvě hodnoty pH, při nichž odštěpuje proton
 13. Co to je prochiralita?
@@ -54,6 +55,7 @@
  - ss můstky, elektrostatické síly, vodíkové můstky, hydrofobní interakce
 9. Jak se bude lišit struktura proteinu z hyperthermofilního organismu od téhož typu proteinu z organismu žijícího v „běžných“ podmínkách?
 10. Které síly určují stabilitu proteinů?
+ - `TODO`
 11. Které modely skládání proteinů znáte?
 12. Co to znamená, že skládání proteinů probíhá hierarchicky?
 13. Jak se může lišit skládání proteinu in vitro od situace uvnitř buňky?
