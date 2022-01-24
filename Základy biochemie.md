@@ -15,6 +15,25 @@
 - [11 Metabolismus lipidů](#11-metabolismus-lipidů)
 
 Poznámka: U témat najdete často prokliky na prezentace. Jsou to originální prezentace z kurzů na Moodle, takže je nejspíš potřeba být zaregistrován v kurzu Základů biochemie (ze ZS 21/22) a být přihlášen do CASu. Prokliky na YouTube přednášky by ale měly fungovat i bez přihlášení.
+
+U prezentací pak moc doporučuju shrnující slidy na konci.
+
+Chyby?: Nejvíc tricky mi přišlo, jestli se něco oxiduje nebo redukuje. Při práci s materiálem prosím použijte vlastní rozum a chyby kdyžtak komentujte, nebo mi pište. To stejné i s jinými chybami. Díky moc!
+
+Pro jistotu:
+ - oxidace ... daná látka/skupina zvyšuje svoje oxidační číslo
+ - redukce ... dtto snižuje svoje oxidační číslo
+ - např. při 2H2 + O2 -> 2H2O se vodík oxiduje (odevzdává elektron) a kyslík redukuje (přijímá elektron)
+ - NAD+ ... nikotin adenin dinukleotid, nabíjí se na NADH, někdy uvidíte i NADH+H+, což je proto, že NAD+ přijímá kromě dvou elektronů i proton (snad jsem to vysvětlil dobře, kdyžtak odkaz na [Wikiskripta](https://www.wikiskripta.eu/w/NADH,_NADPH))
+ - NADP ... nikotin adenin dinukleotid fosfát - funguje trochu jinak než NAD kvůli přítomnosti fosfátové skupiny, vyrábí se v pentózofosfátové dráze a využívá se k syntéze mastných kyselin, viz odkaz výše
+ - FAD ... riboflavinadenosin difosfát - nabíjí se na FADH2 a slouží v OXFOS k přenosu protonů a nabití CoQ, jeho energetická výtěžnost je ale menší než u NAD+, viz [Wiki](https://cs.wikipedia.org/wiki/Flavinadenindinukleotid) a přednáška "[07 Oxidační fosforylace](#07-oxidační-fosforylace)"
+
+Doporučuju:
+[zápisky od Eugleo](https://eugleo.github.io/bioinformatika/doc/zaklady-biochemie/notes.html)
+
+Poděkování:
+ - také děkuji všem autorům všech obrázků a obsahu v odkazech, děkuji takto společně, protože kdybych měl všechny citovat, tak by tyhle výpisky trvaly stejně dlouho jako dělat bakalářku a to úplně nechci
+
 # 01 Prolog a prerekvizity, voda a aminokyseliny
 1. Které vazby v biomolekulách jsou polární a proč?
  - jsou to vazby mezi ionty, molekuly, které mají náboj inukovaný díky nějakému velmi elektronegativnímu atomu a podobně.
@@ -705,7 +724,8 @@ Pozn.: 1.-8. otázka je z #08 a 9.-14 otázka je z #09
    - skrambláza ... náhodně přehazuje lipidy oběma směry (spoiler alert: *funguje například při apoptóze*)
 
 8. Jaká je struktura a funkce fosfolipidů?
- - [obrázek mluví za vše](https://www.creative-biolabs.com/lipid-based-delivery/static/img/Phosphatidylcholine-2.png)
+![obrázek mluví za vše](https://www.creative-biolabs.com/lipid-based-delivery/static/img/Phosphatidylcholine-2.png)
+
  - mají na glycerolu dva hydrofobní ocásky, fosfátovou skupinu a na ní ještě alkohol  
  - na fosfát ale mohou být přidané ještě úplně různé další struktury - aminoskupiny, fosfatidil glycerol, inositol bifosfát etc.
 
@@ -744,28 +764,96 @@ Pozn.: 1.-8. otázka je z #08 a 9.-14 otázka je z #09
 
 # 11 Metabolismus lipidů
 
+[prezentace](https://dl2.cuni.cz/pluginfile.php/198128/mod_resource/content/1/BZ12_Metabolismus%20lipidu.pdf)
+[přednáška](https://youtu.be/mCYZuWs8P5Y)
+
 > Milí přátelé,
 > Přikládám otázky pro přípravu na přednášku o metabolismu lipidů 13.12.  Poslechněte si prezentace k tomuto tématu a připravte si odpovědi na následující otázky:
 
 1. Jak probíhá trávení a odbourávání tuků?
-Jak probíhá aktivace mastných kyselin a jejich transport do mitochondrií?
-Jak probíhá beta oxidace mastných kyselin?
-Jak jsou odbourávány MK s lichým počtem uhlíků a nenasycené MK?
-Jaké znáte ketolátky? Jak se tvoří a odbourávají?
-Jaké jsou rozdíly mezi syntézou a beta-oxidací mastných kyselin?
-Jak probíhá reakce acetyl-CoA-karboxylázy? Jaký má enzym kofaktor?
-Jak je acetyl-CoA-karboxyláza regulována?
-Jak probíhá syntéza mastných kyselin? Jak vypadá syntáza mastných kyselin?
-Jak se dostává acetyl-CoA z mitochondrií do cytoplazmy?
-Kde a jak probíhá elongace mastných kyselin?
-Kde a jak probíhá desaturace mastných kyselin?
-Jak probíhá syntéza triacylglycerolů?
-Jak je regulován metabolismus živočišných tuků?
-Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
-Jak je regulována syntéza cholesterolu?
-Jak probíhá syntéza skvalenu?
-Jak probíhá syntéza a transport cholesterolu v hepatocytu?
-Syntéza kterých zásadně důležitých látek vychází z cholesterolu?
+ - tuky se tráví za pomoci pankreatické lipázy - ta štěpí triacylglyceroly na mono/diacyl glyceroly a na volné mastné kyseliny
+ - zbylé triacylglyceroly jsou uloženy do **chylomikronů**
+ - chylomikron ... váček z cholesterolu, fosfolipidů a alipoproteinů obsahující triacylglyceroly
+ - volné mastné kyseliny vstupují přímo přes stěnu tenkého střeva do lymfatického systému a krevního řečiště, odkud jsou vstřebávány do buněk
+ - lipoprotein lipáza umí štěpit triacylglyceroly v tkáních na glycerol a mastné kyseliny
+
+2. Jak probíhá aktivace mastných kyselin a jejich transport do mitochondrií?
+ - u člověka jsou tuky uskladněné v tukové tkáni, v adipocytech
+ - adipocyt ... buňka tukové tkáně
+ - na základě hormonového signálu se aktivuje signální dráha, která uvolní cAMP
+ - cAMP aktivuje hormon-senzitivní lipázu, která se přidá do membrány "lipid droplet"
+ - dále lipáza začne rozkládat triacylglyceroly na mastné kyseliny a glycerol
+ - mastné kyseliny se přes membránu adipocytu vloží do serum albuminu v krevním řečišti, odkud je využíván dalšími buňkami
+ - serum albumin ... protein v krevním řečišti produkovaný játry, má více funkcí, ale mj. se nespecificky váže k mastným kyselinám, což je využíváno pro jejich transport. Více na [Wiki](https://en.wikipedia.org/wiki/Serum_albumin)
+
+ - uvolněný glycerol vstupuje do glykolýzy (fosforyluje se a redukuje na glyceraldehyd 3-fosfát)
+ - např. myocyt (svalová buňka) má na svém povrchu transportéry mastných kyselin, které přijímají mastné kyseliny z krve
+ - dále jsou mastné kyseliny transportovány do mitochondrií, kde nastupuje proces beta oxidace
+
+ - přenos přes membránu mitochondrie probíhá přes *karnitin* - je to trochu složitější proces, takže ho radši rozepíšu:
+   - MK s už navázaným -CoA přijde k membráně mitochondrie, kde se místo -CoA naváže karnitin a MK přejde pomocí *karnitinacyltransferázy* přes vnější membránu mitochondrie
+   - tam v antiportu s nenavázaným karnitinem projde přes vnitřní membránu skrz transportér
+   - uvnitř se pak karnitin z MK odštěpí a na jeho místo se naváže opět CoA a MK jde do beta oxidace
+   - zpět se karnitin dostane opět antiportem přes transportér do mezimembránového prostoru
+   - díky své malé velikosti projde karnitin samovolně přes vnější membránu mitochondrie, čímž se jeho cyklus uzavírá
+   - na následujícím obrázku od 1. lékařské fakulty se proces částečně liší od toho, co má doc. Brábek v prezentaci... Asi je jedno z toho zastaralé. Njn. :D
+![obrázek karnitin-transferu MK](http://fblt.cz/wp-content/uploads/2013/12/karnitinovy-prenasec-011.jpg)
+
+3. Jak probíhá beta oxidace mastných kyselin?
+ - nejprve je potřeba aktivovat mastnou kyselinu (navázat CoA)
+   - to se dělá tak, že na -COO- konec mastné kyseliny se naváže AMP (za spotřeby ATP a vzniku P2 ... pyrofosfátu)
+   - místo AMP se pak naváže -CoA
+   - energetická bilance tohoto je silně záporná (-33.6kJ/mol)
+
+![obrázek mluví za vše](https://eluc.kr-olomoucky.cz/uploads/images/20307/content_beta_oxidace.jpg)
+
+ - beta oxidace samotná probíhá ve 3 krocích
+   - nejprve se vytvoří dvojná vazba na předposledním uhlíku, čímž se nabije FADH2
+   - pak se dvojná vazba hydratuje a nabije se NADH
+   - následně se odštěpí acetyl-CoA a na volné místo se naváže další -CoA
+
+4. Jak jsou odbourávány MK s lichým počtem uhlíků a nenasycené MK?
+ - oxidace MK s lichým počtem uhlíků vytváří kromě acetyl-CoA i jeden propionyl-CoA, který se převádí na sukcinil-CoA, což je intermediát Krebsova cyklu. [Více viz Wikiskripta.](https://www.wikiskripta.eu/w/Oxidace_mastn%C3%BDch_kyselin_s_lich%C3%BDm_po%C4%8Dtem_uhl%C3%ADk%C5%AF)
+
+ - nenasycené MK se betaoxidují dokud se nedojde k nenasycené (dvojné) vazbě
+ - ta ještě není problém, pokud je v *trans* konformaci
+   - pokud je ale v *cis* konformaci, je přeměněna na *trans* konformaci enoyl-CoA isomerázou
+   - ta je následně použita už v beta oxidaci
+ - podobně se řeší i ostatní problémy s dvojnou vazbou - dvě dvojné vazby za sebou etc.
+ - mch. energetická bilance odbourání palmitátu je +108 ATP, což je 3.5x víc než u glukózy (~30-32 ATP)
+
+5. Jaké znáte ketolátky? Jak se tvoří a odbourávají?
+![aceton, acetoacetát, hydroxobutyrát](https://vydavatelstvi-old.vscht.cz/knihy/uid_es-002_v1/figures/ketogenese.schema.01.gif)
+ - keto látka ... kyslík je na dvojné vazbě
+ - aceton ... 3C s kyslíkem na dvojné vazbě na prostředním uhlíku
+ - acetoacetát ... 4C, karboxylová skupina na 4. uhlíku, kyslík dvojné vazbě na 2. uhlíku
+ - hydroxybutyrát ... jako acetoacetát, keto skupina na druhém uhlíku zaměněna za hydroxyskupinu
+ - tvorba výše zmíněných (slide 39):
+   - 2x acetyl-CoA -> acetoacetyl-CoA
+   - acetoacetyl-CoA + acetyl CoA -> hydroxymethylglutaryl-CoA
+   - hydroxymethylglutaryl-CoA -> acetoacetát + acetyl-CoA
+   - acetoacetát -> acetol + -COOH
+   - acetoacetát -> hydroxybutyrát
+ - odbourávání:
+   - opět přes acetoacetát
+   - acetoacetát + succinyl-CoA -> acetoacetyl-CoA a sukcinát
+   - acetoacetyl-CoA + CoA-SH -> 2x acetyl-CoA
+
+6. Jaké jsou rozdíly mezi syntézou a beta-oxidací mastných kyselin?
+ - 
+7. Jak probíhá reakce acetyl-CoA-karboxylázy? Jaký má enzym kofaktor?
+8. Jak je acetyl-CoA-karboxyláza regulována?
+9. Jak probíhá syntéza mastných kyselin? Jak vypadá syntáza mastných kyselin?
+10. Jak se dostává acetyl-CoA z mitochondrií do cytoplazmy?
+11. Kde a jak probíhá elongace mastných kyselin?
+12. Kde a jak probíhá desaturace mastných kyselin?
+13. Jak probíhá syntéza triacylglycerolů?
+14. Jak je regulován metabolismus živočišných tuků?
+15. Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
+16. Jak je regulována syntéza cholesterolu?
+17. Jak probíhá syntéza skvalenu?
+18. Jak probíhá syntéza a transport cholesterolu v hepatocytu?
+19. Syntéza kterých zásadně důležitých látek vychází z cholesterolu?
 
 > S pozdravem,
 > Jan Brábek
