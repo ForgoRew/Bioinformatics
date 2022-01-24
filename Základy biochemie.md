@@ -12,7 +12,9 @@
 - [07 Oxidační fosforylace](#07-oxidační-fosforylace)
 - [08 Fotosyntéza a 09 Alternativní dráhy sacharidů](#08-fotosyntéza-a-09-alternativní-dráhy-sacharidů)
 - [10 Lipidy a membrány](#10-lipidy-a-membrány)
+- [11 Metabolismus lipidů](#11-metabolismus-lipidů)
 
+Poznámka: U témat najdete často prokliky na prezentace. Jsou to originální prezentace z kurzů na Moodle, takže je nejspíš potřeba být zaregistrován v kurzu Základů biochemie (ze ZS 21/22) a být přihlášen do CASu. Prokliky na YouTube přednášky by ale měly fungovat i bez přihlášení.
 # 01 Prolog a prerekvizity, voda a aminokyseliny
 1. Které vazby v biomolekulách jsou polární a proč?
  - jsou to vazby mezi ionty, molekuly, které mají náboj inukovaný díky nějakému velmi elektronegativnímu atomu a podobně.
@@ -21,7 +23,7 @@
 3. Proč se vytvářejí vodíkové můstky mezi molekulami vody navzájem a mezi molekulami vody a polárními skupinami?
  - slabý náboj vodíků a kyslíku umožňuje vznik nevazebných interakcí jak mezi jednotlivými molekulami vody, tak i mezi jinými nabitými molekulami a vodou
 4. Co určuje pH a co určuje tzv. iontový součin vody?
- - pH je -log([H^+]) v roztoku. Iontový součin je určený silou, jakou je kyslík vázán k vodíkům a z toho vyplývající pravděpodobností, s jakou se vodíky mohou odštěpit. Ta je K=(10^-7*10^-7)/1=10^14
+ - pH je -log([H+]) v roztoku. Iontový součin je určený silou, jakou je kyslík vázán k vodíkům a z toho vyplývající pravděpodobností, s jakou se vodíky mohou odštěpit. Ta je K=(10^-7*10^-7)/1=10^14
 5. Které vlastnosti vody jsou důležité pro život? Proč má voda takové vlastnosti?
  - hodně důležitá je např. její hustota v kapalném a pevném skupenství. 
  - vysoká pohyblivost H_3O^+
@@ -119,6 +121,7 @@
  - proteiny určitě nejsou jedinými katalyzátory. Ze složitějších látek jsou katalyzátory kromě enzymů i ribozymy (RNA)
  - myslím, že mezi katalyzátory se mohou počítat i kovové ionty, které mohou dělat přechodnou vazbu s reagující molekulou a umožní tak reakci. To se ale děje většinou přímo v enzymech...
  - a tak určitě... Třeba hexokináza dává vznik glukóza 6-fosfátu během glykolýzy. Katalyzuje (byť exergonickou) reakci ATP s glukózou na ADP a glukóza 6-fosfátu.
+
 4. Jak byste popsali jednotlivé základní mechanismy katalýzy - 1...6 ?
  - (slide 8 a další v prezentaci)
  - acidobazická katalýza
@@ -127,18 +130,24 @@
  - elektrostatická katalýza
  - katalýza proximitním a orientačním efektem
  - katalýza stabilizací přechodného stavu
+
 5. Jak měříme tzv. počáteční rychlost reakce, která figuruje v rovnici Michaelise a Mentenové?
  - rovnice -> v_0 = v_max[S]/[S]+Km
  - není to řečené přímo, ale protože se nad určitou koncentraci substrátu nemění rychlost reakce, je možné tuto "maximální" rychlost změřit ve chvíli, kdy je koncentrace substrátu mírně vyšší, než je potřeba k maximální rychlosti. Ale proč je potřeba počáteční rychlost resp. proč ne maximální? Není to nějaká záměna? A jak se to dělá ve skutečnosti? ... nevím
+
 6. Jaká je směrnice přímky ve výnosu dle Lineweavera-Burka ?
  - tato rovnice je vlastně jen reciproká úprava (celé se to dá na -1) rovnice Michaelise a Mentenové. Směrnice je v ní daná K_M/V_max
+
 7. Jakými parametry lze postihnout katalytickou účinnost enzymu?
  - katalytická účinnost je definovaná jako k_cat = V_max / [E]_T
  - > počet cyklů katalýzy za jednotku času za podmínky, kdy [E] je limitujcím faktorem (enzym je saturován substrátem S)
-8. V čem je podstata rozdílu mezi statickými uspořádanými strukturami (=např. elektronickým přístrojem) a dynamickými uspořádanými strukturami – živými organismy ?
+
+8. V čem je podstata rozdílu mezi statickými uspořádanými strukturami (=např. elektronickým přístrojem) a dynamickými uspořádanými strukturami – živými organismy?
  - eh (vracím se v čase... prvouka, 3. třída... autíčko není živé, protože... :D). Živé struktury jsou vlastně "otevřené systémy v ustáleném stavu", mj. mají schopnost seberozvoje, sebeopravy a rozmnožování (autíčko není živé, protože se nerozmnožuje :D)
+
 9. Jaké jsou příčiny „vysokoenergetického“ charakteru ATP?
  - fosfátové skupiny kompetují o π elektrony -O- fosfoanhydridových vazeb, negativní náboje na fosfátových skupinách se odpuzují, samostatné fosfoanhydridy mají nižší solvatační energii, než hydrolytické produkty.
+
 10. Proč je právě ATP „základním energetickým platidlem“ ? Bylo by možno jej nahradit jiným NTP?
  - ATP není jediná možnost. Existuje např. GTP a další. ATP je ale nejpoužívanější ze všech NTP. Jestli by to bylo i výhodné v prezentaci není.
 
@@ -634,26 +643,131 @@ Pozn.: 1.-8. otázka je z #08 a 9.-14 otázka je z #09
 [prezentace](https://dl2.cuni.cz/pluginfile.php/198127/mod_resource/content/1/BZ12_Lipidy.pdf)
 [přednáška](https://www.youtube.com/watch?v=O5PNZnhcvZ4)
 
-Milí přátelé,
+> Milí přátelé,
+> Přikládám otázky pro přípravu na přednášku o lipidech 6.12.  Poslechněte si prezentace k tomuto tématu a připravte si odpovědi na následující otázky:
 
-Přikládám otázky pro přípravu na přednášku o lipidech 6.12.  Poslechněte si prezentace k tomuto tématu a připravte si odpovědi na následující otázky:
+1. Jakou strukturu mají živočišné tuky?
+ - tuky se skládají z glycerolu (3 uhlíky, -OH skupina na každém z nich) a tří uhlíkatých zbytků na esterové vazbě (tuky = triacylglyceroly)
+ - mohou být jednoduché a smíšené triacylglyceridy
+   - jednoduché mají třikrát stejný "acyl"
+   - smíšené mají různé tři "acyly"
+ - (k téhle otázce doporučuji nastudovat prezentaci na slidu 2, je tam přehled základních struktur mono-di-tri acyl glycerolů a slide 6 o mastných kyselinách (což zpravidla jsou uhlíkaté zbytky, o kterých jsem psal nahoře))
 
-    Jakou strukturu mají živočišné tuky?
-    Co jsou vosky, jaké znáte zástupce?
-    Jaké znáte zástupce terpenů?
-    Jak dělíme membránové lipidy?
-    Co víte o složení a stavbě biomembrán?
-    Co víte o vlivu lipidů na vlastnosti biomembrán?
-    Co víte o difúzi lipidů v biomembránách?
-    Jaká je struktura a funkce fosfolipidů?
-    Jak jsou fosfolipidy odbourávány?
-    Jak jsou fosfolipidy syntetizovány?
-    Jaká je struktura a funkce sfingolipidů?
-    Co se děje při poruchách odbourávání glykosfingolipidů?
+2. Co jsou vosky, jaké znáte zástupce?
+ - [Wiki](https://cs.wikipedia.org/wiki/Vosk)
+ - vosky jsou sloučeniny mastné kyseliny (MK) a vyššího jednosytného alkoholu
+ - MK a alkohol jsou spojené esterovou vazbou
 
-S pozdravem,
+ - včelí vosk: kyselina palmitová (16C) a 1-triakontanol (30 C)
+ - velrybí vosk: cetylpalmitát - kys. palmitová (16C) a ?palmitol? (16C)
 
-Jan Brábek
+3. Jaké znáte zástupce terpenů?
+ - isopren ... základní stavební jednotka terpenů, struktura se dá zapsat jako 1-methyl but-1,3dien
+ - limonen
+ - citronen
+ - mentol
+ - kyselina diberelová ... základ pro fytohormony
+ - phytol ... prekurzor pro vitamin E a K1
 
+4. Jak dělíme membránové lipidy?
+ - klasické lipidy ... glycerol + skupiny
+   - fosfolipidy ... 2 acyl skupiny, 1 PO4 + alkohol nebo choline
+ - sphingolipidy ... základ lipidu je sphingosine, dále jedna -acyl skupina a poté
+   - glycerolfosfolipidy ... přes PO4 skupinu mají navázaný glycerol
+   - glykolipidy ... navázán mono/oligo sacharid
+
+5. Co víte o složení a stavbě biomembrán?
+ - obsahuje z většiny fosfolipidy s nasycenými i nenasycenými acylovými skupinami (např. kys. oleová)
+   - nenasycená skupina vytváří zalomení a dělá membránu více pohyblivou
+ - obsahuje i sfingolipidy a cholesterol
+ - důležitou složkou membrán jsou i membránové proteiny (u E. coli až 75%)
+
+ - membrána se skládá ze dvou vrstev lipidů, kdy polární část je orientovaná ven a nepolární je orientovaná dovnitř
+
+6. Co víte o vlivu lipidů na vlastnosti biomembrán?
+ - teplota a stabilita:
+   - zastoupení jednotlivých lipidů / dalších látek výrazně ovlivňuje především fluiditu membrán
+   - čím vyšší teplota, tím víc se má membrána tendenci chovat jako běžná kapalina (nefunkční)
+   - to se dá spravit např. vyšším zastoupením cholesterolu, který ji stabilizuje
+   - při nižších teplotách má naopak tendenci tuhnout - je potřeba vyšší zastoupení běžných fosfolipidů, aby byla membrána pohyblivá
+ - dále mají různé typy látek vliv na zakřivení membrán
+
+ - tloušťka membrány:
+   - např. fosfatidylcholine (PC) tvoří "tenší" membránu, když je sám, než když je v kombinaci s cholesterolem - PC má totiž pohyblivé acylové skupiny, které mají tendenci se kroutit
+   - oproti tomu sfingomyelin (SM) je stabilní sám o sobě a přítomnost cholesterolu jeho vlastnosti nemění
+
+7. Co víte o difúzi lipidů v biomembránách?
+ - laterální pohyb (pohyb po povrchu membrány) je **velmi rychlý (1ɳm/s)**
+ - "transbilayer - flip-flop" pohyb (z jedné strany dvouvrstvy na druhou) je **velmi pomalý** (pro daný lipid se poločas počítá v řádu **dní**) 
+ - také enzymy katalizují přesun lipidů z jedné strany membrány na druhou (***translokázy***)
+   - flipáza ... přesouvá fosfatidylserin a "PE" (nějaký další lipid) z vnější strany buněčné membrány na vnitřní
+   - flopáza ... přesouvá fosfolipidy z vnitřní straný membrány na vnější
+   - skrambláza ... náhodně přehazuje lipidy oběma směry (spoiler alert: *funguje například při apoptóze*)
+
+8. Jaká je struktura a funkce fosfolipidů?
+ - [obrázek mluví za vše](https://www.creative-biolabs.com/lipid-based-delivery/static/img/Phosphatidylcholine-2.png)
+ - mají na glycerolu dva hydrofobní ocásky, fosfátovou skupinu a na ní ještě alkohol  
+ - na fosfát ale mohou být přidané ještě úplně různé další struktury - aminoskupiny, fosfatidil glycerol, inositol bifosfát etc.
+
+9.  Jak jsou fosfolipidy odbourávány?
+ - fosfolipázy (A1, A2, C) odštěpí od glycerolu navázané skupiny
+ - acyly (odštěpené A1, A2 fosfolipázami) jdou do ß-oxidace MK
+
+10. Jak jsou fosfolipidy syntetizovány?
+ - fosfatidylcholin (PC)
+   - přes ethanolamine-cholin
+   - přes CDP-ethanolamin a CDP-cholin
+   - cholin se získává především ve stravě
+   - vzniká fosfatidylethanolamin nebo fosfatidyl cholin
+ - fosfatidylserin (PS)
+   - syntetizuje se z fosfatidylethanolaminu
+   - odštěpí se ethanol a místo něj se dá serin
+   - funfact o PS - když je na vnější straně buněčné membrány, signalizuje apoptózu
+   - skrambláza slouží hlavně k tomu, aby PS dala právě na vnější stranu membrány
+ - fosfatidyl-glycerol (PG) a fosfatidyl-inositol
+   - vznikají ze "základního" fosfolipidu - jen glycerol, 2 acyl skupiny a fosfo skupina
+   - na fosfát se přidá glycerol, nebo inositol
+
+ - kardiolipin je speciální lipid, který vzniká ze dvou PG, které se spojí svými glyceroly (slide 55)
+
+11. Jaká je struktura a funkce sfingolipidů?
+ - doporučuju prezentaci, slide 58
+ - sfingolipidy jsou zajímavé tím, že je tvoří sfingosin - vypadá jako glycerol, jen na 1C má ještě 15C řetězec (bez esterové vazby, jen s dvojnou vazbou)
+ - dále mají jednu acyl-skupinu a nějakou další skupinu na 3C
+ - cerebrosidy, gangliosidy, sulfatidy, globosidy ... nervová soustava
+
+12. Co se děje při poruchách odbourávání glykosfingolipidů?
+ - např. Tay-Sachsova choroba ... hromadění gangliosidů na povrchu nervových buněk, demence
+
+> S pozdravem,
+> Jan Brábek
+
+# 11 Metabolismus lipidů
+
+> Milí přátelé,
+> Přikládám otázky pro přípravu na přednášku o metabolismu lipidů 13.12.  Poslechněte si prezentace k tomuto tématu a připravte si odpovědi na následující otázky:
+
+1. Jak probíhá trávení a odbourávání tuků?
+Jak probíhá aktivace mastných kyselin a jejich transport do mitochondrií?
+Jak probíhá beta oxidace mastných kyselin?
+Jak jsou odbourávány MK s lichým počtem uhlíků a nenasycené MK?
+Jaké znáte ketolátky? Jak se tvoří a odbourávají?
+Jaké jsou rozdíly mezi syntézou a beta-oxidací mastných kyselin?
+Jak probíhá reakce acetyl-CoA-karboxylázy? Jaký má enzym kofaktor?
+Jak je acetyl-CoA-karboxyláza regulována?
+Jak probíhá syntéza mastných kyselin? Jak vypadá syntáza mastných kyselin?
+Jak se dostává acetyl-CoA z mitochondrií do cytoplazmy?
+Kde a jak probíhá elongace mastných kyselin?
+Kde a jak probíhá desaturace mastných kyselin?
+Jak probíhá syntéza triacylglycerolů?
+Jak je regulován metabolismus živočišných tuků?
+Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
+Jak je regulována syntéza cholesterolu?
+Jak probíhá syntéza skvalenu?
+Jak probíhá syntéza a transport cholesterolu v hepatocytu?
+Syntéza kterých zásadně důležitých látek vychází z cholesterolu?
+
+> S pozdravem,
+> Jan Brábek
 
 
