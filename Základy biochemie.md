@@ -1055,27 +1055,43 @@ defosforylací, a dlouhodobou regulací rychlostí syntézy a odbourání enzymu
 Petr Folk
 
 # 14 Metabolismus nukleotidů
+[prezentace](https://dl2.cuni.cz/pluginfile.php/355084/mod_resource/content/10/Bzaklady14-2020animace.pdf)
+
+[přednáška](https://youtu.be/NgRWNxmrTPY)
 
 > Milí přátelé,
 > poslední téma se bude týkat metabolismu nukleotidů (ZB14) a sejdeme se k němu 3. 1. v novém roce. Využijte volné dny a připravte si odpovědi na přiložené otázky.
 
 1. Které tautomery se uplatňují při kanonickém párování bazí?
+ - *tautomer* ... strukturní isomer - látka má stejnou strukturu, jednotlivé "tautomery" mezi sebou mohou snadno přecházet
+ - u bazí jsou relevantní amino, nikoli "imino" tautomery (nikdy N redukovaný na -3)
 
 2. Z jakých prekurzorových molekul pocházejí atomy N v molekule purinu?
+ - z inosinu, který vzniká z aspartátu, glutamátu a glycinu
 
 3. Z jakých prekurzorových molekul pocházejí atomy kostry pyrimidinu?
+ <!---
+ - PRPP ... fosforibozylpyrofosfát 
+--->
+ - z aspartátu, glutamátu a z kyseliny uhličité
 
 4. Kde v metabolismu nukleotidů vzniká kyselina močová a o jakou látku se jedná?
+ - kyselina močová je velmi podobná např. guaninu - =O místo NH2,
+ - je to sloučenina založená na purinu,
+ - vzniká v metabolismu purinů
 
 5. Které enzymy jsou zodpovědné za fosforylace nukleotidů?
+ - k fosforylaci nukleotidů se používá PRPP - fosforibozyl pyrofosfát (ribóza s 1P na 6C a 2P na 1C)
+ - nukleosid monofosfát kinázy (NMPK) a nukleosid difosfát kinázy (NDPK)
 
-6.  Odstranění α-fosfátu OMP sníží kcat /KM katalyzované reakce 7x107 krát. Proč asi?
+6.  Odstranění α-fosfátu OMP sníží k_cat/K_M katalyzované reakce 7x10 krát. Proč asi?
+ - OMP ... ororin monofosfát
 
 7. Jak probíhá regulace syntézy deoxyribonukleotidů? Jak se projeví vazba ATP do místa A a jak do místa S?
 
 8. Jaké jsou substráty reakce thymidylátsynthasy a odkud v metabolismu pocházejí?
 
-9. Jakým mechanismem působí 5-fluoro-dUMP jako inhibitor?
+9.  Jakým mechanismem působí 5-fluoro-dUMP jako inhibitor?
 
 10. K čemu slouží v metabolismu cyklus purinových nukleotidů?
 
