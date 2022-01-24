@@ -798,6 +798,7 @@ Pozn.: 1.-8. otázka je z #08 a 9.-14 otázka je z #09
    - zpět se karnitin dostane opět antiportem přes transportér do mezimembránového prostoru
    - díky své malé velikosti projde karnitin samovolně přes vnější membránu mitochondrie, čímž se jeho cyklus uzavírá
    - na následujícím obrázku od 1. lékařské fakulty se proces částečně liší od toho, co má doc. Brábek v prezentaci... Asi je jedno z toho zastaralé. Njn. :D
+
 ![obrázek karnitin-transferu MK](http://fblt.cz/wp-content/uploads/2013/12/karnitinovy-prenasec-011.jpg)
 
 3. Jak probíhá beta oxidace mastných kyselin?
@@ -848,6 +849,11 @@ mastných kyselin probíhá v mitochondriích a využívá estery acyl-CoA, bios
 mastných kyselin probíhá v cytosolu, přičemž rostoucí acylový zbytek je připojen esterovou
 vazbou k proteinu přenášejícímu acylové skupiny (ACP).
 
+> Redoxní koenzymy se liší (FAD a NAD+ pro oxidaci, NADPH pro biosyntézu) podle
+stereochemie jednotlivých kroků dráhy. Výsledkem oxidace je acetyl-CoA, zatímco
+intermediárním prekurzorem v biosyntéze je malonyl-CoA. Ion HCO3- je nutný pro
+biosyntézu, ne však pro oxidaci.
+
  - jednoduše:
    - ACP ... protein, který tam prostě je
 
@@ -855,20 +861,84 @@ vazbou k proteinu přenášejícímu acylové skupiny (ACP).
 |---|---|
 | mitochondrie | cytosol |
 | -CoA | ACP |
+| NAD+, FAD | NADPH |
+| acetyl-CoA | malonyl-CoA |
 
 7. Jak probíhá reakce acetyl-CoA-karboxylázy? Jaký má enzym kofaktor?
+ - acetyl-CoA-karboxyláza ... enzym syntézy MK, acetyl-CoA + HCO3- -> malonyl-CoA
+ - potřebuje biotin jako kofaktor (biotin = vitamin B7)
+
 8. Jak je acetyl-CoA-karboxyláza regulována?
-9. Jak probíhá syntéza mastných kyselin? Jak vypadá syntáza mastných kyselin?
+ - inhibována fosforylací
+ - forsforylovaná AMP-aktivovanou kinázou
+ - alostericky je navíc regulována působením lokálních metabolitů
+   - např. palmitoyl-CoA inhibuje
+   - citrát aktivuje
+
+9.  Jak probíhá syntéza mastných kyselin? Jak vypadá syntáza mastných kyselin?
+ - začne se u acetyl-CoA, na který je přidán ACP místo CoA
+ - acetyl-ACP + malonyl-CoA -> acetoacetyl-ACP + CoA
+ - redukce acetoacetylu-ACP na hydroxybutyryl-ACP (viz ketolátky)
+ - dehydrazace hydroxybutyrylu na hydroxybutenoyl-ACP
+ - pak se pokračuje dál od kroku, kdy se připojuje malonyl-CoA (pro *palmitát* 6x, má 15C)
+
 10. Jak se dostává acetyl-CoA z mitochondrií do cytoplazmy?
+ - ve formě citrátu (slide 56)
+
 11. Kde a jak probíhá elongace mastných kyselin?
-12. Kde a jak probíhá desaturace mastných kyselin?
+> Mastné kyseliny s delším řetězcem a nenasycené mastné kyseliny vznikají z palmitátu
+elongačními a desaturačními reakcemi. 
+- v endoplasmatickém retikulu (ER) a v mitochondriích
+- v ER podobně jako FAS (fatty acid sythesis), jen s jinými enzymy, které jsou asociované s ER
+- v mitochondriích nezávisle na FAS, obrácená beta oxidace, zdroj C-C je ale malonyl (nevšiml jsem si rozdílu oproti FAS, kdyžtak komentujte pls)
+
+12.  Kde a jak probíhá desaturace mastných kyselin?
+ - desaturace ... tvorba nenasycených = dvojných vazeb
+ - membrána ER (propojené s elektrotransportním řetězcem)
+ - pomocí desaturáz - fun facts o savčích desaturázách na slidu 58
+
 13. Jak probíhá syntéza triacylglycerolů?
+ - začíná na dihydroxyaceton fosfátu
+ - přes lysofosfatidylovou kyselinu, která už má 1 acyl se přejde na fosfatidilovou kyselinu (2 acyly, 1 fosfát)
+ - nakonec se odštěpí fosfát (diacylglycerol)
+ - a přidá se třetí acyl - *triacylglycerol*
 14. Jak je regulován metabolismus živočišných tuků?
-15. Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
+> Metabolismus mastných kyselin je regulován allosterickou kontrolou hormonálně citlivé
+triacylglycerollipasy a acetyl-CoA-karboxylasy, fosforylací a defosforylací, případně též
+změnami rychlosti syntézy a odbourání proteinů.
+
+ - kromě toho je regulována přes produkci syntázy MK:
+ - syntáza MK je regulovaná na transkripční úrovni (nevzniká, když není potřeba) pomocí *inzulinu*
+ - nenasycené MK naopak potlačují transkripci genu pro syntázy MK
+ - u tukových buněk jako odpověď na zvýšené skladování tuků je produkován *leptin*
+   - leptin inhibuje produkci syntázy MK
+
+1.  Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
+ - isopentenyl adenosin
+
 16. Jak je regulována syntéza cholesterolu?
+ - má 1 hlavní kontrolní bod - HMG-CoA reduktázu
+> Tento enzym je regulován kompetitivními a allosterickými mechanismy, fosforylací a
+defosforylací, a dlouhodobou regulací rychlostí syntézy a odbourání enzymu.
+
 17. Jak probíhá syntéza skvalenu?
+- na farnezyl se dojde pomocí 3 reakcí, kdy se syntetizují 5C sloučeniny na farnezyl pyrofosfát
+- 2x pyrofosfát se syntetizuje na skvalen (30C)
+- podrobněji na slidu 68
+
 18. Jak probíhá syntéza a transport cholesterolu v hepatocytu?
+ - hepatocyt ... jaterní buňka
+ - pokud je cholesterolu velké množství, syntéza se zastavuje
+ - do buněk se dostává pomocí *LDL* partikulí
+ - syntéza je regulována pomocí inhibice transkripce HMG-CoA reduktázy
+
 19. Syntéza kterých zásadně důležitých látek vychází z cholesterolu?
+ - syntéza steroidních hormonů
+ - např.:
+   - kortizol
+   - testosteron
+   - progesteron
+   - estradiol (jeden z estrogenů)
 
 > S pozdravem,
 > Jan Brábek
