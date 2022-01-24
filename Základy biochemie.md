@@ -913,7 +913,7 @@ změnami rychlosti syntézy a odbourání proteinů.
  - u tukových buněk jako odpověď na zvýšené skladování tuků je produkován *leptin*
    - leptin inhibuje produkci syntázy MK
 
-1.  Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
+15.  Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
  - isopentenyl adenosin
 
 16. Jak je regulována syntéza cholesterolu?
