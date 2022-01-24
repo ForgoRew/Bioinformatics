@@ -13,6 +13,7 @@
 - [08 Fotosyntéza a 09 Alternativní dráhy sacharidů](#08-fotosyntéza-a-09-alternativní-dráhy-sacharidů)
 - [10 Lipidy a membrány](#10-lipidy-a-membrány)
 - [11 Metabolismus lipidů](#11-metabolismus-lipidů)
+- [12 Metabolismus aminokyselin](#12-metabolismus-aminokyselin)
 
 Poznámka: U témat najdete často prokliky na prezentace. Jsou to originální prezentace z kurzů na Moodle, takže je nejspíš potřeba být zaregistrován v kurzu Základů biochemie (ze ZS 21/22) a být přihlášen do CASu. Prokliky na YouTube přednášky by ale měly fungovat i bez přihlášení.
 
@@ -127,7 +128,9 @@ Poděkování:
  - zvýšená koncentrace 2,3-bisfosfoglycerové kyseliny (kofaktor Hb), která zvyšuje afinitu kyslíku k vazebným místům Hb.
 
 # 03 Proteiny - enzymologie
-[PDF přednášky](https://dl2.cuni.cz/pluginfile.php/327341/mod_resource/content/8/Bzaklady03-2020%20animace.pdf)
+[prezentace](https://dl2.cuni.cz/pluginfile.php/327341/mod_resource/content/8/Bzaklady03-2020%20animace.pdf)
+[přednáška](https://youtu.be/T-VhsqdeyV4)
+
 1. Které čtyři vlastnosti enzymů jsou zejména důležité pro živé organismy a proč?
  - katalyzují reakce:
    - rychlost až 10^20 rcí/s
@@ -140,7 +143,7 @@ Poděkování:
  - struktura proteinu je určující pro jeho funkci. Kromě samotného polypeptidového vlákna s aminokyselinami různých vlastností jsou pro funkci proteinu důležité i ligandy a koenzymy, a různé modifikace
  - proteiny určitě nejsou jedinými katalyzátory. Ze složitějších látek jsou katalyzátory kromě enzymů i ribozymy (RNA)
  - myslím, že mezi katalyzátory se mohou počítat i kovové ionty, které mohou dělat přechodnou vazbu s reagující molekulou a umožní tak reakci. To se ale děje většinou přímo v enzymech...
- - a tak určitě... Třeba hexokináza dává vznik glukóza 6-fosfátu během glykolýzy. Katalyzuje (byť exergonickou) reakci ATP s glukózou na ADP a glukóza 6-fosfátu.
+ - např. GTP se u G-proteinů rozpadne na GDP a P samovolně
 
 4. Jak byste popsali jednotlivé základní mechanismy katalýzy - 1...6 ?
  - (slide 8 a další v prezentaci)
@@ -164,6 +167,7 @@ Poděkování:
 
 8. V čem je podstata rozdílu mezi statickými uspořádanými strukturami (=např. elektronickým přístrojem) a dynamickými uspořádanými strukturami – živými organismy?
  - eh (vracím se v čase... prvouka, 3. třída... autíčko není živé, protože... :D). Živé struktury jsou vlastně "otevřené systémy v ustáleném stavu", mj. mají schopnost seberozvoje, sebeopravy a rozmnožování (autíčko není živé, protože se nerozmnožuje :D)
+   - uh, vracím se v čase při revidování tohohle materiálu. Asi jsem měl při psaní dost bizarní náladu... Kill me please :D
 
 9. Jaké jsou příčiny „vysokoenergetického“ charakteru ATP?
  - fosfátové skupiny kompetují o π elektrony -O- fosfoanhydridových vazeb, negativní náboje na fosfátových skupinách se odpuzují, samostatné fosfoanhydridy mají nižší solvatační energii, než hydrolytické produkty.
@@ -172,6 +176,10 @@ Poděkování:
  - ATP není jediná možnost. Existuje např. GTP a další. ATP je ale nejpoužívanější ze všech NTP. Jestli by to bylo i výhodné v prezentaci není.
 
 # 04 Sacharidy
+[prezentace](https://dl2.cuni.cz/pluginfile.php/198121/mod_resource/content/2/BZ06_Monosacharidy a glykolyza.pdf)
+
+[přednáška](https://youtu.be/YEyArwRUS94)
+
 Můj comment: Jan Brábek, který má 04, 05, 10 a 11-tou přednášku nemá moc informací v prezentacích, ale hodně na videích.
 U sacharidů jsme se na střední učili označovat místa v sacharidech pomocí číslování uhlíků, což tady dost využívám... Zapisuju to jako např. na 4C se stalo, čímž myslím, že na 4. uhlíku se stalo XY :D
 
@@ -238,7 +246,7 @@ U sacharidů jsme se na střední učili označovat místa v sacharidech pomocí
 16. Jak probíhá enolázová reakce? Jaký typ makroergní sloučeniny při této reakci vzniká?
  - enoláza odstraňuje molekulu H2O z 2-fosfoglycerátu a vzniká 2-fosfoenolpyruvát
 17. Jak probíhá pyruvátkinázová reakce? Jaký význam může mít její inhibice?
- - pyruvátkináza přenese fosfát na ATP z 2-fosfoenolpyruvátu a vzniká tím čistý pyruvát, který může dál pokračovat buď do Krebsova cyklu, nebo za anoxických podmínek může jít do alkoholového nebo mléčného kvašení
+ - pyruvátkináza přenese fosfát na ADP z 2-fosfoenolpyruvátu a vzniká tím čistý pyruvát, který může dál pokračovat buď do Krebsova cyklu, nebo za anoxických podmínek může jít do alkoholového nebo mléčného kvašení
 18. Co je hlavním důvodem pro fermentaci?
  - fermentace umožňuje nabití NADH+ pro plynulý běh glykolýzy
  - vzniká tím laktát, který způsobuje bolest svalů - v případech vysoké zátěže je ale tento proces energeticky nutný, aby se nabilo rychle co nejvíc ATP i bez kyslíku
@@ -939,8 +947,111 @@ defosforylací, a dlouhodobou regulací rychlostí syntézy a odbourání enzymu
    - testosteron
    - progesteron
    - estradiol (jeden z estrogenů)
+ - žlučové kyseliny - slouží k emulgaci tuků
 
 > S pozdravem,
 > Jan Brábek
+
+# 12 Metabolismus aminokyselin
+[prezentace](https://dl2.cuni.cz/pluginfile.php/349274/mod_resource/content/9/Bzaklady13-2020animace.pdf)
+[přednáška](https://youtu.be/8OkzXrnu1ks)
+
+> Milí přátelé,
+> před vánoci nás čeká ještě jedna přednáška, kterou věnujeme metabolismu aminokyselin (ZB13). Poslechněte si komentované prezentace k tématu a připravte si odpovědi na následující otázky.
+
+1. Jaké jsou základní strategie odstraňování dusíku z organismu?
+ - deaminace ... odstranění primární aminoskupiny z aminokyseliny
+ - transaminace ... přenesení aminoskupiny na jinou ketokyselinu nebo uvolnění ve formě amonného iontu
+ - karbamidový cyklus ... cyklus vrámci něhož je dusík transportován do jater
+
+ - celý proces pak probíhá tak, jak jsem uváděl jednotlivé pojmy:
+   - daná AK je deaminována, aminoskupina je transaminována a vrámci karbamidového cyklu přenesena do jater, kde je z ní syntetizována močovina
+   - močí se pak dusík vylučuje
+
+ - obecně organizmy vylučují buďto:
+   - amonný kationt (např. ryby),
+   - močovinu (savci),
+   - nebo kyselinu močovou (ptáci)
+
+2. Které glukogenní meziprodukty poskytuje odbourávání aminokyselin a jak souvisejí s glukoneogenezí?
+ - zbytky aminokyselin jsou využívány většinou v citrátovém cyklu (jen lysin a leucin ne)
+ - citrátový cyklus produkuje jako intermediát oxaloacetát
+ - oxaloacetát slouží jako substrát pro glukoneogenezi
+
+3. Které ketogenní meziprodukty poskytuje odbourávání aminokyselin? Jaké další ketolátky znáte –proč nejsou glukogenní?
+ - acetoacetát a acetyl-CoA
+ - dále prostý aceton a hydroxybutyrát
+ - nejsou glukogenní, protože by bylo energeticky náročné je měnit na glukózu
+ - jednodušší je použít je k syntéze mastných kyselin
+ - nejsou glukogenní, protože dávají vznik sloučenině s kyslíkem na dvojné vazbě, takže nemohou snadno vytvořit intermediáty krebsova cyklu
+
+4. Jakou roli má PLP v mechanismu transaminázových reakcí? Jak mohou enzymy využívající PLP kontrolovat specificitu štepení vazeb vycházejících z C-alfa?
+ - pyrodoxalfosfát (PLP) ... univerzální koenzym, působí v aktivním místě mnoha enzymů pro *kovalentní katalýzu*
+   - má aromatický charakter
+   - protonace heteroatomu N (PLP má hexagonální cyklickou strukturu)
+   - reagující sloučenina se stane součástí delokalizovaných vazeb a tím se její specifická vazba rozštěpí
+   - následně se meziprodukt naváže na PLP a vytvoří *karbaniont*
+
+ - specifita je zajištěna strukturou a vlastnostmi substrátu, PLP a okolí (= aktivního centra)
+ - struktura enzymu ovlivňuje natočení meziproduktu a tím pádem i která vazba se rozštěpí
+
+5. Odkud – z jakých prekurzorů – pocházejí aminoskupiny v molekule močoviny?
+ - proces probíhá následovně:
+   - AK + pyruvát -> ketokyselina + alanin
+   - alanin jde krevním transportem do jater
+   - alanin + ɑ-ketoglutarát -> pyruvát + glutamát
+   - glutamát -> aspartát + NH3 -> moč
+
+ - dá se tedy říct, že na začátku jsou nositeli aminoskupiny AK
+
+6. Která molekula alostericky reguluje CPS I?
+ - CPS I ... carbamoyl phosphate synthetase I, česky karbamoyl-P-synthetáza I
+   - syntetizuje močovinu z amonného iontu - aminoskupina glutamátu nebo iont uvolněný z aspartátu
+
+-  *CPS I* je alostericky regulována *N-acetyl glutamátem*
+
+7. Rovnice 2Glycin + NAD+ + H2O → Serin + CO2 +NH3 +NADH + H+ vyjadřuje spojení dvou reakcí odbourávání glycinu – kterých a jakým způsobem jsou spřaženy?
+<!---
+- glycin má 2C, N, 2O, 5H
+- serin má 3C, N, 3O, 6H
+- glycin je deaminován na CH3-COOH
+- voda 
+-->
+ - ví někdo? :D
+ - neluštil jsem to, jen typuju -- deaminace - spotřeba 1CO2.. proč vznikne serin?
+
+8. Které dráhy spojuje metabolismus homocysteinu?
+ - dráha odbourávání methyoninu
+ - sám se odbourává na cystein pomocí kys. listové a vitamínu B12
+
+9.  Jak dochází ke konverzi propionyl-CoA na sukcinyl-CoA?
+ - za spotřeby ATP se k propionyl-CoA přidá na 1C methylová skupina za vzniku methylmalonylu-CoA
+ - následuje B12 dependentní reakce, kdy methylmalonyl-CoA reaguje na succinyl-CoA
+
+10. Z jakých prekurzorů je vytvářena molekula hemu? Jakou metodou lze zjistit informaci o inkorporaci molekuly prekurzoru do molekuly produktu?
+ - z glycinu a sukcinyl-CoA
+ - jak to zjistit jsem v prezentaci nenašel, ale mohlo by to jít pomocí radioaktivně značeného glycinu? [Tady něco ke značení nukleových kyselin](https://biogen.cz/znaceni-a-detekce)
+
+11. Z jakých AK jsou vytvářeny biologicky aktivní aminy? Popište jakými kroky probíhá syntéza adrenalinu.
+ - prekurzory pro biologicky aktivní aminy jsou aromatické aminokyseliny (*tyrosin*, *fenylalanin*)
+ - syntéza ***adrenalinu*** probíhá následovně:
+   - na *tyrosin* se přidá (druhá) -OH skupina na aromatickou skupinu -> *dihydroxyfenylalanin*
+   - z *dihydroxyfenylalaninu* se odštěpí karboxo-skupina - vznik *dopaminu*
+   - *dopamin* se hydroxyluje -> *noradrenalin*
+   - *norepinefrin* se methyluje na NH2 skupině -> ***adrenalin***
+
+12. Jaké jsou role glutathionu? Z čeho je tvořena molekula glutathionu? 
+ - *glutathion* = γ-glutamyl-cysteinyl-glycin = *GSH*
+   - skládá se z glutamátu, cysteinu a glycinu (je to tripeptid)
+   - slouží
+     - k přenosu aminokyselin přes cytoplasmatickou membránu (kdy ke glutamylu je připojena nějaká aminokyselina),
+     - dále může sloužit k inaktivaci peroxidů (glutathion peroxidáza),
+     - glutathionreduktáza může sloužit k obnově GSH
+     - thioltransferáza reguluje poměr SH a SS vazeb v proteinech (o tom jsme si zatím nic neříkali...)
+     - glutathion-S-transferáza - syntéza *leukotrienů* (viz slide 37)
+
+>S pozdravem,
+Petr Folk
+
 
 
