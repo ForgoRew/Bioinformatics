@@ -849,27 +849,26 @@ mastných kyselin probíhá v cytosolu, přičemž rostoucí acylový zbytek je 
 vazbou k proteinu přenášejícímu acylové skupiny (ACP).
 
  - jednoduše:
+   - ACP ... protein, který tam prostě je
+
 | beta-oxidace | syntéza |
 |---|---|
 | mitochondrie | cytosol |
 | -CoA | ACP |
- - ACP ... protein, který tam prostě je
 
-1. Jak probíhá reakce acetyl-CoA-karboxylázy? Jaký má enzym kofaktor?
-
-
-2. Jak je acetyl-CoA-karboxyláza regulována?
-3.  Jak probíhá syntéza mastných kyselin? Jak vypadá syntáza mastných kyselin?
-4.  Jak se dostává acetyl-CoA z mitochondrií do cytoplazmy?
-5.  Kde a jak probíhá elongace mastných kyselin?
-6.  Kde a jak probíhá desaturace mastných kyselin?
-7.  Jak probíhá syntéza triacylglycerolů?
-8.  Jak je regulován metabolismus živočišných tuků?
-9.  Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
-10. Jak je regulována syntéza cholesterolu?
-11. Jak probíhá syntéza skvalenu?
-12. Jak probíhá syntéza a transport cholesterolu v hepatocytu?
-13. Syntéza kterých zásadně důležitých látek vychází z cholesterolu?
+7. Jak probíhá reakce acetyl-CoA-karboxylázy? Jaký má enzym kofaktor?
+8. Jak je acetyl-CoA-karboxyláza regulována?
+9. Jak probíhá syntéza mastných kyselin? Jak vypadá syntáza mastných kyselin?
+10. Jak se dostává acetyl-CoA z mitochondrií do cytoplazmy?
+11. Kde a jak probíhá elongace mastných kyselin?
+12. Kde a jak probíhá desaturace mastných kyselin?
+13. Jak probíhá syntéza triacylglycerolů?
+14. Jak je regulován metabolismus živočišných tuků?
+15. Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
+16. Jak je regulována syntéza cholesterolu?
+17. Jak probíhá syntéza skvalenu?
+18. Jak probíhá syntéza a transport cholesterolu v hepatocytu?
+19. Syntéza kterých zásadně důležitých látek vychází z cholesterolu?
 
 > S pozdravem,
 > Jan Brábek
