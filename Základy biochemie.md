@@ -824,7 +824,7 @@ Pozn.: 1.-8. otázka je z #08 a 9.-14 otázka je z #09
  - mch. energetická bilance odbourání palmitátu je +108 ATP, což je 3.5x víc než u glukózy (~30-32 ATP)
 
 5. Jaké znáte ketolátky? Jak se tvoří a odbourávají?
-
+   
 ![aceton, acetoacetát, hydroxobutyrát](https://vydavatelstvi-old.vscht.cz/knihy/uid_es-002_v1/figures/ketogenese.schema.01.gif)
  - keto látka ... kyslík je na dvojné vazbě
  - aceton ... 3C s kyslíkem na dvojné vazbě na prostředním uhlíku
@@ -841,21 +841,35 @@ Pozn.: 1.-8. otázka je z #08 a 9.-14 otázka je z #09
    - acetoacetát + succinyl-CoA -> acetoacetyl-CoA a sukcinát
    - acetoacetyl-CoA + CoA-SH -> 2x acetyl-CoA
 
-1. Jaké jsou rozdíly mezi syntézou a beta-oxidací mastných kyselin?
- - 
-7. Jak probíhá reakce acetyl-CoA-karboxylázy? Jaký má enzym kofaktor?
-8. Jak je acetyl-CoA-karboxyláza regulována?
-9. Jak probíhá syntéza mastných kyselin? Jak vypadá syntáza mastných kyselin?
-10. Jak se dostává acetyl-CoA z mitochondrií do cytoplazmy?
-11. Kde a jak probíhá elongace mastných kyselin?
-12. Kde a jak probíhá desaturace mastných kyselin?
-13. Jak probíhá syntéza triacylglycerolů?
-14. Jak je regulován metabolismus živočišných tuků?
-15. Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
-16. Jak je regulována syntéza cholesterolu?
-17. Jak probíhá syntéza skvalenu?
-18. Jak probíhá syntéza a transport cholesterolu v hepatocytu?
-19. Syntéza kterých zásadně důležitých látek vychází z cholesterolu?
+6. Jaké jsou rozdíly mezi syntézou a beta-oxidací mastných kyselin?
+ - doslova z prezentace:
+> Biosyntéza mastných kyselin se od jejich oxidace liší v několika ohledech. Zatímco oxidace
+mastných kyselin probíhá v mitochondriích a využívá estery acyl-CoA, biosyntéza
+mastných kyselin probíhá v cytosolu, přičemž rostoucí acylový zbytek je připojen esterovou
+vazbou k proteinu přenášejícímu acylové skupiny (ACP).
+
+ - jednoduše:
+| beta-oxidace | syntéza |
+|---|---|
+| mitochondrie | cytosol |
+| -CoA | ACP |
+ - ACP ... protein, který tam prostě je
+
+1. Jak probíhá reakce acetyl-CoA-karboxylázy? Jaký má enzym kofaktor?
+
+
+2. Jak je acetyl-CoA-karboxyláza regulována?
+3.  Jak probíhá syntéza mastných kyselin? Jak vypadá syntáza mastných kyselin?
+4.  Jak se dostává acetyl-CoA z mitochondrií do cytoplazmy?
+5.  Kde a jak probíhá elongace mastných kyselin?
+6.  Kde a jak probíhá desaturace mastných kyselin?
+7.  Jak probíhá syntéza triacylglycerolů?
+8.  Jak je regulován metabolismus živočišných tuků?
+9.  Jaké jsou důležité „vedlejší produkty“ syntézy cholesterolu?
+10. Jak je regulována syntéza cholesterolu?
+11. Jak probíhá syntéza skvalenu?
+12. Jak probíhá syntéza a transport cholesterolu v hepatocytu?
+13. Syntéza kterých zásadně důležitých látek vychází z cholesterolu?
 
 > S pozdravem,
 > Jan Brábek
