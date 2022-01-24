@@ -45,7 +45,7 @@ Poděkování:
 3. Proč se vytvářejí vodíkové můstky mezi molekulami vody navzájem a mezi molekulami vody a polárními skupinami?
  - slabý náboj vodíků a kyslíku umožňuje vznik nevazebných interakcí jak mezi jednotlivými molekulami vody, tak i mezi jinými nabitými molekulami a vodou
 4. Co určuje pH a co určuje tzv. iontový součin vody?
- - pH je -log([H+]) v roztoku. Iontový součin je určený silou, jakou je kyslík vázán k vodíkům a z toho vyplývající pravděpodobností, s jakou se vodíky mohou odštěpit. Ta je K=(10^-7*10^-7)/1=10^14
+ - pH je -log([H+]) v roztoku. Iontový součin je určený silou, jakou je kyslík vázán k vodíkům a z toho vyplývající pravděpodobností, s jakou se vodíky mohou odštěpit. Ta je K=(10^-7*10^-7)/1=10^-14
 5. Které vlastnosti vody jsou důležité pro život? Proč má voda takové vlastnosti?
  - hodně důležitá je např. její hustota v kapalném a pevném skupenství. 
  - vysoká pohyblivost H_3O^+
@@ -60,7 +60,7 @@ Poděkování:
 8. Co to jsou enantiomery? Liší se chemickými vlastnostmi?
  - molekuly, které se liší jen opticky
 9. Kolik center asymetrie mají které AK?
- - zpravidla 2 **!**
+ - zpravidla 2 **!** `TODO`
 10. Které charakteristiky AK lze odvodit z jejich struktur?
  - jsou to nabité molekuly, jejich R skupiny mohou být také nabité...
 11. Které AK jsou nabité při fyziologickém pH?
@@ -86,9 +86,11 @@ Poděkování:
 6. Co určuje stabilitu beta-struktur?
  - R-skupiny aminokyselin a prostředí
 7. Jaká je architektura alfa-beta soudku (TIM soudku)?
- - 8 alpha helix, 8 beta soudek
+ - kombinace helixů a listů - např.: 8 alpha helixů, 8 beta listů
 8. Jak jsou stabilní nativní konformace proteinů a jakými vlivy je lze denaturovat?
  - ss můstky, elektrostatické síly, vodíkové můstky, hydrofobní interakce
+ - močovinou, změnou pH, zvýšením teploty...
+ - návratem veličin do původních hodnot
 9. Jak se bude lišit struktura proteinu z hyperthermofilního organismu od téhož typu proteinu z organismu žijícího v „běžných“ podmínkách?
 10. Které síly určují stabilitu proteinů?
  - `TODO`
