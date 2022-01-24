@@ -16,7 +16,7 @@
 
 Poznámka: U témat najdete často prokliky na prezentace. Jsou to originální prezentace z kurzů na Moodle, takže je nejspíš potřeba být zaregistrován v kurzu Základů biochemie (ze ZS 21/22) a být přihlášen do CASu. Prokliky na YouTube přednášky by ale měly fungovat i bez přihlášení.
 
-U prezentací pak moc doporučuju shrnující slidy na konci.
+
 
 Chyby?: Nejvíc tricky mi přišlo, jestli se něco oxiduje nebo redukuje. Při práci s materiálem prosím použijte vlastní rozum a chyby kdyžtak komentujte, nebo mi pište. To stejné i s jinými chybami. Díky moc!
 
@@ -29,7 +29,8 @@ Pro jistotu:
  - FAD ... riboflavinadenosin difosfát - nabíjí se na FADH2 a slouží v OXFOS k přenosu protonů a nabití CoQ, jeho energetická výtěžnost je ale menší než u NAD+, viz [Wiki](https://cs.wikipedia.org/wiki/Flavinadenindinukleotid) a přednáška "[07 Oxidační fosforylace](#07-oxidační-fosforylace)"
 
 Doporučuju:
-[zápisky od Eugleo](https://eugleo.github.io/bioinformatika/doc/zaklady-biochemie/notes.html)
+ - [zápisky od Eugleo](https://eugleo.github.io/bioinformatika/doc/zaklady-biochemie/notes.html)
+ - U prezentací pak moc doporučuju shrnující slidy na konci. Jsou tam všechny důležité informace shrnuté.
 
 Poděkování:
  - také děkuji všem autorům všech obrázků a obsahu v odkazech, děkuji takto společně, protože kdybych měl všechny citovat, tak by tyhle výpisky trvaly stejně dlouho jako dělat bakalářku a to úplně nechci
@@ -823,6 +824,7 @@ Pozn.: 1.-8. otázka je z #08 a 9.-14 otázka je z #09
  - mch. energetická bilance odbourání palmitátu je +108 ATP, což je 3.5x víc než u glukózy (~30-32 ATP)
 
 5. Jaké znáte ketolátky? Jak se tvoří a odbourávají?
+
 ![aceton, acetoacetát, hydroxobutyrát](https://vydavatelstvi-old.vscht.cz/knihy/uid_es-002_v1/figures/ketogenese.schema.01.gif)
  - keto látka ... kyslík je na dvojné vazbě
  - aceton ... 3C s kyslíkem na dvojné vazbě na prostředním uhlíku
@@ -839,7 +841,7 @@ Pozn.: 1.-8. otázka je z #08 a 9.-14 otázka je z #09
    - acetoacetát + succinyl-CoA -> acetoacetyl-CoA a sukcinát
    - acetoacetyl-CoA + CoA-SH -> 2x acetyl-CoA
 
-6. Jaké jsou rozdíly mezi syntézou a beta-oxidací mastných kyselin?
+1. Jaké jsou rozdíly mezi syntézou a beta-oxidací mastných kyselin?
  - 
 7. Jak probíhá reakce acetyl-CoA-karboxylázy? Jaký má enzym kofaktor?
 8. Jak je acetyl-CoA-karboxyláza regulována?
