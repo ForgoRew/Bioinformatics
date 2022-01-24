@@ -3,7 +3,7 @@
 
 - [***Základy biochemie***](#základy-biochemie)
 - [01 Prolog a prerekvizity, voda a aminokyseliny](#01-prolog-a-prerekvizity-voda-a-aminokyseliny)
-- [02 A Proteiny - struktura](#02-a-proteiny---struktura)
+- [02 A Proteiny - struktura a funkce](#02-a-proteiny---struktura-a-funkce)
 - [02 B Proteiny - struktura a funkce](#02-b-proteiny---struktura-a-funkce)
 - [03 Proteiny - enzymologie](#03-proteiny---enzymologie)
 - [04 Sacharidy](#04-sacharidy)
@@ -38,6 +38,11 @@ Poděkování:
  - také děkuji všem autorům všech obrázků a obsahu v odkazech, děkuji takto společně, protože kdybych měl všechny citovat, tak by tyhle výpisky trvaly stejně dlouho jako dělat bakalářku a to úplně nechci
 
 # 01 Prolog a prerekvizity, voda a aminokyseliny
+[prezentace](https://dl2.cuni.cz/pluginfile.php/198117/mod_resource/content/5/Bzaklady01B-2020animace.pdf)
+
+[přednáška](https://youtu.be/OO90ks-B5cY)
+
+
 1. Které vazby v biomolekulách jsou polární a proč?
  - jsou to vazby mezi ionty, molekuly, které mají náboj inukovaný díky nějakému velmi elektronegativnímu atomu a podobně.
 2. Proč existuje na molekule vody dipólový moment? Co určuje tvar molekuly vody?
@@ -60,19 +65,34 @@ Poděkování:
 8. Co to jsou enantiomery? Liší se chemickými vlastnostmi?
  - molekuly, které se liší jen opticky
 9. Kolik center asymetrie mají které AK?
- - zpravidla 2 **!** `TODO`
+ > Aminokyseliny s výjimkou glycinu mají centrum asymetrie na C-alfa. V proteinech se vyskytují L-
+aminokyseliny. Aminokyseliny Ile a Thr mají dvě centra asymetrie a existují jako 4 izomery; dva
+páry enantiomerů a dva páry diastereomerů.
+
 10. Které charakteristiky AK lze odvodit z jejich struktur?
  - jsou to nabité molekuly, jejich R skupiny mohou být také nabité...
 11. Které AK jsou nabité při fyziologickém pH?
- - `TODO`
+ - fyziologické pH je cca 7.4 (viz [Wikiskripta](https://www.wikiskripta.eu/w/Acidobazick%C3%A1_rovnov%C3%A1ha))
+ - podle tabulky na 23 slidu:
+   - určitě všechny AK odštěpily proton na -COOH
+   - určitě žádná ještě neodštěpila proton na -NH3+
+   - proton na -R skupině už odštěpily kys. asparagová (Asp, D), kys. glutamová (Glu, E) a histidin (His, H)
+
 12. Jak lze popsat disociaci skupin alaninu se znalostí hodnot disociačních konstant dvou disociovatelných skupin?
- - má dvě hodnoty pH, při nichž odštěpuje proton
+ - má dvě hodnoty pH, při nichž odštěpuje proton, 2.34 a 9.69
+
 13. Co to je prochiralita?
- - prochirální molekuly nemají rotační symetrii, tzn. mají různé enantiomery
+ - prochirální molekuly nemají rotační symetrii, tzn. mají různé enantiomery,
+ - vyplývá z toho, že existuje atom označovaný jako ***chireální centrum***, které podle uspořádání jednotlivých skupin na sobě určuje, o jaký optický izomer (*enantiomer*) se jedná
+
 14. Které posttranslační modifikace AK znáte?
  - fosforylace, metylace, acetylace, hydroxylace
 
-# 02 A Proteiny - struktura
+# 02 A Proteiny - struktura a funkce
+[prezentace](https://dl2.cuni.cz/pluginfile.php/315706/mod_resource/content/6/Bzaklady02A-2020animace.pdf)
+
+[přednáška](https://youtu.be/p1xmCsSAKq0)
+
 1. Jaká reakce vede ke vzniku peptidové vazby, jak se liší peptidová a isopeptidová vazba?
  - peptidová vazba je standardní vazba ak v proteinu. Isopeptidová vazba funguje na stejném principu (NH2+COOH)->(NHCO), ale vzniká u postranních řetězců ak (lysin + kys. asparagová)
 2. Vlastnosti peptidové vazby.
@@ -93,12 +113,48 @@ Poděkování:
  - návratem veličin do původních hodnot
 9. Jak se bude lišit struktura proteinu z hyperthermofilního organismu od téhož typu proteinu z organismu žijícího v „běžných“ podmínkách?
 10. Které síly určují stabilitu proteinů?
- - `TODO`
+ - velmi důležité je tzv. Anfinsenovo dogma, které říká, že struktura (a tedy i stabilita) je určena sekvencí aminokyselin
+
+ - na slidu 24,
+ - 1. elektrostatické síly,
+ - 2. vodíkové můstky,
+ - 3. hydrofobní interakce,
+ - 4. S-S vazby (sirné můstky)
+
 11. Které modely skládání proteinů znáte?
+ - existuje více teorií:
+
+ - skládání náhodným výběrem konformací
+   - Levinthalův paradox:
+   - možností je příliš,
+   - není časově možné všechny vyzkoušet
+ - skládání cestou konformačních mezistavů 
+   - spočívá ve skladu, které ale má určité mezistavy, od kterých se teprve pokračuje dál
+   - kinetika skládání ale neodpovídá v této teorii získaným pozorováním
+ - skládání cestou dosažení energetického minima
+   - řetízek aminokyselin se snaží najít nejstabilnější konformaci,
+   - hledá tedy energetické minimum,
+   - hlavní silou, která nutí protein se poskládat je hydrofobní kolaps
+
 12. Co to znamená, že skládání proteinů probíhá hierarchicky?
+> Primární struktura proteinu obsahuje nejen informaci o nativní konformaci (nativních
+konformacích) ale i o procesu zaujetí této konformace. Skládání proteinů probíhá hierarchicky –
+sekundární struktury vznikají lokálně a určují výslednou terciární strukturu. Terciární struktura
+neurčuje svoje lokální sekundární struktury.
+
 13. Jak se může lišit skládání proteinu in vitro od situace uvnitř buňky?
+ - to je spíš teoretická otázka,
+   - v základu ale nejspíš jde o různou hustotu prostředí,
+   - jiné sloučeniny v roztoku,
+   - o jinou teplotu,
+   - ale především se neuplatní tak dobře postupné skládání proteinu,
+   - in vivo narozdíl od zkumavky totiž protein začíná proces skládání už hned jak jeho část vychází z proteinu
+   - in vitro jej musíme nějak denaturovat (např. močovinou)
+   - pak postupně příčinu denaturace odstraňujeme, ale nemůžeme zaručit, aby se protein seskládal tak postupně, jako v buňce (příklad na slidu 27)
 
 # 02 B Proteiny - struktura a funkce
+[prezentace](https://dl2.cuni.cz/pluginfile.php/319115/mod_resource/content/7/Bzaklady02B-2020animace.pdf)
+[přednáška](https://youtu.be/p1xmCsSAKq0)
 1. Na jakém principu interagují helixy ve dvojité nadšroubovici - například v protofibrilách keratinu nebo tropomyosinu?
  - vodíkové můstky hydroxyprolinu, 
 2. Na jakém principu funguje trvalá ondulace (vlasů u kadeřníka)?
