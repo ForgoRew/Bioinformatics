@@ -132,7 +132,7 @@ Poděkování:
 [přednáška](https://youtu.be/T-VhsqdeyV4)
 
 1. Které čtyři vlastnosti enzymů jsou zejména důležité pro živé organismy a proč?
- - katalyzují reakce:
+ - enzymy katalyzují reakce:
    - rychlost až 10^20 rcí/s
    - umožňují reakce i v "mírných" podmínkách
    - umožňují jen některé reakce (nevznikají nechtěné produkty)
