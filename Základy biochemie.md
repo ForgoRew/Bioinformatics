@@ -13,7 +13,8 @@
 - [08 Fotosyntéza a 09 Alternativní dráhy sacharidů](#08-fotosyntéza-a-09-alternativní-dráhy-sacharidů)
 - [10 Lipidy a membrány](#10-lipidy-a-membrány)
 - [11 Metabolismus lipidů](#11-metabolismus-lipidů)
-- [12 Metabolismus aminokyselin](#12-metabolismus-aminokyselin)
+- [13 Metabolismus aminokyselin](#13-metabolismus-aminokyselin)
+- [14 Metabolismus nukleotidů](#14-metabolismus-nukleotidů)
 
 Poznámka: U témat najdete často prokliky na prezentace. Jsou to originální prezentace z kurzů na Moodle, takže je nejspíš potřeba být zaregistrován v kurzu Základů biochemie (ze ZS 21/22) a být přihlášen do CASu. Prokliky na YouTube přednášky by ale měly fungovat i bez přihlášení.
 
@@ -952,7 +953,7 @@ defosforylací, a dlouhodobou regulací rychlostí syntézy a odbourání enzymu
 > S pozdravem,
 > Jan Brábek
 
-# 12 Metabolismus aminokyselin
+# 13 Metabolismus aminokyselin
 [prezentace](https://dl2.cuni.cz/pluginfile.php/349274/mod_resource/content/9/Bzaklady13-2020animace.pdf)
 [přednáška](https://youtu.be/8OkzXrnu1ks)
 
@@ -1053,5 +1054,34 @@ defosforylací, a dlouhodobou regulací rychlostí syntézy a odbourání enzymu
 >S pozdravem,
 Petr Folk
 
+# 14 Metabolismus nukleotidů
+
+> Milí přátelé,
+> poslední téma se bude týkat metabolismu nukleotidů (ZB14) a sejdeme se k němu 3. 1. v novém roce. Využijte volné dny a připravte si odpovědi na přiložené otázky.
+
+1. Které tautomery se uplatňují při kanonickém párování bazí?
+
+2. Z jakých prekurzorových molekul pocházejí atomy N v molekule purinu?
+
+3. Z jakých prekurzorových molekul pocházejí atomy kostry pyrimidinu?
+
+4. Kde v metabolismu nukleotidů vzniká kyselina močová a o jakou látku se jedná?
+
+5. Které enzymy jsou zodpovědné za fosforylace nukleotidů?
+
+6.  Odstranění α-fosfátu OMP sníží kcat /KM katalyzované reakce 7x107 krát. Proč asi?
+
+7. Jak probíhá regulace syntézy deoxyribonukleotidů? Jak se projeví vazba ATP do místa A a jak do místa S?
+
+8. Jaké jsou substráty reakce thymidylátsynthasy a odkud v metabolismu pocházejí?
+
+9. Jakým mechanismem působí 5-fluoro-dUMP jako inhibitor?
+
+10. K čemu slouží v metabolismu cyklus purinových nukleotidů?
+
+11. V jakém důležitém aspektu se liší odbourávání purinových a pyrimidinových bazí?
+
+> S přáním hezkého prožití vánočních svátků, 
+> Petr Folk
 
 
