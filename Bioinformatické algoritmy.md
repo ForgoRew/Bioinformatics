@@ -90,32 +90,33 @@ výpočet evoluční vzdálenosti
  - co je to SSAHA?
  - co je to FT#N?
 
-# 07
+### 07
  - co je to HMM?
  - jak se jmenuje procedura pro odhalování stavu pravděpodobností?
  - co je forward algorithm?
  - jak se najde stav v každém kroku?
  - jak nastavit pravděpodobnosti bez trénovacích dat?
 
-# 08
+### 08
  - co je to FSA?
  - co dělá algoritmus Waterman&Egghert? A jak funguje?
  - je W&E vůbec na něco dobrý?
  - dá se odhadnout, jestli probabilistický alignment je pravděpodobný?
 
-# 09
+### 09
  - jak najdeme "Consenzus sequence"? Jaké má výhody a nevýhody?
  - jak vytvoříme "pattern"? (slide 8)
  - jak funguje PSSM?
  - jaký je postup pro PSI-BLAST a jaké má výhody?
 
-# 10
+### 10
  - co je to ...
    - taxon
    - clade
    - lineage
    - phylogeny
    - bifurcating tree
+   - co je kladogram, fylogram a "Newick format"?
  - jakým postupem je možné zakořenit fylogenetický strom?
  - co je potřeba pro "pravdivé" midgroup zakořenění stromu?
  - jak funguje a kdy se hodí "outgroup" zakořenění stromu? evoluce?
@@ -268,44 +269,44 @@ Cloud-like directory system
 ### File Formats
 ##### GenBank Flat File Format
 Header
-• LOCUS - A short mnemonic name for the entry. The line
+- LOCUS - A short mnemonic name for the entry. The line
 contains the Accession number, length of molecule, type of
 molecule (DNA or RNA), a three-letter reference to possible
 Taxonomy, and the date that the data was made public.
-• DEFINITION - description of the sequence
-• ACCESSION - accession number is a unique, unchanging code
+- DEFINITION - description of the sequence
+- ACCESSION - accession number is a unique, unchanging code
 assigned to each entry
-• VERSION - primary accession number and a numeric version
+- VERSION - primary accession number and a numeric version
 number associated with the current version of the sequence data
 in the record. This is followed by an integer key (a "GI") assigned
 to the sequence by NCBI
-• KEYWORDS - gene description
-• SOURCE - common name of the organism or the name most
+- KEYWORDS - gene description
+- SOURCE - common name of the organism or the name most
 frequently used in the literature
-• ORGANISM - formal scientific name of the organism (first
+- ORGANISM - formal scientific name of the organism (first
 line) and taxonomic classification levels (second and subsequent
 lines)
-• REFERENCE - articles containing data reported in this entry
-• AUTHORS - authors of the citation
-• TITLE - full title of citation
-• JOURNAL - journal name, volume, year, and page numbers of
+- REFERENCE - articles containing data reported in this entry
+- AUTHORS - authors of the citation
+- TITLE - full title of citation
+- JOURNAL - journal name, volume, year, and page numbers of
 the citation
-• MEDLINE - Medline unique identifier for a citation
-• PUBMED - PubMed unique identifier for a citation.
-• REMARK - relevance of a citation to an entry
-• COMMENT - cross-references to other sequence entries,
+- MEDLINE - Medline unique identifier for a citation
+- PUBMED - PubMed unique identifier for a citation.
+- REMARK - relevance of a citation to an entry
+- COMMENT - cross-references to other sequence entries,
 comparisons to other collections, notes of changes in LOCUS
 names, and other remarks.
-• Features
-• SOURCE - contains information about organism, mapping,
+- Features
+- SOURCE - contains information about organism, mapping,
 chromosome, tissue alignment, clone identification
-• CDS - instructions on how to join sequences together to make
+- CDS - instructions on how to join sequences together to make
 an amino acid sequence from the given coordinates. Includes
 cross references to other databases
-• GENE Feature - a segment of DNA identified by a name.
-• RNA Feature - used to annotate RNA on genomic sequence
+- GENE Feature - a segment of DNA identified by a name.
+- RNA Feature - used to annotate RNA on genomic sequence
 (for example: mRNA, tRNA, rRNA)
-• Sequence
+- Sequence
 
 ###### Sample of GBFFF
 ```
@@ -539,13 +540,13 @@ SAM/BAM, BED ...
 
 > PDB records contain (amongst
 other information)
-• positions of individual atoms in the
+- positions of individual atoms in the
 3D space
-• protein sequence
-• secondary structure elements (SSE)
+- protein sequence
+- secondary structure elements (SSE)
 information
-• related classification (SCOP, CATH)
-• meta-information such as release
+- related classification (SCOP, CATH)
+- meta-information such as release
 date, structure determination data,
 etc.
 
@@ -588,35 +589,35 @@ More information on 22nd slide of the presentation.
 Something like taxonomy for proteins!!
 
 > 1. Family
-• proteins in the same family can have high sequence similarity (> 30%) or lower sequence similarity (> 15%) with very similar function or structure
+- proteins in the same family can have high sequence similarity (> 30%) or lower sequence similarity (> 15%) with very similar function or structure
 2. Superfamily
-• proteins sharing common evolutionary origin (based on structural and functional features) but differing in sequence
+- proteins sharing common evolutionary origin (based on structural and functional features) but differing in sequence
 3. Fold
-• structures sharing major secondary structures in similar topological distribution
+- structures sharing major secondary structures in similar topological distribution
 4. Class
-• structures with similar folds
-• all 𝜶 - proteins containing mainly (but not exclusively) 𝛼 helices
-• all 𝜷 - proteins containing mainly (but not exclusively) 𝛽 sheets
-• 𝜶/𝜷 - proteins containing 𝛽 sheet surrounded by 𝛼 helices
-• 𝜶 + 𝜷 - proteins containing 𝛼 helices separated by 𝛽 sheets
-• small proteins, low resolution protein structures, ..
+- structures with similar folds
+- all 𝜶 - proteins containing mainly (but not exclusively) 𝛼 helices
+- all 𝜷 - proteins containing mainly (but not exclusively) 𝛽 sheets
+- 𝜶/𝜷 - proteins containing 𝛽 sheet surrounded by 𝛼 helices
+- 𝜶 + 𝜷 - proteins containing 𝛼 helices separated by 𝛽 sheets
+- small proteins, low resolution protein structures, ..
 
 ##### CATH (Class, Architecture, Topology, Homologous superfamily)
 > 1. Homologous superfamily
-• groups together protein domains which are thought to share a common ancestor and can
+- groups together protein domains which are thought to share a common ancestor and can
 therefore be described as homologous
 2. Topology
-• structures grouped into fold groups at this level depending on both the overall shape and
+- structures grouped into fold groups at this level depending on both the overall shape and
 connectivity of the secondary structures.
 3. Architecture
-• structures classified according to their overall shape as determined by the orientations of the
+- structures classified according to their overall shape as determined by the orientations of the
 secondary structures in 3D space but ignores the connectivity between them
 4. Class
-• structures classified according to their secondary structure composition
-• mostly 𝛼
-• mostly 𝛽
-• mixed 𝛼/𝛽
-• few secondary structures
+- structures classified according to their secondary structure composition
+- mostly 𝛼
+- mostly 𝛽
+- mixed 𝛼/𝛽
+- few secondary structures
 
 ### Programmatic access to data
  - [UniProt API](http://www.uniprot.org/help/api)
@@ -771,14 +772,14 @@ e = 0
 r = 1
 ```
 > Exercise (from presentation)
-• strings: WRITERS, VINTNER
-• 𝑑 = 2 𝑒 = 0, 𝑟 = 3
+- strings: WRITERS, VINTNER
+- 𝑑 = 2 𝑒 = 0, 𝑟 = 3
 
 ### Alphabet-Weight editation distance (AWED)
 This is the major step from ED to alignments as we make them - you modify the `sigma()` function with matrice, so for each combination of letters you have its own score.
 Excercise from the presentation (I accidentelly gave you a recipe/almost solution, sorry :D):
-> • Exercise
-• formalization of AWED concept
+> - Exercise
+- formalization of AWED concept
 
 ### Global Sequence Alignment (GA)
 However we did smaller steps on a path from ED to GA, there are stil huge differences between AW (the last "predecessor" of GA) and GA itself.
@@ -891,12 +892,12 @@ It is quite difficult procces behind the selection of testing set of protein seq
  -  Motivation
  -  Scoring functions
  -  Algorithms
-• exhaustive -> multidimensional dynamic
+- exhaustive -> multidimensional dynamic
 programming
  - heuristics
-• progressive alignment
-• iterative alignment/refinement
-• block(local)-based alignment
+- progressive alignment
+- iterative alignment/refinement
+- block(local)-based alignment
 
 ### Motivation
  - Distant homologues
@@ -931,12 +932,12 @@ Time complexity is: `O(2^N*L^N)
 
 > MDP - exercise
 #1
-• Let’s have sequence of length 50
-• Comparison of a pair of sequences using DP takes 0,1s
-• What is the time needed to compare 4 sequences?
+- Let’s have sequence of length 50
+- Comparison of a pair of sequences using DP takes 0,1s
+- What is the time needed to compare 4 sequences?
 #2
-> • Let’s say we have 1000 years and average sequence length is 50.
-• How many sequence can afford to compare?
+> - Let’s say we have 1000 years and average sequence length is 50.
+- How many sequence can afford to compare?
 
 ### Heuristic Algorithms
  - Progressive alignment methods
@@ -956,16 +957,16 @@ Time complexity is: `O(2^N*L^N)
 
 ### Progressive alignment methods
  - Framework
-• First, two sequences are aligned using standard pairwise alignment
-• The remaining sequences are taken one by one and added to the pool from which
+- First, two sequences are aligned using standard pairwise alignment
+- The remaining sequences are taken one by one and added to the pool from which
 MSA emerges
-• Repeated until all sequences are aligned
+- Repeated until all sequences are aligned
 
  - Parameters
-• The order in which the sequences are be aligned
-• Whether only one alignment is kept and sequences are added to it or whether also
+- The order in which the sequences are be aligned
+- Whether only one alignment is kept and sequences are added to it or whether also
 an alignment can be aligned to another alignment (as if a tree was built)
-• The process used to align and score sequences or alignments against the existing
+- The process used to align and score sequences or alignments against the existing
 ones
 
 ### Star alignment
@@ -975,10 +976,10 @@ Pick one starting sequence and then make pairwise alignments of this sequence wi
 To make it better, pick the sequence which is similar to most of the sequences.
 
 ### SA – time complexity
-• Average sequence length `𝐿`
-• One global alignment computation in `𝐎(𝑳^𝟐)`
-• 𝑘 sequences → `O(k^2*L^2) `pairwise computations
-• 𝑙 ... upper bound on the MSA length → `𝐎(l*k) `for MSA construction
+- Average sequence length `𝐿`
+- One global alignment computation in `𝐎(𝑳^𝟐)`
+- 𝑘 sequences → `O(k^2*L^2) `pairwise computations
+- 𝑙 ... upper bound on the MSA length → `𝐎(l*k) `for MSA construction
 `𝑂(𝑘^2*𝐿^2+𝑙*𝑘) = 𝑶(𝒌^𝟐*𝑳^𝟐)`
 
 ### Feng & Doolitle
@@ -1035,21 +1036,21 @@ sequence alignment. Repeat for 𝒔𝟐, ... , 𝒔𝑵
 ### Block-based alignment
 Both progressive and iterative methods assume that all parts of all sequences are consistent with a global alignment - not every position in the alignment must correspond to a homologous site in all sequences.
 Block-based solution approach to the problem of global alignment by
-• splitting sequences into blocks
-• aligning the blocks
-• merging block alignments
+- splitting sequences into blocks
+- aligning the blocks
+- merging block alignments
 
 ### DIALIGN
-• Alignment constructed from gap-free local alignments between pairs of sequences
-• based on diagonals in the dynamic programming matrix
+- Alignment constructed from gap-free local alignments between pairs of sequences
+- based on diagonals in the dynamic programming matrix
   - Procedure
-• align all possible pairs of sequences
-• determine all diagonals and assign weights
-• for a diagonal 𝐷 of length 𝑙, score 𝒔 is obtained from substitution matrix
-• determine length-independent weight as 𝒘 𝑫 = − 𝐥𝐨𝐠 𝑷(𝒍, 𝒔), where 𝑷(𝒍, 𝒔) is the probability that diagonal of sequence of length 𝒍 will have score at least 𝒔
-• build MSA by adding consistent diagonals in order of decreasing weight
+- align all possible pairs of sequences
+- determine all diagonals and assign weights
+- for a diagonal 𝐷 of length 𝑙, score 𝒔 is obtained from substitution matrix
+- determine length-independent weight as 𝒘 𝑫 = − 𝐥𝐨𝐠 𝑷(𝒍, 𝒔), where 𝑷(𝒍, 𝒔) is the probability that diagonal of sequence of length 𝒍 will have score at least 𝒔
+- build MSA by adding consistent diagonals in order of decreasing weight
 (and overlap with other diagonals)
-• explore unaligned regions and include them if possible
+- explore unaligned regions and include them if possible
 
 ### MAFFT
  - Multiple Alignment Using Fast Fourier Transform
@@ -1102,9 +1103,9 @@ Block-based solution approach to the problem of global alignment by
   - nucleotide sequence has 4-letter alphabet → 𝟒𝟑 = 𝟔𝟒 possible triplets
   - each letter is assigned a number (A=0, C=1, G=2, T=3) → 𝒄(𝑿) ... code for letter 𝑋
 
-• 𝑐(𝐴𝐴𝐴) = 0, 𝑐 (𝐶𝐴𝐴) = 16, 𝑐 (𝐴𝐶𝐴) = 4, 𝑐 (𝐴𝐴𝐶) = 1
-• for an amino acid sequence we need 20 letter alphabet
-• Scan a sequence, take k-tuple for every position i and assign to position
+- 𝑐(𝐴𝐴𝐴) = 0, 𝑐 (𝐶𝐴𝐴) = 16, 𝑐 (𝐴𝐶𝐴) = 4, 𝑐 (𝐴𝐴𝐶) = 1
+- for an amino acid sequence we need 20 letter alphabet
+- Scan a sequence, take k-tuple for every position i and assign to position
 𝒄𝒊 in the hash table
 
 ### Chaining
@@ -1126,24 +1127,24 @@ Uses local alignment!
 More time-efficient than FASTA
 
 1. For the query sequence, all k-mers are considered
-• typically k=3 for an amino acid sequence and k=11 for a nucleotide sequence
+- typically k=3 for an amino acid sequence and k=11 for a nucleotide sequence
 2. Seeding - for each k-mer from step 1, all k-mers from the universe of all possible k-mers scoring above a given threshold 𝑻 are generated
-• E.g. for proteins, typically BLOSSUM 62 scoring matrix and positive 𝑇 is used → since there are many negative scores in BLOSSUM 62, only very similar 3-mers score above given threshold, e.g., for 𝑻 = 𝟏𝟗 only CHH, CHY and CYH will score sufficiently against the query sequence 3-mer CHH
+- E.g. for proteins, typically BLOSSUM 62 scoring matrix and positive 𝑇 is used → since there are many negative scores in BLOSSUM 62, only very similar 3-mers score above given threshold, e.g., for 𝑻 = 𝟏𝟗 only CHH, CHY and CYH will score sufficiently against the query sequence 3-mer CHH
 3. For the k-mers in step 2, a finite state automata (FSA) is built to be used for scanning the database. The FSA is then used to scan against every database sequence; the positions of the matched k-mers in the query and DB sequences are stored → alignment matrix similar to the FASTA one
 4. differs in the older and newer version of BLAST.
 a) In the older version, every k-mer scoring above the threshold 𝑻 is extended in both directions until the score drops by some amount 𝑋𝑈 with respect to the maximum obtained so far. The extension is called high scoring pair (HSP)
 b) Later versions of BLAST (gapped BLAST) use the two hit approach. The idea is that an HSP should contain at least two sufficiently well scoring k-mers
-• value of 𝑻 is decreased (compared to 4a)
-• k-mers on the same diagonal within given distance are identified and joined
-• extension as in 4a takes place
-• HSPs not scoring above a threshold 𝑺𝒈 are removed
-• 𝑆𝑔 is set so that about only 2% of the database sequence would pass
+- value of 𝑻 is decreased (compared to 4a)
+- k-mers on the same diagonal within given distance are identified and joined
+- extension as in 4a takes place
+- HSPs not scoring above a threshold 𝑺𝒈 are removed
+- 𝑆𝑔 is set so that about only 2% of the database sequence would pass
 5. HSPs with scores exceeding 𝑺𝒈 are used to seed dynamic
 programming
-• the DP starts from the center of highest scoring k-mer of the HSP
-• the matrix is filled in both directions until the score 𝑋𝑔 falls below the score of the current highest scoring alignment
-• no band restrictions takes place as in FASTA
-• score of the highest scoring alignment is used to determine the significance
+- the DP starts from the center of highest scoring k-mer of the HSP
+- the matrix is filled in both directions until the score 𝑋𝑔 falls below the score of the current highest scoring alignment
+- no band restrictions takes place as in FASTA
+- score of the highest scoring alignment is used to determine the significance
 
 ### HSP - High Score Pair
 
@@ -1160,7 +1161,7 @@ extreme value (Gumbel) distribution
 > The theory assumes that alignment can start anywhere, which is not true near
 the ends of the sequences (edge effect) → effective length used instead of real
 length
-• Especially valid for short sequences (<200 residues)
+- Especially valid for short sequences (<200 residues)
 
 ### E-value
 (DANGER ZONE :D)
@@ -1174,14 +1175,14 @@ Succesful (complexity decreased to `O(log(n)` or even `O(1)` in case of hashing)
 ### BLAT
 BLAST-like alignment tool
 Procedure mostly identical to BLAST apart from the HSPs identification
-• BLAST scans the database letter by letter
-• BLAT builds an in-memory index (hash table) for non-overlapping DB k-mers and this index is then used for every query sequence position
-• Hamming distance used as the distance/similarity measure
+- BLAST scans the database letter by letter
+- BLAT builds an in-memory index (hash table) for non-overlapping DB k-mers and this index is then used for every query sequence position
+- Hamming distance used as the distance/similarity measure
 
 ### SSAHA
-• Sequence Search and Alignment by Hashing Algorithm [Ning et al., 2001]
-• Primarily meant to be used for nucleotide sequences but the idea is generalizable to protein sequences as well
-• Works over k-tuples
+- Sequence Search and Alignment by Hashing Algorithm [Ning et al., 2001]
+- Primarily meant to be used for nucleotide sequences but the idea is generalizable to protein sequences as well
+- Works over k-tuples
 Simplification, because it works over hash-lists, not over sequences itself
 
 ### FT#N
@@ -1232,8 +1233,8 @@ Note: There are many ilustrational pictures and schemes in the presentation.
 > Best alignment corresponds to the most probable path through the model → Viterbi algorithm for pair HMM
 
 ### Significance of matches
-• With the standard DP programming solution, it is difficult to identify correct alignment when the similarity is weak
-• With pair HMM we can compute the probability that a pair of sequences is related given any alignment
+- With the standard DP programming solution, it is difficult to identify correct alignment when the similarity is weak
+- With pair HMM we can compute the probability that a pair of sequences is related given any alignment
 
 -- ilustration of the forward algorithm
 
@@ -1252,26 +1253,26 @@ threshold
 
 Motivation
  - MSA contains conserved regions corresponding to
-   • signals (promoters, ...)
-   • common structural motifs
-   • chemical reactivity (active sites, ...)
+   - signals (promoters, ...)
+   - common structural motifs
+   - chemical reactivity (active sites, ...)
  - When encountering a new sequence one is interested in comparing the new sequence to other, existing, sequences
-• description of a set of sequences
-• assigning new sequence to a set of
+- description of a set of sequences
+- assigning new sequence to a set of
 sequences
-• scoring of the assignment
+- scoring of the assignment
  - Models of conserved regions
-• consensus sequence
-• patterns
-• position specific scoring matrix
+- consensus sequence
+- patterns
+- position specific scoring matrix
 (PSSM)
-• Hidden Markov Models (HMM)
+- Hidden Markov Models (HMM)
 
 ### Consensus sequence
 > The simplest way to make a model from a MSA.
 Principle:
-• majority wins
-• *but* skip too much variation
+- majority wins
+- *but* skip too much variation
 
 > Algorithm:
 1. Count symbol distribution in each column independently
@@ -1298,12 +1299,12 @@ Cons: Highly dependent on the training set, Small patterns generate lots of hits
 and the sequence is scored by the PSSM (able to paralelize)
 
 Pros: 
-• Relatively fast
-• Querying is easy to implement
-• Match scores are statistically interpretable
+- Relatively fast
+- Querying is easy to implement
+- Match scores are statistically interpretable
 Cons:
-• No insertions or deletions and
-• constant-length regions
+- No insertions or deletions and
+- constant-length regions
 
 ### PSSM - weighting
 > Highly populated families can contain big subfamilies which can negatively influence the results
@@ -1311,8 +1312,8 @@ Cons:
 
 ### PSI-BLAST
 > Position specific iterated BLAST
-• establishment of profiles
-• using profiles to search sequence database
+- establishment of profiles
+- using profiles to search sequence database
 
 Algorithm
 1. Search database using BLASTP
@@ -1320,43 +1321,43 @@ Algorithm
 3. Get PSSM from the MSA
 4. Use the profile from PSSM to search
 against database using BLASTP
-• use PSSM instead of substitution matrix
+- use PSSM instead of substitution matrix
 5. If new hits are identified add them to the
 MSA and update the profile
 6. Repeat steps 4 and 5 until stabilization
 
 Pros:
-• Capable to identify up to three times more 30% homologues than BLAST
-• Fast because using BLAST heuristics
-• Allows PSSMs on large databases
+- Capable to identify up to three times more 30% homologues than BLAST
+- Fast because using BLAST heuristics
+- Allows PSSMs on large databases
 Cons:
-• Profile drift
-• high sensitivity → false positives → biased profile → incorporation in subsequent cycles
+- Profile drift
+- high sensitivity → false positives → biased profile → incorporation in subsequent cycles
 
 ### Operating Instructions
  - Consensus sequences
-• to find highly conserved signatures such as, for example, enzyme restriction sites
+- to find highly conserved signatures such as, for example, enzyme restriction sites
 for DNA
  - Patterns
-• to search for small signatures or active sites
-• to communicate with other biologists
+- to search for small signatures or active sites
+- to communicate with other biologists
  - PSSM
-• to model small regions with high variability but constant length
+- to model small regions with high variability but constant length
 
 ### Profile Hidden Markov Models
-> • HMM can capture information present in an MSA → an alternative to PSSM → profile HMM
-• Match states come from PSSM built from the input MSA and capture log-odds ratio of a residue at given position
-• We should introduce position-dependent gap model, because at some positions insertions/deletions are more probable (higher ratio of gaps in the MSA)
+> - HMM can capture information present in an MSA → an alternative to PSSM → profile HMM
+- Match states come from PSSM built from the input MSA and capture log-odds ratio of a residue at given position
+- We should introduce position-dependent gap model, because at some positions insertions/deletions are more probable (higher ratio of gaps in the MSA)
 
 > If we have a profile 𝑷 and align a sequence 𝒔 to it, at each step 𝑖 we can
 either
-• match a letter of 𝑠 to 𝑃 → 𝑴_𝒊
-• add gap to 𝒔 (the corresponding letter in 𝑠 will be possibly matched with some later position in 𝑃) → 𝑫_𝒊
-• add gap to the profile and align given position in 𝑠 with a gap in 𝑃 → 𝑰_𝒊
-• 𝑴_𝒊, 𝑫_𝒊, 𝑰_𝒊 correspond to the states of the HMM
+- match a letter of 𝑠 to 𝑃 → 𝑴_𝒊
+- add gap to 𝒔 (the corresponding letter in 𝑠 will be possibly matched with some later position in 𝑃) → 𝑫_𝒊
+- add gap to the profile and align given position in 𝑠 with a gap in 𝑃 → 𝑰_𝒊
+- 𝑴_𝒊, 𝑫_𝒊, 𝑰_𝒊 correspond to the states of the HMM
 which emit letters of the query sequence with
 given probabilities (learned from a MSA)
-• Path in the HMM shows how a sequence could
+- Path in the HMM shows how a sequence could
 be aligned to the profile and moreover gives the
 score reflecting the probability with which such
 an alignment could arise
@@ -1364,11 +1365,11 @@ an alignment could arise
 ### Protein Family Databases
 
 > There exist many databases of MSAs and related
-• consensus sequences
-• patterns
-• HMMs
-• ...
-• Some databases contain multiple representations of families
+- consensus sequences
+- patterns
+- HMMs
+- ...
+- Some databases contain multiple representations of families
 
 ### Prosite
 > Collection of motifs, protein domains, families and functional sites
@@ -1379,97 +1380,99 @@ an alignment could arise
 
 > Includes MSAs available as PSSMs
  - NCBI-curated domains based on 3D structure
-• imported domains models (Pfam, TIGRFAM, SMART, COG, KOG ...)
+- imported domains models (Pfam, TIGRFAM, SMART, COG, KOG ...)
  - CD-search
-• search interface for scanning CDD against submitted protein or nucleotide query
-• uses RPS-BLAST (variant of PSI-BLAST where profiles are precomputed and searched
+- search interface for scanning CDD against submitted protein or nucleotide query
+- uses RPS-BLAST (variant of PSI-BLAST where profiles are precomputed and searched
 by the query sequence)
 - CDART
-• Conserved Domain Architecture Retrieval Tool
-• being used to analyze the domain architecture and retrieve proteins with similar architecture
+- Conserved Domain Architecture Retrieval Tool
+- being used to analyze the domain architecture and retrieve proteins with similar architecture
 
 ### Pfam
-> • Collection of protein domains and families and respective MSAs
-• Uses HMMs (HMMER3 package)
-• Versions
-• Pfam-A
-• manually curated
-• over 12,000,000 sequences in over 13,500 families
-• Pfam-B
-• automatically clustered and aligned sequences not covered by Pfam-A
+> - Collection of protein domains and families and respective MSAs
+- Uses HMMs (HMMER3 package)
+- Versions
+- Pfam-A
+- manually curated
+- over 12,000,000 sequences in over 13,500 families
+- Pfam-B
+- automatically clustered and aligned sequences not covered by Pfam-A
 
 ### InterPro
-> • Combination of protein signatures from a number of member databases
+> - Combination of protein signatures from a number of member databases
 into a single searchable resource
-• CATH/Gene3D, PANTHER, Pfam, PRINTS, ProDom, PROSITE, SMART,
+- CATH/Gene3D, PANTHER, Pfam, PRINTS, ProDom, PROSITE, SMART,
 SUPERFAMILY, TIGRFAM, ....
-• INTERPROSCAN
-• allows scanning of sequences again InterPro’s sequences
-• accessible also using web services
+- INTERPROSCAN
+- allows scanning of sequences again InterPro’s sequences
+- accessible also using web services
 
 # 10 Phylogenetics
+[prezentace](https://cunicz-my.sharepoint.com/personal/51137390_cuni_cz/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures%2Flecture10%5Fphylogenetics%2Epdf&parent=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures)
 ### Outline
-> • Motivation
-• Basics -> terminology
-• Tree construction techniques -> molecular markers, tree building, distance-based methods, parsimony-based methods, tree reliability
+> - Motivation
+- Basics -> terminology
+- Tree construction techniques -> molecular markers, tree building, distance-based methods, parsimony-based methods, tree reliability
 
 ### Phylogenetics
-> The study of evolutionary relatedness among various groups of  entities(e.g., species, populations)
-• Can be obtained from fossil records containing morphological information about ancestors of  common species
-• but, e.g., for microorganisms the fossils are not available
-• Genes can be viewed as molecular fossils
-• accumulation of  mutations over time causes phenotypic changes•more data available
-• no sampling bias
-• Assumptions
-• sequences using in phylogenetic construction are homologous
-• sequence variability is sufficiently informative
-• each sequence position evolved independently
+> The study of evolutionary relatedness among various groups of  entities (e.g., species, populations)
+- Can be obtained from fossil records containing morphological information about ancestors of  common species
+- but, e.g., for microorganisms the fossils are not available
+- Genes can be viewed as molecular fossils
+- accumulation of  mutations over time causes phenotypic changes
+- more data available
+- no sampling bias
+- Assumptions
+  - sequences using in phylogenetic construction are homologous
+  - sequence variability is sufficiently informative
+  - each sequence position evolved independently
 
 ### Trees
 > Tree is:
-• undirected graph without cycles
-• branch
-• path in the tree
-• root
-• rooted tree
-• a tree with one node being the root, forming a hierarchy
-• unrootedtree
-• a tree where all the nodes are equal
-• topology
-• mutual arrangement of the nodes in the tree
-• branching pattern
+- undirected graph without cycles
+- branch
+  - path in the tree
+- root
+  - rooted tree
+    - a tree with one node being the root, forming a hierarchy
+  - unrootedtree
+    - a tree where all the nodes are equal
+- topology
+  - mutual arrangement of the nodes in the tree
+  - branching pattern
 
 ### Phylogeny-related terminology
-> • Taxon (taxa)
-• group of (one or more) entities considered as a unit
-• Clade(monophyletic group)
-• a group of taxa descended from a single common ancestor
-• two taxa share a unique common ancestor
-• Lineage
-• a branch showing ancestor-descendant relationship
-• Phylogeny
-• the tree-branching pattern representing the evolutionary divergence
-• to obtain valid species phylogeny, multiple phylogenetic trees from variety of genes and gene families should be built
-• some parts of genome evolve more rapidly than others
+> - Taxon (taxa)
+- group of (one or more) entities considered as a unit
+- Clade(monophyletic group)
+- a group of taxa descended from a single common ancestor
+- two taxa share a unique common ancestor
+- Lineage
+- a branch showing ancestor-descendant relationship
+- Phylogeny
+- the tree-branching pattern representing the evolutionary divergence
+- to obtain valid species phylogeny, multiple phylogenetic trees from variety of genes and gene families should be built
+- some parts of genome evolve more rapidly than others
 
 # Tree rooting
-> • Some algorithms result in a rooted tree some do not → no assumption about direction of evolution
+> - Some algorithms result in a rooted tree some do not → no assumption about direction of evolution
 
  - Rooting by midpoint
-• Place root at the midway point between the two most distant taxa in the tree -> Assumes constant clock-like manner of  evolution
+- Place root at the midway point between the two most distant taxa in the tree -> Assumes constant clock-like manner of  evolution
  -  Rooting using an outgroup
- • close enough to ingroup to allow inference from sequence or trait data, but far enough to be a clear outgroup
- • often determined from an independent source of information
+ - close enough to ingroup to allow inference from sequence or trait data, but far enough to be a clear outgroup
+ - often determined from an independent source of information
     - bird sequence can be outgroup for mammals phylogenetic analysis (based on evidence that birds branched off prior to all mammals)
 
 ### Phylogenetic tree representation
  - Cladogram
- • branch lengths have no evolutionary meaning (do not correspond to the amount of  genetic change)
+ - branch lengths have no evolutionary meaning (do not correspond to the amount of  genetic change)
  - Phylogram
- • branch lengths represent the amount of  evolutionary divergence
+ - branch lengths represent the amount of  evolutionary divergence
  - Newick format
- • nested parentheses format
- • phylogram-based format includes branch lengths
+ - nested parentheses format
+ - phylogram-based format includes branch lengths
     ***example of the Newick format***:
  - (((B:1,C:2),A:2),(D:1.5,E:3))
  - (((B,C),A),(D,E))
@@ -1477,40 +1480,40 @@ SUPERFAMILY, TIGRFAM, ....
 ### Phylogenetics procedure
 ```
 1. Choosing molecular markers
-• what data to use for the analysis?
+- what data to use for the analysis?
 2. Performing multiple sequence alignment
-• aligned positions are considered to be genealogically related
+- aligned positions are considered to be genealogically related
 3. Choosing a model of  evolution
 4. Choice of  the tree building method
-• algorithm for building the tree itself
-• distance-based vs. character-based
+- algorithm for building the tree itself
+- distance-based vs. character-based
 5. Assessing tree reliability
 ```
 ### Molecular markers
  - Nucleotide sequence
-• evolves more rapidly → suitable for more closely related organisms
-• e.g., noncoding regions of  mitochondrial DNA for individuals within population
+- evolves more rapidly → suitable for more closely related organisms
+- e.g., noncoding regions of  mitochondrial DNA for individuals within population
  - Protein sequence
-• slow evolving → distantly related species
-• ribosomal RNA is slowly evolving as well
-• more conserved than nucleotide sequences
-• single-point mutation in DNA does not have to lead to protein sequences/structure change → synonymous (does not change AA type) vs. nonsynonymous (alternates AA type) mutation
-• different codons are more preferred for a given AA in different species
+- slow evolving → distantly related species
+- ribosomal RNA is slowly evolving as well
+- more conserved than nucleotide sequences
+- single-point mutation in DNA does not have to lead to protein sequences/structure change → synonymous (does not change AA type) vs. nonsynonymous (alternates AA type) mutation
+- different codons are more preferred for a given AA in different species
 
 ### Sequence alignment
  - Identification of related positions in the sequences
  - More than one multiple sequence alignments tools can and should be applied
  - Manual refinement
-   • alignment can contain errors which have to be corrected
-   • guidelines
-   • cofactor residues
-   • residues with similar physico-chemical properties
-   • residues sharing secondary structure
+   - alignment can contain errors which have to be corrected
+   - guidelines
+     - cofactor residues
+     - residues with similar physico-chemical properties
+     - residues sharing secondary structure
 
-# Evolutionary distances
+### Evolutionary distances
  - Models of  mutation and evolution built over alignments to assess evolutionary distance to a pair of  sequences
  - Evolutionary (pairwise) distance
- - Estimated number of mutations that has occurred since two sequences diverged from their common ancestor
+   - Estimated number of mutations that has occurred since two sequences diverged from their common ancestor
 
 ### Fractional alignment difference (p-distance)
 > p = D/L
@@ -1523,20 +1526,25 @@ SUPERFAMILY, TIGRFAM, ....
 2. For low mutation rates or short periods of time only few mutations happen → high statistical variation between short sequences → errors in p-distance estimations
 3. Notall species evolve at the same rate (different evolutionary pressures)
 
-### Poison corrected distance
- - waits for writing
+### Poisson corrected distance
+ - The idea is to come up with a formula which would relate the actual number of mutations and observed mutations (p-distance)
+ - Assumption that the probability of a mutation at a position follows Poisson distribution `P(x=k)=(l^k * e^-l)/ k!`
+ - I skip there the step-by-step process and give there only the result:
+ - The Poisson corrected distance id defined as `d_p:=-ln(1-p)`
 
 ### Jukes-Cantor model
+ - Nucleotide sequence evolutionary model
+
 
 ### Tree building methods
  - Distance-based methods
- • based on quantitative measureslike the distanceor similarity between species (e.g., sequences)
-• UPGMA (Unweighted Pair Group method Using Arithmetic Average)
-• Neighbor joining
+ - based on quantitative measureslike the distanceor similarity between species (e.g., sequences)
+- UPGMA (Unweighted Pair Group method Using Arithmetic Average)
+- Neighbor joining
  - Character-based methods
-• based on qualitative aspectslike common characters
-• maximum parsimony
-• maximum likelihood
+- based on qualitative aspectslike common characters
+- maximum parsimony
+- maximum likelihood
 
 ### UPGMA
 
