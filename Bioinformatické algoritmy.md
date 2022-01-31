@@ -1,6 +1,216 @@
 # Bioinformatics algorithms
 ![](https://images.theconversation.com/files/17729/original/md78kkzd-1353034364.jpg?ixlib=rb-1.1.0&rect=0%2C48%2C500%2C243&q=45&auto=format&w=1356&h=668&fit=crop)
 
+- [Bioinformatics algorithms](#bioinformatics-algorithms)
+    - [Poznámky:](#poznámky)
+- [Otázky ke studiu](#otázky-ke-studiu)
+    - [02](#02)
+    - [03](#03)
+    - [04](#04)
+    - [05](#05)
+    - [06](#06)
+    - [07](#07)
+    - [08](#08)
+    - [09](#09)
+    - [10](#10)
+    - [11 Protein structure similarity](#11-protein-structure-similarity)
+    - [12 Protein structure prediction](#12-protein-structure-prediction)
+- [01 Introduction and overview](#01-introduction-and-overview)
+    - [Sequence](#sequence)
+    - [Structure](#structure)
+    - [Molecular actors](#molecular-actors)
+    - [Central dogma of molecular biology](#central-dogma-of-molecular-biology)
+    - [Structure (of Peptide)](#structure-of-peptide)
+    - [Mathematical description of molecules](#mathematical-description-of-molecules)
+    - [Structure-function correlation](#structure-function-correlation)
+    - [Similarity principle](#similarity-principle)
+    - [Function Example –G-Protein Coupled Receptors](#function-example-g-protein-coupled-receptors)
+    - [Course overview -existing nucleotide and protein databases and data formats](#course-overview--existing-nucleotide-and-protein-databases-and-data-formats)
+    - [Course overview - dynamic programming](#course-overview---dynamic-programming)
+    - [Course overview – sequence alignment](#course-overview--sequence-alignment)
+    - [Course overview - MSA (Multiple-Sequence Alignment)](#course-overview---msa-multiple-sequence-alignment)
+    - [Motifs](#motifs)
+    - [Phylogenetic trees](#phylogenetic-trees)
+    - [Protein structure similarity](#protein-structure-similarity)
+    - [Protein structure prediction](#protein-structure-prediction)
+- [02 DATA sources and formats](#02-data-sources-and-formats)
+    - [Sequence databases and file formats](#sequence-databases-and-file-formats)
+    - [GenBank](#genbank)
+    - [Searching GenBank with Entrez](#searching-genbank-with-entrez)
+    - [Searching with FTP](#searching-with-ftp)
+    - [File Formats](#file-formats)
+        - [GenBank Flat File Format](#genbank-flat-file-format)
+          - [Sample of GBFFF](#sample-of-gbfff)
+        - [FASTA](#fasta)
+        - [VCF](#vcf)
+        - [FASTQ](#fastq)
+        - [Next](#next)
+    - [Protein data banks](#protein-data-banks)
+        - [SwissProt](#swissprot)
+        - [TrEMBL](#trembl)
+        - [PIR](#pir)
+        - [UniProt](#uniprot)
+        - [ProSite](#prosite)
+        - [Pfam](#pfam)
+        - [InterPro](#interpro)
+    - [Structure databases and data formats](#structure-databases-and-data-formats)
+        - [PDB (Protein DataBank)](#pdb-protein-databank)
+          - [PDB Format](#pdb-format)
+        - [mmCIF](#mmcif)
+    - [Protein similarity classification](#protein-similarity-classification)
+        - [SCOP - Structural Classification of Protein Structures](#scop---structural-classification-of-protein-structures)
+        - [CATH (Class, Architecture, Topology, Homologous superfamily)](#cath-class-architecture-topology-homologous-superfamily)
+    - [Programmatic access to data](#programmatic-access-to-data)
+- [03 Dynamic programming](#03-dynamic-programming)
+    - [Outline](#outline)
+    - [Recursion](#recursion)
+    - [Dynamic programming](#dynamic-programming)
+    - [Dimension of DP problem](#dimension-of-dp-problem)
+    - [Matrix Product Ordering (MPO)](#matrix-product-ordering-mpo)
+    - [Longest Common Subsequence](#longest-common-subsequence)
+- [04 Pairwise sequence alignment](#04-pairwise-sequence-alignment)
+    - [Outline](#outline-1)
+    - [Motivation](#motivation)
+    - [Biological sequences](#biological-sequences)
+    - [Hamming distance](#hamming-distance)
+    - [Alignments](#alignments)
+    - [Editation distance](#editation-distance)
+    - [Backtracking](#backtracking)
+    - [Operation weighted ED (OWED)](#operation-weighted-ed-owed)
+    - [Alphabet-Weight editation distance (AWED)](#alphabet-weight-editation-distance-awed)
+    - [Global Sequence Alignment (GA)](#global-sequence-alignment-ga)
+    - [Gap penalization in alignments](#gap-penalization-in-alignments)
+    - [Needleman-Wunsch](#needleman-wunsch)
+    - [Local Sequence Alignment (LA)](#local-sequence-alignment-la)
+    - [Smith-Waterman (SW)](#smith-waterman-sw)
+    - [Optimizations](#optimizations)
+    - [Some flavors of prewiously said](#some-flavors-of-prewiously-said)
+    - [Evolutionary nature of sequence alignment](#evolutionary-nature-of-sequence-alignment)
+    - [Scoring systems](#scoring-systems)
+        - [Probabilistic model](#probabilistic-model)
+          - [Random model](#random-model)
+          - [Match model](#match-model)
+        - [Issues on probabilistic models](#issues-on-probabilistic-models)
+        - [PAM matrices](#pam-matrices)
+        - [Computation of PAM matrices](#computation-of-pam-matrices)
+        - [BLOSSOM matrices](#blossom-matrices)
+- [05 Multiple Sequence Alignment](#05-multiple-sequence-alignment)
+    - [Outline](#outline-2)
+    - [Motivation](#motivation-1)
+    - [Hand-made MSAs](#hand-made-msas)
+    - [Not "computed" MSAs](#not-computed-msas)
+    - [Scoring](#scoring)
+    - [Multidimensional dynamic programming](#multidimensional-dynamic-programming)
+    - [Computational complexity of MSA](#computational-complexity-of-msa)
+    - [Heuristic Algorithms](#heuristic-algorithms)
+    - [Progressive alignment methods](#progressive-alignment-methods)
+    - [Star alignment](#star-alignment)
+    - [SA – time complexity](#sa--time-complexity)
+    - [Feng & Doolitle](#feng--doolitle)
+    - [Profile/MSA alignment](#profilemsa-alignment)
+    - [ClustalW](#clustalw)
+    - [Clustal Omega](#clustal-omega)
+    - [T-Coffee](#t-coffee)
+    - [Iterative refinement](#iterative-refinement)
+    - [Barton-Stenberg](#barton-stenberg)
+    - [Block-based alignment](#block-based-alignment)
+    - [DIALIGN](#dialign)
+    - [MAFFT](#mafft)
+        - [Version 5:](#version-5)
+        - [Version 6:](#version-6)
+    - [MUSCLE](#muscle)
+    - [BAliBase](#balibase)
+- [06 Speeding Up Similarity Search In Protein Databases](#06-speeding-up-similarity-search-in-protein-databases)
+    - [Outline](#outline-3)
+    - [Motivation](#motivation-2)
+    - [Hashing](#hashing)
+    - [Chaining](#chaining)
+    - [FAST(A)](#fasta-1)
+    - [BLAST](#blast)
+    - [HSP - High Score Pair](#hsp---high-score-pair)
+    - [E-value](#e-value)
+    - [Indexing](#indexing)
+    - [BLAT](#blat)
+    - [SSAHA](#ssaha)
+    - [FT#N](#ftn)
+    - [Parallelization](#parallelization)
+- [07 Hidden Markov Models](#07-hidden-markov-models)
+    - [Viterbi algorithm](#viterbi-algorithm)
+    - [Forward algorithm](#forward-algorithm)
+- [08 Probabilistic alignment](#08-probabilistic-alignment)
+    - [FSA - based view of pairwise alignment](#fsa---based-view-of-pairwise-alignment)
+    - [Significance of matches](#significance-of-matches)
+    - [Waterman & Eggert](#waterman--eggert)
+- [09 Patterns, Profiles and Motifs](#09-patterns-profiles-and-motifs)
+    - [Consensus sequence](#consensus-sequence)
+    - [Patterns](#patterns)
+    - [Position specific scoring matrix for profiles](#position-specific-scoring-matrix-for-profiles)
+    - [PSSM - weighting](#pssm---weighting)
+    - [PSI-BLAST](#psi-blast)
+    - [Operating Instructions](#operating-instructions)
+    - [Profile Hidden Markov Models](#profile-hidden-markov-models)
+    - [Protein Family Databases](#protein-family-databases)
+    - [Prosite](#prosite-1)
+    - [CDD](#cdd)
+    - [Pfam](#pfam-1)
+    - [InterPro](#interpro-1)
+- [10 Phylogenetics](#10-phylogenetics)
+    - [Outline](#outline-4)
+    - [Phylogenetics](#phylogenetics)
+    - [Trees](#trees)
+    - [Phylogeny-related terminology](#phylogeny-related-terminology)
+    - [Tree rooting](#tree-rooting)
+    - [Phylogenetic tree representation](#phylogenetic-tree-representation)
+    - [Phylogenetics procedure](#phylogenetics-procedure)
+    - [Molecular markers](#molecular-markers)
+    - [Sequence alignment](#sequence-alignment)
+    - [Evolutionary distances](#evolutionary-distances)
+    - [Fractional alignment difference (p-distance)](#fractional-alignment-difference-p-distance)
+        - [Drawbacks](#drawbacks)
+    - [Poisson corrected distance](#poisson-corrected-distance)
+    - [Jukes-Cantor model](#jukes-cantor-model)
+    - [Tree building methods](#tree-building-methods)
+    - [UPGMA](#upgma)
+    - [Neighbor joining](#neighbor-joining)
+        - [NJ – Algorithm](#nj--algorithm)
+        - [Star decomposition](#star-decomposition)
+    - [Parsimony](#parsimony)
+    - [Weighted (generalized) parsimony](#weighted-generalized-parsimony)
+    - [Traditional parsimony](#traditional-parsimony)
+    - [Boostrapping](#boostrapping)
+- [11 Protein structure similarity](#11-protein-structure-similarity-1)
+    - [Background](#background)
+    - [Pairwise protein structure similarity task](#pairwise-protein-structure-similarity-task)
+    - [RMSD](#rmsd)
+    - [Superpositional algorithms](#superpositional-algorithms)
+    - [Typical workflow of superposition approaches](#typical-workflow-of-superposition-approaches)
+    - [Classical Approaches](#classical-approaches)
+    - [DALI](#dali)
+        - [DALI - Algorithm](#dali---algorithm)
+          - [DALI – Monte Carlo (step 5)](#dali--monte-carlo-step-5)
+        - [DALI - Scoring](#dali---scoring)
+    - [CE](#ce)
+        - [CE - Algorithm](#ce---algorithm)
+    - [PROSUP, STRUCTAL (TN)](#prosup-structal-tn)
+    - [MAMMOTH](#mammoth)
+        - [MAMMOTH (cont.)](#mammoth-cont)
+    - [FATCAT](#fatcat)
+- [12 Protein structure prediction](#12-protein-structure-prediction-1)
+    - [Outline](#outline-5)
+    - [Motivation](#motivation-3)
+    - [Structure → function](#structure--function)
+    - [Protein structure prediction tasks](#protein-structure-prediction-tasks)
+    - [Protein structure determination](#protein-structure-determination)
+      - [X-ray crystallography](#x-ray-crystallography)
+        - [X-ray crystallography – quality measures](#x-ray-crystallography--quality-measures)
+      - [NMR spectroscopy](#nmr-spectroscopy)
+        - [NMR spectroscopy – quality measures](#nmr-spectroscopy--quality-measures)
+      - [3D cryo-EM](#3d-cryo-em)
+    - [Protein folding](#protein-folding)
+    - [Anfinsen’s dogma](#anfinsens-dogma)
+    - [Levinthal’s paradox](#levinthals-paradox)
+    - [Template existence dependency of tertiary structure prediction approaches](#template-existence-dependency-of-tertiary-structure-prediction-approaches)
+    - [Template-less prediction](#template-less-prediction)
 ### Poznámky:
 Pokud najdete label "DANGER ZONE" u některého nadpisu, znamená to, že jsem dost možná nepochopil hlavní pointu toho tématu, takže je to jen nástřel a je fajn se podívat na to do prezentace :D
 # Otázky ke studiu
@@ -140,7 +350,7 @@ Poznámky pro vylepšení prezentace:
 V prezentaci 4 na slidu 13 je v třetím bulet pointu `D[i,j] -> D[i-1,j]` namísto `D[i,j] -> D[i-1,j-1]`.
 V prezentaci u CATH je místo architecture napsáno hierarchy
 
-### 11
+### 11 Protein structure similarity
  - co označuje hodnota 'RMSD'?
  - co je cílem superpozičních algoritmů?
  - na jakém principu funguje algoritmus DALI a jak uplatňuje metodu Monte-Carlo?
@@ -149,6 +359,15 @@ V prezentaci u CATH je místo architecture napsáno hierarchy
  - co je specifické na algoritmu MAMMOTH?
  - jaký má MAMMOTH mechanismus kontroly, že vyšel správně?
  - co je to FATCAT (název ve zkratce to docela vysvětluje)?
+
+### 12 Protein structure prediction
+ - jaké jsou tři kroky (structure prediction tasks) k získání predikce 3D struktury proteinu?
+ - jaké jsou tři metody pro zjištění struktury proteinu?
+ - jaký je princip X-ray krystalografie
+ - jaká je princip NMR spektroskopie?
+ - jaký je princip 3D cryo-EM (stačí pochopit název :D )
+ - co říká Anfinsenovo dogma?
+ - co je to Levinthalův paradox a jak se vztahuje k predikci 3D struktury proteinů? 
 
 # 01 Introduction and overview
 [Presentation](https://cunicz-my.sharepoint.com/personal/51137390_cuni_cz/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures%2Flecture01%2Dcourse%2Doverview%2Epdf&parent=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures)
@@ -1742,4 +1961,152 @@ SUPERFAMILY, TIGRFAM, ....
    - modify protein A using twists to match protein B
    - path minimizing number of twists (twists are penalized) determines the distance of A and B
 
-# 12
+# 12 Protein structure prediction
+[Prezentation](https://cunicz-my.sharepoint.com/personal/51137390_cuni_cz/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures%2Flecture12%2Dprotein%2Dstructure%2Dprediction%2Epdf&parent=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures)
+[Lecture recording](https://cunicz-my.sharepoint.com/personal/51137390_cuni_cz/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures%20%2D%20video%2F2022%2D01%2D03%2Dstructure%2Dprediction%2D2%2Emkv&parent=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures%20%2D%20video)
+
+### Outline
+- Motivation
+- Protein structure determination techniques
+- Protein folding
+- Model scoring
+- Template-less prediction
+- Template-based prediction
+- Evaluation
+- Existing tools
+
+### Motivation
+- Sequence → structure → function
+-  The number of available (protein) sequences grows much faster
+than the number of available 3D structures
+- Given a protein sequence we want to determine its structure
+  - Inverse problem to protein structure design where, given a structure, we
+want to find sequence which codes for it
+
+### Structure → function
+- Inferring function from structure
+  - Detection of local structural motifs with functional roles
+  - Analysis of surface clefts → catalytic sites
+  - Conservation analysis
+  - Quaternary structure (beware of false positives due to crystallization)
+  - Buried and solvent exposed residues
+- Issues
+  - Moonlighting proteins
+    - Multiple functions carried out by a single domain
+  - Conformational change of shape upon binding
+    - ligand-bound state (holo structures) vs unbound state (apo structure)
+  - Intrinsically disordered proteins (IDP)
+    - Natively unfolded proteins
+
+### Protein structure prediction tasks
+- Secondary structure prediction
+  - Assign each amino acid one of three (or more) states (helix, sheet, loop)
+- Tertiary structure prediction
+  - Assign each amino acid/atom its position in 3D space
+- Interaction sites prediction
+  - Tertiary structure (intra-molecular) contacts
+  - Protein-protein/DNA/RNA sites prediction (inter-molecular quaternary structure contacts)
+  - Protein-ligand (active sites/pockets) prediction
+
+### Protein structure determination
+- X-Ray crystalography (89% of all)
+- NMR Spectroscopy (8%)
+- 3D (cryo) electron microscopy(2%)
+
+#### X-ray crystallography
+- Crystallized protein subjected to X-ray beams, electrons disperse the beam, interfering with each other forming a diffraction patterns which is observed
+- Electron density of crystal is determined by the positions of electrons (atoms) magnitudes and phases of the X-ray diffraction waves = diffraction pattern of the crystal
+  - Fourier transformation is used to estimate the
+electron density for each position
+- Works only for proteins which form a crystal →
+suitable for rigid proteins but unsuitable for
+flexible proteins
+
+##### X-ray crystallography – quality measures
+- Resolution
+- 3Å → secondary structure
+- 2.5Å → side chains
+- <1Å → hydrogen atoms
+- R-factor
+  - After structure reconstruction, theoretical diffraction pattern can be computed → difference between real and theoretical pattern expressed as percentage (how well model back-predicts the data)
+- Rule of thumb - good structure should have R-factor lower than resolution/10 ( ≤ 0.3 for 3Å resolution)
+- R(free)-factor
+- When set aside data is used for the real pattern
+- B-factor (temperature factor)
+- Thermal motion is present even in crystal → extent to which electron density is spread out for each atom
+- 𝐵 = 8(𝜋^2)(𝑈^2)
+
+#### NMR spectroscopy
+- Purified protein in a solution is put to a strong magnetic field and probed with radio waves and observed resonances (each atom has characteristic resonance in magnetic field based on its surroundings) which are analyzed to build a model of atomic nuclei and bonded atoms
+- Resonances give indication of which atoms are close to each other → list of restraints to build the model
+- NMR structure commonly includes ensemble of structures which fit the constraints → diverse regions correspond to flexible parts
+- Proteins in solution → works also for flexible proteins which can’t be locked in a crystal
+- Works for small to medium-sized proteins
+
+##### NMR spectroscopy – quality measures
+- Completeness of resonance assignments
+  - Percentage of atoms for which the resonances were measured
+- Statistically unusual resonances
+- Random coil index
+  - How does the resonance fit usual protein conformations such as secondary structure
+
+#### 3D cryo-EM
+- A beam of electrons and a system of electron lenses is used to image
+the biomolecule directly.
+- Cryo-EM
+  - Vitrification - protein solution is cooled so rapidly that water molecules do
+not have time to crystallize → thin layer of non-crystalline ice
+- Thousands of 2D projection images → 3D density map → fitting atomic
+model to the map
+- Chemistry Nobel prize in 2017 - Jacques Dubochet, Joachim Frank and
+Richard Henderson
+- Ability to analyze large, complex and flexible structure
+- Works for proteins in native state
+- Often breaking 3Å resolution barrier
+
+### Protein folding
+- Folding (skládání) is the process through which protein obtains its three-dimensional structure
+- The protein wants to fold into most thermodynamically efficient state, i.e. state with the lowest free energy
+- Information for folding is (mostly) driven by protein’s amino acid
+sequence through thermodynamic process
+  - Anfinsen’s dogma
+
+### Anfinsen’s dogma
+- ***All information needed to fold native structure of a protein is contained in its amino acid sequence***
+- Experiment with ribonuclease A (RNaseA), a 124-long extracellular enzyme
+with 4 disulfide bonds
+  - Observation
+    1. SS bonds reduced using mercaptoethanol → denaturation with 8M urea → inactive protein, flexible random polymer
+    2. Removal of urea → oxidation of –SH groups back to SS bonds → regain of more than 90% of activity
+- Control (proving that the protein was unfolded)
+- Change of the order of steps in second phase → 1-2% of activity and random assortment of SS
+bonds
+
+### Levinthal’s paradox
+- ***Reaching native folded state of a protein by a random search among all possible configurations can take an enormously long time***
+- Unfolded polypeptide chain has many degrees of freedom
+- Even a small number of allowed 𝜙 and 𝜓 combinations (torsion angles) leads to astronomically large number of structures
+- Proteins fold in at most seconds which is a paradox → there must be pathway or set of pathways leading to energetically favorable conformation
+  - Biased search
+  - When considering some conformations as stabilizing and preferred (energy bias), the folding time becomes reasonable [Zwanzig et al. "Levinthal's paradox." PNSA 89.1 (1992): 20-22]
+
+### Template existence dependency of tertiary structure prediction approaches
+ - If we have 2 proteins, then if their sequence similarity is, we can:
+   - `> 30%` ... for sure,
+   - `20%-30%` ... maybe (twilight zone),
+   - `< 20%` ... hardly
+   - make one of them template for the 3D structure prediction of the other.
+
+### Template-less prediction
+- If there does not exist a homologue (with known structure) with
+respect to the target we cannot use any structure as a template and
+the model needs to be build de novo (ab initio)
+- Approaches
+  - Molecular dynamics
+    - Model the folding process
+  - Conformational space exploration
+    - Sample the full conformation space
+  - Fragment-based approaches
+    - Restrict the conformation by considering predefined fragments
+
+
