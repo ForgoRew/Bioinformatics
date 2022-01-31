@@ -124,6 +124,10 @@ výpočet evoluční vzdálenosti
  - při vytváření fylogen. stromu se vytváří MSA. Jak se jeho tvorba liší od klasického MSA?
  - jak odhadnout "Evolutionary (pairwise) distance" u dvou sekvencí?
  - na základě vlastností mutací při evoluci a znalosti principu p-value (p=D/L) zkus domyslet 3 problémy (drawbacks), které mohou vznikat při delší evoluční době nebo u kratších mutací a při porovnávání délek evoluce dvou různých skupin organizmů
+ - jak Poisson corrected p-value umožňuje obejít "drawbacks" u p-value?
+ - na jakém principu funguje Jukes-Cantor model?
+ - jaké jsou metody pro budování fylogenetických stromů?
+ - UPGMA - co tento název označuje?
 
 Poznámky pro vylepšení prezentace:
 V prezentaci 4 na slidu 13 je v třetím bulet pointu `D[i,j] -> D[i-1,j]` namísto `D[i,j] -> D[i-1,j-1]`.
@@ -1534,7 +1538,12 @@ SUPERFAMILY, TIGRFAM, ....
 
 ### Jukes-Cantor model
  - Nucleotide sequence evolutionary model
-
+ - Assumptions:
+   - sites are independent
+   - sites have identical mutation rates
+   - all mutation substitutions happen at the same rate 𝜶 per unit time (probability of nucleotide change)
+   - better explained on 19th slide
+   - Jukes-Cantor distance is defined as `d_JC=(-3/4)ln(1-(4p/3))
 
 ### Tree building methods
  - Distance-based methods
@@ -1547,7 +1556,24 @@ SUPERFAMILY, TIGRFAM, ....
 - maximum likelihood
 
 ### UPGMA
+- Assumption
+  - molecular clock
+    - all taxa evolve at a constant rate and are equidistant from the root
+- Based on sequential clustering:
+1. Compute ***all-to-all distance matrix***
+2. Group ***2 taxa with the smallest distance***
+3. Place a node at the midpoint of the 2 taxa
+4. Form ***a reduced distance matrix***, treating the new group as a separate taxon
+  - distance between a group and a taxon T is the average of the distances of taxa in the group and T
+5. Repeat steps ***2-4*** until there is only one taxa
+6. Last taxa to be joined is treated as the outgroup
 
+- why UPGMA faily?
+  - assumption of "molecular clock", ***mutation speed*** has the same ***constant*** rate
+  - sum of times along any branch is the same
+    - if that is true, the tree will be constructed correctly
+    - UPGMA does not take into account the possibility of unequal substitution rates along different branches
+  - problems with ultrametrics (see slide 25)
 ### Neighbor joining
 ##### Star decomposition
 
