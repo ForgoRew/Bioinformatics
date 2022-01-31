@@ -128,10 +128,27 @@ výpočet evoluční vzdálenosti
  - na jakém principu funguje Jukes-Cantor model?
  - jaké jsou metody pro budování fylogenetických stromů?
  - UPGMA - co tento název označuje?
+ - jak se jmenuje algoritmus pro vytváření fylgenetikého stromu, založený na star-decomposition?
+ - jak fázi algoritmu Neighbor-Join označuje "branching"?
+ - co je to parsimonie?
+ - jaké jsou základní dva typy parsimonie?
+traditional a weighted (generalized) pasimony
+ - v čem se liší distance-based a parsimony-based techniky vytváření fylogenetických stromů?
+ - jak se ověřuje "reliability" (důvěryhodnost) fylogenetického stromu?
 
 Poznámky pro vylepšení prezentace:
 V prezentaci 4 na slidu 13 je v třetím bulet pointu `D[i,j] -> D[i-1,j]` namísto `D[i,j] -> D[i-1,j-1]`.
 V prezentaci u CATH je místo architecture napsáno hierarchy
+
+### 11
+ - co označuje hodnota 'RMSD'?
+ - co je cílem superpozičních algoritmů?
+ - na jakém principu funguje algoritmus DALI a jak uplatňuje metodu Monte-Carlo?
+ - v čem se CE liší od DALI a proč má stejnou nevýhodu (rozpoznává struktury v topologickém pořadí)?
+ - jaký je základní princip algoritmů PROSUP a STRUCTAL?
+ - co je specifické na algoritmu MAMMOTH?
+ - jaký má MAMMOTH mechanismus kontroly, že vyšel správně?
+ - co je to FATCAT (název ve zkratce to docela vysvětluje)?
 
 # 01 Introduction and overview
 [Presentation](https://cunicz-my.sharepoint.com/personal/51137390_cuni_cz/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures%2Flecture01%2Dcourse%2Doverview%2Epdf&parent=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures)
@@ -1459,7 +1476,7 @@ SUPERFAMILY, TIGRFAM, ....
 - to obtain valid species phylogeny, multiple phylogenetic trees from variety of genes and gene families should be built
 - some parts of genome evolve more rapidly than others
 
-# Tree rooting
+### Tree rooting
 > - Some algorithms result in a rooted tree some do not → no assumption about direction of evolution
 
  - Rooting by midpoint
@@ -1572,25 +1589,157 @@ SUPERFAMILY, TIGRFAM, ....
   - assumption of "molecular clock", ***mutation speed*** has the same ***constant*** rate
   - sum of times along any branch is the same
     - if that is true, the tree will be constructed correctly
-    - UPGMA does not take into account the possibility of unequal substitution rates along different branches
-  - problems with ultrametrics (see slide 25)
+  - UPGMA does not take into account the possibility of unequal substitution rates along different branches
+    - problems with ultrametrics (see slide 25)
 ### Neighbor joining
+ - solves both problems of UPGMA
+ - special case of star decomposition
+ - really being used by Clustal
+##### NJ – Algorithm
+1. Define 𝑇(star tree) as set of  leafs (sequences) and set 𝐿=𝑇
+2. Compute all-to-all distance matrix for every object in 𝐿
+3. Modify distances to compensate for long edges →𝐷𝑖𝑗
+4. Pick (𝐢,𝐣) ∈ 𝐿 with minimum 𝑫𝒊𝒋
+5. Define a new node 𝒌 and set 𝒅(𝒌𝒎)=𝟏/𝟐(𝒅(𝒊𝒎)+𝒅(𝒋𝒎)−𝒅(𝒊𝒋)),∀𝑚∈𝐿
+6. Add 𝒌 to 𝑻 with lengths 𝒅(𝒊𝒌)=𝟏/𝟐(𝒅(𝒊𝒋)+𝟏/𝟐(𝒓(𝒊)−𝒓(𝒋)),𝒅(𝒋𝒌)=𝒅(𝒊𝒋)−𝒅(𝒊𝒌)
+7. **𝑳=𝑳/𝒊,𝒋⋃𝒌**
+8. Repeat steps 4 – 7 until |𝑳|=𝟐
+9. Connect the remaining two nodes with length 𝑑(𝑖𝑗)
+10. Determine outgroupbased on the external knowledge
 ##### Star decomposition
-
-##### Branching
-
-##### Neighboring leaves selection
-
-##### Algorithm
-
+ - set of algorithms for phylogeny based on a "star" - each algorithm starts with a graph of sequences connected only with a one point (in the middle of them)
 ### Parsimony
+- Commonly used
+  - Unlikedistance-based methods almost no asssumptions about the distances
+  - Allows to hypothesize the ancestral sequence in addition to the point of divergence
+- Finding ***a tree which can explain the observed sequences*** with ***the minimum number of  substitutions***
 
 ### Weighted (generalized) parsimony
-
+ - Cost 𝑆(𝑎,𝑏)for each substitution in the tree 
+ - 
 ### Traditional parsimony
+ - Counting the number of  substitutions
 
-### Tree searching methods
+### Boostrapping
+ - a method for phylogenic tree evaluation
+ - repeating the process of tree generation multiple times but with different positions in the dataset sequences (>100), build consenzus tree, meassure agreement between them
+ - best on 38 slide :)
 
-### Phylogenetic tree evaluation
+# 11 Protein structure similarity
+[prezentace](https://cunicz-my.sharepoint.com/personal/51137390_cuni_cz/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures%2Flecture11%2Dprotein%2Dstructure%2Dsimilarity%2Epdf&parent=%2Fpersonal%2F51137390%5Fcuni%5Fcz%2FDocuments%2Fteaching%2Fbioinfo%2Flectures)
 
-##### Boostrapping
+### Background
+ - Structure-function correlation
+ - Approaches
+   - global similarity
+     - structures are globally similar on the fold level
+     - structures sharing global similarity might also share similar binding sites (protein-protein, protein-ligand, ...) or other functional motifs and therefore share similar function (at least with respect to given active site/motif)
+   - local similarity
+     - structures share similarity on the level of, e.g., active sites only
+     - globally dissimilar proteins can still share function since their correspondence can be related to the local functional motifs only
+
+### Pairwise protein structure similarity task
+ - Input
+   - A pair of protein structures (set of 3D coordinates of the constituent residues/atoms
+ - Output
+   - Nonalignment-basedmethods
+     - output only the similarity/distance
+   - Alignment/superposition-basedmethods
+     - give also structural superposition (3D match)
+
+### RMSD
+ - ***root-measure-square-deviation***
+ - `RMSD(S1,S2) = (1/N * SUM_i=1^N(sigma^2_i))^1/2`
+   - sigma...eucleidan distance between the mapped residues
+
+### Superpositional algorithms
+ - these want to find a superposition of 2 structures, which has minimal RMSD
+ - Given a mapping between atoms/amino acids of the two compared structures, superposition minimizing RMSD (based on the paired atoms) can be computed in linear time (e.g., using Kabschalgorithm or quaternions)
+### Typical workflow of superposition approaches
+1. Feature extraction
+2. Feature-based mapping
+3. Superposition
+4. Scoring
+
+### Classical Approaches
+- DALI
+- CE
+- SSAP
+- PROSUP
+- STRUCTAL
+- MAMMOTH
+- VAST
+- FATCAT
+
+### DALI
+ - ***Distance mAtrix aLIgnment*** [HolmandSander, 1993]
+ - Based on matrix of intra-residual distances
+   - 2D representation of a 3D structure
+   - independent of the coordinate frame
+ - Main idea
+   - similar structures share similar intra-residual distances →similar structures share similar distance matrix
+
+##### DALI - Algorithm
+1. Intra-residual distance matrix computation 𝑀
+2. Splitting 𝑀into overlapping submatrices of fixed size –contact patterns
+3. Identification of similar contact patterns
+4. Overlapping (pairs have a common fragment) contact patterns are merged to get seed patterns
+5. Seed pattern chosen and extendedby neighboring contact patterns using either Monte Carlo algorithm or branch-and-bound approach into the overall alignment
+
+###### DALI – Monte Carlo (step 5)
+1. Compute similarity score 𝑺 for the current alignment
+2. Randomly add a new (non-overlapping) pair into the alignment and compute score 𝑺′
+   - (𝑺′−𝑺)>𝟎→change is accepted
+   - (𝑺′−𝑺)<𝟎→change is accepted with the probability 𝑝=exp(𝛽(𝑺′−𝑺)) where 𝛽 is a parameter of the method
+3. Iterate until the system converges
+
+##### DALI - Scoring
+ - additive similarity score
+
+### CE
+ - Combinatorial Extension [Shindyalov, Bourne 1998]
+ - Unlike DALI does not resolve non-topological similarities (order of the structure alignment must follow the sequence order)
+ - Based on the notion of Aligned Fragment Pair (AFP) - sufficiently similar constant-length portions of consecutive residues (local structure) in both sequences
+
+##### CE - Algorithm
+1. Identification of AFPs 
+2. Suitable AFPs joined (path extension)
+3. Optimization of the path → structure superposition
+4. Iterative optimization of the superposition
+
+### PROSUP, STRUCTAL (TN)
+ - The main idea is to use dynamic programming in an iterative fashion
+ - Algorithm
+  1. generate one or more seed alignments
+  2. superposethe structures based on the initial alignment
+  3. take the inter-residual distances and use them to form a scoring matrix
+  4. perform dynamic programming where the distance matrix from previous step is used as the scoring matrix
+  5. the resulting path defines the new mapping of the residues which leads to a new structural superposition
+  6. iterate until convergence
+ - PROSUP and STRUCTAL use different ways of obtaining the initial alignment and scoring of the superposition
+   - e.g., STRUCUTAL employs exposure weighting where buried amino acids score higher when aligned
+
+### MAMMOTH
+ - MAtching Molecular Models Obtained from THeory [Ortiz, Strauss, Olmea; 2002]
+ - Algorithm:
+   - Divide 𝐶𝛼backbone into heptapeptides
+   - Convert each heptapeptide into unit vector by plotting the direction vectors between𝑖-thand 𝑖+1-th 𝐶𝛼 atom on a unit sphere
+   - Compute all-to-all RMSD distances between all pairs of the heptapeptides/unit vectors in the two proteins → scoring matrix
+     - Since we have vectors on a unit sphere, finding optimal superposition (for a pair of heptapeptides) requires to only find rotation which minimizes RMSD
+
+##### MAMMOTH (cont.)
+ - Use the scoring matrix from the previous step with Needleman-Wunsch algorithm with zero end gaps
+ - Find the maximum subset of similar local structures that have their corresponding 𝐶𝛼 close in Cartesian space
+   - variant of the heuristic MaxSub algorithm
+ - Percentage of structural identity (PSI) is computed, defined as the percentage of corresponding (from previous step) residues below 4.0 Å in 3D space, measured with respect to the shorter structure
+ - Calculate the probability of obtaining given proportion (from previous step) of aligned residues (with respect to the shorter model) by chance (p-value)
+
+### FATCAT
+ - **F**lexible structure **A**lignmen**T** by **C**haining **A**FPs (Aligned Fragment Pairs) with **T**wists(**FATCAT**)[Ye and Godzik; 2003]
+ - Does not treat proteins as rigid bodies
+ - Main idea
+   - application of edit distance in 3D space
+   - modify protein A using twists to match protein B
+   - path minimizing number of twists (twists are penalized) determines the distance of A and B
+
+# 12
