@@ -1028,7 +1028,7 @@ We want the best alignment possible. In real, the scoring system is inverted. Th
 
 The second huge difference is, that we want to penalize every opened gap, because we want to prevent an alignment with many solo nucleotides (it is highly unprobable or just shows, that there is no similarity).
 
-So we want to find an alignment with the **highest** score.
+So we want to find an alignment with the ***highest*** score.
 
 ### Gap penalization in alignments
 In an ideal case we want a function, which can score every type of mismatch, scores individually the length of gap, also individually scored for every type of gap surroundings etc.
@@ -1102,11 +1102,8 @@ These two arguments are reasons to use different matrices for differently distan
 (the matrix made from less distant set makes false negativity in alignment for more distant set of proteins)
 
 ##### PAM matrices
-**PAM matrices are scoring matrices encoding expected evolutionary
-change at the AA level**
-These are based on principle of evolutionary distance between two sequences.
-It counts with "PAM" units.
-One PAM means "the amount of evolution needed to change 1% of AAs in sequence"
+**PAM matrices are scoring matrices encoding expected evolutionary change at the AA level**
+These are based on principle of evolutionary distance between two sequences. It counts with "PAM" units. One PAM means "the amount of evolution needed to change 1% of AAs in sequence"
 It is accepted only non-lethal, non-silent mutation
 It is not easy to explain, but for example two sequences with 1 PAM score are different in approx. 1/100 AAs. Because the AA can be changed also again to the same AA, 200 PAM sequences has ~ 25% of AAs the same.
 
