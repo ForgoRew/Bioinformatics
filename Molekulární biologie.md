@@ -80,3 +80,25 @@ https://www.biologicals.cz/tostvou
  - s možností kontroly párování
  - s možností využití genetického inženýrství
  - ve středu zájmu společnosti - tj. umožňující získání finančního prostředků
+
+### Genom
+ - velikosti genomu:
+
+| ---- | ---- | ---- |
+| Řasy | Pyrenomas salina | 6,6 x 105 |
+| Mykoplasmata | Mycoplasma | pneumoniae | 1,0 x 106 |
+| Baktérie | Escherichia coli | 4,6 x 106 |
+| Kvasinky | Saccharomyces cerevisiae | 1,3 x 107 |
+| Hlenky | Dictyostelium discoideum | 5,4 x 107 |
+| Nematoda | Caenorhabditis elegans | 8,7 x 107 |
+| Hmyz | Drosophila melanogaster | 1,4 x 108 |
+| Ptáci | Gallus domesticus | 1,2 x 109 |
+| Obojživelníci | Xenopus laevis | 3,1 x 109 |
+| Savci | Homo sapiens | 3,3 x 109 |
+
+ - sekvenovaný genom =! popsaný genom
+   - sekvenovaný ... spousta písmenek
+   - popsaný ... víme kde co je a jak to funguje
+
+ - známe asi 68e3 genomů, ale jen sekvenace, ne popis!
+
