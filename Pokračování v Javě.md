@@ -80,3 +80,54 @@
 
 ### Pluginy
  - samostatně fungující segment kódu
+
+# 02
+
+### Java platform
+ - JSE ... java standard edition
+ - JEE ... java enterprice edition
+
+### Výkon
+ - spuštění vždy virtual - machine
+   - má Just-in-time compilation
+   - má optimalizaci za běhu
+ - srovnatelný s normálními aplikacemi
+ - velká spotřeba paměti
+
+### Implementace Javy
+ - Oracle: Oficiální implementace
+ - Windows, Linux, macOS
+ - OpenJDK: podporovaná Oraclem
+   - z ní vychází oficiální implementace
+ - existují i jiné implementace, ale nejsou příliš použité
+
+### Androidové aplikace
+ - Android compiluje do Java bytecodu,
+ - má jinou virtual-machine
+
+### Generické typy
+ - opakování a nové informace
+ - obdoba šablon z C#
+ - parametry pro typy
+ - cíl: přehlednější kód a typová bezpečnost.
+   - `List<Integer>`
+ - nejde dávat primitivní typy, interně se to mění na `Object`
+
+ - není možné typy měnit
+ - otazník (wildcard) je libovolný typ
+   - `List<?>`
+ - omezený `?` dáme extends
+   - povolujeme kovariantní změnu (`List<? extends Shape>`)
+   - děláme kontravariantní změnu (`List<? super T>`)
+ - max() -> porovnatelné prvky -> implementují Comparable<Object>
+
+### Anotace
+ - dřív (Java 5) nebyly snadno přidávatelné.
+ - nyní lze přidat ke každému elementu
+ - i na dalších místech
+ - lze omezit, na co půjde použít
+
+@ a identifikátor
+ - mega cool věc...
+
+

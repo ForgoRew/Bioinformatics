@@ -2,6 +2,10 @@
 Martin Pilát
 [Stránky předmětu](http://ktiml.mff.cuni.cz/~pilat/cs/prirodou-inspirovane-algoritmy/)
 
+Kačka Macková
+[Stránky cvičení](https://github.com/kackamac/Prirodou-inspirovane-algoritmy)
+katerina.mackova@ktiml.mff.cuni.cz
+
 ### Obsah
 [Přírodou inspirované algoritmy](#přírodou-inspirované-algoritmy)
  - [01 Úvod a algoritmy obecně](#01-úvod-a-algoritmy-obecně)
@@ -9,6 +13,7 @@ Martin Pilát
 
 ### Podmínky
 - zápočet za cvičení
+  - 3 úkoly (5, 8 a 11 cvičení)
 - zkouška ... [požadavky](http://ktiml.mff.cuni.cz/~pilat/cs/prirodou-inspirovane-algoritmy/pozadavky/)
   - obecně výběr techniky a způsob řešení problému
 

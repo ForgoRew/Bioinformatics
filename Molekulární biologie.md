@@ -84,17 +84,18 @@ https://www.biologicals.cz/tostvou
 ### Genom
  - velikosti genomu:
 
-| ---- | ---- | ---- |
-| Řasy | Pyrenomas salina | 6,6 x 105 |
-| Mykoplasmata | Mycoplasma | pneumoniae | 1,0 x 106 |
-| Baktérie | Escherichia coli | 4,6 x 106 |
-| Kvasinky | Saccharomyces cerevisiae | 1,3 x 107 |
-| Hlenky | Dictyostelium discoideum | 5,4 x 107 |
-| Nematoda | Caenorhabditis elegans | 8,7 x 107 |
-| Hmyz | Drosophila melanogaster | 1,4 x 108 |
-| Ptáci | Gallus domesticus | 1,2 x 109 |
-| Obojživelníci | Xenopus laevis | 3,1 x 109 |
-| Savci | Homo sapiens | 3,3 x 109 |
+| Skupina | Druh | Česky | Velikost genomu |
+| ---- | ---- | ---- | ---- |
+| Řasy | Pyrenomonas salina | ~ Rhodomonas salina | 6,6 x 10e5 |
+| Mykoplasmata | Mycoplasma pneumoniae | dělá třeba bronchytidu | 1,0 x 10e6 |
+| Baktérie | Escherichia coli | střevní bakterie | 4,6 x 10e6 |
+| Kvasinky | Saccharomyces cerevisiae | kvasinka pekařská | 1,3 x 10e7 |
+| Hlenky | Dictyostelium discoideum | prostě druh hlenky, žije v půdě | 5,4 x 10e7 |
+| Nematoda | Caenorhabditis elegans | haďátko octové | 8,7 x 10e7 |
+| Hmyz | Drosophila melanogaster | octomilka obecná | 1,4 x 10e8 |
+| Ptáci | Gallus domesticus | kur domácí | 1,2 x 10e9 |
+| Obojživelníci | Xenopus laevis | drápatka vodní | 3,1 x 10e9 |
+| Savci | Homo sapiens | člověk lidský :D | 3,3 x 10e9 |
 
  - sekvenovaný genom =! popsaný genom
    - sekvenovaný ... spousta písmenek
