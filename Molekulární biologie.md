@@ -103,3 +103,18 @@ https://www.biologicals.cz/tostvou
 
  - známe asi 68e3 genomů, ale jen sekvenace, ne popis!
 
+
+# 02 Složení buňky
+ Docela umím, nedělám si zápisky...
+### DNA
+Pravotočivá dvoušroubovice.
+
+#### Malý a velký žlábek
+ - definice je:
+   - velký žlábek jde vrchem a malý žlábek spodem
+   - hrot AK - purinu - směřuje do velkého žlábku
+ - velký žlábek ... častější interakce (často se navazuje a modifikuje, oproti malému žlábku)
+
+#### Keto a enol konformace NK
+ - 10^4 případů, nicméně může se to stát
+ - občas ty NK prostě vypadají jinak
