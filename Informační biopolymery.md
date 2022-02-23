@@ -3,9 +3,8 @@ Radovan Fišer
 
 Přednáška 8.10-10.25
 Cvičení 13.10-14.40 ... není povinné, ale pomůže s úlohami, co budeme mít zadané
-
-# Úvodní přednáška: Materiály, informace o vedení předmětu + atomy a molekuly
-
+# 01 Úvodní přednáška: Materiály, informace o vedení předmětu + atomy a molekuly
+[přednáška](InformatickeBiopolymery_Prednasky/01-uvod-atom-molekula_atomy.pdf)
 ## O předmětu
 
 ### Úkoly
@@ -23,7 +22,7 @@ Cvičení 13.10-14.40 ... není povinné, ale pomůže s úlohami, co budeme mí
 4. Drobné úlohy okolo využití a aplikace metod pro analýzu a separaci biopolymerů.
 
 ### Příprava
-[ ] Jsou tu témata přednášek a odkazy - projít si a udělat overview
++ [ ] Jsou tu témata přednášek a odkazy - projít si a udělat overview
 
 ### Literatura
 Voet P. a Voet J.G. Biochemie
@@ -125,3 +124,46 @@ Přejaté od Dr. Marxe z Howard University
 
 ### Angstrom
 1A = 1e-10m
+
+# 02 Prvky a jejich vlastnosti, úvod do biopolymerů
+[přednáška](InformatickeBiopolymery_Prednasky/01-uvod-atom-molekula_molekuly.pdf)  
+Hezky vysvětlené sigma a pí vazby a vazebné/antivazebné orbitaly: https://is.muni.cz/do/rect/el/estud/pedf/js18/obecna_chemie/web/pages/10-teorie-molekulovych-orbitalu.html
+## Prvkové složení
+ - značení prvků periodické tabulky
+
+## Obsazování orbitalů
+ - valenční vrstvy etc.
+
+## Periodické vlastnosti prvků
+ - vlastnosti prvků se periodicky opakují...
+
+## Struktura a vlastnosti informačních biopolymerů
+ - struktura planární struktury molekul je známá
+ - máme i přímé snímky!
+
+![organickeslouceniny](OrganickeSlouceniny.png)
+
+## Složení molekul
+- samostatné částice
+- homonukleární (H2) a heteronukleární (H2O)
+- makromolekuly, krystaly
+
+## Znázornění vazebných elektronů
+ - tečky a čárky...
+
+## Molekulové orbitaly
+ - lineární kombinace dvou atomových vlnových funkcí
+ - ukázané na principu anilinu
+
+## Hybridizace orbitalů
+ - sp, sp2, sp3
+ - kombinace s a p orbitalů
+ - sp ... s + p
+ - sp2 ... s + p + p
+ - sp3 ... s + p + p + p
+ - Methan
+   - 4 stěn
+   - 109.5° &copy AT&T
+ - rotamery ... molekula může rotovat kolem jednoduchých vazeb
+
+## Cis/trans izomerie
