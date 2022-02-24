@@ -9,6 +9,7 @@ katerina.mackova@ktiml.mff.cuni.cz
 ### Obsah
 [Přírodou inspirované algoritmy](#přírodou-inspirované-algoritmy)
  - [01 Úvod a algoritmy obecně](#01-úvod-a-algoritmy-obecně)
+ - [Zpětnovazebné učení](#02-zpětnovazebné-učení)
  - 
 
 ### Podmínky
@@ -105,3 +106,33 @@ funkce neuronu ... sgn(SUM_Vx(xi))
  - Evoluční anténa,
  - popisky obrázků,
  - GO, StarCraft a další!
+
+### Třídicí algoritmy
+ - 
+
+## 02 Zpětnovazebné učení
+ - agent dělá akce v prostředí a získává zpětnou vazbu
+ - cyklus ... (stav st, odměna rt) -> akce at -> t = tm
+ - Mountain Car
+
+### Markovské rozhodovací procesy
+MDP ... Markovovské rozhodovací procesy
+*(S,A,P,R)* ... (stavy, akce, přechodová funkce, odměny (Ra(s,s')))  
+*P* ... pro stavy *s*,*s'* a akci *a* je přechod mezi nimi pravděpodobnost *P_a(s,s')*  
+Pravděpodobnost musí splňovat Markovskou podmínku.  
+strategie ... pí(s,a) ... pravděpodobnost, že ve stavu *s* provedu akce *a*  
+
+> Pokud píšu něco jiného než co říkám, raději mi to řekněte. Správně je totiž pravděpodobně to, co si myslím, což je možná něco úplně jiného. -- Martin Pilát. 24/2/2022
+
+### Výroba optimální strategie
+Jde o to maximalizovat odměnu, kterou agent dostane.
+Dělá se to pomocí strategie. Ohodnocení strategie je dané vzorečkem:  
+![vzorecek strategie](OhodnoceniStrategieMarkovovskeUceni.png)  
+Cílem učení je pak najít nejlepší strategie.  
+
+Cíl je najít strategii *pí\** takovou, aby V^pí* = max_pí(V^pí(s))
+
+### Monte-Carlo metody
+
+### Q-učení
+
