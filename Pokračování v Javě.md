@@ -130,4 +130,79 @@
 @ a identifikátor
  - mega cool věc...
 
+# 03
+### Třídy javy a classloadery
+- virtual machine natahuje třídy dynamicky
+- java.lang.ClassLoader ... má classloader
+
+#### Postup VirtualMachine
+1. natažení třídy
+   - hledá bytecode podle cesty k němu
+   - může vyhodit pár errorů (ClassFormatError ... kompilováno špatnou verzí javy, NoClassDefFoundError ... nebyla nalezena)
+   - může nastat i OutOfMemoryError
+2. "linking"
+ - verifikace bytecodu ... odpovídá specifikaci? ... LinkageError
+   - VerifyError
+ - příprava
+   - vytvoření static atributů
+   - OutOfMemoryError
+3. inicializace
+4. vytvoření nové instance
+
+#### Třída a classloader
+ - při použití různých classloaderů je i stejná třída nekompatibilní
+ - classloader má i předka
+ - pokud není classloader implicitně specifikovaný, použije se systémový classloader
+ - hierarchický výběr classloadera
+ - pokud jsou potřeba další třídy načíst s danou třídou, použije se stejný classloader
+
+#### Vlastní ClassLoader
+ - napsat si potomka třídy ClassLoader, předefinování jeho metody defineClass
+
+### ServiceLoader
+- obsahuje cesty k jednotlivým službám
+- vrací služby, má iterátor etc.
+
+### Bytecode
+Formát:  
+```byte
+ClassName{
+  U4 magic;
+  U2 majorVersion;
+  U2 minorVersion;
+  U2 constant_pool_count; // pole konstant (pojmenování)
+  cp_info constant_pool[constant_pool_count-1];
+  u2 access_flags;
+  ...
+  u2 interfaces_count;
+  u2 interfaces[interfaces_count];
+  u2 fields_count;
+  field_info fields[fields_count];
+  ...
+}
+```
+
+Metody:  
+Virtual machine je zásobníkový stroj.
+
+***InvokeDynamic***    
+Od Java 7 překlad dynamických jazyků do Java bytekódu  
+Od Java 8 použita i pro překlad lambda výrazů  
+
+#### Nástroje pro práci s Bytecodem
+ - ASM
+   - http://asm.ow2.org/
+   - manipulace s bytecodem
+   - vytváření nových tříd
+   - upravování existujících tříd
+ - BCEL,
+ - SERP,...
+
+### Nativní kód
+ - integrace Java kódu do nativního kódu
+
+#### JNA
+ - externí knihovna pro převod nativní knihovny do Javy
+ - ***JNI*** naopak mapuje *Javu* do *C*
+
 
