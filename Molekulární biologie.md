@@ -29,6 +29,8 @@ Martin Pospíšek
 Více informací, texty a presentace přednášek včetně aktualizovaných seznamů doporučené literatury jsou pro studenty zapsané do kurzu k dispozici na http://web.natur.cuni.cz/~pospisek/
 
 # 01
+Str. 2-7
+
 ### Zdroje
 #### Kniha
 T.D.Pollard: Cell Biology
@@ -105,6 +107,7 @@ https://www.biologicals.cz/tostvou
 
 
 # 02 Složení buňky
+Str. 7-19
  Docela umím, nedělám si zápisky...
 ### DNA
 Pravotočivá dvoušroubovice.
@@ -134,14 +137,36 @@ Renaturace - 3 kroky
 1) Volná ssDNA
 2) Najde se správné místo (nejdelší fáze, hodně možností interakce)
 3) Spojení ssDNA do dsDNA  
+
+Tento proces popisuje ***kinetika reasociace***  
 ![Renaturace](Renaturace.png)
 
 ### Jak vypadá DNA?
 ***Konformace***  
- - B DNA ... páry bazí jdou přes osu helixu
- - A DNA ... páry bazí jdou mimo osu helixu
- - Z DNA ... levotočivá DNA
- - Triple-Helical DNA
+ - B DNA ... páry bazí jdou přes osu helixu ... 10 párů bazí na otočku ... 3.4 párů bazí na otočku
+ - A DNA ... páry bazí jdou mimo osu helixu ... 11 párů na otočku ... 2.6 párů bazí na otočku
+ - Z DNA ... levotočivá DNA ... 12 párů na otočku ... 3.7 párů bazí na otočku
+ - Triple-Helical DNA  
 
-![A, B, Z DNA](ABZ_DNA.jpg)
+![A, B, Z DNA](ABZ_DNA.jpg)  
 
+Z DNA má guanosiny v syn-konformaci  
+Jsou bílkoviny, které mají afinitu k Z DNA.  
+
+***Nadšroubovice u cyklické dsDNA***  
+Lk ... počet obrátek podél osy helixu  
+Tw ... počet obrátek celkem  
+Wr ... počet obrátek osy kolem osy helixu (nadobrátky)  
+
+pokud nadobrátky jsou negativní, uvolňují šroubovici  
+
+#### Model výzkumu topologie
+***SV40 virion*** ... velmi supercoiled nadšroubovice  
+na elektroforéze vidíme po přidání topoizomerázy mezistavy při relaxaci  
+můžeme spočítat, kolik otáček nadšroubovice má.  
+
+#### Další informace
+Pozitivní topoizomeráza umožňuje vytvářet velmi stabilní DNA u termofilních bakterií.  
+
+*Camptoteca acuminata* *qwertzuiopasdfghjkl;yxcvbnm,*
+topotecan, irinotecan ... sloučenina, která zabíjí jen bakterie, protože brání superspiralizaci DNA  
