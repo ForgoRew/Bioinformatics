@@ -1,4 +1,28 @@
 # Pravděpodobnost a statistika I
+- [Pravděpodobnost a statistika I](#pravděpodobnost-a-statistika-i)
+    - [Organizace](#organizace)
+    - [Sylabus:](#sylabus)
+  - [01 P (EN)](#01-p-en)
+    - [Independent events](#independent-events)
+    - [Practice](#practice)
+  - [01 P (CZ)](#01-p-cz)
+  - [01 L](#01-l)
+    - [Software](#software)
+    - [Téma přednášky](#téma-přednášky)
+      - [Ilustrace](#ilustrace)
+    - [Pojmy](#pojmy)
+    - [Věta 1](#věta-1)
+      - [Příklady pravděpodobnostních prostorů](#příklady-pravděpodobnostních-prostorů)
+    - [Podmíněná pravděpodobnost](#podmíněná-pravděpodobnost)
+  - [02 P](#02-p)
+  - [02 L](#02-l)
+    - [Úvodní příklad](#úvodní-příklad)
+    - [Věta](#věta)
+    - [Věta o úplné pravděpodobnosti nebo o rozboru příkladů](#věta-o-úplné-pravděpodobnosti-nebo-o-rozboru-příkladů)
+    - [Bayesova věta](#bayesova-věta)
+    - [Def: Nezávislost jevu](#def-nezávislost-jevu)
+    - [Vzájemně nezávislé jevy](#vzájemně-nezávislé-jevy)
+    - [Def: diskrétní náhodná veličina](#def-diskrétní-náhodná-veličina)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -135,10 +159,10 @@ počet emailů za den
    - def.: *F* -> P(Omega) je prostor jevů, patří do něj systém všech podmnožin Omega. Musí tvořit *Sigma-algebru*
      - 1. Množina 0 je v *F*
      - 2. Pro každou množinu A z *F* platí, že Omega bez A také náleží do *F*
-     - 3. Pro A1, A2, ... z *F* platí, že jejich sjednocení je opět v F
+     - 3. Pro A1, A2, ... z *F* platí, že jejich sjednocení je opět v *F*
 3. Pravděpodobnost ... P: *F*->[0,1]
    1. pokud P(Omega)=1
-   2. pokud pravděpodobností sjednocených jevů je suma pravděpodobností jednotlivých jevů (samostatně) (ale jevy musí být po dvou disjunktní)
+   2. pokud pravděpodobností sjednocených jevů je ∑ pravděpodobností jednotlivých jevů (samostatně) (ale jevy musí být po dvou disjunktní)
 4. Pravděpodobnostní prostor ... (Omega, Gamma, P)
    1. Omega != 0 ... libovolná množina
    2. Gamma = P(Omega) ... prostor jevů
@@ -155,18 +179,118 @@ počet emailů za den
 4. P(A1vA2v...) <= suma pravděpodobností dohromady
    1. důkaz -- zdizjunktnění (T.ODO: zkus si dokázat)
 
-#### Příklady
+#### Příklady pravděpodobnostních prostorů
 1. klasický:
    - Omega je konečná množina
    - Gama = P(Omega)
    - P(A)=|A|/|Omega|=n-dobrých/n-všech možností
 2. diskrétní
    - Omega ... spočetná množina
-   - P(A) = Suma (Pi)
+   - P(A) = ∑ (Pi)
    - ... prostě jevy se váží??
 3. geometrický
     - Omega je podmnožina d-rozměrného prostoru nad reálnými čísly
     - P(A)=Vd(A)/Vd(Omega) ... objemy
+4. spojitý
+    - P(A) = ∫_A(f(x)) t.ž.
+      - 0∈f(x),
+      - ∫_Omega(f(x)) = 1
 
 ### Podmíněná pravděpodobnost
 Def.: A,B z Gama, P(B)>0, definujeme P(A|B) = P(A^B)/P(B)
+
+## 02 P
+Podmíněná pravděpodobnost
+
+3 Karty červené  
+Výlet do Krkonoš  
+Paradox Monty-Halla  
+
+## 02 L
+### Úvodní příklad
+P(A|B) = 1 nebo P(B|A) = 1 pokud A=>B?  
+P(B|A) = 1 je správně, protože A vytváří pravděpodobnostní prostor a pro každý jev z A platí jev B...  
+
+### Věta
+**P(A1^...^An) = P(A1).P(A2|A1). ... .P(An|A1^A2^...^An)**  
+
+Dk.: Rozepsání vzorečku na podmíněnou pravděpodobnost. *TODO*
+
+Příklad:  
+S ... spam  
+D ... detekce  
+4 možnosti  
+1. D^S - správně nevyhodnocený jako spam
+2. D'^S - false negative
+3. D^S' - false positive
+4. D'^S' - správně vyhodnocený jako spam  
+
+### Věta o úplné pravděpodobnosti nebo o rozboru příkladů
+P(A) = ∑_i(P(B) . P(A|B))  
+A,B náleží *F*  
+B1,B2,...,Bn ... rozklad Omega ... (Bi^Bj)!=0  
+vBi = Omega množin je konečný nebo spočetný počet  
+
+Dk.: P(A) = ∑_i(P(A^Bi)) = ∑_i(P(Bi)*P(A|Bi))  
+*(rozepsání vzorečku)*
+
+Příklad 1:  
+P(D) = P(S).P(D|S) + P(S')*P(D|S')  
+B1 = S  
+B2 = S'  
+A = D  
+
+Příklad 2: Gambler's ruin  
+n náleží N,  
+s náleží {0,1,2...n} ... s je startovní počet  
+opakujeme hru o +-1 Kč  
+férová hra ... pravděpodobnost výhry/prohry je 1  
+V ... vyhrajeme ... n Kč  
+V' ... prohrajeme ... 0Kč
+
+Zjistit p(s) = P(V)  
+1) 1.hra vyhraná / prohraná
+P(V1) nebo P(V2)
+    .
+   /\
+   1 0
+  /\/\
+2
+
+2) P(s) = 1/2 . P(s+1) + ∑_i(P(s-1))  
+3) n+1 lineárních rovnic pro n+1 neznámých  
+P(S) = s/n je řešení 
+
+### Bayesova věta
+P(Bj|A) = P(Bj) . P(A|Bi) / ∑_i(P(Bi).P(A|Bi))  
+Dk.: P(Bj^A) / P(A) = P(Bj)(P(A|Bj)) / P(A) a věta o úplné pravděpodobnosti!
+
+Příklad s nemocí:  
+Senzitivita ... 95%
+Lidí v populaci ... 1/1000  
+0.001 * 0.95 = 0.00095  
+
+Stav světa ... B1, B2,... ,Bi...
+Model světa ... P(Bi).P(A|Bi) ... A je měření
+
+### Def: Nezávislost jevu
+Jevy A,B náleží *F* jsou *nezávislé* pokud P(A^B) = P(A).P(B).
+
+Příklad.: 2 hody mincí  
+A ... první hod je P
+B ... druhý bod je P
+C ... hody jsou odlišné
+
+x,P,O
+P,PP,PO
+O,OP,OO
+
+### Vzájemně nezávislé jevy
+Jevy jsou po dvou nezávislé, lze ověřit průnikem a produktem :)
+
+### Def: diskrétní náhodná veličina
+X ... diskrétní náhodná veličina, pokud X: Omega -> *R* t.ž.:
+ - X je spočetná množina
+ - pro každé x z R, že stav který zobrazuje je z *F*
+
+P(X=x) ... popis množiny X  
