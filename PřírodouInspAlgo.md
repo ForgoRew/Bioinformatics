@@ -115,6 +115,12 @@ funkce neuronu ... sgn(SUM_Vx(xi))
  - cyklus ... (stav st, odměna rt) -> akce at -> t = tm
  - Mountain Car
 
+### Typy prostředí
+ - spojité x diskrétní
+ - prozkoumatelné x neprozkoumatelné
+ - statické (deterministické) x dynamické
+ - ...
+
 ### Markovské rozhodovací procesy
 MDP ... Markovovské rozhodovací procesy
 *(S,A,P,R)* ... (stavy, akce, přechodová funkce, odměny (Ra(s,s')))  
@@ -135,4 +141,7 @@ Cíl je najít strategii *pí\** takovou, aby V^pí* = max_pí(V^pí(s))
 ### Monte-Carlo metody
 
 ### Q-učení
+
+## 02 P
+Přechodové funkce -- ***S,A,P,R*** -> *Markovský rozhodovací proces*  
 

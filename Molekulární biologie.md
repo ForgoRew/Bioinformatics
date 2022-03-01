@@ -28,7 +28,7 @@ Martin Pospíšek
 
 Více informací, texty a presentace přednášek včetně aktualizovaných seznamů doporučené literatury jsou pro studenty zapsané do kurzu k dispozici na http://web.natur.cuni.cz/~pospisek/
 
-## 01
+# 01
 ### Zdroje
 #### Kniha
 T.D.Pollard: Cell Biology
@@ -118,3 +118,30 @@ Pravotočivá dvoušroubovice.
 #### Keto a enol konformace NK
  - 10^4 případů, nicméně může se to stát
  - občas ty NK prostě vypadají jinak
+
+# 03
+### Denaturace/renaturace
+ - denaturace pomocí změny pH  
+![Denaturace](Denaturace.png)
+ - DNA je poměrně stabilní v alkalickém pH
+ - RNA je naopak stabilnější v kyselém pH
+
+Absorbance u DNA  
+okolo 260 nm -> puriny,  
+denaturace -> zvýšení absorbance, protože každý řetězec absorbuje samostatně  
+
+Renaturace - 3 kroky  
+1) Volná ssDNA
+2) Najde se správné místo (nejdelší fáze, hodně možností interakce)
+3) Spojení ssDNA do dsDNA  
+![Renaturace](Renaturace.png)
+
+### Jak vypadá DNA?
+***Konformace***  
+ - B DNA ... páry bazí jdou přes osu helixu
+ - A DNA ... páry bazí jdou mimo osu helixu
+ - Z DNA ... levotočivá DNA
+ - Triple-Helical DNA
+
+![A, B, Z DNA](ABZ_DNA.jpg)
+

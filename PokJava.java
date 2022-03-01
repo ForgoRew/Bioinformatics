@@ -32,12 +32,4 @@ public class PokJava{
             return;
         };
     }
-
-    private String id() {
-        return null;
-    }
-
-    private String id() {
-        return null;
-    }
 }
