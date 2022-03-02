@@ -168,5 +168,5 @@ můžeme spočítat, kolik otáček nadšroubovice má.
 #### Další informace
 Pozitivní topoizomeráza umožňuje vytvářet velmi stabilní DNA u termofilních bakterií.  
 
-*Camptoteca acuminata* *qwertzuiopasdfghjkl;yxcvbnm,*
+*Camptoteca acuminata*
 topotecan, irinotecan ... sloučenina, která zabíjí jen bakterie, protože brání superspiralizaci DNA  
