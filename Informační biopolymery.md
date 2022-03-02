@@ -167,3 +167,120 @@ Hezky vysvětlené sigma a pí vazby a vazebné/antivazebné orbitaly: https://i
  - rotamery ... molekula může rotovat kolem jednoduchých vazeb
 
 ## Cis/trans izomerie
+
+# 03 Tvary molekul
+[přednáška](InformatickeBiopolymery_Prednasky/02-aminokyseliny.pdf) 
+Voet: 61-78  
+### Konformace cyklických hexamerů
+ - vaničková / židličková konformace
+ - aromatické sloučeniny jsou planární
+
+### Pi orbitaly
+ -  but-1,3 dien ... 2 dvojné vazbě, dobře pohlcuje UV záření
+ -  u aromatických molekul jsou delokalizované
+ -  počet pi-elektronů musí odpovídat Hucklovu pravidlu 4n+2, kde *n* = 0,1,2,...  
+ -  imidazol ... také planární strukturas
+
+![Delokalizované e- u benzenu](Delocalized.png)  
+
+Benzen ... 3 vazebné a 3 antivazebné orbitaly
+
+### Struktura krystalů solí
+ - anionty a kationty v pravidelné ~~krychlové~~ **tetrální bipyramidické** *mřížce*
+ - každý kationt je obklopen 6 anionty a každý aniont 6 kationty
+
+## Struktura polymerů
+ - hierarchický popis
+   - primární struktura ... sekvence,
+   - sekundární struktura ... popis úseku s charakteristickými typovými znaky,
+   - terciární struktura ... prostorové uspořádání proteinu,
+   - kvartérní struktura ... skupiny molekul dohromady
+ - u nedefinovaných terciárních struktur je důležitá topologie molekul
+
+### Slabé vazby
+ - vodíkové můstky mohou spojovat části struktur proteinu dohromady (Van der Waalsovy interakce)
+   - Londonovské interakce ... interakce mezi dipóly
+ - H-můstky mezi elektronegativními atomy
+ - vrstvové interakce
+ - interakce s vodou v roztocích
+ - iontové interakce s ionty v roztocích a uvnitř molekul v místech nedostupných pro vodu
+
+### Rotace, vibrace
+ - znesnadňují definitivní popis struktury molekul
+
+### Vlastnosti aminokyselin
+ - amfoterní charakter, dobře rozpustné...
+ - tvoří obojetný iont ... amfion/zwitterion
+ - v makromolekule závisí jejich náboj především na jejich postranní skupině
+![AKs](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amino_Acids.svg/800px-Amino_Acids.svg.png)
+#### Nepolární AK
+ - Glycin, G, Gly
+ - Alanin, A, Ala
+ - Valin, V, Val
+ - Leucin, L, Leu
+ - Isoleucin, I, Ile
+ - Methionin, M, Met
+ - Prolin, P, Pro
+ - Fenylalanin, F, Phe
+ - Tryptofan, W, Trp
+
+#### Nenabité polární AK
+ - Serin, S, Ser
+ - Threonin, T, Thr
+ - Asparagin, N, Asn
+ - Glutamin, Q, Gln
+ - Tyrosin, Y, Tyr
+ - Cystein, C, Cys
+
+#### Nabité, bazické AK
+ - Lysin, K, Lys
+ - Arginin, R, Arg
+ - Histidin, H, His
+
+#### Nabité, acidické AK
+ - Asparagová kyselina, D, Asp
+ - Glutamová kyselina, E, Glu
+
+|Název              |Značka|Zkratka|
+|-------------------|:----:|:-----:|
+|Glycin             |   G  |  Gly  |
+|Alanin             |   A  |  Ala  |
+|Valin              |   V  |  Val  |
+|Leucin             |   L  |  Leu  |
+|Isoleucin          |   I  |  Ile  |
+|Methionin          |   M  |  Met  |
+|Prolin             |   P  |  Pro  |
+|Fenylalanin        |   F  |  Phe  |
+|Tryptofan          |   W  |  Trp  |
+|Serin              |   S  |  Ser  |
+|Threonin           |   T  |  Thr  |
+|Asparagin          |   N  |  Asn  |
+|Glutamin           |   Q  |  Gln  |
+|Tyrosin            |   Y  |  Tyr  |
+|Cystein            |   C  |  Cys  |
+|Lysin              |   K  |  Lys  |
+|Arginin            |   R  |  Arg  |
+|Histidin           |   H  |  His  |
+|Asparagová kyselina|   D  |  Asp  |
+|Glutamová kyselina |   E  |  Glu  |
+|Stop codon         |   X  |   X   |
+|Glutamin/acid      |   Z  |  Glx  |
+
+### Izoelektrický bod 
+Přednáška 28-31  
+ - v jakém pH AK odštěpí proton?
+
+![NabitíAK](NabitiAK.png)  
+
+pI bude v TESTUUUUUU!!!
+Podívat se na kyselé a zásadité AK v proteinu a odhadnutí izoelektrického bodu.
+
+### Hydrofobicita
+Přednáška 32  
+Polární AK jsou hydrofilní, nepolární AK jsou hydrofobní.
+
+### Chiralita
+Přednáška 33  
+Chireální sloučenina je schopná vytvářet optické izomery.  
+Měří se polarimetrem - zdroj, polarizátor, trubice polarimetru, otočný analyzátorí
+
