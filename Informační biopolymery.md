@@ -282,5 +282,11 @@ Polární AK jsou hydrofilní, nepolární AK jsou hydrofobní.
 ### Chiralita
 Přednáška 33  
 Chireální sloučenina je schopná vytvářet optické izomery.  
-Měří se polarimetrem - zdroj, polarizátor, trubice polarimetru, otočný analyzátorí
+Měří se polarimetrem - zdroj, polarizátor, trubice polarimetru, otočný analyzátor.
+
+# V testu 1!  
+Lambert - Beerův zákon  
+Absorbční spektra aminokyselin  
+pI bude v TESTUUUUUU!!!
+Podívat se na kyselé a zásadité AK v proteinu a odhadnutí izoelektrického bodu.
 
