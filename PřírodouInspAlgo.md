@@ -145,3 +145,43 @@ Cíl je najít strategii *pí\** takovou, aby V^pí* = max_pí(V^pí(s))
 ## 02 P
 Přechodové funkce -- ***S,A,P,R*** -> *Markovský rozhodovací proces*  
 
+## 03 L Ještě strojové učení a úvod do evolučních algoritmů
+
+### Problém: OneMAX
+Máme posloupnost {0,1}^n, maximální počet jedniček.
+0101101001 ... 5
+1011101111 ... 8
+1111111111 ... 10  ... hey!
+
+Každá posloupnost ... jedinec  
+Počet jedniček ... fitness funkce  
+Jde o to: (... genetické učení)   
+1. vygenerovat populaci,
+2. selektovat nejlepší jedince,
+3. skřížit nejlepší jedince ... např. jednobodové - v jednom bodě crossover (1011 + 1101 -> 1001 + 1111)
+4. mutace (flipování)
+5. jít na `1.`
+
+### Selekce  
++ ruletová selekce
+  + Pi=(fi)/∑(fj) ... ale fitness musí být >= 0)
+  + malé rozdíly ve fitness mají poměrně malé rozdíly v šanci být přijaty
++ turnajová selekce
+  + vybere se lepší ze dvojice jedinců (s určitou pravděpodobnoctí)
+
++ ***elitismus*** ... necháme rodiče také ve skupině pro selekci
++ *explorace* ... jak moc jdeme do prostoru
++ *exploatace* ... vylepšování nalezeného místa v prostoru
+
+### Křížení
++ bodové (+ dvoubodové, tříbodové ...) ... zvolí se bod a prohodí se příslušné sekvence obou jedinců
+  + uniformní křížení ... rozhodování pro každou pozici v sekvenci
+
+1. a
+   1. ab
+   2. ac
+   3. ad
+2. b
+   1. ba
+   2. bc
+   3. bd
