@@ -37,6 +37,10 @@
     - [Def: Poissonovo rozdělení](#def-poissonovo-rozdělení)
     - [Def: Poissonovo paradigma](#def-poissonovo-paradigma)
     - [Def: Střední hodnota](#def-střední-hodnota)
+    - [Příklady střední hodnoty](#příklady-střední-hodnoty)
+      - [Bernouliho rozdělení](#bernouliho-rozdělení)
+      - [Geometrické rozdělení](#geometrické-rozdělení)
+      - [Binomické rozdělení](#binomické-rozdělení)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -424,4 +428,13 @@ Poznámka:
 Pokud (Omega, *F*, P) je diskrétní, můžu EX definovat i takto:
 EX = SUMA_(w z Omega)(X(w).P({w}))  
 
+### Příklady střední hodnoty
+#### Bernouliho rozdělení
+#### Geometrické rozdělení
+EX = SUMA_(k=1)(k.(1-p)^(k).p =  
+= SUMA_k=1 (SUMA_(l=1)^(k)) (1-p)^(k-1).p =  
+SUMA_(l=1)(((1-p)^(l-1)*p)/(1-n-p)=1/(1-(1-p))=1/p
+
+#### Binomické rozdělení
+EX=np
 
