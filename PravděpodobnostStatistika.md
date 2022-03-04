@@ -33,6 +33,10 @@
     - [Def: Indikátorová n. veličina jevu A](#def-indikátorová-n-veličina-jevu-a)
     - [Def: Geometrické rozdělení](#def-geometrické-rozdělení)
     - [Def: Binomiální rozdělení](#def-binomiální-rozdělení)
+    - [Def: Hyper geometrické rozdělení](#def-hyper-geometrické-rozdělení)
+    - [Def: Poissonovo rozdělení](#def-poissonovo-rozdělení)
+    - [Def: Poissonovo paradigma](#def-poissonovo-paradigma)
+    - [Def: Střední hodnota](#def-střední-hodnota)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -350,7 +354,7 @@ p z [0,1] -> X~Geom(p)
 Px(x)=P(X=x)=0
 Px(x)=(1-p)^(x-1)*p ... (x je z X)  
 
-Kontrola SUMA_(k=1)^(neonečno)(1-p)^(k-1)*p ?= 1  
+Kontrola ∑_(k=1)^(neonečno)(1-p)^(k-1)*p ?= 1  
 
 pokud p/(1-(1-p)) = 1, tak platí  
 
@@ -371,7 +375,53 @@ to celé krát (1-p)^n-k ... pravděpodobnost, že n-k krát nepadne.
 Kontrola:  
 suma přes všechna k je rovna 0. TODO :)  
 
+Příklad s míčky:  
+Máme n míčků a k krát vytáhnu.
 
+### Def: Hyper geometrické rozdělení
+Totéž jako binomická věta, ale míčky nevracím.
 
+n z N
+k z 1,2,...,n
+
+Px(k) = P(X=k) = P(vytáhnu K červených z n pokusů bez vracení).
+
+(Počet červených/všech) = (K nad k)(N-k nad n-k)/(N nad n).
+
+### Def: Poissonovo rozdělení
+λ > 0, X ~ Poi(λ)  
+Px(k)=e^λ(λ^(k)/k!)
+
+limita binomického rozdělení.  
+
+Xn~Bin(n,λ/n) n>λ
+
+P(Xn=k) = (n nad k).(λ/n)^(k).(1-λ/n)^(n-k)  
+(n nad k).(λ/n)^(k) -> λ^(k)/k!  
+(1-λ/n)^n -> e^-λ  
+(1-λ/n)^(-k) -> 1  
+
+Příklad:  
+X ... počet emailů za den  
+n ... počet lidí, co píšou (píšou stejně často) ... <= 1 email/den každý  
+
+λ ... typický počet emailů za den => p=λ/n  
+P(1 člověk napíče email)=p  
+X~Bin(n,λ/n), přibližně X~Poi(λ)  
+
+### Def: Poissonovo paradigma
+Buďte A1 ... An jsou (skoro) nezávislé jevy  
+λ = ∑(P(Ai))  
+
+Potom ∑_(i=1)^(n)I_A_i ~ Poi(λ)
+
+### Def: Střední hodnota
+Střední hodnota d.n.v. X je  
+EX=SUMA_(x z Im(x))(x.Px(x)) = SUMA(x)P(X=x)  
+E ... expectation ... střední hodnota  
+
+Poznámka:
+Pokud (Omega, *F*, P) je diskrétní, můžu EX definovat i takto:
+EX = SUMA_(w z Omega)(X(w).P({w}))  
 
 
