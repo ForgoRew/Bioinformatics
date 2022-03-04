@@ -1,5 +1,8 @@
-# Pravděpodobnost a statistika I
-- [Pravděpodobnost a statistika I](#pravděpodobnost-a-statistika-i)
+# Pravděpodobnost a statistika 
+
+### Obsah
+- [Pravděpodobnost a statistika](#pravděpodobnost-a-statistika)
+    - [Obsah](#obsah)
     - [Organizace](#organizace)
     - [Sylabus:](#sylabus)
   - [01 P (EN)](#01-p-en)
@@ -23,6 +26,13 @@
     - [Def: Nezávislost jevu](#def-nezávislost-jevu)
     - [Vzájemně nezávislé jevy](#vzájemně-nezávislé-jevy)
     - [Def: diskrétní náhodná veličina](#def-diskrétní-náhodná-veličina)
+  - [03 L Diskrétní náhodné veličiny](#03-l-diskrétní-náhodné-veličiny)
+    - [Def: Náhodná veličina](#def-náhodná-veličina)
+    - [Def: Pravděpodobnostní funkce n.v. X](#def-pravděpodobnostní-funkce-nv-x)
+    - [Def: Bernouliho/Alternativní rozdělení](#def-bernoulihoalternativní-rozdělení)
+    - [Def: Indikátorová n. veličina jevu A](#def-indikátorová-n-veličina-jevu-a)
+    - [Def: Geometrické rozdělení](#def-geometrické-rozdělení)
+    - [Def: Binomiální rozdělení](#def-binomiální-rozdělení)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -294,3 +304,74 @@ X ... diskrétní náhodná veličina, pokud X: Omega -> *R* t.ž.:
  - pro každé x z R, že stav který zobrazuje je z *F*
 
 P(X=x) ... popis množiny X  
+
+## 03 L Diskrétní náhodné veličiny
+### Def: Náhodná veličina
+D.n.v. je funkce X:Omega->*R*  
+1) ... Im(X) je spočetná množina  
+2) ... všechna x z X : {w z Omega: X(w)=x} náleží do *F*  
+
+Třeba máme množinu 5 čísel {a,b,c,d,e}, Omega je ta množina, X dává množině hodnoty.  
+
+Pozn.:
+X: {a,b,c,d,e} -> {1,2,2,7,15}  
+díky 3) definováno, že: P(X=x)  
+
+Tím jsme mch. zavedli nový diskrétní pravděpodobnostní prostor, kde elementární jevy (w) jsou zobrazeny na Im(X) = {x1,X2,x3...}
+
+### Def: Pravděpodobnostní funkce n.v. X
+je Px:*R* -> [0,1]  
+Px(x)=P(X=x)  
+
+Pozorování:  
+{1,2,2,pi,10} ... Px(1) = 0.2, Px(2) = 0.4, ...  
+
+### Def: Bernouliho/Alternativní rozdělení
+X může být jen 1 nebo 0.
+p z [0,1] -> X~Bern(p) ... X má rozdělení
+
+Příklad:  
+X ... 1/0  
+1 ... padla šestka  
+0 ... jinak  
+
+### Def: Indikátorová n. veličina jevu A
+I_A(w)=1 ... w z A  
+I_A(w)=0 ... w není z A  
+
+Pozorování:  
+I_A ~Bern(P(A))
+
+### Def: Geometrické rozdělení
+např.: X = kolikátým hodem padla 1. šestka  
+Im(X)=*N*  
+p z [0,1] -> X~Geom(p)  
+
+Px(x)=P(X=x)=0
+Px(x)=(1-p)^(x-1)*p ... (x je z X)  
+
+Kontrola SUMA_(k=1)^(neonečno)(1-p)^(k-1)*p ?= 1  
+
+pokud p/(1-(1-p)) = 1, tak platí  
+
+### Def: Binomiální rozdělení
+X = počet šestek při n nezávislých hodech  
+p je z [0,1]; n z *N*  
+X ~ Bin(n,p)
+Px(k)= ...  
+  1) 0 pokud k není z [0,n]   
+  2) (n nad k)*p^k * (1-p)^n-k  
+
+Příklad:
+X = počet šestek při n nezávislých hodech  
+k krát padne s pravděpodobností:  
+(n nad k)*p^k (počet možností kdy padne krát pravděpodobnost, že k-krát padne)  
+to celé krát (1-p)^n-k ... pravděpodobnost, že n-k krát nepadne.  
+
+Kontrola:  
+suma přes všechna k je rovna 0. TODO :)  
+
+
+
+
+
