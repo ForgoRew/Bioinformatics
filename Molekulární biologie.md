@@ -170,3 +170,42 @@ Pozitivní topoizomeráza umožňuje vytvářet velmi stabilní DNA u termofiln�
 
 *Camptoteca acuminata*
 topotecan, irinotecan ... sloučenina, která zabíjí jen bakterie, protože brání superspiralizaci DNA  
+coumarin ... v trávě, inhibitor bakteriální gyrázy, antibiotikum
+
+# 04
+## Přístupy k odhalení struktury DNA  
+Franklinová & Gosling ... x-ray crystalografie  
+
+Watson & Crick
++ teoretická stavba modelu a porovnávání s realitou  
++ přemýšleli nad funkcí molekuly v organismu
+
+Antibiotika  
++ často nezabírají, protože pro danou bakterii třeba nemusí ten princip fungovat!
+
+## Vyšší struktura DNA
+Chromozomy jsou tvořeny chromatinem ... DNA + proteiny (hlavně histony)  
+
+Struktura
+### bakterie
+cirkulární DNA, 1 místo počátku replikace
+### archea 
++ chybí jaderná membrána,
++ cirkulární DNA,
++ někdy DNA ve více kopiích
++ histone core -- tyčka z histonů v centru nadšroubovice
++ histony ALBA1 a ALBA2
+
+### mitochondrie
++ u člověka (obratlovců) velmi malý genom
+
+### chloroplasty
++ lineární? cirkulární? Dynamická struktura DNA
+
+### eukaryota
+
+### Polymerace DNA
+Pomocí nukleosid trifosfátů, od 5' k 3' konci.
+Zrychlení reakce -> odebírání produktů (pyrofosfát) -> ***pyrofosfatázy***  
+
+
