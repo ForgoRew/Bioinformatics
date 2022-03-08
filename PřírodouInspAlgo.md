@@ -166,6 +166,8 @@ Jde o to: (... genetické učení)
 + ruletová selekce
   + Pi=(fi)/∑(fj) ... ale fitness musí být >= 0)
   + malé rozdíly ve fitness mají poměrně malé rozdíly v šanci být přijaty
++ spravedlivá ruletová selekce
+  + je vybrán 1. jedinec a druhý je vybrán pomocí jiné funkce
 + turnajová selekce
   + vybere se lepší ze dvojice jedinců (s určitou pravděpodobnoctí)
 
@@ -177,11 +179,3 @@ Jde o to: (... genetické učení)
 + bodové (+ dvoubodové, tříbodové ...) ... zvolí se bod a prohodí se příslušné sekvence obou jedinců
   + uniformní křížení ... rozhodování pro každou pozici v sekvenci
 
-1. a
-   1. ab
-   2. ac
-   3. ad
-2. b
-   1. ba
-   2. bc
-   3. bd
