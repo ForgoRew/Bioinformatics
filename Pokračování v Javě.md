@@ -205,4 +205,57 @@ Od Java 8 použita i pro překlad lambda výrazů
  - externí knihovna pro převod nativní knihovny do Javy
  - ***JNI*** naopak mapuje *Javu* do *C*
 
+# 04
+### Moduly
+další vrstva k balíčkům  
+classpath je křehký  
+u classpath chybí zapouzdření  
+   - public věci jsou vidět všude
 
+Moduly umožňují komplexnější a vícevrstevnaté aplikace.  
+Spojování aplikací dohromady.  
+Je možné distribuovat části programů do vývojových týmů.  
+Umožňuje definovat komplexní závislosti.  
+Zlepšení architektury programu.  
+   - program ví o svých závislostech
+   - dokáže spravovat své závislosti
+Vnitřní implementace modulů si každé IDE udělalo trochu jinak.  
+Moduly znemožňují hackování architektury.  
+
+Moduly jsou definovány v balíčku (co požadují a co dávají).  
+Moduly jsou většinou ve formě jaru.
+
+Používají se pomocí "module path".  
+
+Virtual machine si staví graf závislost jednotlivých modulů na sobě navzájem.
+
+klíčová slova:
+```java
+module // deklarace modulu
+
+requires // požadavek modulu
+static //
+export // co balíček ze sebe publikuje
+
+open // je možné přistoupit i k neexportované části balíčku
+open module // je možné přistupovat k čemukoli z něj
+```
+
+layer - vrstva  
+přiřazuje classloadery k jednotlivým třídám  
+
+moduly jsou normálně přístupné v jar balíčcích  
+automatické moduly vzniknou, když jar balíček nemá module-info.java soubor
+
+### Skriptovací api Javy
+ - skriptovací jazyky jako např. shell
+ - nejsou kompilované, ale interpretované
+ - třeba JavaScript!
+
+```java
+ScriptEngineManager manager = new Manager();
+ScriptEngine engine = Manager.searchEngineByName("JavaScript");
+engine.eval("printf(\"hello world\")");
+```
+
+Je možné si vytvořit vlastní skriptovací jazyk!
