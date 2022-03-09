@@ -290,3 +290,56 @@ Absorbční spektra aminokyselin
 pI bude v TESTUUUUUU!!!
 Podívat se na kyselé a zásadité AK v proteinu a odhadnutí izoelektrického bodu.
 
+# 04
+Sekundární struktury  
+- helikální struktury ... nejsou to alpha helixy
+- alpha helixy
+- beta-listy
+
+## Metody
+![motivational only infrared doggie](Infrared_dog.jpg)
+### Gelová elektroforéza
+- rozdělujeme proteiny do skupin, podle toho, jak putují elektrickým polem
+- SDS-PAGE ... sodium dodecil sulfate - polyakryl gelová elektroforéze
+  - snaha o rozdělené podle hmotnosti/objemu molekuly
+- kDA ... jednotka velikosti molekuly
+- barvení (pozor, velké molekuly se snáz barví)
+- roztok akrylu - ~ 15% akrylamidu, přidán methylenbisakrylamid v množství 5% akrylamidu
+- vysoká rozlišovací schopnost ... pouze 0.2%
+- příprava
+  1. gel mezi skla
+  2. zaostřovací gel
+  3. dáme vzorky
+  4. pustíme tu elektroforézu!
+- sodný dodecyl sulfát (SDS) denaturuje proteiny a naváže se na hydrofobní části
+- SDS tomu dá silně záporný náboj, takže celá molekula putuje ke katodě.
+![SodiumDodecylSulfate](SDS.png)
+- barvení
+  - přidání BSA - bovine serum albumin
+
+### Cirkulární dichroismus
+- světlo může být lineárně polarizované a cirkulárně polarizované (čtvrtvlnová destička)
+
+### Tryptofanová sonda
+Měření emisního spektra ...   
+Jablonského graf ... měření absorbce a fluorescence v závislosti na vlnové délce pro danou molekulu  
+
+Tryptofan ... indolová skupina  
+ - silná absorpce 
+
+U hydrofobních rozpouštědel jsou více absorbovány vyšší vlnové délky.  
+U hydrofilních spíše nižší vlnové délky.  
+Jde určit, jak hluboko/na povrchu je tryptofan u proteinů.  
+
+Tryptofan je nejvzácnější aminokyselina.  
+
+## Dusíkaté báze, nukleotidy, nukleové kyseliny
+### Nukleové kyseliny
+* v jádře
+* jsou kyselé (zbytky kys. fosforečné)
+* skládají se z nukleosidů
+
+### Nukleosidy
++ NTP/dNTP
+
+
