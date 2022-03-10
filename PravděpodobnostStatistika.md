@@ -321,11 +321,15 @@ D.n.v. je funkce X:Omega->*R*
 
 Třeba máme množinu 5 čísel {a,b,c,d,e}, Omega je ta množina, X dává množině hodnoty.  
 
+Buď pravděpodobnostní prostor (Omega, *F*, *P*)
+Pak D.n.v. je funkce X:Omega->*R*, pro kterou platí, že
+1) Im(X) je spočetná množina
+2) pro všechna x z X : {w z Omega: X(w)=x} náleží do *F* 
 Pozn.:
 X: {a,b,c,d,e} -> {1,2,2,7,15}  
 díky 3) definováno, že: P(X=x)  
 
-Tím jsme mch. zavedli nový diskrétní pravděpodobnostní prostor, kde elementární jevy (w) jsou zobrazeny na Im(X) = {x1,X2,x3...}
+Tím jsme mch. zavedli nový diskrétní pravděpodobnostní prostor, kde elementární jevy (w) jsou zobrazeny na Im(X) = {x1,X2,x3...}  
 
 ### Def: Pravděpodobnostní funkce n.v. X
 je Px:*R* -> [0,1]  
@@ -370,7 +374,7 @@ Px(k)= ...
   1) 0 pokud k není z [0,n]   
   2) (n nad k)*p^k * (1-p)^n-k  
 
-Příklad:
+Příklad:  
 X = počet šestek při n nezávislých hodech  
 k krát padne s pravděpodobností:  
 (n nad k)*p^k (počet možností kdy padne krát pravděpodobnost, že k-krát padne)  
@@ -383,14 +387,14 @@ Příklad s míčky:
 Máme n míčků a k krát vytáhnu.
 
 ### Def: Hyper geometrické rozdělení
-Totéž jako binomická věta, ale míčky nevracím.
+Totéž jako binomická věta, ale míčky nevracím.  
 
-n z N
-k z 1,2,...,n
+n z N  
+k z 1,2,...,n  
 
-Px(k) = P(X=k) = P(vytáhnu K červených z n pokusů bez vracení).
+Px(k) = P(X=k) = P(vytáhnu K červených z n pokusů bez vracení).  
 
-(Počet červených/všech) = (K nad k)(N-k nad n-k)/(N nad n).
+(Počet červených/všech) = (K nad k)(N-k nad n-k)/(N nad n).  
 
 ### Def: Poissonovo rozdělení
 λ > 0, X ~ Poi(λ)  
@@ -417,7 +421,7 @@ X~Bin(n,λ/n), přibližně X~Poi(λ)
 Buďte A1 ... An jsou (skoro) nezávislé jevy  
 λ = ∑(P(Ai))  
 
-Potom ∑_(i=1)^(n)I_A_i ~ Poi(λ)
+Potom ∑_(i=1)^(n)I_A_i ~ Poi(λ)  
 
 ### Def: Střední hodnota
 Střední hodnota d.n.v. X je  
@@ -436,5 +440,5 @@ EX = SUMA_(k=1)(k.(1-p)^(k).p =
 SUMA_(l=1)(((1-p)^(l-1)*p)/(1-n-p)=1/(1-(1-p))=1/p
 
 #### Binomické rozdělení
-EX=np
+EX=np  
 
