@@ -179,3 +179,53 @@ Jde o to: (... genetické učení)
 + bodové (+ dvoubodové, tříbodové ...) ... zvolí se bod a prohodí se příslušné sekvence obou jedinců
   + uniformní křížení ... rozhodování pro každou pozici v sekvenci
 
+## 04 L Spojitá a kombinatorická optimalizace
+
+### Celočíselné kódování
+- kódování jedince pomocí celých čísel
+- většina věcí u celočíselného kódování se neliší od binárního kódování
+
+***Příklad:***  
+Jde o to rozdělit čísla z množinu A na k podmnožin se stejným součtem.  
+
+Množina A obsahuje N přirozených čísel čísel,  
+pro n z A platí, že leží v intervalu <0,k-1>  
+k je přirozené číslo  
+
+Pozice i ve vektoru jedince pak reprezentuje číslo z A a hodnota na dané pozici určuje, v jaké podmnožině se číslo nachází.  
+
+### Permutační kódování
+ - speciální případ celočíselného kódování
+ - jedinec je kódován opět jako seznam čísel od 0 do k, zároveň se ale musí v jedinci objevit jen právě jednou
+
+Příklad:  
+Problém obchodního cestujícího, permutace dává pořadí vrcholů.  
+
+- permutační kódování se ale používá i pro jiné problémy, nebo jako součást řešení většího problému
+
+Příklad:  
+Bin packing problém ... naskládání objektů daných velikostí (mezi 0 a 1) do přihrádek velikosti 1.  
+Heuristika ... postupné přidávání objektů, permutace dává pořadí objektů  
+
+- problém je vytvoření operátorů
+- mutace může prohazovat dvě různé pozice, invertovat část jedince, nebo přesunout větší celky na jiné místo
+- křížení
+  - Order Crossover ... prohodí prostřední část rodičů
+    - zbylé pozice doplní podle jejich pořadí v rodičích
+  - Partially Mapped Crossover (PMX) ... prohodí se prostřední část rodičů, doplní se chybějící pozice, to, co je duplicitní nahradíme hodnotou z rodiče 
+- Edge Recombination ... pro problém obchodního cestujícího
+  - kombinace hran řešení, nikoli vrcholů
+  - postupuje se podle toho, kolik má daný vrchol sousedů - od nejmenšího po největší
+
+### Spojitá optimalizace - kódování pomocí reálných čísel
+Optimalizace funkcí *R*^n -> *R*  
+
+- mutace
+  - biased ... vychází z hodnoty na dané pozici. Např. podle gaussovského rozdělení.
+  - unbiased ... prostě generace nového čísla
+- křížení ... aritmetické křížení / n bodové mutace
+
+- separabilní funkce - je možné je optimalizovat po složkách
+  - hledání umístění elipsy -- osy rovnoběžné s osami -> separabilní, jinak neseparabilní
+
+
