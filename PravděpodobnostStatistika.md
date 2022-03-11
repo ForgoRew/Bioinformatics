@@ -39,11 +39,19 @@
     - [Def: Střední hodnota](#def-střední-hodnota)
     - [Příklady střední hodnoty](#příklady-střední-hodnoty)
       - [Bernouliho rozdělení](#bernouliho-rozdělení)
+      - [Binární rozdělení](#binární-rozdělení)
       - [Geometrické rozdělení](#geometrické-rozdělení)
-      - [Binomické rozdělení](#binomické-rozdělení)
+      - [Hypergeometrické rozdělení](#hypergeometrické-rozdělení)
+      - [Poissonovo rozdělení](#poissonovo-rozdělení)
   - [04 L](#04-l)
     - [Věta o střední hodnotě d. n. v. funkce (LOTUS)](#věta-o-střední-hodnotě-d-n-v-funkce-lotus)
     - [Věta o vlastnostech *E*](#věta-o-vlastnostech-e)
+    - [Def.: Rozptyl n.v. X](#def-rozptyl-nv-x)
+    - [Def.: Směrodatná odchylka](#def-směrodatná-odchylka)
+    - [Věta o rozptylu a střední hodnotě](#věta-o-rozptylu-a-střední-hodnotě)
+    - [Věta o rozptylu](#věta-o-rozptylu)
+    - [Věta o střední hodnotě a pravděpodobmosti](#věta-o-střední-hodnotě-a-pravděpodobmosti)
+    - [Def. Sdružená pravděpodobnostní funkce](#def-sdružená-pravděpodobnostní-funkce)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -437,14 +445,33 @@ EX = SUMA_(w z Omega)(X(w).P({w}))
 
 ### Příklady střední hodnoty
 #### Bernouliho rozdělení
+EX = p  
+var(X)= E(X^2) - E(X)^2 = p-p^2 = p.( 1-p )
+
+#### Binární rozdělení
+EX = E(X1 + X2 + ... + Xn), kde Xi je bernouliho rozdělení.  
+EX = EX1 + EX2 + ... + EXn = n.p  
+var(X) = var(X1) + var(X2) + ... + var(Xn) = np(1-p)  
+
 #### Geometrické rozdělení
 EX = SUMA_(k=1)(k.(1-p)^(k).p =  
 = SUMA_k=1 (SUMA_(l=1)^(k)) (1-p)^(k-1).p =  
 SUMA_(l=1)(((1-p)^(l-1)*p)/(1-n-p)=1/(1-(1-p))=1/p
 
-#### Binomické rozdělení
-EX=np  
+#### Hypergeometrické rozdělení
+Příklad:  
+K ... červené míčky  
+N ... celkem míčky  
+počet červených z n vytažených  
 
+X = X1 + ... + Xn  
+X1 ~ Bern(K/N)  
+
+EX = EX1 + EX2 + ... EXN = n*(K/N)
+
+#### Poissonovo rozdělení
+X ~ Pois(lambda)  
+EX = var(X) = lambda
 ## 04 L
 Y = g(X) = g°X
 
@@ -455,7 +482,8 @@ g(X) je d. n. v., kdykoli X je d. n. v.
 
 ### Věta o střední hodnotě d. n. v. funkce (LOTUS)
 Law Of The Unconscious Statistitian  
-Eg(X)= SUMA_(x z Im(X))(g(x) . P(X=x))  
+E( g(X) ) = SUMA_( x z Im(X) )( g(x) . P(X=x ) )  
+
 
 ### Věta o vlastnostech *E*
 1. P(X>=0) = 1 & E(X)=0 -> P(X=0)=1
@@ -463,6 +491,31 @@ Eg(X)= SUMA_(x z Im(X))(g(x) . P(X=x))
 3. E(a.X+b) = a.E(X)+b
 4. E(X+Y)=E(X)+E(Y)
 
+Dk. 2.:  
+EX > c = SUMA(x.P(X=x))
+Sporem: P(X>=c) = 0  
+  -> Vx>=c : P(X=x)=0
+  -> nenulové členy v "P(X=x)" mají x>c
 
+Příklad:  
+Házíme kostkou, při 6 házíme podruhé
 
-   
+### Def.: Rozptyl n.v. X
+var(X) = E[ (X - E(X))^2 ]  
+
+### Def.: Směrodatná odchylka
+sigma_x = √( var(X) )  
+
+### Věta o rozptylu a střední hodnotě
+var(X) = E(X^2) - E(X)^2
+
+### Věta o rozptylu
+var(aX+b) = a^2 . var(X)  
+
+### Věta o střední hodnotě a pravděpodobmosti
+E(X) = SUMA _od nuly ^do nekonečna ( P(X>n) )
+
+### Def. Sdružená pravděpodobnostní funkce
+Diskr. n. v. X,Y ... náh. vektor (X,Y)  
+P(X,Y) : R^2 -> [0,1]  
+P_x,y()
