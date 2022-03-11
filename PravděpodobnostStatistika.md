@@ -41,6 +41,9 @@
       - [Bernouliho rozdělení](#bernouliho-rozdělení)
       - [Geometrické rozdělení](#geometrické-rozdělení)
       - [Binomické rozdělení](#binomické-rozdělení)
+  - [04 L](#04-l)
+    - [Věta o střední hodnotě d. n. v. funkce (LOTUS)](#věta-o-střední-hodnotě-d-n-v-funkce-lotus)
+    - [Věta o vlastnostech *E*](#věta-o-vlastnostech-e)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -442,3 +445,24 @@ SUMA_(l=1)(((1-p)^(l-1)*p)/(1-n-p)=1/(1-(1-p))=1/p
 #### Binomické rozdělení
 EX=np  
 
+## 04 L
+Y = g(X) = g°X
+
+g(X) je d. n. v., kdykoli X je d. n. v.
+1. Im(X) je nejvýše spočetný,  
+2. V y z *R* : Y^(-1)(y) z *F*
+   {w:g(X(w))=y} = U_(x z R: g(x)=y x z Im(X) {w:X(w)=x})
+
+### Věta o střední hodnotě d. n. v. funkce (LOTUS)
+Law Of The Unconscious Statistitian  
+Eg(X)= SUMA_(x z Im(X))(g(x) . P(X=x))  
+
+### Věta o vlastnostech *E*
+1. P(X>=0) = 1 & E(X)=0 -> P(X=0)=1
+2. E(X)>=c -> P(X>c)>0
+3. E(a.X+b) = a.E(X)+b
+4. E(X+Y)=E(X)+E(Y)
+
+
+
+   
