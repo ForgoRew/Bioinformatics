@@ -484,7 +484,6 @@ g(X) je d. n. v., kdykoli X je d. n. v.
 Law Of The Unconscious Statistitian  
 E( g(X) ) = SUMA_( x z Im(X) )( g(x) . P(X=x ) )  
 
-
 ### Věta o vlastnostech *E*
 1. P(X>=0) = 1 & E(X)=0 -> P(X=0)=1
 2. E(X)>=c -> P(X>c)>0
