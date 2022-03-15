@@ -259,3 +259,61 @@ engine.eval("printf(\"hello world\")");
 ```
 
 Je možné si vytvořit vlastní skriptovací jazyk!
+
+# 05
+### GUI ... Graphics User Interface
+
+*AWT* ... Nativní GUI komponenty  
+
+**Swing** ... kompletní GUI v Javě  
+
+**JavaFX** ... 2007 ... něco jako Flash. Není ve standardní knihovně.  
+
+SWT ... Javovská obálka nad knihovnou operačního systému.  
+
+QT ... knihovna, existuje její mapování do Javy.  
+
+### Swing
+- balíčky `javax.swing`, využívá třídy z `java.awt`, potřebuje `java.desktop`
+- používá model událostí
+
+#### Look & feel
+... string pro nastavení vzhledu a chování  
+
+#### Události
+Generují se při každé akci.  
+Je potřeba mít `Listener`, který `Eventy` registruje.
+
+#### Co dalšího Swing má
+ + Kontejnery, Layout, Layout Manager
+   + BorderLayout - SJVZ+střed
+   + FlowLayout
+   + atd. -> všechno je hezky v příkladech
+
+ + přehled vizuálních komponent
+ + `JLabel`
+   + text, obrázek
+ + Tlačítka
+   + `JButton`,
+   + `JToggleButton`,
+   + `JCheckBox`,
+   + `JRadioButton` --> `ButtonGroup`
+ + Ikonky a obrázky
+   + `Icon` interface
+   + třída `ImageIcon` - gif, png, jpg
+ + Nad komponentami je možné nastavit tool tipy
+ + `JTextField`
+ + `JTextArea`
+ + `JComboBox` ... text field + menu
+
+![KomboBox příklad](KomboBox.png)
+
++ `JTree`
++ `JTable`
++ `JToolBar`
++ `JSplitPane`
++ `JDesktopPane`
++ `JDialog`
+
+
+
