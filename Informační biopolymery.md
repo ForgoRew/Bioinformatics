@@ -333,6 +333,11 @@ Jde určit, jak hluboko/na povrchu je tryptofan u proteinů.
 
 Tryptofan je nejvzácnější aminokyselina.  
 
+### Ramachandranův graf
+***Jak ho číst?***
+![Ramachandran description](ramachandran_described.jpg)  
+
+
 ## Dusíkaté báze, nukleotidy, nukleové kyseliny
 ### Nukleové kyseliny
 * v jádře
@@ -342,4 +347,49 @@ Tryptofan je nejvzácnější aminokyselina.
 ### Nukleosidy
 + NTP/dNTP
 
+## 05 Nukleové kyseliny a jejich komponenty
 
+### Ribóza
+Má několik konformací(
++ C2'-exo/endo
++ C3'-endo/endo
+), které označují "prolomení" v C2/C3 uhlíku.
+
+### N-glykosidická vazba mezi bazí a ribózou
+### Vodíkové můstky mezi vlákny DNA
+ - mezi A-T jsou dva
+ - mezi G-C jsou 3
+ - uvádí se, že počet vodíkových můstků má velký vliv na stabilitu DNA
+   - GC bohaté úseky jsou obecně stabilnější, než AT bohaté úseky
+
+### Struktura DNA
+ - držena vodíkovými můstky mezi AT/GC
+ - jednotlivé báze se stackují nad sebou
+
+### Rozpoznání struktury DNA
+ - difrakce Roentgenu skrz DNA dělá křížek s vodorovnými čárkami
+ - navíc jsou vidět velké skvrny nahoře a dole
+
+![DiffractionPatternDNA](https://upload.wikimedia.org/wikipedia/en/b/b2/Photo_51_x-ray_diffraction_image.jpg)
+
+10-12 nukleotidů je vidět opakování.  
+Z difraktogramu je vidět repetitivní a šroubovicovitá struktura.  
+
+### Názvosloví komponent DNA
+nukleotid ... celý komplex 3P, ribóza a báze na N-glykosidické vazbě
+nukleosid ... ribóza a báze na N-glykosidické vazbě
+
+![Nukleotid](UntitledNukleotid.png)
+
+### Dusíkaté báze
+Pyrimidin ~ 
+Purin
+
+### Párování
+*Watson-Criegovo* párování:  
+anti-anti konformace, standardní.
+*Hoogsteenovo* párování:
+Báze pootočená o 180°, syn-anti, nestandardní
+
+### Kolísavé párování (wobbling)
+[Wobbling na Wiki](https://cs.wikipedia.org/wiki/Antikodon#Wobbling)
