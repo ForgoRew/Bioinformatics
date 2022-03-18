@@ -228,4 +228,54 @@ Optimalizace funkcí *R*^n -> *R*
 - separabilní funkce - je možné je optimalizovat po složkách
   - hledání umístění elipsy -- osy rovnoběžné s osami -> separabilní, jinak neseparabilní
 
+## 05 Evoluční algoritmy - genetické programování
+Složitější, než jedinec = vektor.  
+
+### Genetické programování
+- programy pomocí evolučních algoritmů automatiky
+
+#### Lineární genetické programování
+ - jedinec jako posloupnost instrukcí,
+ - jedinci nemusí mít stejnou délku, ale jinak operace fungují docela normálně
+
+#### Kartézské genetické programování
+ - jedinec kóduje program na mřížce *r* × *l*,
+ - jedinec je vektor r x l genů
+ - gen
+   - jméno funkce, kterou počítá
+   - indexy do předchozích vrstev, odkud bere vstupy
+ - jedinec bere vstupy do první vrstvy
+ - na každý výstup jedinec obsahuje index, kde se v něm tento výstup počítá
+
+ - mutace většinou mění funkci a její vstupy / výstupy
+
+#### Gramatická evoluce
+- využívá se formální zápis syntaxe jazyka pomocí bezkontextové gramatiky
+- jedinec jako posloupnost čísel, která udává pravidlo gramatiky
+- když je jedinec moc krátký a po jeho zpracování zbudou ještě nějaké terminály - pak nemůže být vyhodnocen
+  - snažíme se generovat delší jedince
+  - rodiče vždy vytvoří validního potomka
+
+#### Stromové genetické programování
+- "běžné" genetické programování
+- jedinec je strom s funkcemi v uzlech (neterminály) a v listech vstupy a výstupy (terminály)
+- mutace prohazují hrany, podstromy etc.
+- jak s číselnými konstantami?
+  - základní konstanty ... 0,1,2,...
+  - operátory podobné jako u spojité optimalizace
+- automaticky definované funkce - vytváříme vlastní funkce
+
+#### Evoluce pravidel
+- strojové učení a evoluce klasifikačních pravidel
+- jedinec ... množina pravidel pro klasifikaci zadaných vstupů
+- vstup ... vektor n čísel -> jedinec ... (c1,c2,cn)->*k*
+  - pokud pri každé i z n platí podmínka ci, pak objekt je třídy *k*
+- když vstup splňuje více pravidel
+  - můžeme nechat pravidla hlasovat
+  - zvolíme tu nejčastější třídu
+  - nebo můžeme zvolit první možnost
+- křížení ... kombinace pravidel rodičů
+- mutace ... měnit třídu pro dané pravidlo, podmínky, měnit váhy pravidel
+
+
 
