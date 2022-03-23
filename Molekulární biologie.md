@@ -208,4 +208,32 @@ cirkulární DNA, 1 místo počátku replikace
 Pomocí nukleosid trifosfátů, od 5' k 3' konci.
 Zrychlení reakce -> odebírání produktů (pyrofosfát) -> ***pyrofosfatázy***  
 
+# 06
+replikace
 
+bakterie ... 1 replikační počátek  
+eukaryota ... více počátků  
+prokaryota ... je to různé  
+
+T = 18-180 min  
+C = 40 min (42min, 4639221, bp = 1840)  
+
+eukaryota ... G1,S,G2,M,  
+celkem proběhne za cca 22-24 hodin, ale není na to pravidlo.  
+Hepatocyty se dělí 1x za půl roku.    
+
+Cdc - -- cyclin dependent complex, cdk ... cyclin dependent kinase  
+
+### DnaA
+- u bakterií - je potřeba hodně DnaA na zahájení replikace,  
+- po startu je všechno znehodnoceno.
+- takže se hned nemůže zahájit dělení znovu...
+
+### Telomery
+ ... obrana proti ničení konců DNA na 3' konci
+
+### Chyby v RNA
+ ... životnost RNA je v řádu vteřin u bakterií ... nevadí tolik
+ ... u eukaryot je to v řádu hodin/dní
+
+### 

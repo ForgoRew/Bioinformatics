@@ -52,6 +52,15 @@
     - [Věta o rozptylu](#věta-o-rozptylu)
     - [Věta o střední hodnotě a pravděpodobmosti](#věta-o-střední-hodnotě-a-pravděpodobmosti)
     - [Def. Sdružená pravděpodobnostní funkce](#def-sdružená-pravděpodobnostní-funkce)
+  - [05 L](#05-l)
+    - [Def.: Nezávislost X,Y](#def-nezávislost-xy)
+    - [Marginální rozdělení](#marginální-rozdělení)
+    - [Věta ("o konvoluci náhodné veličiny")](#věta-o-konvoluci-náhodné-veličiny)
+    - [Věta ("o konvoluci střední hodnoty")](#věta-o-konvoluci-střední-hodnoty)
+    - [Věta o linearitě střední hodnoty](#věta-o-linearitě-střední-hodnoty)
+    - [Věta o součinu střední hodnoty](#věta-o-součinu-střední-hodnoty)
+    - [Věta o rozptylu součtu](#věta-o-rozptylu-součtu)
+    - [Def.: Kovariance](#def-kovariance)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -436,7 +445,7 @@ Potom ∑_(i=1)^(n)I_A_i ~ Poi(λ)
 
 ### Def: Střední hodnota
 Střední hodnota d.n.v. X je  
-EX=SUMA_(x z Im(x))(x.Px(x)) = SUMA(x)P(X=x)  
+EX=SUMA_(x z Im(X))(x.Px(x)) = SUMA(x)P(X=x)  
 E ... expectation ... střední hodnota  
 
 Poznámka:
@@ -506,7 +515,7 @@ var(X) = E[ (X - E(X))^2 ]
 sigma_x = √( var(X) )  
 
 ### Věta o rozptylu a střední hodnotě
-var(X) = E(X^2) - E(X)^2
+var(X) = E(X^2) - E(X)^2  
 
 ### Věta o rozptylu
 var(aX+b) = a^2 . var(X)  
@@ -518,3 +527,69 @@ E(X) = SUMA _od nuly ^do nekonečna ( P(X>n) )
 Diskr. n. v. X,Y ... náh. vektor (X,Y)  
 P(X,Y) : R^2 -> [0,1]  
 P_x,y()
+
+
+## 05 L
+D.N.V. X ... fce: Px(x)=P(X=x)  
+-> lze určit střední hodnota ... EX = SUMA (xPx(x)) nebo Eg(X)=SUMA (g(x)Px(x))
+
+P_X,Y(x,y) = P(X=x & Y=y) = P( {w:X(w)=x & Y(w)=y} ), kde {w:X(w)=x & Y(w)=y} je z *F*
+
+### Def.: Nezávislost X,Y
+Dvě d. n. v. X,Y jsou nezávislé právě tehdy, když pro všechna x,y: {X=x} a {Y=y} jsou nezávislé jevy.  
+To je také ekvivalentní tomu, že P(X=x & Y=y) = P(X=y)*P(Y=y)
+
+Příklad:  
+Na kostce...  
+p, že i: Pi>=0, SUMA_1^6 (Pi) = 1  
+P(Xi = k1, ... X6 = K6)  
+
+To, že padnou samé jedničky není nezávislé na tom, že padnou samé dvojky
+
+Multinomické rozdělení ... 
+
+### Marginální rozdělení
+
+P_X1(k_i) = SUMA_(k1...Kn) P(Xi...n) (k1 ... k6) = ... = (n nad ki).Pi^(ki).(1-p)^(n-ki)
+
+Příklad:  
+g(x,y) = x+y  
+P(X+Y=3)=... konvoluce  
+
+### Věta ("o konvoluci náhodné veličiny")
+Pokud X a Y jsou nezávislé, pak P(X+Y=z) = SUMA_x (PX(x)PY(z-x)).  
+
+### Věta ("o konvoluci střední hodnoty")
+E[g(X,Y)] = SUMA (g(x,y).P(X,Y)(x,y)), má-li součet smysl.  
+... protože [LOTUS](#věta-o-střední-hodnotě-d-n-v-funkce-lotus)
+
+### Věta o linearitě střední hodnoty
+E[X+Y]=E[X]+E[Y]  
+
+Důkaz:  
+g(x,y)=x+y  
+E[X+Y]=E[g(X,Y)]=SUMA_(x,y) ((x+y).P(X=x & Y=y)) = SUMA_x,y (x.P(X=x, Y=y) + SUMA(y.P(...))  
+= EX+EY  
+
+### Věta o součinu střední hodnoty
+Když X,Y jsou **nezávislé** náhodné veličiny, pak E(X.Y)=(EX).(EY)  
+
+Důkaz:  
+h(x,y) = x.y  
+E(XY)=SUMA_(x.y) (P(X=x, Y=y)) = SUMA_x (xPx(x)).SUMA_y(yPy(y)) = EX.EY  
+
+### Věta o rozptylu součtu
+var(X+Y)=var(X) + var(y) + 2cov(X,Y)  
+
+Dlouze:  
+var( SUMA_i=1^n (Xi) ) = SUMA_i,j=1^n (cov(Xi,Xj)) =  
+= SUMA_i=1^n (var(Xi)) + SUMA_i!=j (cov(Xi,Xj)) = 
+= SUMA_i=1^n (var(Xi)), pokud X jsou po dvou nezávislé.
+
+E[(X+Y)^2] = E(X^2+2XY + Y^2)
+E[(X+Y)^2] = EX^2 + EY^2 + 2(EX)(EY)
+
+### Def.: Kovariance
+cov(X,Y)=E(X,Y)-E(X)(E)  
+
+Pozorování!  
