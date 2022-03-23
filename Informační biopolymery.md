@@ -290,7 +290,7 @@ Absorbční spektra aminokyselin
 pI bude v TESTUUUUUU!!!
 Podívat se na kyselé a zásadité AK v proteinu a odhadnutí izoelektrického bodu.
 
-# 04
+# 04 Struktura proteinů a metody jejího zjišťování
 Sekundární struktury  
 - helikální struktury ... nejsou to alpha helixy
 - alpha helixy
@@ -347,8 +347,8 @@ Tryptofan je nejvzácnější aminokyselina.
 ### Nukleosidy
 + NTP/dNTP
 
-## 05 Nukleové kyseliny a jejich komponenty
-
+# 05 Nukleové kyseliny a jejich komponenty
+[prezentace](https://dl2.cuni.cz/pluginfile.php/135591/mod_resource/content/1/03-stavebni-jednotky-DNA-RNA-2019-0320a.pdf)  
 ### Ribóza
 Má několik konformací(
 + C2'-exo/endo
@@ -393,3 +393,55 @@ Báze pootočená o 180°, syn-anti, nestandardní
 
 ### Kolísavé párování (wobbling)
 [Wobbling na Wiki](https://cs.wikipedia.org/wiki/Antikodon#Wobbling)
+
+### Kolísavé párování
+Např. Imidazol a i další látky se mohou párovat i s více bazemi.  
+Díky tomu je např. zajištěno, že translační RNA má i přes nepoměr  
+mezi počtem AA (20) a počtem kombinací tripletů ACGT (4^3 = 64),  
+se budou triplety správně translatovat.
+
+### Přechody amin/imin
+Mohou mezi sebou přecházet a tím měnit vlastnosti bazí.  
+Např. uracil - laktam/laktim konformace.  
+![Laktam/laktim uracilu](U_laktam_laktim.png)  
+
+### Lakton
+Heterocyklus uhlíků (3,4,5,6) s jedním dusíkem a navázaným *O* na dvojné vazbě.  
+
+![lakton cycle](laktonovy_kruh.png)
+
+### Další typy kolísavého párování
+keto/enol  
+syn/anti  
+triády ... společně 3 báze naráz (TA.T, CG.C+)  
+G-kvadruplex ... 4 guaniny  
+
+### Reaktivita bazí
+Alkylace  
+Thyminový dimer  
+
+# 06 Polymorfismus DNA
+[prezentace](https://dl2.cuni.cz/pluginfile.php/14729/mod_resource/content/1/04-vyssi-struktury-NA-proteinu-24-moodle.pdf)  
+
+### Konformace DNA
+DNA má kontinuum konformací od A do Z  
+Nejběžnější je konformace B  
+
+### Vývoj znalostí o tomto
+Průlom s rozvojem metody rozptylu X na krystalech (krystalizace)
+
+#### Problémy
+Není snadné vyizolovat molekulu DNA, která by byla skutečně definovaná.  
+DNA je dlouhé a kratší úseky se velmi liší.  
+RNA je prakticky nemožné vyizolovat z organizmů.  
+
+### Denaturace DNA
+Jde o to oddělit jednotlivé řetězce dsDNA  
+nejjednodušší je denaturovat necyklické dsDNA  
+pak je možnost ještě cyklická dsDNA a necyklická DNA se spojenými konci  
+
+Hyperchromní efekt ... když se dsDNA denaturuje na ssDNA, více absorbuje světlo  
+
+
+
+
