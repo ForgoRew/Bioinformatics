@@ -277,5 +277,67 @@ Složitější, než jedinec = vektor.
 - křížení ... kombinace pravidel rodičů
 - mutace ... měnit třídu pro dané pravidlo, podmínky, měnit váhy pravidel
 
+## 06 Neuronové sítě
+- inspirace v neuronové soustavě
+- jsou velmi populární
+  - zvlášť konvoluční sítě ... zpracovávají obraz
+
+### Strojové učení a příprava dat
+ - příznaky ... vektory x1,x2,...xn
+ - výstup ... nějaké y
+ - xi i y mohou být číselné, kategorické nebo ordinální
+ - škálování 
+   - je lepší většinou nepouštět do programu čísla rovnou,
+   - změnit jejich rozsah do intervalu [0,1]
+ - normalizace
+   - odečtení průměru a vydělení směrodatnou odchylkou
+ - kategorické příznaky (např. popisky obrázků)
+   - většinou z nějaké množiny,
+   - kóduje se jako vektor s indexací na příslušné pozici
+ - ordinální příznaky je možné připravit pomocí již existujících hodnot
+
+### Perceptron
+Neuronová síť s jedním neuronem.  
+
+Neuron má n vstupů a jeden výstup.  
+Každý ze vstupů *xi* má váhu *wi*.  
+Ještě se definuje práh (bias) *b*, který ovlivňuje aktivaci perceptronu.
+Vyhodnocovací funkce vypadá asi takto:  
+Ný=*b* + SUMA_*Vi*(*xi*.*w*)
+
+Úplně mi nedává smysl to s tím prahem *b* ve vzorečku, ale intuitivně platí,
+že je potřeba, aby suma přeskočila určitý *práh* a pak dá 1, jinak 0.
+
+#### Trénování perceptronu
+Jednoduše se přenastavují váhy *w* (vektor vah).
+r ... říká, jak rychle se učí
+x ... vstupy (vektor)
+y ... výstup
+
+*wi* = *wi* + r.(*y* - *f(x)*).*xi*  
+
+z rovnice vyplývá, že se wi mění jen, když je výstup špatně :)  
+
+
+### Vícevrstvé perceptrony
+také feedforward network  
+Jednotlivé neurony jsou zapojené na sebe.  
+
+používají se jiné funkce *f*, než ty zmiňované výše  
+
+f(x)=1/(1+e^(-lambda.x)) ... logistická sigmoida  
+f(x) = max(0,x) ... ReLU ... rectified linear unit  
+
+pro trénování se využívá tzv. gradientní metoda  
+#### Gradientní metoda
+ - pro chybovou funkci L(x,y|w)
+ - derivuje se podle vah v síti
+ - wi = wi - alpha.(dL(x,y|w)/dwi)  
+ - alpha je parametr učení
+
+Přeskočil jsem výpočet. Pokud je to potřeba, DOUČIT SE
+
+#### Adaptační pravidlo
+wij^k+1 = wij^k - alpha.beta_j.yi
 
 
