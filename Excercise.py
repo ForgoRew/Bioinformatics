@@ -26,3 +26,4 @@ def IsPalindrome(string):
 
 print(IsPalindrome("kajakartaA"))
 
+print("PokemonLOL")
