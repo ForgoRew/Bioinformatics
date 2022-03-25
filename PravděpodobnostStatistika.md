@@ -61,6 +61,14 @@
     - [Věta o součinu střední hodnoty](#věta-o-součinu-střední-hodnoty)
     - [Věta o rozptylu součtu](#věta-o-rozptylu-součtu)
     - [Def.: Kovariance](#def-kovariance)
+    - [Značení](#značení)
+  - [06 L Obecné náhodné veličiny](#06-l-obecné-náhodné-veličiny)
+    - [Def: Náhodná veličina](#def-náhodná-veličina-1)
+    - [Def: Distribuční funkce](#def-distribuční-funkce)
+    - [Def: Spojitá n.v.](#def-spojitá-nv)
+    - [Věta X má hustotu fx](#věta-x-má-hustotu-fx)
+    - [Exponenciální rozdělení](#exponenciální-rozdělení)
+    - [Def: střední hodnoty](#def-střední-hodnoty)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -593,3 +601,67 @@ E[(X+Y)^2] = EX^2 + EY^2 + 2(EX)(EY)
 cov(X,Y)=E(X,Y)-E(X)(E)  
 
 Pozorování!  
+
+Příklad na úvod:  
+X~Bin(m,p)  
+Y~Bin(n,p)  
+X,Y jsou n.n.v.  
+
+Z=X+Y  
+Pz=?  
+
+Pz(k)=  
+
+SUMA_x=0^k (Px(x).Py(k-x))=  
+SUMA_x^k (m nad x).p^x.(n nad k-x).p^k-x.(1-p)^(n-(k-x))=  
+p^k.(1-p)^m-n-k.SUMA_t (m nad x).(n nad k-x)=  
+
+p^k.(1-p)^m-n-k.(m+n nad k)  
+
+### Značení
+P_(X|A) (x) = P(X=x|A)  
+P_(X|A) (x|y) = P(X=x|Y=y)  
+
+
+## 06 L Obecné náhodné veličiny
+### Def: Náhodná veličina
+X:OMEGA->*R* t.ž. Vx z *R*: {w z OMEGA: X(w)<=x} z *F*  
+
+(Značení: {w z OMEGA: X(w)<=x}={X<=x})
+
+Pozorování:  
+{X<=x}=U_(x'<=x){X=x'}
+
+### Def: Distribuční funkce
+Fx(x)=P(X<=x)
+
+### Def: Spojitá n.v.
+X je spojítá n.v., pokud existuje fx:*R*->[0,infinity) t.ž. Fx(x) = INTEGRÁL_-INFINITY^x (fx(t)) dt
+
+### Věta X má hustotu fx
+1) P(X=x)=0, Vx z *R*  
+2) P(a<=X<=b) = INTEGRÁL_a^b (fx(t)) dt, Va < b
+3) V rozumnou A: P(X z A) = INTEGRÁL_A f(x)
+
+Příklad:  
+Uniformní rozdělení U(a,b)  
+pro -nek ... a -> 0  
+pro a ... b -> 0,1  
+pro b ... nek -> 1  
+
+### Exponenciální rozdělení
+Exp(lambda)  
+
+F(x)=  
+1-e^(-lambda.x) pro x>=0,  
+0 pro x<=0
+
+f(x)=F'(x) když NLSS.  
+f(x)=lambda.e^-lambda.x
+
+### Def: střední hodnoty
+X je spojitá n.v. s hustotou *fx* .  
+Pak E(X)=INTEGRÁL (x.fx(x)), pokud na intervalu dává funkce smysl.  
+
+Pro diskrétní n.v. zase suma (*xPx(x)*)
+
