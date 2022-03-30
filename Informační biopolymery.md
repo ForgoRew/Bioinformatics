@@ -442,6 +442,30 @@ pak je možnost ještě cyklická dsDNA a necyklická DNA se spojenými konci
 
 Hyperchromní efekt ... když se dsDNA denaturuje na ssDNA, více absorbuje světlo  
 
+# 07 Pokračování ve struktuře nukleové kyseliny
+*A-DNA* ... pravotočivá stuha
+*B-DNA* ... pravotočivá dvoušroubovice
+*Z-DNA* ... levotočivá pokřivená dvoušroubovice
 
+### Anomálie
+*Kvadruplex Guaninů* ... 4 guaniny s jedním jednomocným kationtem vytváří čtvercovou planární strukturu
+
+*Vrtulový skrut* ... posun bazí v rovině vůči sobě navzájem  
+
+*Vlásenky, kříže a bubliny* ... palindromy, nepoměr mezi bazemi v jednom a druhém vláknu  
+![Vlásenky, kříže a bubliny](vlasenky-krize.png)  
+
+*Utajená přerušení a gapy* ... narušené úseky DNA, přerušená vlákna  
+![Utajená přerušení](preruseniDNA.png)  
+
+### Vinutí
+ - L ... číslo vinutí
+ - T ... dvoušroubovicové číslo
+ - W ... počet nadobrátek
+
+- Různé struktury
+   - Solenoid -- cívka
+   - pleptoneidní vinutí
+   - thoroidní vinutí
 
 

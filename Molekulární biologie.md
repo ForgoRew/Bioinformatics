@@ -236,4 +236,19 @@ Cdc - -- cyclin dependent complex, cdk ... cyclin dependent kinase
  ... životnost RNA je v řádu vteřin u bakterií ... nevadí tolik
  ... u eukaryot je to v řádu hodin/dní
 
-### 
+# 07
+### Deaminace Thyminu
+
+### Tyjo asi končim s poznámkama!!! Půjdu si asi kreslit nebo nevim, stejně si to přečtu ve skriptech!
+
+### Opravy
+Helikázy a nukleázy ... opravy chybného párování.  
+Řetězce rozbité jsou dlouhé až 2000 nk, buňce se to vyplatí!!  
+MutS, MutS + MutL + DNA komplex -> aktivace MutH  
+MutH se váže na GATC a řeší to.  
+
+### Testy mutagenity
+***Amesův test***:  
+*Salmonella typhimurium his-* - když se nedodává histidin, neroste.  
+Když proběhne reverzní mutace, bakterie si opraví tvorbu histidin a roste.
+Existuje spousta dalších testů :)
