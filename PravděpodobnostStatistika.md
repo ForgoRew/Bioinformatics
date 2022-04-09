@@ -69,6 +69,23 @@
     - [Věta X má hustotu fx](#věta-x-má-hustotu-fx)
     - [Exponenciální rozdělení](#exponenciální-rozdělení)
     - [Def: střední hodnoty](#def-střední-hodnoty)
+  - [07 L](#07-l)
+    - [Opakování n.v.](#opakování-nv)
+    - [Linearita střední hodnoty platí i zde](#linearita-střední-hodnoty-platí-i-zde)
+    - [Příklady rozdělení](#příklady-rozdělení)
+      - [X ~ Exp(λ)](#x--expλ)
+      - [X ~ Geom(p)](#x--geomp)
+      - [X ~ ϕ(x) Standardní normální rozdělení](#x--ϕx-standardní-normální-rozdělení)
+      - [Cauchyho rozdělení](#cauchyho-rozdělení)
+      - [Kvartilová funkce](#kvartilová-funkce)
+  - [08 L](#08-l)
+    - [Věta o celkové hustotě pravděpodobnosti (o celkové střední hodnotě)](#věta-o-celkové-hustotě-pravděpodobnosti-o-celkové-střední-hodnotě)
+    - [Věta](#věta-1)
+    - [Věta](#věta-2)
+    - [Def.: Náhodný vektor (X,Y)](#def-náhodný-vektor-xy)
+    - [Def.: Vícerozměrná distribuční funkce](#def-vícerozměrná-distribuční-funkce)
+    - [Vícerozměrné normální rozdělení](#vícerozměrné-normální-rozdělení)
+    - [Věta](#věta-3)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -487,8 +504,8 @@ X1 ~ Bern(K/N)
 EX = EX1 + EX2 + ... EXN = n*(K/N)
 
 #### Poissonovo rozdělení
-X ~ Pois(lambda)  
-EX = var(X) = lambda
+X ~ Pois(λ)  
+EX = var(X) = λ
 ## 04 L
 Y = g(X) = g°X
 
@@ -636,12 +653,12 @@ Pozorování:
 Fx(x)=P(X<=x)
 
 ### Def: Spojitá n.v.
-X je spojítá n.v., pokud existuje fx:*R*->[0,infinity) t.ž. Fx(x) = INTEGRÁL_-INFINITY^x (fx(t)) dt
+X je spojítá n.v., pokud existuje fx:*R*->[0,infinity) t.ž. Fx(x) = ∫_-INFINITY^x (fx(t)) dt
 
 ### Věta X má hustotu fx
 1) P(X=x)=0, Vx z *R*  
-2) P(a<=X<=b) = INTEGRÁL_a^b (fx(t)) dt, Va < b
-3) V rozumnou A: P(X z A) = INTEGRÁL_A f(x)
+2) P(a<=X<=b) = ∫_a^b (fx(t)) dt, Va < b
+3) V rozumnou A: P(X z A) = ∫_A f(x)
 
 Příklad:  
 Uniformní rozdělení U(a,b)  
@@ -650,18 +667,109 @@ pro a ... b -> 0,1
 pro b ... nek -> 1  
 
 ### Exponenciální rozdělení
-Exp(lambda)  
+Exp(λ)  
 
 F(x)=  
-1-e^(-lambda.x) pro x>=0,  
+1-e^(-λ.x) pro x>=0,  
 0 pro x<=0
 
 f(x)=F'(x) když NLSS.  
-f(x)=lambda.e^-lambda.x
+f(x)=λ.e^-λ.x
 
 ### Def: střední hodnoty
 X je spojitá n.v. s hustotou *fx* .  
-Pak E(X)=INTEGRÁL (x.fx(x)), pokud na intervalu dává funkce smysl.  
+Pak E(X)=∫ (x.fx(x)), pokud na intervalu dává funkce smysl.  
 
 Pro diskrétní n.v. zase suma (*xPx(x)*)
 
+## 07 L
+### Opakování n.v.
+X: Omega -> *R*  
+EX = ∫ _-Inf^Inf (xF_X(x)) dx  
+Fx(x) = ∫ _-Inf^x (f_X(t)) dt  
+
+### Linearita střední hodnoty platí i zde
+Platí i zde. (E(aX+bY)) = aEX + bEY
+
+### Příklady rozdělení
+#### X ~ Exp(λ)  
+F_X(x) = 1-e^(-λ.x)  
+f_X(x) = F_X'(x) = λ.e^(-λ.x)  
+
+test, zda f je hustota:  
+INTEGRACE.
+
+EX = ∫(od -Inf do Inf)(x.F_X(x)) = ∫(λ.x.e^-λ.x) = 1/λ  
+var(X) = 2/λ^2 - 1/λ^2 = 1/λ^2  
+
+#### X ~ Geom(p)
+
+Y ... čas, kdy se rozpadne atom U  
+Pravděpodobnost, že P(Y>nd) = (e^(-λ))
+
+#### X ~ ϕ(x) Standardní normální rozdělení
+ϕ(x) = 1/(√2π)  
+φ ... primitivní funkce k funkci ϕ  
+
+dva parametry , mí a sigma
+Z = (X-mí) / sigma
+
+#### Cauchyho rozdělení
+f(x) = 1/(pí(1+x^2))  
+
+#### Kvartilová funkce
+X ... n. v.  
+Q_X: [0,1] -> *R*  
+Q_X(p) = min{x z *R*: p<= F_X(x)}  
+F_X ... spojitá a rostoucí => Q_X = F_X^(-1)
+
+## 08 L
+### Věta o celkové hustotě pravděpodobnosti (o celkové střední hodnotě)
+X ... s.n.v., B1,B2,B3 ... rozklad X  
+E(X)=SUMA(PBi.E(X|Bi)) = INTEGRÁL_-inf^+inf(x.fX|Bi(x))  
+= INTEGRÁL_-inf^+inf(x.fX(x))  
+
+Příklad :)  
+p ... z (0,1)  
+Qx(p) = min{x náleží *R*: p<=FX(x)}   
+
+
+### Věta
+X je n.v. s distribucí FX=F, F je spojitá & rostoucí  
+Pak F(X) ~ U(0,1)  
+
+### Věta
+F je funkce "typu distr. funkce"    
+Q je odpov. kvartilová funkce.  
+U ~ U(0,1), X = Q(U)  
+Pak FX=F
+
+Víme, že  
+QX(p) =< x
+<=>
+p <= FX(x)
+
+P(Q(U) <= x) =? F(x)
+
+Př.:  
+Exp(lambda)  
+F(x) = 1-e^(-lambda.x)  
+
+### Def.: Náhodný vektor (X,Y)
+(na (OMEGA, *F*, P)) je dvojice n.v.  
+t. ž. Vx,y z *R* je definována.  
+F(X,Y)(x,y)=P(X<=x&Y<=y)  
+
+### Def.: Vícerozměrná distribuční funkce
+F_X,Y(x,y) = INTEGRÁL_-inf^x ( INTEGRÁL_-inf^y( f_X,Y(s,t) )dt )ds  
+
+d^2/(dxdy) ... Derivace podle x a pak podle y
+
+### Vícerozměrné normální rozdělení
+
+### Věta
+X,Y n.n.v. spojité  
+Pak Z=X+Y je také spojitá  
+a f_Z(z) = INTEGRÁL_-Inf^+Inf (f_X(x)f_Y(z-x)) dx
+
+∫λφϕ√∑π
