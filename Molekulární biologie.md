@@ -252,3 +252,26 @@ MutH se váže na GATC a řeší to.
 *Salmonella typhimurium his-* - když se nedodává histidin, neroste.  
 Když proběhne reverzní mutace, bakterie si opraví tvorbu histidin a roste.
 Existuje spousta dalších testů :)
+
+# 09
+
+## Transkripce
+### Pol I
+### Pol II
+Mediátorová struktura na okraji (přes 20 transkripčních faktorů) zprostředkují dotyk core proteinu.  
+Celá struktura polymerázy se při každém použití skládá znova.  
+### Pol III
+### Transkripce u organel
+Podobně jako u bakterií, malá RNA Pol.  
+
+### Transkripce u bakterií
+### Transkripce u archeí
+
+### Princip konce transkripce
+1. Iniciace - Polymeráza nasedne
+2. Polymeráza pokračuje
+3. Polymeráza najede na AAUAAA sekvenci a okopíruje jí, ale pokračuje dál
+4. Na místě AAUAAA se RNA odstřihne, ale polymeráza pořád kopíruje
+5. Pol I je zastavena proteinem, který se naváže na Pol I a ta se rozpadne
+6. Pol II je zastavena až při posttranskripční modifikaci RNA
+7. Pol III je zastavena podobným principem, jako rhó zastavení bakteriální Pol
