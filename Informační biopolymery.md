@@ -536,7 +536,16 @@ Hyperchromní efekt ... když se dsDNA denaturuje na ssDNA, více absorbuje svě
    - používá se pro DNA větší než 1kbp a menší než 50kbp,
    - při pulzní *elfo* až 2Mbp
 ### Horizontální *elfo*
- - 
+ - prostě normální elektroforéza
+
+### Způsoby dělení molekul
+1. Ogstonovo síto
+2. Plazení bez napínání
+3. Plazení s napínáním
+
+![tři způsoby dělení molekul](elfo_deleni_dna.png)  
+
+
 
 
 
