@@ -545,8 +545,63 @@ Hyperchromní efekt ... když se dsDNA denaturuje na ssDNA, více absorbuje svě
 
 ![tři způsoby dělení molekul](elfo_deleni_dna.png)  
 
+### Složení pufru
+- složení pufru ovlivňuje rychlost pohybu molekul
+  - ovlivňuje celkové chování molekul
+  - při vyšším obsahu vázajících iontů molekuly putují rychleji,
+    - ale také se vyrábí velké množství tepla
+    - agar se může roztavit
+    - DNA může denaturovat
+
+### Faktory ovlivňující průběh elektroforézy
+ - napětí
+   - přímo úměrná rychlosti pohybu molekul
+   - má horní mez
+   - zlepšuje definovanost proužků
+   - maximální rozlišení 2kb, napětí <= 5V/cm
+ - směr elektroforézy
+   - standardně stejnosměrný konstantní proud
+     - omezení: není možné odlišit DNA > 50kb
+   - pulzní elektroforéza
+     - střídavé vysílání proudu dopředu a nazpátek
+     - dělí fragmenty dlouhé až 2Mbp
+ - složení bazí a teplota
+   - na rozdíl od PAGE nehraje příliš roli
+     - v rozmezí 5-30°C se mobilita nemění
+   - vyjímkou je agar řidší než 5% u komplexů DNA-protein
+ - přítomnost interkalátorů
+   - EtBr snižuje mobilitu o 15%
+
+ - na základě parametrů elektroforézy je možné určit vzdálenost, kterou se budou fragmenty dané velikosti pohybovat a na základě toho pak provést jejich separaci
+
+![separace: závislost rychlosti na hustotě](separation-speed-density.png)  
+
+### Role nanášecích pufrů
+ - zvyšují hustotu vzorku
+ - obarvují vzorek
+ - indikují přibližnou polohu fragmentů DNA
+
+![nanášecí pufry - přehled](elfo_aditiva.png)  
+
+### Barvení
+![barvení - slide č. 20](elfo_barvení.png)  
+
+### Denaturační gely
+ - močovina
+ - formamid
+ - denaturují NA na jednotlivé řetězce a ruší sekundární struktury
+
+### Studium topologie DNA
+![topologie](elfo_topologie_DNA.png)  
+
+### Eluce NA na gelu
+
+## Dvojrozměrná elektroforéza
+TODO: Dodělat ke zkoušce.
+## Pulzní elektroforéza
+TODO: Dodělat ke zkoušce.
 
 
 
 
- - ↑↓←→↔
+[](↑↓←→↔)
