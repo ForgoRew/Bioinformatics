@@ -22,7 +22,7 @@ Cvičení 13.10-14.40 ... není povinné, ale pomůže s úlohami, co budeme mí
 4. Drobné úlohy okolo využití a aplikace metod pro analýzu a separaci biopolymerů.
 
 ### Příprava
-+ [ ] Jsou tu témata přednášek a odkazy - projít si a udělat overview
++ [x] Jsou tu témata přednášek a odkazy - projít si a udělat overview
 
 ### Literatura
 Voet P. a Voet J.G. Biochemie
@@ -462,10 +462,46 @@ Hyperchromní efekt ... když se dsDNA denaturuje na ssDNA, více absorbuje svě
  - L ... číslo vinutí
  - T ... dvoušroubovicové číslo
  - W ... počet nadobrátek
+ - L se nemění, prostorovou konformací se T může předělat na W a naopak-
 
 - Různé struktury
    - Solenoid -- cívka
-   - pleptoneidní vinutí
-   - thoroidní vinutí
+   - thoroidní vinutí - jedna otočka
+   - pleptoneidní vinutí - dvě otočky naráz
+
+![twist/writhe u Z-DNA](twist_writhe.png)  
+
+ - transkripce generuje nadšroubovitost
+ - replikace také generuje nadšroubovitost
+
+# 08 Další důležité principy vinutí
+
+## Topoizomerázy
+ - topoizomeráza I 
+   - štěpí jen jeden řetězec,
+   - váže 5' konec rozštěpené DNA
+   - u eukaryot váže 5' i 3' konce rozštěpené DNA
+   - relaxuje nadobrátky
+ - topoizomeráza II
+   - štěpí oba řetězce DNA
+   - má podjednotky alpha a beta
+     - alpha váže rozštěpenou DNA
+   - vytváří negativní nadobrátky (relaxuje pozitivní nadobrátky)
+   - změny W jsou vždy o dvě nadobrátky
+
+
+
+# 09 Rozlišovací metody pro strukturu DNA
+
+*EtBr ... Ethidium bromide*  
+## Přehled rozlišovacích metod
+1. Elektroforéza
+2. Centrifugace
+   - izokinetická
+   - izopyknická
+3. Elektronová mikroskopie
+4. Chování při denaturaci / reasociaci
+5. Chování při interakci s EtBr
+6. Odolávání mechanickému namáhání
 
 
