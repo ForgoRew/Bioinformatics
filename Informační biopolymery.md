@@ -494,6 +494,8 @@ Hyperchromní efekt ... když se dsDNA denaturuje na ssDNA, více absorbuje svě
 # 09 Rozlišovací metody pro strukturu DNA
 
 *EtBr ... Ethidium bromide*  
+*NA ... Nucleic acid*  
+*elfo ... elektroforéza*
 ## Přehled rozlišovacích metod
 1. Elektroforéza
 2. Centrifugace
@@ -504,4 +506,38 @@ Hyperchromní efekt ... když se dsDNA denaturuje na ssDNA, více absorbuje svě
 5. Chování při interakci s EtBr
 6. Odolávání mechanickému namáhání
 
+## Elektroforéza NA
+### Základní podmínky
+ - neutrální / zásadité prostředí -> negativně nabité NA
+ - poměr mezi hmotností a nábojem molekuly je konstantní
+ - pro *elfo* NA se používá *elfo* na gelu
+   - používá se agaróza nebo polyakrylamid
 
+ - používá se horizontální a dvourozměrná *elfo*, viz dále 
+
+### Agaróza
+ - získává se z mořských řas
+ - lineární polysacharid
+ - základní jednotka ... D-galaktóza + 3-6-anhydro-D-galaktózy
+ - průměrně molekula dlouhá 300-400 podjednotek
+ - vyšší hodnoty agaru v gelu zapříčiňují pomalejší pohyb molekul
+
+#### Výhody a nevýhody agarózy
+ - výhody
+   - snadná příprava
+   - snadná manipulace
+ - nevýhody
+   - vysoká cena
+   - přírodní produkt
+     - šarže se mohou lišit
+     - může poskytovat nestabilní výsledky
+     - DNA z agarózy může být kontaminovaná sacharidy nebo ionty kovů → možná inhibice následných reakcí
+ - shrnutí
+   - používá se pro DNA větší než 1kbp a menší než 50kbp,
+   - při pulzní *elfo* až 2Mbp
+### Horizontální *elfo*
+ - 
+
+
+
+ - ↑↓←→↔
