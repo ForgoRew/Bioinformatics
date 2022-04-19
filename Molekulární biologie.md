@@ -275,3 +275,27 @@ Podobně jako u bakterií, malá RNA Pol.
 5. Pol I je zastavena proteinem, který se naváže na Pol I a ta se rozpadne
 6. Pol II je zastavena až při posttranskripční modifikaci RNA
 7. Pol III je zastavena podobným principem, jako rhó zastavení bakteriální Pol
+
+
+# 10
+## Posttranslační modifikace
+### Něco
+
+### Sestřih
+Intron ... nekódující část RNA, která je vystřižená  
+Exony ... kódující část RNA, která je ponechaná pro translaci  
+
+
+#### Průběh sestřihu
+- Sestřihává se ve směru RNA kódování, tzn. od 5' konce ke 3' konci.  
+- exony ve výsledné molekule budou mít stejné pořadí, jako v původní molekule
+
+### Editace
+- upravování bazí
+- pomocí proteinu "APOBEC-I-C/U"
+- typy
+  - deaminace na adenosinu
+    - vzniká hypoxantin
+  - deaminace na cytosinu
+    - vzniká uracil
+    - 
