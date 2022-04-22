@@ -4,7 +4,7 @@
 - [Pravděpodobnost a statistika](#pravděpodobnost-a-statistika)
     - [Obsah](#obsah)
     - [Organizace](#organizace)
-    - [Sylabus:](#sylabus)
+    - [Sylabus](#sylabus)
   - [01 P (EN)](#01-p-en)
     - [Independent events](#independent-events)
     - [Practice](#practice)
@@ -86,13 +86,23 @@
     - [Def.: Vícerozměrná distribuční funkce](#def-vícerozměrná-distribuční-funkce)
     - [Vícerozměrné normální rozdělení](#vícerozměrné-normální-rozdělení)
     - [Věta](#věta-3)
+  - [09 L](#09-l)
+    - [Náhodné vektory](#náhodné-vektory)
+      - [Podmíněná hustota](#podmíněná-hustota)
+    - [Věta Markovova nerovnost (51% lidí je 2x starší než průměr ... nejde)](#věta-markovova-nerovnost-51-lidí-je-2x-starší-než-průměr--nejde)
+    - [Věta Čebiševova nerovnost](#věta-čebiševova-nerovnost)
+    - [Věta Chernoff](#věta-chernoff)
+    - [Silný zákon velkých čísel](#silný-zákon-velkých-čísel)
+    - [Aplikace: Monte Carlo Integrace](#aplikace-monte-carlo-integrace)
+    - [Slabý zákon velkých čísel](#slabý-zákon-velkých-čísel)
+    - [Centrální limitní věta](#centrální-limitní-věta)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
  [kvízy](https://api.socrative.com/rc/AhrYBB)
 
  Heslo: PRAVDASTAT
-### Sylabus:
+### Sylabus
 Pravděpodobnost:
 - Axiomy pravděpodobnosti, základní příklady (diskrétní a spojité). Podmíněná pravděpodobnost, věta o úplné pravděpodobnosti, Bayesova věta. 
 
@@ -771,5 +781,66 @@ d^2/(dxdy) ... Derivace podle x a pak podle y
 X,Y n.n.v. spojité  
 Pak Z=X+Y je také spojitá  
 a f_Z(z) = INTEGRÁL_-Inf^+Inf (f_X(x)f_Y(z-x)) dx
+
+## 09 L
+
+### Náhodné vektory
+#### Podmíněná hustota
+f_X|Y ( x|y) = f_X,Y(x,y)/f_Y(y)
+
+f _Y(y) = ∫ _-Inf^Inf (f_X,Y(x,y)) dx
+
+Př.:  
+Y ... rychlost auta
+Y ~ Exp(1/50) (E(Y) = 50)
+
+Pokud Y=y tak radar naměří X
+
+X ~ N(y,y^2/100)
+
+### Věta Markovova nerovnost (51% lidí je 2x starší než průměr ... nejde)
+X n.v. t.ž. X>=0  
+a z R: a > 0   
+P(X>=a) < EX/a  
+
+Př.:  
+Pravděpodob. algoritmus ~ X=doba běhu  
+Zjistili jsme EX = n^2  
+Markovova ner.  
+
+### Věta Čebiševova nerovnost
+X je n.v, EX = mi < Inf, var X = SIGMA^2 < Inf  
+P(|X-mi| >= a.SIGMA) <= 1/a^2  
+
+Dk.: Y = (X-mi)^2
+
+### Věta Chernoff
+X = SUMA_i=1^n (Xi), Xi n.n.v. = +-1
+
+P(X>=t) = P(X<=-t) <= ^(-t^2/2sigma^2)
+
+sigma = var(X) = n
+
+### Silný zákon velkých čísel
+
+X1, X2, ... stejně rozdělené n.n.v.
+ - mají E ný a rozptil sigma^2
+ - Sn = (X1+X2+...)/n ... výběrový průnik
+ - lim_n->Inf Sn = ný skoro jistě
+
+### Aplikace: Monte Carlo Integrace
+
+### Slabý zákon velkých čísel
+- X1, X2 ... ný, sigma^2, Sn  
+- V epsilon > 0: lim_n->Inf (P(|Sn-ný|>epsilon)) = 0  
+
+### Centrální limitní věta
+- X1, X2, ... n.n.v. stejně rozd., ný, sigma^2
+
+- Yn = ((X1 + ... + Xn) - n.ný)/(beta.√(n))  
+- Pak Yn -> N(0,1)
+- Fn = F_Yn
+
+
 
 ∫λφϕ√∑π

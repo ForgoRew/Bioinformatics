@@ -298,4 +298,5 @@ Exony ... kódující část RNA, která je ponechaná pro translaci
     - vzniká hypoxantin
   - deaminace na cytosinu
     - vzniká uracil
-    - 
+
+ribozimy ... RNA analogie proteinů
