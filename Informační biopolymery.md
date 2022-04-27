@@ -122,7 +122,7 @@ Přejaté od Dr. Marxe z Howard University
 - umíííím
 - huíhuíííí
 
-### Angstrom
+### Ångström
 1A = 1e-10m
 
 # 02 Prvky a jejich vlastnosti, úvod do biopolymerů
@@ -475,7 +475,7 @@ Hyperchromní efekt ... když se dsDNA denaturuje na ssDNA, více absorbuje svě
  - replikace také generuje nadšroubovitost
 
 # 08 Další důležité principy vinutí
-
+[prezentace](https://dl2.cuni.cz/pluginfile.php/137663/mod_resource/content/2/05-kondenzace-topologie-DNA-elfo-2019-0410a-moodle.pdf)  
 ## Topoizomerázy
  - topoizomeráza I 
    - štěpí jen jeden řetězec,
@@ -601,7 +601,57 @@ TODO: Dodělat ke zkoušce.
 ## Pulzní elektroforéza
 TODO: Dodělat ke zkoušce.
 
+# 11
+## Sekvenace
 
+### 454 sekvenace
+[prezentace](https://dl2.cuni.cz/pluginfile.php/138700/mod_resource/content/1/07-sekvenace-DNA-2019-0417-0424.pdf)  
+
+### Next Generation Sequencing
+
+### Illumina (Solexa) sekvenace
+* fixace ssDNA primeru na sklíčko (čip)
+* lokální amplifikace ssDNA
+* terminace řetězce fluorescenčním analogem dNTP
+* detekce kamerou
+* odštěpení fluorescenční sondy
+
+### Ion semiconductor sequencing
+* měření iontů během inkorporace dNTP
+* měří se množství protonů - n.dNTP → n.H+
+  * přímý záznam sekvvence
+  * levná detekce
+
+### Sekvenace nanopóry
+![nanopore](nanopore_technique.png)  
+* alphatoxin - udělá dírku v membráně
+* měří se proud částic skrz nanopóry
+* DNA procházející nanopórem mění proud v nanopóru
+* každý tetranukleotid má vlastní hladinu proudu
+* velmi nepřesná metoda
+* provádí se tolikrát, až je chyba malá
+
+### Spektrum DNA v roztoku
+* rozdíl nativní a denaturované DNA v absorbanci při 260nm a 25°C
+* nativní frakce = (D-X)/(D-N)
+
+## Kolorimetrie
+[prezentace](https://dl2.cuni.cz/pluginfile.php/43981/mod_resource/content/2/08-proteiny-purifikace-elfo-2016-0413-odpoledne.pdf)  
+
+### RNA-kolorimetrie
+* konverze ribózy na furfural
+  * furfural reaguje s orcinolem
+  * vzniká zelenomodrý produkt
+* nefunguje u DNA (chybí OH skupina)
+
+### DNA-Burtonova kolorimetrie
+* stanovení koncentrace DNA → "dishe agent"
+* zabarvení vzorku
+
+### Další kolorimetrické metody
+* Biuret a Cu+II vazba na 4N peptidické vazby až do 1mg/l
+* Lowry: Biuret a Folinovo reagens (tyrosin)
+* Bradfordová: Coomassie blue G250 (arginin, arom.k.)
 
 
 [](↑↓←→↔)
