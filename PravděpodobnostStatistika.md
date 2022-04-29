@@ -1,8 +1,8 @@
 # Pravděpodobnost a statistika 
 
-### Obsah
+### Obsah>
 - [Pravděpodobnost a statistika](#pravděpodobnost-a-statistika)
-    - [Obsah](#obsah)
+    - [Obsah>](#obsah)
     - [Organizace](#organizace)
     - [Sylabus](#sylabus)
   - [01 P (EN)](#01-p-en)
@@ -96,6 +96,10 @@
     - [Aplikace: Monte Carlo Integrace](#aplikace-monte-carlo-integrace)
     - [Slabý zákon velkých čísel](#slabý-zákon-velkých-čísel)
     - [Centrální limitní věta](#centrální-limitní-věta)
+  - [10 L - Statistika](#10-l---statistika)
+    - [Pojmy a oblasti zkoumání](#pojmy-a-oblasti-zkoumání)
+    - [Náhodný výběr](#náhodný-výběr)
+    - [Intervalové odhady](#intervalové-odhady)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -841,6 +845,30 @@ X1, X2, ... stejně rozdělené n.n.v.
 - Pak Yn -> N(0,1)
 - Fn = F_Yn
 
+## 10 L - Statistika
+### Pojmy a oblasti zkoumání
+ - náhodný výběr ~ stratifikovaný výběr
+ - bodové odhady x intervalové odhady
+ * testování hypotéz
+ * explorační analýza dat
+   * tlustá čára - medián
+   * hranice krabice - kvartil
+   * horní a spodní čára - min/max nebo dalších 25% na obě strany
+ * konfirmační analýza
+ * náhodný výběr
+   * bez vracení ... to dává smysl
+   * s vracením ... to se dělá
+
+### Náhodný výběr
+* náhodný výběr
+  * distr. funkce F
+  * rozsah n
+  * X1 ... Xn - n.n.v V Fx=F
+* X1 ... Xn ~ F je n.v.
+
+* neparametrické a parametrické modely
+
+### Intervalové odhady
 
 
 ∫λφϕ√∑π
