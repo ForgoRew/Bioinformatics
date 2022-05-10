@@ -315,5 +315,72 @@ Je potřeba mít `Listener`, který `Eventy` registruje.
 + `JDesktopPane`
 + `JDialog`
 
+# 12
+## Android v Javě
+### Fragmenty
++ podaktivity v uživatelském rozhraní
+### Intents
+### Services
+#### IntentService
+### Vlákna
++ jednovláknové
+#### AsyncTask
++ něco jako SwingWorker
+### Dialogy
++ speciální případ fragmentů
++ předpřipravené typy dialogů
+
+## Jazyky překládané do Java bytecodu
++ Scala
++ Closure
++ Groovy
++ Kotlin
++ Jython
++ JRuby
+
+# 13
+## Scala
++ Mix objektového a funkcionálního jazyka
++ Byla i verze pro .NET
++ používá se
+  + Twitter od r. 2009
+  + LinkedIn do 2015
++ je možné najít různé knihovny pro paralelní programování
++ použití
+  + přímo z příkazové řádky
+  + `scalac` obalený kompilátor
++ proměnné
+  + `var identifikátor[:typ] = hodnota`
+  + `val nemoznemenit[:typ] = hodnota`
++ třídy
+  + `class`
+  + `object` ... singleton
++ trait
+  + částečně implementovaná třída
++ volná syntax
+  + volitelný středník
+  + metody jako infix operátory
+  + vytvořené tak, aby bylo možné ji rozšiřovat -> je možné vkládat kód jako argument metodám
+## Groovy
++ objektový jazyk
++ dynamický
++ kombo Javy a Ruby
+  + většina Java kódu je v Groovy kompilovatelná
++ trochu konkurent Scaly
++ je skriptovací na top levelu
++ rozšířené možnosti inicializace a práce s listy oproti Javě
++ má svoje vlastní GroovyBeans
+
+## Kotlin
++ objektový a funkcionální jazyk
++ jako Scala, ale umírněnější v syntaxi
++ podpora všech IDE
++ od autorů IntelliJ, JetBrains
++ psaní v Kotlinu
+  + středník volitelný
+  + funkce pomocí slova `fun`
+  + proměnné: `var` & `val`
+  + super práce se stringy!!
+  + 
 
 
