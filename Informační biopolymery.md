@@ -1262,5 +1262,4 @@ TODO: Dodělat ke zkoušce.
 * Bradfordová: Coomassie blue G250 (arginin, arom.k.)
 
 
->>>>>>> 2c959680c7aadcd97df2c10ae181f7c6df84ec1c
 [](↑↓←→↔)
