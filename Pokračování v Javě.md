@@ -408,3 +408,4 @@ Je potřeba mít `Listener`, který `Eventy` registruje.
     + rovnou je možné je předefinovat
 
 
+
