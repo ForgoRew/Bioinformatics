@@ -381,6 +381,28 @@ Je potřeba mít `Listener`, který `Eventy` registruje.
   + funkce pomocí slova `fun`
   + proměnné: `var` & `val`
   + super práce se stringy!!
+  + výjimky
+    + `try`/`catch`/`finally`
+    + místo `switch` má `when`
+      + více možností než v Javě
+    + `for` cyklus iteruje přes prvky čehokoliv `iterable`
+      + `break` a `continue` v principu jako u Javy
+  + vylepšení typů oproti Javě
+    + `any` -- předek všech typů!
+    + `unit` ~ v Javě void
+      + je to typ, singleton 
+      + vrací se, když funkce nic nevrací
+    + `nothing` -- podtyp všech typů
+  + konstruktory
+    + primární konstruktor rovnou inicializuje atributy pomocí values v argumentech
+    + je možné si udělat i sekundární konstruktory s jinými parametry
+    + není zde kw `new`
+  + dědičnost
+    + explicitní určování dědičnosti tříd
+    + pokud se nepovolí pomocí `open`, není povolená
+  + má gettery a settery (`val` jen gettery)
+    + je možné je předefinovat
+  + infix tvar funkcí se může používat, ale je potřeba explicitně to říct pomocí kw `infix`
   + 
 
 
