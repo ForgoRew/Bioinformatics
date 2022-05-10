@@ -403,6 +403,8 @@ Je potřeba mít `Listener`, který `Eventy` registruje.
   + má gettery a settery (`val` jen gettery)
     + je možné je předefinovat
   + infix tvar funkcí se může používat, ale je potřeba explicitně to říct pomocí kw `infix`
-  + 
+  + interfacy
+    + je možné je rovnou implementovat
+    + rovnou je možné je předefinovat
 
 
