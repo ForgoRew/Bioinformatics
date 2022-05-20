@@ -659,5 +659,13 @@ TODO: Dodělat ke zkoušce.
 + kapka proteinu (visící/sedící) je nechaná vyschnout
 + krystal se nechává růst
   + je potřeba mít hezký krystal
++ ozařování rentgenovým zářením o dané délce
++ kryoprotekce - zamražení proteinu
+  + kryoprotektant (glycerol) brání vodě zamrznout v krystalové mřížce
++ furierova transformace difrakčního vzorce
++ refinement mapy elektronové hustoty
+## Fluorescenční korelační spektroskopie (FCS)
++ autokorelace ... v delším časovém úseku se úseky moc nepodobají
++ crosscorrelation
 
 [](↑↓←→↔)

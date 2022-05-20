@@ -100,6 +100,12 @@
     - [Pojmy a oblasti zkoumání](#pojmy-a-oblasti-zkoumání)
     - [Náhodný výběr](#náhodný-výběr)
     - [Intervalové odhady](#intervalové-odhady)
+  - [12](#12)
+    - [Párový test](#párový-test)
+    - [Test dobré shody](#test-dobré-shody)
+    - [Lineární regrese](#lineární-regrese)
+    - [Nelineární regrese](#nelineární-regrese)
+    - [Logistická regrese](#logistická-regrese)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
 
@@ -870,5 +876,17 @@ X1, X2, ... stejně rozdělené n.n.v.
 
 ### Intervalové odhady
 
+## 12
+### Párový test
+### Test dobré shody
+### Lineární regrese
+data: $(xi, yi), i = 1...n$  
+a): $y = v0+v1*x$
 
-∫λφϕ√∑π
+### Nelineární regrese
+$y = v0 + v1x + v2x^2 + ...$
+
+### Logistická regrese
+$y = 0 v 1$
+
+∫λφϕ√∑π∧∨∈∉∏∞
