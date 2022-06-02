@@ -1,8 +1,7 @@
 # Pravděpodobnost a statistika 
 
-### Obsah>
+**Obsah**
 - [Pravděpodobnost a statistika](#pravděpodobnost-a-statistika)
-    - [Obsah>](#obsah)
     - [Organizace](#organizace)
     - [Sylabus](#sylabus)
   - [01 P (EN)](#01-p-en)
@@ -77,7 +76,7 @@
       - [X ~ Geom(p)](#x--geomp)
       - [X ~ ϕ(x) Standardní normální rozdělení](#x--ϕx-standardní-normální-rozdělení)
       - [Cauchyho rozdělení](#cauchyho-rozdělení)
-      - [Kvartilová funkce](#kvartilová-funkce)
+    - [Kvartilová funkce](#kvartilová-funkce)
   - [08 L](#08-l)
     - [Věta o celkové hustotě pravděpodobnosti (o celkové střední hodnotě)](#věta-o-celkové-hustotě-pravděpodobnosti-o-celkové-střední-hodnotě)
     - [Věta](#věta-1)
@@ -99,7 +98,7 @@
   - [10 L - Statistika](#10-l---statistika)
     - [Pojmy a oblasti zkoumání](#pojmy-a-oblasti-zkoumání)
     - [Náhodný výběr](#náhodný-výběr)
-    - [Intervalové odhady](#intervalové-odhady)
+  - [11 Intervalové odhady](#11-intervalové-odhady)
   - [12](#12)
     - [Párový test](#párový-test)
     - [Test dobré shody](#test-dobré-shody)
@@ -728,16 +727,16 @@ Y ... čas, kdy se rozpadne atom U
 Pravděpodobnost, že P(Y>nd) = (e^(-λ))
 
 #### X ~ ϕ(x) Standardní normální rozdělení
-ϕ(x) = 1/(√2π)  
+$ ϕ(x) = 1/(√2*π) $  
 φ ... primitivní funkce k funkci ϕ  
 
-dva parametry , mí a sigma
+dva parametry, mí a sigma
 Z = (X-mí) / sigma
 
 #### Cauchyho rozdělení
-f(x) = 1/(pí(1+x^2))  
+$f(x) = 1/(pí*(1+x^2))$  
 
-#### Kvartilová funkce
+### Kvartilová funkce
 X ... n. v.  
 Q_X: [0,1] -> *R*  
 Q_X(p) = min{x z *R*: p<= F_X(x)}  
@@ -874,7 +873,11 @@ X1, X2, ... stejně rozdělené n.n.v.
 
 * neparametrické a parametrické modely
 
-### Intervalové odhady
+## 11 Intervalové odhady
+
+$T1, T2$ ... náhodné veličiny  
+*intervalový odhad* / *konfidenční interval* / *interval spolehlivosti* "1-alpha"... *T1, T2* jej určují, pokud
+ - v $P(T1 < theta < T2) >= 1-alpha$   
 
 ## 12
 ### Párový test
