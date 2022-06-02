@@ -877,7 +877,7 @@ X1, X2, ... stejně rozdělené n.n.v.
 
 $T1, T2$ ... náhodné veličiny  
 *intervalový odhad* / *konfidenční interval* / *interval spolehlivosti* "1-alpha"... *T1, T2* jej určují, pokud
- - v $P(T1 < theta < T2) >= 1-alpha$   
+ - v $P(T_1 < theta < T_2) >= 1-alpha$   
 
 ## 12
 ### Párový test
