@@ -98,12 +98,23 @@
   - [10 L - Statistika](#10-l---statistika)
     - [Pojmy a oblasti zkoumání](#pojmy-a-oblasti-zkoumání)
     - [Náhodný výběr](#náhodný-výběr)
-  - [11 Intervalové odhady](#11-intervalové-odhady)
-  - [12](#12)
+  - [11](#11)
+  - [12 Intervalové odhady](#12-intervalové-odhady)
     - [Párový test](#párový-test)
     - [Test dobré shody](#test-dobré-shody)
     - [Lineární regrese](#lineární-regrese)
     - [Nelineární regrese](#nelineární-regrese)
+  - [13 Bodové odhady](#13-bodové-odhady)
+    - [Základní pojmy](#základní-pojmy)
+    - [Metoda momentů](#metoda-momentů)
+    - [Metoda maximální věrnosti](#metoda-maximální-věrnosti)
+    - [Studentův t-test](#studentův-t-test)
+  - [14 Testování hypotéz](#14-testování-hypotéz)
+    - [Z-test](#z-test)
+    - [p-hacking](#p-hacking)
+    - [Testy dobré shody](#testy-dobré-shody)
+  - [15 Lineární regrese](#15-lineární-regrese)
+  - [16 Neparametrická statistika](#16-neparametrická-statistika)
     - [Logistická regrese](#logistická-regrese)
 ### Organizace
  [stránky předmětu](https://iuuk.mff.cuni.cz/~samal/vyuka/2122/PSt1/)
@@ -873,13 +884,14 @@ X1, X2, ... stejně rozdělené n.n.v.
 
 * neparametrické a parametrické modely
 
-## 11 Intervalové odhady
+## 11 
 
-$T1, T2$ ... náhodné veličiny  
+
+## 12 Intervalové odhady
+$T_1, T_2$ ... náhodné veličiny  
 *intervalový odhad* / *konfidenční interval* / *interval spolehlivosti* "1-alpha"... *T1, T2* jej určují, pokud
- - v $P(T_1 < theta < T_2) >= 1-alpha$   
+ - v $P(T_1 < theta < T_2) >= 1-alpha$  
 
-## 12
 ### Párový test
 ### Test dobré shody
 ### Lineární regrese
@@ -888,6 +900,18 @@ a): $y = v0+v1*x$
 
 ### Nelineární regrese
 $y = v0 + v1x + v2x^2 + ...$
+
+## 13 Bodové odhady
+### Základní pojmy
+### Metoda momentů
+### Metoda maximální věrnosti
+### Studentův t-test
+## 14 Testování hypotéz
+### Z-test
+### p-hacking
+### Testy dobré shody
+## 15 Lineární regrese
+## 16 Neparametrická statistika
 
 ### Logistická regrese
 $y = 0 v 1$
