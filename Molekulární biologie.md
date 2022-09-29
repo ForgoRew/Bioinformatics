@@ -63,9 +63,12 @@ https://www.biologicals.cz/tostvou
  - rostliny mají často výrazně odlišné mechanismy
 
  - první DNA
-   - 1838 ... W. T. Astbury zjišťuje difrakční obrazce DNA, návrh struktury
    - 1928 ... Griffit ... Griffitův experiment
-     - ***Griffitův experiment*** ... ukázal, že virulentní kmen streptokoka
+     - ***Griffitův experiment***
+       - Streptococcus pneumoniae
+         - S-kmeny (Smooth)
+         - R-kmeny (Rough)
+   - 1938 ... W. T. Astbury zjišťuje difrakční obrazce DNA, návrh struktury
    - Koch ... Kochovy postuláty
      - ***Kochovy postuláty*** ... infekční agens v čistém stavu -> infekce -> izolace toho stejného infekčního agens (potvrzení)
      - 1957 ... Francis Crick, George Gamov ... Formulace Centrálního dogmatu molekulární biologie
