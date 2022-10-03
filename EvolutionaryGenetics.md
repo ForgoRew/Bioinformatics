@@ -22,4 +22,25 @@
 - pseudogeny
   - procesované ... vznik genomovou duplikací (a následnou mutací?)
   - neprocesované ... vznik reverzní transkripcí procesované RNA (např. nemá introny, má polyA-tail)
-  - 
+- repetitivní sekvence
+  - tandemové repetice
+    - mikrosatelity ... opakování 1-6 dlouhé, celkově až řádově 10^2 bp
+    - minisatelity ... opakování <=25bp, celkově až řádově 10^3
+      - telomerické sekvence
+    - satelity ... -||- 100ky bp, celkově až 1Mb
+      - centromery např.
+  - rozptýlené repetice
+    - DNA transpozony
+    - retrotranspozony
+      - LTR (long terminal repeat) ... reverze transkriptase
+      - nonLTR
+        - LINE (long interspersed nuclear elements) ... kódují vlastní reverzní transkriptázu
+        - SINE (short interspersed nuclear elements) ... čekají na reverzní transkriptázu např. po infekci virem
+- výhody a nevýhody transpozonů
+  - spíš nevýhody, někdy mohou být vhodně využity pro mutagenezi
+  - Drosophyla má místo telomer nějaký retrotranspozon
+  - evoluce placenty vznikla nejspíš díky transpozomové aktivitě a mutagenezi
+    - komplexní změna v mnoha promotorech najednou
+- polyploidizace
+  - není běžné u organizmů s determinovaným pohlavím
+- programová DNA eliminace
