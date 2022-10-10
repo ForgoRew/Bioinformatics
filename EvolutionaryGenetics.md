@@ -1,5 +1,6 @@
 # Evoluční genetika
 -- Radka Reifová  
+- [ ] R. Dawkins: Sobecký gen
 
 ## 01 Repetitorium
 - Historický vývoj genetiky
@@ -44,3 +45,144 @@
 - polyploidizace
   - není běžné u organizmů s determinovaným pohlavím
 - programová DNA eliminace
+
+## 02 Teorie dědičnosti, mechanizmy sobeckých genů + epigenetická dědičnost
+- kvantitativní genetika
+  - vliv genetiky a prostředí na fenotyp je oddělení
+- Mendelovy zákony:
+  1. ...
+  2. ...
+  3. Zákon o identitě reciprokého křížení
+    - neplatí dokonale (uniparentální dědičnost mitochondriální DNA)
+- Rekombinace
+  - Morgan ... délka v genomu ... 1cM ~ 1Mb
+    - míra rekombinace
+    - u savců jsou "definované" hotspoty rekombinace
+  - *Haldane-Huxley pravidlo*
+    - pokud nějaké pohlaví nerekombinuje, je to vždy heterogametické pohlaví
+      - (např. u Drosophily nerekombinují samičky (Z,W systém))
+  - rekombinace je mechanizmus proti *Mullerově rohatce*
+    - může odstraňovat škodlivé mutace a shromažďovat výhodné mutace
+- uniparentální dědičnost
+  - mitochondriální a plastidová DNA
+  - zpravidla maternální linie
+    - někdy přehozeno (parentální dědičnost u slávek a škeblí)
+    - "matčina kletba"
+- zajímavý parazit Arthropod Wolbachia
+  - vnitrobuněčný parazit
+  - dědí se uniparentálně samičkami
+  - např. u Drosophily
+  - změní pohlaví infikovaných samečků
+  - zakáže množení nenakažených samečků s nakaženými samičkami etc.
+- *germline restricted chromozome*
+  - chromozom je jen v germinálních buňkách, ne v somatických
+  - dědí se také uniparentálně
+  - jen po matčině linii
+  - je aktivně vymazán při spermatogenezi
+- Kvantitativní znaky ... vymykají se Mendelovské teorii
+  - sčítají se alely např. pro vysokou postavu a pro nízkou postavu
+    - často odpovídají gaussově křivce (binární rozdělení)
+    - silný vliv prostředí
+      - popisuje *Heritabilita*
+- *Heritabilita*
+  - $H^2 = V_G/V_P$
+  - $V_P = V_G + V_E$
+    - $V_P$ ... fenotyp
+    - $V_G$ ... genotyp
+    - $V_E$ ... prostředí
+- Teorie sobeckého genu
+  - oproti Darwinovské představě, geny se mohou šířit více v populaci i když snižují fitness jedince
+  - více mechanizmů
+    - více potomků s menší fitness než u "kvalitnější" alely
+    - *Meiotický tah*
+      - jiný poměr gamet obsahující danou alelu než 1:1
+      - aA -> 1:1 a:A x ... 1:10 a:A
+      - *u oogeneze* - např. mohou vystrčit tu druhou gametu do pólových tělísek
+        - např. pomocí zesílení síly centromer
+        - mutace v oblasti centromer
+      - *u spermatogeneze*
+        - systém jedu a protijedu
+          - jed se šíří do dalších spermií
+          - protijed se nešíří
+        - příklad *t-haplotyp*
+          - inverze části chromozomu 17
+          - až 13% myší domácích
+          - z nich až 90% samců dědí tuto inverzi
+          - v homozygotním stavu způsobuje smrt spermií
+    - *Zygotický tah*
+      - např. *Medea* (Maternal-Effect dominant Embrionic Arrest)
+        - pomocí "toxického" m-RNA ještě z buněk matky
+        - pokud chybí alela *Medea*, neprodukuje se protijed
+          - zygota umírá
+    - *efekt zelenovouse*
+      - William Hamilton
+      - alela v tomto efektu musí zajistit
+        1. fenotypický znak (zelený vous)
+        2. rozeznání znaku ostatními jedinci
+        3. zařídit pomoc jedinců s touto alelou
+      - zatím zachyceno u mravence ... Bp, Bp dělnice zabíjejí BB královny, dělnice BB nic nedělají, bb je letální
+    - *syntetický tah*
+    - *genová konverze*
+      - změna alely na homologickém chromozomu pomocí druhé alely
+      - často při meiotickém dělení
+      - *Holliday junction* - - posuvné překřížení jednotlivých vláken chromozomu
+      - může probíhat i mezi paralogními geny
+      - umí zpomalit Müllerovu rohatku
+      - nutná palindromatická sekvence
+      - důležitý mechanizmus pro nepárové chromozomy
+
+- epigenetika
+  - změny v procesech transkripce, translace a foldingu
+  - změny v expresi genů
+  - původně věda o diferenciaci buněk
+- molekulární mechanizmy epigenetiky
+  - metylace DNA
+  - modifikace Histonů (metylace velmi často) -> změna typu chromatinu
+  - priony ... toxické konformace proteinů
+    - nemoc *kuru*
+    - *Creutzfeldt-Jakobova choroba*
+    - *Nemoc šílených krav* Bovinní spongiformní encefalopatie (BSE)
+    - *PSI+* kvasinky
+- základní poznatky
+  - jeden genotyp může mít různé fenotypy
+    - lakušník pod vodou a nad vodou
+    - daphnie bez predátora a s ním
+  - během ranné embryogeneze a gametogeneze dochází k masivní demethylaci (odstranění epigenetické informace)
+    - některé metylace ale mohou přežít, především LTR elementy
+
+- parentální imprinting
+  - některé geny mají jen otcovský set chromozomů nebo jen matčin set chromozomů
+  - u savců až do té míry, že uniparentální embrya nejsou životaschopná
+  - Poruchy
+    - angelman syndrom ... paternální disomie
+    - prader - willi syndrom ... maternální disomie
+- dědičnost modifikací na histonech
+  - především maternální
+  - u spermií jsou histony vyměněny za tzv. *protaminy*
+- co způsobuje epigenetické změny
+  - jídlo
+    - *agouti viable yellow ($A^{vy}$)*
+      - žluté myši, když matka nemá dostatek methylových skupin
+    - nedostatek jídla
+      - změna v metabolismu tuků u potomků i vnoučat přeživších hladomor
+  - vitamíny
+  - toxické prostředí
+  - sociální stres
+    - ztráta matky - epigenetické změny v mozku
+- rostliny mají častější dědičné epigenetické změny než živočichové
+  - nemají *Weismanovu bariéru*
+  - nemají tak silné epigenetické změny při diferenciaci buněk
+
+- *Lamarcovská evoluce*
+  - mutace vznikají cíleně
+  - nefunguje u běžné genetiky
+  - často funguje u epigenetiky (je využita adaptivní fenotipová plasticita)
+- *genetická asimilace*
+  - změna chromatinu (epigenetika) může indukovat změny v genomu
+  - není zatím dokázáno
+
+- *horizontální genový přenos*
+  - např. retrovirů
+  - t-plasmid u bakterií
+  - endosymbionti u eukaryot (*wolbachie*)
+  - mšice - syntetizují karotenoidy (geny hub)
