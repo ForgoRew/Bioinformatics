@@ -186,3 +186,82 @@
   - t-plasmid u bakterií
   - endosymbionti u eukaryot (*wolbachie*)
   - mšice - syntetizují karotenoidy (geny hub)
+
+### 03 Populační genetika
+#### Hardy-Weinbergův zákon
+- $p^2+2pq+q^2=1$
+- $p$ ... alela A
+- $q$ ... alela a
+- $p^2$ ... homozygoti
+- $pq$ ... heterozygoti
+- předpokladem je ideální panmiktická populace
+  - dostatečně velká populace
+  - jedinci se párují náhodně
+- např. pomocí $χ^2$ testu
+### odchylku od HW rovnováhy způsobuje
+1. nenáhodné (asortativní) pozitivní párování
+   - **inbreeding** (příbuzenské křížení)
+     - používá se k vytváření imbredních kmenů
+     - hodí se pro vytvoření homozygotních linií
+   - koeficient inbreedingu
+     - $$F=(1/2)^n$$
+2. negativní asortativní
+   - MHC I - založen na heterozygotnosti
+     - podvědomě rozeznáváme pot. sexuální partnery s jinými MHC I geny
+3. geografická strukturovanost populace
+   - **Wahlundův princip**
+   - Snížení celkové heterozygotnosti
+   - **$F_{ST}$** statistika
+     - $F_{ST} = \frac{H_T-H_S}{H_T}$
+
+### Mechanizmy vytvářející variabilitu
+- *efektivní velikost populace ($N_e$)* 
+  - $N_e$ se rovná skutečnému počtu jedinců, pokud počty potomků jednotlivých jedinců mají Poissonovské rozložení
+  - nenáhodné křížení a rozdíly mezi počty rozmnožujících se samic a samců
+    - $N_e = \frac{4N_mN_f}{N_m+N_f}$
+    - efektivní velikost populace člověka je cca $10-20 * 10^3$
+1. genetický drift
+  - doba fixace ???
+  - *efekt hrdla lahve*
+    - ~ cca 500 jedinců
+    - např. gepardi
+  - *efekt zakladatele*
+  - plus náhodné rozrůznění
+  - síla závisí na velikosti populace
+2. mutace
+  - mutační rychlost $μ$
+    - $\frac{N_{jedinců s mutací}}{N_{jedinců v populaci}}$
+    - u člověka je cca $1*10^8$
+  - čím je daná mutační rychlost ($μ$)
+    1. buněčný metabolismus
+    2. záření
+    3. chemické mutageny
+    4. chyby při replikaci
+    5. reparační mechanismy
+  - různé typy mutací mají různé pravděpodobnosti
+    - tranzice je mnohem pravděpodobnější než transverze
+    - hotspots CpG (cytosin megarychle na thymin)
+    - v mitochondriích je 10* větší mutační rychlost než v jádře, kvůli metabolitům
+- *genetický polymorfismus ($θ$)*
+  - většinou platí, že $θ = 4N_e*μ$
+  - *empirický odhad théty ($π$)*
+    - přes všechny kombinace dvojic sekvencí si spočítáme, v kolika bodech se liší
+      - počítá se u bodových mutací
+    - *proporce polymorfních míst ($θ_w$)*
+      - spočítá se počet míst v sekvenci, kde je rozdíl mezi jedinci
+      - normalizuje se to délkou sekvence a harmonickým číslem pro počet jedinců minus 1
+      - $θ_w = S/n/H_{k-1}$
+      - pro počet rozdílů S = 10
+      - pro délku sekvence n = 100
+      - pro k = 3 jedince
+      - bude vzoreček $θ_w = \frac{10}{100*(1+1/2)}$
+3. Migrace
+  - vztah mezi $F_{ST}$ a populační migrační rychlostí
+    - $F_{ST} = \frac{1}{1+4Nm}$
+  - *genová introgrese* (genový tok)
+    - *adaptivní introgrese*
+      - např. myš domácí získala rezistenci vůči Warfarinu z myši středozemní
+      - geny od neandrtálců
+        - srst, kůže, život ve vysokých nadmořských výškách
+        - obezita, deprese
+      - 
