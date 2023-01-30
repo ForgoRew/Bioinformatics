@@ -2,8 +2,33 @@
 -- Radka Reifová  
 - [ ] R. Dawkins: Sobecký gen
 
-## 01 Repetitorium
+## Materiály
+### Sylabus
+### Nahrané přednášky
+- Dostal jsem k dispozici jen následující:
+  - [05 Selekce](https://drive.google.com/file/d/18X74b3A7sREG6BUe95Ft37-kZzDFBsQI/view?usp=sharing)
+  - [06 Funkční genetika](https://drive.google.com/file/d/12oBsUx4r7GIW0jxBr5vkAXxj-Hh1rk41/view?usp=sharing)
+  - [?? Koalescence](https://drive.google.com/file/d/1YXZKwtQ7rz1O8yLcuFE2o8xM2K6HSdxW/view?usp=sharing)
+  - [07 Speciace](https://drive.google.com/file/d/1D5edxU52AtAsmhGPoeBZQw4usTCEibYr/view?usp=sharing)
+  - [08 Genealogie](https://drive.google.com/drive/folders/12-4Ds_5WXZ4S6ho9B-Z61LBR1ona_wIX?usp=sharing)
+### Prezentace
+1. https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/01-GenyGenomy-2022.pdf
+2. https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/02-Dedicnost-2022.pdf
+3. https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/03-UvodPopulacniGenetika-2022.pdf
+4. https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/04-NeutralniEvoluce-2022.pdf
+5. https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/05-Selekce-2022.pdf
+6. https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/06-FunkcniGenetika-2022.pdf
+7. https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/07-Speciace-2022.pdf
+8. https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/08-GenealogieFylogeneze-2022.pdf
+### Stránky předmětu
+https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
+
+## 01 Geny a genomy (opakování)
 - Historický vývoj genetiky
+  - Haldaneovo pravidlo
+    - pokud je u nějakého druhu jedinec sterilní, pak je to nejspíš heterogametické pohlaví
+  - Watson & Crick ... struktura DNA
+  - Motoo Kimura ... teoretický evoluční genetik, neutrální teorie genetického draftu
 - Buněčná biologie a genetika
   - organizace genomu u prokariot a eukariot
 - význam intronů
@@ -46,7 +71,7 @@
   - není běžné u organizmů s determinovaným pohlavím
 - programová DNA eliminace
 
-## 02 Teorie dědičnosti, mechanizmy sobeckých genů + epigenetická dědičnost
+## 02 Dědičnost
 - kvantitativní genetika
   - vliv genetiky a prostředí na fenotyp je oddělení
 - Mendelovy zákony:
@@ -187,8 +212,8 @@
   - endosymbionti u eukaryot (*wolbachie*)
   - mšice - syntetizují karotenoidy (geny hub)
 
-### 03 Populační genetika
-#### Hardy-Weinbergův zákon
+## 03 Úvod do populační genetiky
+### Hardy-Weinbergův zákon
 - $p^2+2pq+q^2=1$
 - $p$ ... alela A
 - $q$ ... alela a
@@ -264,4 +289,18 @@
       - geny od neandrtálců
         - srst, kůže, život ve vysokých nadmořských výškách
         - obezita, deprese
-      - 
+
+
+## 04 
+
+## 05
+
+## 06
+
+## 07
+
+## 08
+
+## 09
+
+## 10
