@@ -229,22 +229,25 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
      - používá se k vytváření imbredních kmenů
      - hodí se pro vytvoření homozygotních linií
    - koeficient inbreedingu
-     - $$F=(1/2)^n$$
+     - $F=(1/2)^n$ ... pravděpodobnost, že jedinec zdědil obě alely od stejného předka
+     - $n$ ... počet jedinců v genealogii od daného jedince ke společnému předkovi
 2. negativní asortativní
    - MHC I - založen na heterozygotnosti
      - podvědomě rozeznáváme pot. sexuální partnery s jinými MHC I geny
 3. geografická strukturovanost populace
    - **Wahlundův princip**
-   - Snížení celkové heterozygotnosti
+   - Snížení celkové heterozygotnosti oproti očekávání
    - **$F_{ST}$** statistika
      - $F_{ST} = \frac{H_T-H_S}{H_T}$
+     - $H_T$ ... očekávaná heterozygotnost
+     - $H_S$ ... reálná heterozygotnost
 
 ### Mechanizmy vytvářející variabilitu
 - *efektivní velikost populace ($N_e$)* 
   - $N_e$ se rovná skutečnému počtu jedinců, pokud počty potomků jednotlivých jedinců mají Poissonovské rozložení
   - nenáhodné křížení a rozdíly mezi počty rozmnožujících se samic a samců
     - $N_e = \frac{4N_mN_f}{N_m+N_f}$
-    - efektivní velikost populace člověka je cca $10-20 * 10^3$
+    - efektivní velikost populace člověka je cca $1$ až $2 × 10^4$
 1. genetický drift
   - doba fixace ???
   - *efekt hrdla lahve*
@@ -291,11 +294,220 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
         - obezita, deprese
 
 
-## 04 
+## 04 Teorie neutrální evoluce
+- Mottoo Kimura
+- popisuje evoluci v případě neutrálních mutací
+- frekvence alel je ovlivněna pouze genetickým driftem
+- Substituční rychlost
+  - pokud
+  - N$_e$ ... efektivní velikost populace
+  - $u$ ... mutační rychlost
+  - $k = 2N_eu \frac{1}{2N_e}$
+    - $k$ ... počet substitucí za čas
+- Genetická divergence
+  - počet mutací, který odlišuje od sebe dva taxony
+  - počítá se jako substituční rychlost × čas
+    - $D=2ut$
+  - pro neutrální mutace roste lineárně s časem
+  - $Dxy$ ... průměrná divergence
+    - vezmou se sekvence více jedinců sledovaných druhů
+  - po určité době dojde ke zpomalení počtu substitucí, protože dochází k mnohočetným substitucím (jsou změněny vícekrát nukleotidy na stejné pozici)
+- nukleotidové substituční modely
+  - více variant
+  - Jukes & Cantor předpokládali stejnou rychlost mutace ve všech variantách
+  - Kimura předpokládá větší pravděpodobnost tranzic oproti tranzverzím (A <-> G a C<->U je pravděpodobnější než A/G<->U/C)
+  - Felsenstein 81 (4 parametry, různé frekvence nukleotidů)
+  - HKY-Hasegawa. Kishino. Yano. (5 parametrů)
+    - kimura + felsenstein
+  - další možnosti, např. domáklý HKY+$\Gamma$, umožňuje modelovat různou rychlost substitucí v různých nukleotidových pozicích
+  - [`ModelTest`](http://evomics.org/resources/software/molecular-evolution-software/modeltest/) je program na zjišťování správného modelu, který nejlépe sedí na vybraná data
+- Z Divergence a substituční rychlosti je možné spočítat čas, kdy se druhy rozešly
+  - $t=D/2u$
+  - substituční rychlost se je pro různé organizmy různá
+    - kalibrace molekulárních hodin pomocí mutací v cytochromu b u mtDNA (u ptáků a savců = 0.01)
+      - 2% divergence ~ 1 mil. let
+    - druhy s menšími těly mají vyšší rychlost substituce
+      - především kvůli vyšší metabolické rychlosti
+        - studenokrevný mají nižší subst. rychlost než teplokrevní
+    - dlouhověké organizmy mají více rozvinuté reparační mechanizmy
+- více typů molekulárních hodin
+  - striktní ... počítá se jen s jednou rychlostí pro všechny zkoumané taxony
+  - relaxované ... více modelů pro různé rychlosti mutace u různých taxonů
+- fixace nových mutací ... t = 4$N_e$ v průměru, $N_e$ je **efektivní** velikost populace!
+  - velký rozptyl
+- ancestrální polymorfismus
+  - stejný polymorfismus u dvou různých druhů
+  - k polymorfizmu došlo ještě před rozdělením populací na dva druhy
+  - ancestrální polymorfizmus může způsobit, že omylem nadhodnotíme čas rozdělení dvou druhů
+### Téměř neutrální teorie evoluce
+- na neutrální mutace nepůsobí selekce a působí drift
+- na silně pozitivní nebo negativní mutace působí majoritně selekce
+- na slabě pozitivní/negativní mutace působí jak selekce tak drift
+- $|2s|<\frac{1}{2N_e}$
+- v malých populacích se mírně pozitivní/negativní mutace chovají jako neutrální, ve velkých populacích jako silně pozitivní/negativní mutace
+  - druhy s malými populacemi mají vyšší substituční rychlost než velké populace, ve vyšších populacích jsou mírně (zpravidla negativní) mutace více selektovány
+## 05 Selekce
+- Charles Darwin
+- hnací síla biologické evoluce
+  - přírodní výběr
+- biologická zdatnost (schopnost jedince přenést své geny do další generace)
+- Lamarck vs. Darwin
+  - záměr/náhoda?
+    - žirafa se snaží natahovat svůj krk × ze setu jedinců se vyberou ti s nejdelším krkem
+### Populačně genetické modely selekce
+- relativní fitnes (w)
+  - rozdíly ve fitness mezi jednotlivými genotypy
+  - genotyp s maximální fitness w=1
+  - minimální (letální) fitness w=0
+- selekční koeficient (s)
+  - o kolik je snížená/zvýšená fitness určitého typu
+    - w / w-s
+- koeficient dominance (h)
+  - o kolik je jedna alela dominantnější než druhá?
+- příklad: negativní selekce proti recesivní mutaci
+  - frekvence této alely v populaci klesá,
+    - úměrně selekčnímu koeficientu
+  - nikdy nevymizí z populace
+    - H-W rovnováha, skryta v heterozygotech
+- negativní selekce proti dominantní mutaci
+  - odstraní téměř plně tuto alelu
+  - pouze pokud se projeví až u starších jedinců může být zafixována (nesníží reálnou biologickou fitness)
+- haldaneovo síto ... většina výhodných mutací je dominantní
+- pozitivní selekce ve prospěch dominantní, recesivní a neúplně dominantní mutace
+  - domuinantní ... velmi rychlá fixace
+  - recesivní ... pokud z počátku nevypadne, postupně může stoupat její frekvence
+  - aditivní ... nejlepší fixace
 
-## 05
+### Doba fixace mutace
+- $t = 2ln(2N_e)/s$ generací, s je sel. koeficient ... výhodná
+- $t = 4N_e$ generací ... neutrální
+- selekce proti heterozygotům (underdominance)
+  - w_AA, w_aa, w_Aa
+  - moc se nevyskytuje, velmi rychle vymizí
+  - fixuje se alela 'a' nebo 'A'
+  - často disruptivní selekce
+- frekvenčně závislá selekce
+  - je výhodné nebýt jako druzí
+  - křivky ... levotočivý a pravotočivý zobák
+  - cichlidy
+  - poměr pohlaví
+- pozitivní selekce
+  - selektive sweep
+  - postupně se zafixují jen chromozomy s pozitivní mutací
+  - má za následek diferenciaci mezi druhy
+  - $K_A/K_S=1$ neutrální mutace
+  - $K_A/K_S>1$ 
+- negativní selekce
+  - selekce na pozadí
+    - nevýhodné mutace jsou odstraňovány
+    - zůstávají jen neutrální
+    - není tak drastické snížení genetické variability
+  - $K_A/K_S<1$
+- ultra conserved genetic elements  
+  - extrémně nízká substituční rychlost
+  - nejspíš velmi důležité pro základní fungování organizmu
+- genetický draft
+  - změna ve frekvenci alely v populaci díky její vazbě s výhodnou/nevýhodnou alelou
+- balancing selekce
+  - zvyšuje míru genetické variability
+  - vyrovnané zastoupení určitých alel
+### Metody detekce nedávné pozitivní selekce (selective sweep)
+- máme signály selekce, které ale rychle mizí
+- detekujeme neúplný nebo velmi nedávný! (u člověka 250 000 let)
+- Hudson-Kreitman-Aguadé (HKA) test
+  - $\theta= 4N_eu$
+  - $D = 2ut$ divergence ... mutační rychlost a čas
+- testy založené na vazebné nerovnováze
+   - určité kombinace alel odpovídají častěji/ méně často, než by odpovídalo jejich náhodné kombinaci
+   - D = pozorované - očekávané frekvence haplotypů
+   - $D = \frac{1}{4N_er}$
+- míra rekombinace (r)
+   - směrem k telomerám se zvyšuje
+   - více na malých chromozomech než na velkých
+   - recombination hotspots (chybí u Drosophily a C. elegans)
+- testy selekce na míře vazebné nerovnováhy
+   - je potřeba rozlišit malou rekombinační rychlost a selektive sweep ... obojí má za následek vazebnou nerovnováhu
+- Tajima's D test
+   - frekvenční spektrum mutací
+      - ukazuje četnost různých mutací v populaci
+   - u neutrálních mutací je mnoho vzácných mutací a jen pár s širokým rozšířením
+   - selective sweep odstraňuje genetickou variabilitu
+      - -> máme veelmi málo četnějších mutací a velmi mnoho extrémně vzácných mutací
+      - balanční selekce má opačný efekt
+   - srovnání
+      - $\theta$ ... hledáme v kopiích genu polymorfní segregující místa (i velmi vzácné mutace mají více polymorfně segragujících míst a zvyšují tuto veličinu)
+      - $\pi$ ... odhad tak, že vytváříme kombinace dvojic sekvencí a hledáme v nich heterozygoty
+        - je větší, když máme dvě frekvenčně vyrovnané alely o různých sekvencích
+      - nadbytek vzácných alel zvyšuje $\thetu$ oproti $\pi$, D<0
+      - balancující selekce překlápí poměr ve prospěch $\pi$, D>0
+        - $D=(\pi-\theta)/SD(\pi-\theta)$
+   - pozor, frekvenční spektrum mutací je ovlivněno demografickými faktory (nesmí se měnit velikost populace)
+- 'SweepDetector' ... program na hledání selective sweep v populaci
+### Příklady selekce
+- u člověka
+  - gen pro laktázu
+  - trávení mléka v dospělosti
+    - s = ~1,4-15% ... velmi silná selekce
+  - zbarvení pleti
+    - rozšíření člověka, směrem od rovníku barva bledne
+    - světlejší pleť dokáže zachytit více UV záření (je to pozitivní, nikoli neutrální mutace)
+  - GYPA a GYPB - rezistence vůči malárie
+  - lokálně, např. adaptace k nízkým teplotám u inuitů
+  - introgrese alely pro vysokohorské ... z denisovanů u Nepálské populace
 
-## 06
+- balancing selekce
+  - velká variabilita lidských tváří oproti zvýřatům
+  - je udržovaná balancující selekcí
+- pozitivní selekce pro geny způsobující lidské choroby??
+  - ano, mutace jsou recesivní, ale u heterozygotů jsou nějakým stylem výhodné
+  - selekční tlaky se v čase mění
+
+### Test detekce genů odpovědných za lokální adaptace
+- vychází z $F_{ST}$ statistiky (míra genetické diferenciace mezi populacemi)
+- v lokusech, které podmiňují adaptaci bude zvýšena míra diferenciace
+  - tahové cesty drozda malého!
+  
+### Soft selective sweep
+- nemusí dojít k "tvrdému" selective sweepu,
+- není alela de novo, adaptace ze stávající genetické variability
+  - změna podmínek prostředí, alela se nachází ve více kombinacích
+- koljuška tříostná - 3 nezávisle na sobě se vyvinula její říční forma z té mořské
+  - křížení mořské a říční formy
+  - mořská forma nese ve velmi nízkých frekvencích gen Eda, který je nezbytný pro vytvoření říční formy
+
+### Metody detekce dlouhodobě působící selekce
+- srovnání počtu nesynonymních (K_A) a synonymních (K_S)
+- geny s vysokým poměrem K_A/K_S má často důležitou roli v
+  - reprodukci (zvláště spermatogeneze)
+  - imunitě
+- Test McDonald-Kreitman (MK) test
+  - porovnání počtu nesysnonymních a synonymních mutací uvnitř (P) a mezi (D) druhy pro dany gen
+  - umožňuje odhadnout proporci aminokyselinových substitucí, které jsou fixované pozitivní selekcí ($\alpha$)
+    - větší alpha u vyšších efektivních velikostí populace
+
+### Genetická podstata adaptací
+- více názorů
+  - spíš změna v aminokyselinovém složení proteinu,
+  - nebo mutace způsobující rozdíl v expresi genu? <- **nejspíš častější varianta**
+  - fajn je genová duplikace
+
+- adaptace ale také nemusí být nutně genomové
+- např. epigenetické změny! (cavefish bez očí)
+
+- neodarwinismus a teorie sobeckého genu
+  - genocentrický pohled na evoluci
+  - alely nemusí nutně zvyšovat fitness svému nositeli, mohou se šířit i jinak
+    - např. evoluční tahy
+
+- evoluční tahy
+  - meiotický tah
+  - zygotický tah
+  - molekulární tah
+  - mutační tah
+  - reparační tah
+
+## 06 Funkcni genetika
+- 
 
 ## 07
 
