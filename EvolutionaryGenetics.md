@@ -784,8 +784,3 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
   - pro dvě uspořádání 3 sekvencí a 1 outgroup - co je nejlepší uspořádání do fylogen. stromu
   - rozdíly v sekvencích
   - detekce introgrese a nerekombinujících úseků v genomu
-
-
-## 09
-
-## 10
