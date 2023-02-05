@@ -506,12 +506,285 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
   - mutační tah
   - reparační tah
 
-## 06 Funkcni genetika
-- 
+## 06 Funkční genetika
+- propojit mutace a fenotyp
+- zjištění vlivu alel na fenotypy
+- forward / reverse genetika
+- fenotyp -> gen/mutace
+- genotyp -> fenotyp
 
-## 07
+- fenotypy
+  - lidské choroby
+  - tvary zobáku ptáků
+  - další...
+- využívá se náhodná mutageneze (nohy na hlavě, 4 křídla místo 2 u octomilek)
 
-## 08
+- při studiu funkční genetiky ... fenotyp musí být geneticky podmíněn!
+
+### Forward genetika
+- jak v genomu nalézt mutace odpovědné za určitý fenotyp?
+
+- metoda kandidátního genu
+  - pytlouš skalní - běžně je světlý, na lávě černý
+    - mutace v genu Mc1r v některých mutacích
+    - někdy se to ještě neví
+  - musíme mít seznam genů, které máme vytipované
+
+- genetické mapování
+  - cíl je nalézt vazbu fenotypu k molekulárním markerům
+  - QTL mapování (experimentální křížení)
+  - zkřížení dvou kmenů, které se liší v námi zkoumaném znaku
+    - černé x bílé myši
+  - hledáme asociaci SNP markerů a mikrosatelity
+  - vytvoření segregující generace
+  - míchání více genomů
+    - F1 zkřížíme opět s P kmenem (rodičovský kmen)
+  - studujeme fenotyp, můžeme si je namarkerovat
+  - další segregující generace může být F2 generace
+    - ogenotypujeme jí (nebo alespoň ty s extrémními fenotypovými projevy)
+    - bílé myšky mají jen "bílé" markery
+    - černé myšky mají jen "černé"
+  - existují i složitější interakce, které se složitěji odhalují
+  - nevýhoda: některé populace není možné třídit
+  - nízká rozlišovací schopnost
+  - zjistíme spíše počet lokusů odpovědných za daný znak, jejich interakci a hrubou lokalizaci v genomu
+
+### Jak vytvořit genetickou mapu?
+- vytvoříme si markery (nevíme, kde leží v genomu)
+- vypočítáme si vzdálenost markerů v cM
+- zjistíme z procenta rekombinací
+
+### Konsomické kmeny
+- kmeny, u kterých je vyměněn celý 1 chromozom za chromozom jiné linie
+- vyžaduje genotypování v každé z 10 generací, ale pak jsou velmi výhodné
+  - je možné na nich snadno zjistit, na kterém z chromozomů daný znak je umístěný
+- z konsomického kmenu můžeme vytvořit i kongenní kmen!
+  - kmen s pouze jednou oblastí identickou
+
+### Rekombinantně inbrední kmeny
+- sada kmenů pouze ze dvou rodičů
+  - kříží se pouze bratři a sestry
+  - vzrůstá homozygotnost
+  - (kompletně homozygotní linie)
+- collaborative cross - prokřížení 8 nezávislých linií myší
+  - zmapování genu vytvářejícího bílou korunku na hlavě myši
+- magic lines
+
+### Fyzikální mapy
+- mapování genetické mapy (cM) na fyzikální mapu (bp)
+- seznamy genů pro jednotlivé oblasti
+- 1cM ~ 2Mb u myši, 1cM ~ 1Mb u člověka. Průměrně přes celý genom
+- hybridní sterilita ... může být ovlivněna speciačním genem
+
+### Analýza rodokmenů
+- je třeba dostatek rodokmenů
+- velmi nízká rozlišovací schopnost (~cM)
+
+### Asociační mapování
+- haplotypová mapa lidského genomu
+- u savců -- hotspoty rekombinace
+- 10exp6 SNP najednou na čipech, má vysokou rozlišovací schopnost
+- vhodné pro mapování kvantitativních znaků
+- potřeba analyzovat velký počet jedinců (~1000)
+
+### Admixture mapování
+- genetické mapování v přírodních hybridních populacích
+- 1000-5000 markerů
+
+### Expression (e) QTL mapování
+- rozdíl v genové expresi jako kvantitativní znak
+- pomocí eQTL mapování lze identifikovat regulační oblasti
+  - cis i trans
+
+### Reverzní genetika
+- od genu k fenotypu
+- vypnutí genu a pak sledování fenotypu
+
+- genový knockout
+  - embryonální buňky
+  - vložní poškozeného genu a do embryonálních buněk
+  - buňky dáme do blastocysty
+  - potomci jsou chimérami
+
+- podmíněný genový knockout
+  - využívá se Cre-lox systém
+- loxP, Cre-lox systém
+- genový knockdown - dsRNA -> silencing genu
+- genový knockin homologní rekombinace upraví sekvenci genu, příp. vytvoří novou funkci
+- transgen - vložení jedné kopie genu
+- CRISPR-Cas
+  - je možné vyloženě editovat genom
+  - pomocí jednoho enzymu a různých naváděcích sekvencí dosáhne kamkoli
+- Zing-finger
+  - proteinová sekvence
+  - léčba hunterova syndromu
+
+## 06a Koalescence
+- splynutí linií/bod v rodokmenu, kde se linie určité alely rozbíhá do více směrů
+- most recent common ancestor (MRCA)
+- nezakořeněné stromy (gene tree, fylogenetické stromy etc.)
+  - haplotypový strom ... pospojování na základě příbuznosti
+- phylogeografie
+  - snaha o to namapovat příbuznost na geografie - historie šíření etc.
+- lineage sorting ... dříve bylo více linií, mnoho jich vymizelo
+- přetrvání ancestrálního polymorfismu
+- monofyletické ... skupina má výlučného společného předka, v jiné skupině nejsou jeho potomci
+- polyfyletické ... skupina má více společných předků, které jsou i v jiné skupině
+- parafyletické ... skupina má jednoho společného předka, ale v jiné skupině jsou další potomci tohoto společného předka
+- koalescence je produkt náhody
+- pravp., že jedinec v předchozí generaci je MRCA je 1/N, kde N je efektivní počet jedinců v populaci
+  - v případě, že je gen obsažený ve dvou sadách v genomu jedince, pak pravp. je 1/2N
+  - -> mtDNA jde rychleji k reciproční monofylii než pro alelu v diploidním genomu (4x)
+
+- Y a $N_e$
+  - $N_e$ je čtvrtinová vzhledem k autosomům
+  - větší náchylnost ke driftu
+- nižší N_e pro geny na X (3/4)
+
+- odhad pro mutace vzhledem k době od společného předka
+  - $\Theta = 4N\mu$
+  - lze vytvořit odhad frekvence mutací v populaci
+    - (neutrální model, bez selekce)
+    - pár běžných alel, spousta vzácných alel
+
+- k čemu je možné koalescenční teorii použít?
+  - můžeme odhalit procesy, které s populacemi probíhají
+    - migrace, selekce, změna populační velikosti etc.
+  - odhadujeme čas ke společnému předkovi
+    - divný čas -> zajímavé děje
+    - očekávaný čas -> nic zajímavého
+  - konkrétní štěpení stromů nás moc nezajímá
+
+- $\pi$ ... nukleotidová diverzita ... odpovídá thétě, pokud máme neutrální mutace, při selekci se $\pi != \theta$
+- odhad efektivní velikosti populace ... můžeme pomocí koalescenční teorie!
+  - Bayesian Skyline Plot
+  - odhady z minima jedinců a mnoho genů
+    - jedinců může být i málo
+
+- model "Isolation with migration"
+  - rozlišní ancestrálních polymorfismů a migrací
+  - velikost populací
+  - čas divergence
+  - čas divergence
+  - migrace
+  - programy IM, IMa, IMa2
+
+## 07 Speciace
+- W. Mayr ... Biologické pojetí druhu ... druh je skupina populací, mezi kterými může dojít ke křížení a které jsou reprodukčně izolovány od jiných populací
+- alopatrický model vzniku reprodukčních bariér
+- peripatrický, parapatrický, sympatrický
+
+- neúplná
+  - bariéry - premating, postmating - prezygotal, postzygotal
+
+- prekopulační, premating - behaviorální bariéry - určitý znak + gen pro rozlišování tohoto znaku
+  - kejklířky ... změna znaku (barva květu), ale opylují je různí opylovači
+
+- postmating, postkopulační - bariéry kontaktu gamet
+  1. špatný pohyb ve vaječníku samičky?
+  2. kompetitivní izolace - samička má k dispozici více spermií, mimodruhové spermie mají horší schopnosti
+
+- postzygotické izolační bariéry
+  1. vnější bariéra - ekologická neživotaschopnost (rostliny ve vodě a na souši, hybrid není schopný ani ve vodě, ani na souši), behaviorální sterilita (slíďáci, přesně stanovené tance)
+  2. vnitřní bariéra - hybridní neživotaschopnost, hybridní sterilita (mula, mezek )
+
+- vnitřní bariéra ... reprodukční bariéry jsou produktem 2+ genů
+
+- dvě empirická pravidla (two rules of speciation)
+  - Haldaneovo pravidlo
+    - ... když je u hibridů problém, pak spíše u heterogametického pohlaví
+  - velký efekt chromozomu X
+    - geny postzygotické izolace jsou často na chromozomech X
+
+- killer X chromozome
+  - geny na X chromozomu, které do další generace dají víc X než Y chromozomů u samců
+ 
+- feminizující X* u lumíků
+  - ze samců se stanou samice!
+    - XX - běžná samice
+    - XX* - samice s feminizovaným chromozomem
+    - X*Y - samice, která by jinak byla samec
+      - může produkovat Y vajíčka
+
+- distortery ... geny, které mění poměr pohlaví ve prospěch homozygotního pohlaví
+- různé distortery vedou ke sterilitě -> reprodukční bariéra!!
+
+- reinforcement
+  - selekce posiluje bariéry při křížení
+  - samice z bělokrkého a černohlavého je sterilní
+    - u allopatrie jsou oba skvěle vybarvení
+    - u sympatrie jsou samci hnědí -> rozpoznání správného druhu
+
+- speciační geny ... zpravidla mají i normální funkci
+  - musí interagovat s dalšími geny
+
+- u slunečnic byly reprodukční bariéry různých druhů vždycky na stejnym místě!!
+
+- speciace hybridizací
+  - většinou divné rozmnožování
+    - partenogeneze
+    - gynogeneze - geny se předávají jen ze samice, spermie je nutná pro iniciaci vývoje vajíčka
+    - genomic exclusion
+    - hybridogeneze - křížení 2 druhů a vzniká 3 druh (vrabec italský)
+
+- jak teda definovat druhy?
+  - trochu mlhavý pojem, něco za tím je, má trochu mlhavý význam, můžeme si s tím trochu hrát
+  - jednotlivé ... evoluční linie?
+
+- Bateson-Dobzhansky-Muller model ... postupné vzniky variability -> nekompatibilita linií
+
+## 08 Fylogenetika
+- kladogram vs. ultrametrický strom
+
+- monofyletická skupina - předek a všichni jeho potomci
+- parafyletická skupina - předek s částí svých potomků
+
+- polytomie - více větví z jednoho uzlu, většinou nedostatek dat, někdy realita...
+
+- fylogeneze pomocí znaků ... apomorfie (nově odvozený znak)
+  - u savců bránice a srst
+- pleziomorfie - znak, který všichni členové skupiny získali od společného předka
+- homoplázie - znak vznikl dvakrát nezávisle
+
+- analýza molekulárních znaků - sekvence DNA
+
+- metody výpočtu fylogenetických stromů
+  1. distanční metody
+  2. maximální úspornost = parsimonie
+  3. maximální věrohodnost = likelihood
+  4. Bayesovské metody výpočtu
+
+- distanční metody
+  - UPGMA, neighbor-joining
+    - matice vzdáleností
+  - UPGMA unweighted pair group method with arithmetic mean
+  - outgroup ... díky němu můžeme zakořenit strom - zjistíme, čemu je nejblíže a mezi touto skupinou a outgroupem je společný předek
+
+- maximální parsimonie
+  - zjistíme rozdíly pro všechny možné stromy a vybereme ten s nejmenším počtem rozdílů
+    - provádí se heuristický přístup
+      - výběr náhodného stromu, náhodné prohození větví etc.
+
+- maximal likelihood 
+  - zadané parametry pro přechody jednotlivých ak na jiný druh, příp. inzerce + delecell
+
+- Bayesovská metoda
+  - pravděpodobnost stromu za podmínky daných dat
+  - pravděpodobnost uzlu pro daná data
+
+- Bootstrapping
+  - analýza -- v kolika z 1000 vytvořených stromech se vyskytl určitý uzel?
+
+- long branch attraction
+  - v určité větvi proběhne mnoho informativních změn
+    - pak jsou větve, které udělají mnoho změn často interpretovány jako příbuznější
+      - je způsobeno nerovnoměrnou evolucí, je potřeba vědět, že to existuje, ale nedá se s tím algoritmicky nic dělat
+
+- ABBA - BABA test (D-statistika)
+  - pro dvě uspořádání 3 sekvencí a 1 outgroup - co je nejlepší uspořádání do fylogen. stromu
+  - rozdíly v sekvencích
+  - detekce introgrese a nerekombinujících úseků v genomu
+
 
 ## 09
 
