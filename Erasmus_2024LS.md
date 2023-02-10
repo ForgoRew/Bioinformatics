@@ -4,6 +4,9 @@
 1. Biologické zobrazování a analýza obrazu (MPI Dresden)	1	L
 2. Aplikované diferenciální rovnice	1	L
 3. Odborný seminář z oboru bioinformatika	1,2	Z/L
+4. Časoprostorové modelování a simulace biologických systémů (MPI Dresden)	2	L
+5. Strukturní bioinformatika	2	Z
+6. Drug design	2	L
 
 #### Povinně volitelné
 1. Epigenetika
