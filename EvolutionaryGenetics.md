@@ -75,17 +75,17 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
 - kvantitativní genetika
   - vliv genetiky a prostředí na fenotyp je oddělení
 - Mendelovy zákony:
-  1. ...
-  2. ...
+  1. Zákon o uniformitě F1 generace (rodiče homozygoti, potomek heterozygot, má dominantní znak)
+  2. Zákon o náhodné segregaci genů do gamet (každá z alel rodiče má 50% šanci, že jí zdědí potomek)
   3. Zákon o identitě reciprokého křížení
     - neplatí dokonale (uniparentální dědičnost mitochondriální DNA)
 - Rekombinace
-  - Morgan ... délka v genomu ... 1cM ~ 1Mb
+  - Morgan ... délka v genomu ... 1cM ~ 1Mb v průměru, člověk 1Mb, Drosophila 2Mb nebo naopak, liší se pro různé části genomu, nejkratší v blízkosti telomer
     - míra rekombinace
     - u savců jsou "definované" hotspoty rekombinace
   - *Haldane-Huxley pravidlo*
     - pokud nějaké pohlaví nerekombinuje, je to vždy heterogametické pohlaví
-      - (např. u Drosophily nerekombinují samičky (Z,W systém))
+      - (např. u Drosophily nerekombinují samci (XY systém, u ptáků ZW -> samice)
   - rekombinace je mechanizmus proti *Mullerově rohatce*
     - může odstraňovat škodlivé mutace a shromažďovat výhodné mutace
 - uniparentální dědičnost
@@ -133,7 +133,7 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
           - inverze části chromozomu 17
           - až 13% myší domácích
           - z nich až 90% samců dědí tuto inverzi
-          - v homozygotním stavu způsobuje smrt spermií
+          - v homozygotním stavu způsobuje smrt ~~spermií~~ -> *asi zygoty* 
     - *Zygotický tah*
       - např. *Medea* (Maternal-Effect dominant Embrionic Arrest)
         - pomocí "toxického" m-RNA ještě z buněk matky
@@ -202,6 +202,7 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
   - mutace vznikají cíleně
   - nefunguje u běžné genetiky
   - často funguje u epigenetiky (je využita adaptivní fenotipová plasticita)
+
 - *genetická asimilace*
   - změna chromatinu (epigenetika) může indukovat změny v genomu
   - není zatím dokázáno
@@ -218,7 +219,7 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
 - $p$ ... alela A
 - $q$ ... alela a
 - $p^2$ ... homozygoti
-- $pq$ ... heterozygoti
+- $2pq$ ... heterozygoti
 - předpokladem je ideální panmiktická populace
   - dostatečně velká populace
   - jedinci se párují náhodně
@@ -241,6 +242,7 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
      - $F_{ST} = \frac{H_T-H_S}{H_T}$
      - $H_T$ ... očekávaná heterozygotnost
      - $H_S$ ... reálná heterozygotnost
+
 
 ### Mechanizmy vytvářející variabilitu
 - *efektivní velikost populace ($N_e$)* 
@@ -273,7 +275,7 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
 - *genetický polymorfismus ($θ$)*
   - většinou platí, že $θ = 4N_e*μ$
   - *empirický odhad théty ($π$)*
-    - přes všechny kombinace dvojic sekvencí si spočítáme, v kolika bodech se liší
+    - přes všechny kombinace dvojic sekvencí si spočítáme, v kolika bodech se liší - ne kolik záměn je přesně, ale na kolika pozicích je nějaká změna
       - počítá se u bodových mutací
     - *proporce polymorfních míst ($θ_w$)*
       - spočítá se počet míst v sekvenci, kde je rozdíl mezi jedinci
@@ -346,6 +348,7 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
 - $|2s|<\frac{1}{2N_e}$
 - v malých populacích se mírně pozitivní/negativní mutace chovají jako neutrální, ve velkých populacích jako silně pozitivní/negativní mutace
   - druhy s malými populacemi mají vyšší substituční rychlost než velké populace, ve vyšších populacích jsou mírně (zpravidla negativní) mutace více selektovány
+
 ## 05 Selekce
 - Charles Darwin
 - hnací síla biologické evoluce
@@ -396,7 +399,9 @@ https://web.natur.cuni.cz/zoologie/biodiversity/index.php?page=EvolucniGenetika
   - postupně se zafixují jen chromozomy s pozitivní mutací
   - má za následek diferenciaci mezi druhy
   - $K_A/K_S=1$ neutrální mutace
-  - $K_A/K_S>1$ 
+  - $K_A/K_S>1$
+    - K_A nesynonymní
+    - K_S synonymní 
 - negativní selekce
   - selekce na pozadí
     - nevýhodné mutace jsou odstraňovány
