@@ -28,7 +28,9 @@
 
 ### Ve Stockholmu (Spring 2023)
 1. Stem Cells in Developmental- and Cancer Biology ... https://www.su.se/english/search-courses-and-programmes/bl7047-1.413086?semester=VT23&eventcode=56859&open-collapse-boxes=course-detail
-2. R Programming ... https://www.su.se/english/search-courses-and-programmes/st4102-1.540863?semester=HT23&eventcode=39911
-3. Statistical Models ... https://www.su.se/english/search-courses-and-programmes/mt7002-1.412857?semester=VT23&eventcode=48005
-4. Bioinformatics ... https://www.su.se/english/search-courses-and-programmes/kb7016-1.520963?open-collapse-boxes=course-detail
+2. R Programming (autumn) ... https://www.su.se/english/search-courses-and-programmes/st4102-1.540863?semester=HT23&eventcode=39911
+3. Chemical Modeling (autumn) (Mol. Dynamics, MC, mesoscopic methods) ... https://www.su.se/english/search-courses-and-programmes/kz7002-1.412360?semester=HT23&eventcode=54244&open-collapse-boxes=course-detail
+4. Statistical Models ... https://www.su.se/english/search-courses-and-programmes/mt7002-1.412857?semester=VT23&eventcode=48005
+5. Bioinformatics ... https://www.su.se/english/search-courses-and-programmes/kb7016-1.520963?open-collapse-boxes=course-detail
+6. Research traineeship in (...) bioinformatics ... (https://www.su.se/english/search-courses-and-programmes?eventopenforinternationalstudents=true&q=Advanced%20research%20traineeship%20in%20Biochemistry%2C%20Biophysics%2C%20Bioinformatics%20or%20Neurochemistry%20I&xpanded=KZ7002%2CKB7019%2CKB5012)
 
