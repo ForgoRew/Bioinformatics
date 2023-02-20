@@ -33,4 +33,7 @@
 4. Statistical Models ... https://www.su.se/english/search-courses-and-programmes/mt7002-1.412857?semester=VT23&eventcode=48005
 5. Bioinformatics ... https://www.su.se/english/search-courses-and-programmes/kb7016-1.520963?open-collapse-boxes=course-detail
 6. Research traineeship in (...) bioinformatics ... (https://www.su.se/english/search-courses-and-programmes?eventopenforinternationalstudents=true&q=Advanced%20research%20traineeship%20in%20Biochemistry%2C%20Biophysics%2C%20Bioinformatics%20or%20Neurochemistry%20I&xpanded=KZ7002%2CKB7019%2CKB5012)
+7. Systems Theory (autumn) ... https://www.su.se/english/search-courses-and-programmes/bl8049-1.412400?semester=HT23&eventcode=56953
+8. Statistical Deep Learning ... https://www.su.se/english/search-courses-and-programmes/mt7042-1.537865?semester=VT23&eventcode=48009
+9. Numerical Solutions of Differential Equations ... https://www.su.se/english/search-courses-and-programmes/be7008-1.412848?semester=VT23&eventcode=48988&open-collapse-boxes=course-detail
 
