@@ -184,11 +184,14 @@
         2. Match Model
           - jde přes shodné indexy
           - (jakoby jen jeden for cyklus přes *i* pro obě sekvence naráz)
+          - pravděpodobnost, že na dané pozici pochází daná rezidua ze společného předka
           - random model předpokládá, že sekvence jsou si příbuzné
       - Odds Ratio je podíl výsledku Match modelu a Random modelu
         - podíl pravděpodobnosti, že na pozici je daná kombinace znaků (např. aminokyselin) za předpokladu, že sekvence jsou příbuzné a že sekvence nejsou příbuzné
+        - když vyjde vyšší než 1, daný alignment dvou pozic je pravděpodobně nějak evolučně spřízněný
+        - když vyjde nižší než 1, pravděpodobně není spřízněný
       - Log Odds Ratio
-        - logaritmus Odds Ratio, vyhodí použitelné hodnoty do skórovací tabulky ()
+        - logaritmus Odds Ratio, vyhodí použitelné hodnoty do skórovací tabulky (nespřízněné -> menší než 0, spřízněné -> vyšší než 0, ((log(1)=0)))
 
 - metody dynamického programování
 
