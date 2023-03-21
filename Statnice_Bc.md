@@ -195,7 +195,23 @@
       - tenhle přístup má 2 problémy
         1. je potřeba dávat pozor, aby pro nějakou obecnou skórovací matici nebyly vybrány příliš příbuzné sekvence
         2. je potřeba chytře zvolit pravděpodobnost pro Match Model - u sekvencí s evolučně bližším společným předkem bude pravděpodobnost záměny na dané pozici nižší než pro sekvence se vzdálenějším (čas po který sekvence mutovaly)
-    - 
+    - Substituční matice PAM (Point/Percent Accepted Mutation (Dayhoff et al.)) a BLOSSUM (BLOckS SUbstitution Matrix (Henikoff et al.))
+      - při tvoření matic se využívá pravděpodobnostních modelů viz výše
+      - pro evoluční studie jsou běžně používány matice PAM 250 a BLOSSUM 62
+      - PAM
+        - vytvoří se matice PAM 1 (velmi podobné sekvence)
+        - znalost o pravděpodobnostech v PAM 1 se použije pro evolučně vzdálené sekvence (PAM *n*)
+        - dvě sekvence jsou 1 PAM vzdálené, pokud série mutací přeměnila jednu sekvenci na druhou pomocí 1 přijaté mutace na 100 aminokyselin (point accepted mutation)
+          - přijaté (accepted) znamená, že mutace není letální a není umlčená (silent)
+        - dvě sekvence vzdálené 200 PAM mají cca 25% identitu (jsou to proteinové sekvence)
+        - pro *ideální* konstrukci PAM *n* matice je potřeba
+          1. vzít set n PAM vzdálených sekvencí
+          2. manuálně udělat jejich alignment (ještě nemáme skórovací matici, abychom to udělali automaticky)
+          3. spočítat pomocí pravděpodobnostního modelu skóre v matici: $PAM_n[i,j] = log(\frac{f(i,j)}{f(i)×f(j)})$
+        - *reálně* se PAM dělá pomocí markovovských modelů
+          - z toho vyplývá, že PAM *n* se vyrábí umocněním PAM 1 na *n*-tou
+      - Příště BLOSSUM
+        - TODO: začni tady :)
 - metody dynamického programování
 
 - lokální a globální alignment
