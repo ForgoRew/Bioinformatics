@@ -84,7 +84,7 @@
 # Poznámky
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
->"Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*). (Janet Thornton)
+> "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
 
 - literatura
    - [Evžen - zápisky](https://eugleo.github.io/bioinformatika/doc/zaklady-bioinformatiky/notes.html)
@@ -132,12 +132,63 @@
 
 ### 2. Sekvenční bioinformatika
 - literatura
-  - [](../Literatura/Essential_Bioinformatics.pdf)
-- sekvenční srovnávání
+  - [essentials](../Literatura/Essential_Bioinformatics.pdf)
+  - [Wiki CZ: Dot plot](https://cs.wikipedia.org/wiki/Dot_plot)
+  - [Základy bioinformatiky na Drivu](https://drive.google.com/drive/u/2/folders/1Q6Qdnpu6WVNltm0hdHHSNKI6f4Hrsib0)
+  - [Bioinformatické algoritmy na GDrivu](https://drive.google.com/drive/u/2/folders/1PxGQIhwFY3ZVHpoBSD0pbtg41LQU3QIV)
 
-- dotplot 
+- dotplot
+  - vizuální metoda pro alignment 2 sekvencí
+  - postup:
+    - jedna sekvence jde do řádku, druhá do sloupce
+    - z teček (identita na jednotlivých pozicích) vidíme, jaké vzory se vyskytují
+      - čára diagonálně zleva nahoře doprava dolů značí identický úsek
+      - kolmo na tuto čáru vidíme inverzi
+  - tento postup je možné použít i pro analýzu jedné sekvence
+    - dáme do řádku i do sloupce tu stejnou sekvenci
+      - samozřejmě bude nepřerušená čára na diagonále (identita)
+      - mimo diagonálu uvidíme opakující se subsekvence a kolmo na ně inverzní opakující se subsekvence
+  - nevýhoda dot-plotu je, že generuje mnoho šumu (např. pro DNA sekvenci je pravděpodobnost 1/4, že dojde k identitě na pozici u dvou náhodných sekvencí)
 
-- substituční tabulky
+- substituční tabulky ([Algoritmy - 4](https://drive.google.com/drive/u/2/folders/1jAY334cmBiOS3Tx06VBPDkjNM--tGqBo))
+  - při vytváření alignmentu dvou sekvencí je možné použít různé typy skórujících funkcí
+    1. Hammingova vzdálenost (Hamming Distance, HD)
+      - pro sekvence stejné délky!
+      - identita na pozici -> 1
+      - neidentita -> 0
+    2. Editační (Levensteinova) vzdálenost (ED)
+      - minimální Hammingova vzdálenost pro alignment dvou sekvencí
+      - je možné ji spolehlivě získat pomocí dynamického programování (DP) (taková ta tabulka dvou sekvencí) a následným backtrackingem
+    3. OWED (Operation-Weighted Editation Distance)
+      - zobecněná ED
+      - jsou zavedeny hodnoty, které mohou být upraveny pro potřeby dané situace
+        - d ... penalizace za mezeru
+        - e ... skóre, pokud je na pozici identita
+        - r ... skóre, pokud na pozici není identita
+      - je definovaná rekurzivně, ale počítá se pomocí dynamického programování
+    4. AWED (Alphabet-Weighted Edit Distance)
+      - OWED upravené pro specifické hodnoty d, e, r pro každou kombinaci znaků
+        - znak×mezera,  
+        - znak sám se sebou, 
+        - znak×jiný znak
+      - z AWEDu vychází většina skórujících tabulek, jen je většinou ještě nastavená jiná hodnota pro první gap a pro následující gapy (otevřít mezeru je "dražší" než ji prodloužit)
+  - Skórující tabulky
+    - není problém vytvořit alignment dvou sekvencí, problém je najít vhodnou skórující tabulku, aby nám nevyšla blbost
+    - Probabilistic models
+      - počítání skóre na základě pravděpodobnosti, že se budou dané páry znaků ve dvou sekvencích (např. aminokyselin) vyskytovat na stejné pozici
+      - dva přístupy
+        1. Random Model
+          - jde přes všechny kombinace pozic ve dvou sekvencích
+          - (jakoby for cyklus přes *i* ve for cyklu přes *j*)
+          - předpokládá, že sekvence jsou unrelated
+        2. Match Model
+          - jde přes shodné indexy
+          - (jakoby jen jeden for cyklus přes *i* pro obě sekvence naráz)
+          - random model předpokládá, že sekvence jsou si příbuzné
+      - Odds Ratio je podíl výsledku Match modelu a Random modelu
+        - podíl pravděpodobnosti, že na pozici je daná kombinace znaků (např. aminokyselin) za předpokladu, že sekvence jsou příbuzné a že sekvence nejsou příbuzné
+      - Log Odds Ratio
+        - logaritmus Odds Ratio, vyhodí použitelné hodnoty do skórovací tabulky ()
 
 - metody dynamického programování
 
