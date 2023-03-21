@@ -1,3 +1,4 @@
+# Otázky
 ## Požadavky znalostí k bakalářské státní závěrečné zkoušce z bioinformatiky
 
 ### Matematika & informatika
@@ -71,10 +72,77 @@
 7. predikce struktury makromolekul
 8. fylogenetika – stavba stromů – základní metody tvorby stromů (ML, MP, NJ, Bayes) – bootstrap analýza
 
-## Výpočet
+## Výpočet času
 |Okruh                           |n otázek|koef. učení|tok/h|hodin|
 |:-------------------------------|:------:|:---------:|:---:|:---:|
 |Matematika & informatika        |23      |1.25       |2    |57   |
 |Biologie - molekulární a buněčná|27      |1.00       |2    |54   |
 |Bioinformatika                  |8       |0.9        |2    |14.4 |
 |Celkem                          |58      |-          |2    |125.4|
+
+
+# Poznámky
+## Bioinformatika
+### 1. Obor "bioinformatika"
+>"Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*). (Janet Thornton)
+
+- literatura
+   - [Evžen - zápisky](https://eugleo.github.io/bioinformatika/doc/zaklady-bioinformatiky/notes.html)
+     - [lokálně](Statnice_Bc_materialy/bioinf_z%C3%A1pisy.html)
+   - [Marian - základy bioinformatiky](https://web.natur.cuni.cz/~marian/kurz/course.html)
+   - [Wiki: Bioinformatics](https://en.wikipedia.org/wiki/Bioinformatics)
+  
+  
+- definice oboru
+  - bioinformatika se zabývá zpracováním biologických dat
+    - sběr, 
+    - archivace, 
+    - organizace, 
+    - interpretace
+  
+- historie bioinformatiky
+  - 1707 - 1778 Carl Linne, první "bioinformatik"
+  - 1951 Fred Sanger, sekvence proteinu insulinu
+  - 1957 Perutz, Kendrew, první struktura proteinu
+  - 1965 Margarett Dayhoff, první sekvenční databáze
+  - 1970 Needlman - Wunsch, algoritmus sekvenčního srovnávání
+  - 1971 první strukturní databáze
+  - 1988 "HUGO project" ([HUman Genome Organization](https://en.wikipedia.org/wiki/Human_Genome_Organisation))
+  - 1990 Altshul, Lipman et al., BLAST
+  - 1992 NCBI - GenBank
+  - 1995 První osekvenovaný celý genom, Haemophilus influenze
+
+
+- oblasti bioinformatiky
+  - sekvenční (informační biopolymery, proteiny)
+  - strukturní (Struktura DNA, RNA, proteinů)
+  - signální dráhy v buňkách (stará definice bioinformatiky)
+  - regulace exprese genů (signalizace, epigenetika)
+
+
+- biologická data
+  - v základu jakákoli data (délky motýlých křídel)
+  - každopádně i další data
+    - genomická data
+    - sekvence (proteiny, RNA, DNA)
+    - interakce
+    - příbuzenské vztahy etc.
+  - rozsah dat?
+    - EBI 2015 - 60PB dat
+
+### 2. Sekvenční bioinformatika
+- literatura
+  - [](../Literatura/Essential_Bioinformatics.pdf)
+- sekvenční srovnávání
+
+- dotplot 
+
+- substituční tabulky
+
+- metody dynamického programování
+
+- lokální a globální alignment
+
+- parwise versus multiple sequence alignment
+
+
