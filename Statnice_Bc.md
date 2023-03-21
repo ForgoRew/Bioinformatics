@@ -192,7 +192,10 @@
         - když vyjde nižší než 1, pravděpodobně není spřízněný
       - Log Odds Ratio
         - logaritmus Odds Ratio, vyhodí použitelné hodnoty do skórovací tabulky (nespřízněné -> menší než 0, spřízněné -> vyšší než 0, ((log(1)=0)))
-
+      - tenhle přístup má 2 problémy
+        1. je potřeba dávat pozor, aby pro nějakou obecnou skórovací matici nebyly vybrány příliš příbuzné sekvence
+        2. je potřeba chytře zvolit pravděpodobnost pro Match Model - u sekvencí s evolučně bližším společným předkem bude pravděpodobnost záměny na dané pozici nižší než pro sekvence se vzdálenějším (čas po který sekvence mutovaly)
+    - 
 - metody dynamického programování
 
 - lokální a globální alignment
