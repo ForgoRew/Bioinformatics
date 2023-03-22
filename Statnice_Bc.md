@@ -185,7 +185,7 @@
           - jde přes shodné indexy
           - (jakoby jen jeden for cyklus přes *i* pro obě sekvence naráz)
           - pravděpodobnost, že na dané pozici pochází daná rezidua ze společného předka
-          - random model předpokládá, že sekvence jsou si příbuzné
+          - match model předpokládá, že sekvence jsou si příbuzné
       - Odds Ratio je podíl výsledku Match modelu a Random modelu
         - podíl pravděpodobnosti, že na pozici je daná kombinace znaků (např. aminokyselin) za předpokladu, že sekvence jsou příbuzné a že sekvence nejsou příbuzné
         - když vyjde vyšší než 1, daný alignment dvou pozic je pravděpodobně nějak evolučně spřízněný
@@ -210,12 +210,86 @@
           3. spočítat pomocí pravděpodobnostního modelu skóre v matici: $PAM_n[i,j] = log(\frac{f(i,j)}{f(i)×f(j)})$
         - *reálně* se PAM dělá pomocí markovovských modelů
           - z toho vyplývá, že PAM *n* se vyrábí umocněním PAM 1 na *n*-tou
-      - Příště BLOSSUM
-        - TODO: začni tady :)
+      - BLOSSUM
+        - Na bázi PROSITE
+          - BLOCKS
+            - bloky motivů derivované z PROSITE knihovny
+        - podíl spatřených identit a očekávaných identit
+        - BLOSSUM n se vytvoří tak, že z BLOCKS se odstraní sekvence s identitou vyšší než n%
+
 - metody dynamického programování
+  - optimalizace rekurzivních algoritmů
+  - je potřeba zjistit, jaká část předpočítaných výsledků se shoduje
+  - nějak chytře je potřeba vytvořit tabulku s těmito shodujícími se tabulkami a začít od začátku, nikoli od konce...
+  - příklady: Fibonacciho číslo ... začne se od 0, 1 - > pak se pokračuje v řadě, až se dojde k n-tému číslu
+  - v sekvenční bioinformatice ... Needleman-Wunsch algoritmus -> pro dvě sekvence se vytvoří tabulka s dvěma dimenzemi ...
+    - definují se hodnoty na začátku, pak si algoritmus na každé pozici vybere minimum z předchozích pozic
+    - backtrackingem se zjistí, jak "alignment" postupoval
 
 - lokální a globální alignment
+  - jde především o biologický pohled - zarovnání sekvencí tak, aby odpovídaly evoluční příbuznosti
+  - je možné vytvořit aligment i ručně s biologickou intuicí
+  - automatizace -> informatický pohled
+    - jde o to najít alignment s nejlepší skórovací funkcí (AWED)
+      - potřeba vhodné skórovací matice
+  - globální alignment hledá alignment pro celou sekvenci
+  - lokální alignment hledá alignment jednotlivých podsekvencí - předpokládá příbuznost kratších úseků, které mohou být i proházené mezi sebou
+  - algoritmus pro globální alignment je možné upravit na lokální tak, že místo záporných hodnot se do tabulky pro dynamické programování vkládají nuly
+    - backtracking se pak dělá pro jednotlivé podoblasti
+  - algoritmus pro globální alignment (GA) se jmenuje Needleman-Wunsch
+  - dtto pro lokální alignment (LA) se jmenuje Smith-Waterman
 
 - parwise versus multiple sequence alignment
+  - párový - jednoduše pomocí DP
+  - u multiple sequence alignmentu stoupá složitost exponenciálně pro n sekvencí
+  - skórování MSA (multiple sequence alignmentu)
+    - používá se skórování přes sloupce MSA
+    - dvě metody
+      - ME (Minimal Entropy) - počítá pravděpodobnost, že je reziduum x na pozici i, skóre je záporně zlogaritmované, aby byla 0 nejvyšší možné skóre
+      - SP - Sum of Pairs
+        - v podstatě se udělá skórování pomocí PAM / BLOSSUM přes všechny dvojice v každém sloupci MSA
+  - spoustu heuristických algoritmů pro MSA
+    - Progressive iterative methods
+      - Feng&Doolitle
+      - ClustalW, Clustal Omega
+    - Consistency based
+      - T-Coffee
+    - Iterative refinement
+      - Barton&Sternberg
+    - Block-Based
+      - DIALIGN
+    - Mix
+      - MAFFT, 
+      - MUSCLE
 
 
+### 3. Hledání podobných sekvencí v databázích
+> hledání podobných sekvencí – Blast versus FASTA - statistické zhodnocení významnosti nálezu - profilové metody (PSI-BLAST) – HMM metody
+
+- literatura
+  - [Bioinformatické algoritmy na GDrivu](https://drive.google.com/drive/u/2/folders/1PxGQIhwFY3ZVHpoBSD0pbtg41LQU3QIV), přednášky 6(, 7) a 8
+
+- úvod
+  - obří databáze - potřebujeme je efektivně prohledávat
+    - v nejhorším případě lineární složitost, spíš lepší
+    - optimální algoritmus má kvadratickou složitost pro sekvence
+    - je potřeba využít heuristiky
+  - využívá se hashování
+    - list pro všechny sekvence a k-tice (všechny možné?)
+      - kde v sekvenci se daná k-tice nachází
+      - pomocí dvou listů, jeden (b) obsahuje pro všechny k-tice jejich první výskyt,
+      - druhý (a) pro celou sekvenci dává pointry na tu další k-tici
+      - lepší vysvětlení v 6. přednášce na 6. slidu
+
+- Blast versus FASTA
+  - FASTA
+    - 4 kroky
+      1. pro query a databázovou sekvenci se najdou všechny matchující k-tice (v tabulce podobné jako u NW algoritmu)
+      2. k-tice se pospojují (za gapy mezi nimi se dává penalizace)
+      3. vybere se 10 nejlepších spojených subsekvencí a oskórují se pomocí PAMu nebo BLOSSOM, z nich se započítají ty nejlépe skórující, součtem skóre subsekvencí se ohodnotí celá sekvence
+      4. mezi nejlépe skórujícími sekvencemi se udělá Smith-Waterman
+  - BLAST
+
+- statistické zhodnocení významnosti nálezu
+- profilové metody (PSI-BLAST) 
+- HMM metody
