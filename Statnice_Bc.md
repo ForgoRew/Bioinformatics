@@ -288,7 +288,15 @@
       2. k-tice se pospojují (za gapy mezi nimi se dává penalizace)
       3. vybere se 10 nejlepších spojených subsekvencí a oskórují se pomocí PAMu nebo BLOSSOM, z nich se započítají ty nejlépe skórující, součtem skóre subsekvencí se ohodnotí celá sekvence
       4. mezi nejlépe skórujícími sekvencemi se udělá Smith-Waterman
-  - BLAST
+  - BLAST (Basic Local Alignment Search Tool)
+    - algoritmus má 5 kroků, stejně jako ve FASTA jde o to najít malé množství sekvencí, které pak už budou oskórované pomocí SW algoritmu
+      1. pro query sekvenci jsou zjištěny všechny její k-tice (typicky k=3)
+      2. pro každou k-tici z kroku 1. jsou vygenerovány všechny teoreticky možné k-tice, které s ní budou skórovat nad určitou hodnotu (T), skóruje se pomocí PAM, či BLOSSUM
+      3. pro množinu všech těchto k-tic se udělá "finite state automata (FSA)", kterým se proskenují všechny sekvence v databázi. FSA zaznamená pozici jednotlivých (hledaných) k-tic v sekvencích
+      4. krok 4 má dvě varianty
+         1. ve starší verzi se rozšiřují nalezené k-tice do obou směrů, dokud skóre subsekvence nespadne pod určitý limit ($X_u$), rozšířená k-tice se nazývá "high scoring pair (HSP)"
+         2. v novější verzi BLASTU musí HSP obsahovat na konci rozšiřování alespoň 2 k-tice, čímž se sníží nějaká náhodnost toho procesu
+      5. je stanovena hodnota $S_g$, nad kterou dosáhne skóre jen 2% HSP. Sekvence těchto vybraných HSP pak jsou normálně zalignovány pomocí SW algoritmu
 
 - statistické zhodnocení významnosti nálezu
 - profilové metody (PSI-BLAST) 
