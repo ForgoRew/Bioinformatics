@@ -84,12 +84,12 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
 8. fylogenetika – stavba stromů – základní metody tvorby stromů (ML, MP, NJ, Bayes) – bootstrap analýza
 
 ## Výpočet času
-|Okruh                           |n otázek|koef. učení|tok/h|hodin|
-|:-------------------------------|:------:|:---------:|:---:|:---:|
-|Matematika & informatika        |23      |1.25       |2    |57   |
-|Biologie - molekulární a buněčná|27      |1.00       |2    |54   |
-|Bioinformatika                  |8       |0.9        |2    |14.4 |
-|Celkem                          |58      |-          |2    |125.4|
+|Okruh                           |n otázek|koef. učení|tok/h|hodin|reálně|
+|:-------------------------------|:------:|:---------:|:---:|:---:|:----:|
+|Matematika & informatika        |23      |1.25       |2    |57   ||
+|Biologie - molekulární a buněčná|27      |1.00       |2    |54   ||
+|Bioinformatika                  |8       |0.9        |2    |14.4 ||
+|Celkem                          |58      |-          |2    |125.4||
 
 
 # Poznámky
@@ -492,7 +492,7 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
   - PIR
   - PROSITE, Pfam (InterPro), Silva
 
-### 6. 
+### 6. Alignment struktur
 > strukturní srovnávání – hledání podobných struktur
 
 - Literatura
@@ -535,8 +535,60 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
           - vytvoří se alignment na začátku
           - alignment se seeduje (přidávají se postupně dvojice aminokyselin), monte carlo metoda, využívá se rozdíl ve skóre alignmentu
           - skóre - rigidní a elastická podobnost
+      - CE
+        - postupně hledá podobné strukturní (AFP, aligned fragment pair) úseky jdoucí v sekvencích po sobě
+        - ombinatoricky vyhledává optimální AFP s ohledem na minimalizaci RMSD
+      - PROSUP, STRUCTAL
+        - opakovaný alignment struktur
+          1. vytvoří se první seed - alignment
+          2. na základě tohoto alignmentu se zarovnají struktury (nová superpozice)
+          3. v rámci této superpozice se vytvoří matice vzdáleností
+          4. tato matice je použita pro vytvoření nového alignmentu pomocí dynamického programování
+          5. vznikne nový alignment, takže se jde na krok 2 - opakuje se až do konvergence
+
+      - SSAP
+        - založené na 2 úrovních dynamického programování
+          - pro každou kombinaci aminokyselin se struktury zalignují a vznikne tedy n tabulek dynamického programování se vzdálenostmi aminokyselin
+          - ve druhém kroku se tabulky sečtou a ze skóre se určí optimální alignment
 
 
 - hledání podobných struktur
+  - <!-- TODO? Nenašel jsem v prezentacích! -->
+
+### 7. Predikce struktury makromolekul
+> predikce struktury makromolekul
+
+- literatura
+  - [Bioinformatické algoritmy na GDrivu](https://drive.google.com/drive/u/2/folders/1PxGQIhwFY3ZVHpoBSD0pbtg41LQU3QIV), přednáška 12
+
+- v motivaci stojí především to, že znalost struktury makromolekul nám pomůže objasnit jejich funkci (platí dvojnásob u preteinů)
+  - a dá nám to i spoustu dalších informací, jako jak mohou být funkce regulovány, chování v roztoku etc.
+- struktura makromolekul může být zpravidla experimentálně určena, ale pro např. drug design by bylo mnohem praktičtější umět vlastnosti biopolymerů simulovat na počítači
+- pro určení struktury makromolekul se používá
+  1. rentgenová krystalografie (difrakce X-ray paprsků)
+  2. NMR spektroskopie (nuclear magnetic resonance, dá hodnoty vzdáleností různých typů atomů od sebe, zpětně se konstuuje struktura)
+  3. 3D cryo elektronová mikroskopie (mnoho 2D snímků naráz po megarychlém zchlazení -> 3D mapa hustoty částic -> konstruování modelu z mapy)
+- pro odhad struktury se používají 2 typy metod
+  - de novo
+  - homologní modelování
+- je fajn do začátku zmínit, že pro proteiny do určité míry platí tzv. Anfinsenovo paradigma, které říká, že struktura proteinu závisí pouze na primární struktuře (čili že nám naše snažení o odhad struktury reálného proteinu nekazí např. nějaké zlovolné posttranslační modifikace)
+- de novo metody
+  - mají několik podkategorií
+    - tak trochu fyzikální metody, které napodobují folding proteinů třeba v buňce
+      - nejhojněji je dneska používána metoda molekulové dynamiky, která pro každý krátký časový krok v simulačním čase konstruuje pro každou částici silová pole, která na ní působí a na jejich základě pak pohne s částicí
+      - u de novo metod je možná fajn říct, jaké používají různé potenciály
+        - mezi každými dvěma částicemi je nevazebný potenciál
+        - další potenciál je pro délky vazeb (vazebný potenciál)
+        - pak je úhlový potenciál pro tři po sobě jsoucí částice
+        - nakonec dihedrální potenciál, který se týká úhlu, který svírají 4 po sobě jdoucí částice v řetězci
+        - daly by se najít i další potenciály, které se týkají dalších specifických věcí, např. potenciál pro S-S můstky
+  - conformation space exploring (prozkoumání možností, jaké má protein na sbalení)
+    - za zmínku stojí i Monte Carlo metody, které nějakým způsobem (zpravidla trochu náhodně) hýbají řetězcem proteinu a na základě energie (potenciální energie <=> potenciálu) v systému pak přijímají nebo zahazují nové stavy. to se opakuje zpravidla do ustálení systému
+      - je to docela vhodná strategie pro prozkoumávání celého prostoru všech konformací proteinů - všechny prozkoumat nejdou (Levinthalův paradox)
+  - fragment-based approaches
+    - jednotlivé podsekvence mohou být docela dobře definované (motivy)
+    - toho je možné využít a už je jen vhodně poskládat, aby vytvořili správnou strukturu
+- template-based metody <!-- TODO: pokračuj tadyy! :D -->
+
 
 
