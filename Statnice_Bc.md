@@ -1,3 +1,14 @@
+# README
+Čauky!
+
+Tenhle soubor jsou moje poznámky z průběžnýho učení na státnice. Neříkám, že jsou kompletní, ale někomu by se mohly hodit :)
+
+Zatím jsou under construction :D
+
+Vycházím ze [státnicových otázek na SISu](https://is.cuni.cz/studium/predmety/index.php?id=7b4a1f9cb7c5f97f6a546844bfc00ea4&tid=&do=predmet&kod=MSZBB004&skr=2022).
+
+U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vycházím (přednášky etc.).
+
 # Otázky
 ## Požadavky znalostí k bakalářské státní závěrečné zkoušce z bioinformatiky
 
@@ -37,7 +48,7 @@
 2. Stavba buňky, funkce buněčných kompartmentů, srovnání buněčné stavby pro- a eukaryot, povrchové struktury buněk, význam specifických struktur rostlinných buněk (buněčné stěny, plastidů, vakuol) pro životní strategii rostlin
 3. Membrány - stavba, biogeneze a funkce membrán, membránové proteiny, membránový potenciál a transmembránový přenos látek
 4. Struktury proteinů a nukleových kyselin - primární, sekundární, terciální a kvartérní struktury, motivy a domény, supramolekulární komplexy (ribosom, spliceosom, proteasom...); princip komplementarity bází, primární a sekundární struktury DNA a RNA
-5. Enzymy a jejich vlastnosti - mechanismy katalýzý, regulace enzymové aktivity, názvosloví enzymů
+5. Enzymy a jejich vlastnosti - mechanismy katalýzy, regulace enzymové aktivity, názvosloví enzymů
 6. Energetický metabolismus - makroergní fosfátové sloučeniny, glykolýza a citrátový cyklus, fermentace, oxidativní fosforylace a transport elektronů, fotosyntéza - celkový přehled, dílčí reakce a komplexy, jejich lokalizace
 7. Zpracování genetické informace. Centrální dogma molekulární biologie, struktura virových, pro- a eukaryotických genomů. Vertikální a horizontální přenos dědičné informace. Transpozony, viry, epigenetická dědičnost, priony
 8. Základy genetiky - Mendelovy zákony, základní pojmy, různé verze definice genu. Intra- a intergenové interakce, genová vazba, genetické aspekty sexuality, chromozomové určení pohlaví, pohlavně vázaná dědičnost, mimojaderná dědičnost.
@@ -82,6 +93,13 @@
 
 
 # Poznámky
+## Co jsem ještě nestihl doprojít
+<!-- TODO -->
+- Hidden Markov Models
+  - [Bioinformatické algoritmy, přednášky 7,8,9](https://drive.google.com/drive/u/2/folders/1jAY334cmBiOS3Tx06VBPDkjNM--tGqBo)
+
+
+
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
 > "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
@@ -132,7 +150,6 @@
 
 ### 2. Sekvenční bioinformatika
 - literatura
-  - [essentials](../Literatura/Essential_Bioinformatics.pdf)
   - [Wiki CZ: Dot plot](https://cs.wikipedia.org/wiki/Dot_plot)
   - [Základy bioinformatiky na Drivu](https://drive.google.com/drive/u/2/folders/1Q6Qdnpu6WVNltm0hdHHSNKI6f4Hrsib0)
   - [Bioinformatické algoritmy na GDrivu](https://drive.google.com/drive/u/2/folders/1PxGQIhwFY3ZVHpoBSD0pbtg41LQU3QIV)
@@ -298,6 +315,228 @@
          2. v novější verzi BLASTU musí HSP obsahovat na konci rozšiřování alespoň 2 k-tice, čímž se sníží nějaká náhodnost toho procesu
       5. je stanovena hodnota $S_g$, nad kterou dosáhne skóre jen 2% HSP. Sekvence těchto vybraných HSP pak jsou normálně zalignovány pomocí SW algoritmu
 
+  - zatímco FASTA spojuje k-tice, které jsou nalezeny v databázových sekvencích a ty se pak oskórují, BLAST pomocí všech k-tic podobných s k-ticemi v zadané sekvenci vytvoří FSA, tím najde všechna stejná místa v databázových sekvencích, tato místa pak nechá rozšířit (HSP) a ty se pak oskórují
+
 - statistické zhodnocení významnosti nálezu
-- profilové metody (PSI-BLAST) 
-- HMM metody
+  - E-value
+    - E-value rovno 1 znamená, že v prohledávané databázi se dá očekávat pro dané skóre 1 sekvence prostě náhodou
+    - čím menší je E-value, tím menší je šance, že by např. vyhledaná sekvence byla vyhledána náhodně.
+    - ve velkých databázích by krátké sekvence měly vysoké E-value, i kdyby byly třeba velmi podobné vstupní sekvenci
+    - E-value je definovaná pomocí Gumbelova (extrémového) rozdělení
+      - E-value je pravděpodobnost, že dobrý alignment nějaké sekvence v databázi má vyšší skóre, než skóre daného hitu
+        - Gambelovo rozdělení má CDF definovanou jako $exp(-e^{-\lambda (x-\mu)})$, $\lambda$ je rozptyl a $\mu$ střední hodnota
+        - E-value je pak 1-$exp(-e^{-\lambda (x-\mu)})$
+        - tohle E-value je trochu jiné, než databázové E-value
+          - FASTA to vypočítané E-value pronásobí počtem sekvencí v databázi
+          - BLAST počítá s tím, že delší sekvence mají větší šanci na to být hitnuté
+            - pronásobí E-value $×\frac{N}{n}$, kde N je počet reziduí v sekvenci a n je délka nalezené sekvence
+
+- profilové metody (PSI-BLAST) (lecture-09, první polovina)
+  - hledají se konzervovaná místa (např. Prosite databáze)
+  - přístupy mají různou komplexitu, dávají různé množství informací
+  - konsenzus sekvence ("úplně jednoduchý grep"), jen aminokiselina a jeden wild-card - *
+  - patterns - grep patterny,
+    - má trochu upravenou syntax
+      - wildcard ... X
+      - [] místo ^ etc.
+  - PSSM (Position specific scoring matrix)
+    - Hoksza o PSSM říká, že na nich většina studentů u státnic zbytečně pohoří!!! :// Creepy
+    - také se nazývá profil
+    - pro daný MSA se spočítají frekvence jednotlivých typů aminokyselin na určitých pozicích
+    - video [přednášky Hokszy](https://drive.google.com/file/d/1XTO0RUbab7IxBHANDX8nKfClvE1H7FZo/view?usp=sharing) od Matěje Zátka je pure gold, na 20:00 kočka Hokszovi ničí mikrofon u sluchátek :D
+    - PSSM hodnoty pro jednotlivé aminokyseliny se ještě upraví pomocí pseudo-countů, aby se trochu oslabil vliv toho, co vidíme a měly šanci i jiné aminokyseliny - dává se to kvůli tomu, aby se oslabil vliv toho, že jsem neviděl všechny sekvence z celé té rodiny, v některé sekvenci by třeba nějaká jiná aminokyselina byla.
+      - tato hodnota se v PSSM pro danou aminokyselinu na dané pozici se tedy spočítá takto:
+        - *n* ... počet reálných výskytů aminokyseliny v alignmentu
+        - *k* ... počet sekvencí v alignmentu
+        - *a* ... počet aminokyselin (jo jde to určitě i pro nukleotidy?)
+        - *ps* ... pseudocount
+        - $f_{ij} = \frac{n+ps}{k+a*ps}$
+    - pak se to celé ještě prožene log-likelihood ratio nulového modelu
+      - $s_{ij}=log(\frac{f_{ij}}{q_i})$
+        - kde $f_{ij}$ je ta pseudocountovaná hodnota
+        - $q_i$ je pravděpodobnost, že na i-té pozici by daná aminokyselina byla náhodně
+    - hodnoty tabulky pak říkají, kolikrát je pravděpodobnější, že hodnota v sekvenci pochází z match modelu než random modelu (pokud je vyšší než 0), nebo kolikrát je pravděpodobnější random model než match model (pokud je nižší než 0) 
+    - s PSSM se pak jede přes všechny pozice ve zkoumané sekvenci a pro každou pozici se zapisuje skóre
+    - nevýhoda, neumožňuje inzerce a delece
+    - nechce se mi teď zpětně přepisovat ještě poznámky, ale rád bych líp shrnul postup pro PSSM
+      1. vytvoření dobrého MSA sekvencí s motivem
+      2. vytvoření PSSM
+         1. zaznamenání počtu výskytů jednotlivých reziduí na daných pozicích
+         2. volba hodnoty pseudo-countu
+         3. spočtení $f_{ij}$ - pseudocountované pravděpodobnosti výskytu reziduí na daných pozicích
+         4. log-likelihood ratio (převedení pravděpodobnosti na skóre, využívá se znalosti random a match modelu)
+      3. použití PSSM na dané sekvenci
+         1. oskórování všech pozic pomocí PSSM
+  - PSI-BLAST (Position Specific Iterated Basic Local Alignment Search Tool)
+    - je to docela super v tom, že se naleznou vzdálenější homologové než jen pomocí BLASTu, ale může to občas vyhledat něco dost mimo - přidá to do PSSM nějakou nesouvisející sekvenci (profile drift)
+    - využívá to metod BLASTu (P) a PSSM
+    1. pro zadanou sekvenci se vyhledají pomocí BLASTP podobné sekvence
+    2. z nejlepších vyhledaných se udělá MSA
+    3. z MSA se vytvoří PSSM
+    4. profil (PSSM) se použije pro další vyhledávání v databázi pomocí BLASTP
+    5. pokud jsou nové hity, přidat do MSA a vytvořit nový profil
+    6. opakovat 4. a 5., dokud jsou nalézány nové hity
+
+- HMM metody (v přednáškách 07, 08, 09)
+- HMM metody (lecture-09, druhá část, cca slide 25)
+  - PSSM má nevýhodu, že neumí inzerce a delece
+  - např. Viterbi algoritmus
+    - zjišťuje nejpravděpodobnější variantu (nikoli nejpravdivější), jak by mohla být jakoby zalignovaná zkoumaná sekvence za předpokladu, že patří do příbuzné skupiny k určitému motivu
+  - sestrojení FSA, kde jsou tři typy průchodů pro každou pozici
+    - *match*
+    - *insert*
+    - *delete*
+  - jde o to najít pravděpodobnosti přechodů
+  - ty se vypočítají podobně jako u PSSM z poměrů toho, jak jdou jednotlivé "matche", "inzerce" a "delece" v MSA a plus se to ještě pseudo-countuje
+<!-- TODO ... -->
+
+
+### 4. Domény a motivy
+> hledání domén a motivů – predikce transmembránových proteinů – predikce buněčné lokalizace a postranslačních modifikací
+
+- literatura
+  - [Bioinformatické algoritmy na GDrivu](https://drive.google.com/drive/u/2/folders/1PxGQIhwFY3ZVHpoBSD0pbtg41LQU3QIV)
+
+- hledání domén a motivů
+  - to je docela dost pokryté ve 3. otázce
+  - možná by bylo fajn tu sepsat databáze, které se toho týkají
+    - Prosite
+      - [webovky](http://www.expasy.ch/prosite) (od SwissProtu)
+      - motivy, proteinové domény, rodiny a funkční místa
+      - dobře se v tom vyhledává - generalized profiles, Pftools
+    - CDD
+      - [webovky](https://www.ncbi.nlm.nih.gov/cdd/)
+      - Conserved Domains Database
+      - obsahuje předvytvořené MSA (PSSM)
+      - poskytuje variantu PSI-BLAST
+    - Pfam
+      - [webovky](http://pfam.xfam.org/)
+      - kolekce domén a families,
+      - pro vyhledávání jsou použity HMM
+      - V SOUČASNOSTI JE PROVOZ UKONČEN A PŘEVEDEN NA INTERPRO
+    - InterPro
+      - [webovky](https://www.ebi.ac.uk/interpro/)
+      - sdružuje členské databáze, které je možné prohledávat z jejich interfacu...
+
+- predikce transmembránových proteinů
+  - <!-- TODO Nemůžu najít přednášku? -->
+
+
+- predikce buněčné lokalizace a postranslačních modifikací
+  - <!-- TODO Materiály-->
+
+### 5. Databáze
+> databáze – vlastnosti databází – formáty dat- validace dat – významné bioinformatické databáze
+
+- literatura
+  - [Bioinformatické algoritmy na GDrivu](https://drive.google.com/drive/u/2/folders/1PxGQIhwFY3ZVHpoBSD0pbtg41LQU3QIV), přednáška 2
+
+- vlastnosti databází
+  - trochu nechápu otázku, jakože vyjmenovat obecně vlastnosti bioinformatických databází?
+
+- formáty dat (skoro všechny mají wiki stránku)
+  - FASTA
+    - prostě jen název sekvence a sekvence (DNA i proteiny)
+  - Formáty dat ze sekvenačních experimentů
+    - GenBank Flat File Format ([sample](https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html))
+    - FASTQ
+      - podobné jako FASTA, obsahuje ještě data o kvalitě sekvenování
+    - SAM
+      - obsahuje data ze sekvenátoru, ještě více informace, než FASTQ
+    - BAM
+      - binární verze SAM filu
+
+  - VCF
+    - variant calling format
+      - obsahuje varianty v genomických datech
+
+  - [BED](https://en.wikipedia.org/wiki/BED_(file_format))
+    - Browser Extensible Data
+    - obsahuje informace o genomických regionech...
+  - soubory v PDB databázi
+    - PDB file
+      - human readable
+      - pozice jednotlivých atomů
+      - proteinová sekvence
+      - zastaralý
+    - mmCIF
+      - macro-molecule crystalographic information file
+      - modernější PDB soubor, hůře čitelný, ale obecně lepší pro software a má neomezenou kapacitu (PDB format se vyvinul asi z děrných štítků)
+
+- validace dat
+  - <!-- TODO Trochu netuším, co sem dát :D Asi jsme se to neučili nebo nevím, nevím jakým směrem by to mělo jít. Jakože  -->
+
+- významné bioinformatické databáze
+  - RefSeq, GeneBank
+    - obojí pro genomická data
+    - RefSeq je "curated", vybírá existující data a pak je teprve přidává, také má jen modelové organizmy
+  - PDB
+    - struktury proteinů
+    - anotace etc.
+    - konsorcium
+      - rcsb-PDB, PDBe, PDBJ
+      - v každé z poboček jsou stejná data
+      - interface si řeší každá pobočka sama
+    - web interface, FTP, API
+    - každý protein má čtyřznakový permanentní kód (číslo a tři písmena)
+    - formáty - PDB a mmCIF
+      - ukládají se nejen proteiny, ale i ligandy a DNA
+    - SCOP - Structural Classification of Protein Structures
+      - human curated
+      - hierarchická klasifikace proteinů
+        - podle funkční a strukturní blízkosti
+    - CATH
+      - podobně jako CATH, ale automatizovaná
+  - UniProt
+    - zahrnuje i SwissProt
+  - PIR
+  - PROSITE, Pfam (InterPro), Silva
+
+### 6. 
+> strukturní srovnávání – hledání podobných struktur
+
+- Literatura
+  - [Bioinformatické algoritmy na GDrivu](https://drive.google.com/drive/u/2/folders/1PxGQIhwFY3ZVHpoBSD0pbtg41LQU3QIV), přednášky na (11) "Protein structure similarity"
+
+- strukturní srovnávání
+  - strukturní podobnost - podobný fold etc.
+    - global similarity
+    - local similarity
+      - globálně odlišné proteiny mohou sdílet stejnou funkci -> stejná vazebná/aktivní místa
+  - algoritmy pro hledání proteinových struktur
+    - zpravidla pracují s párem proteinových struktur, které jsou reprezentovány souřadnicemi atomů (např. mmCIF formát)
+    - vyhodí nějaké číslo
+  - RMSD
+    - Root Mean Square Deviation
+    - pro dvě dané struktury (stejný počet atomů)
+      - $RMSD(S_1, S_2) = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\sigma_{i}^2}$
+        - $\sigma_i$ je euklidovská vzdálenost mezi i-tými atomy
+    - aby RMSD mělo nějakou hodnotu, je potřeba struktury nejprve zarovnat (i identické, ale posunuté struktury budou mít nenulové RMSD)
+    - superposition-based similarity
+      - hledá ideální superpozici dvou struktur
+      - obecně má 4 kroky
+        1. pro dvě zaddané struktury (P1, P2) jsou extrahovány jejich vlastnosti (pro struktury jsou vygenerované množiny vektorů jejich vlastostí)
+        2. na množinách vlastností je vytvořen alignment (podobnost dvojic)
+        3. vytvoření strukturní superpozice
+        4. skórování alignmentu
+      - spoustu přístupů
+        - jen v PDB je jich hned několik
+          - DALI
+          - CE
+          - MAMMOTH
+    - DALI
+      - distance matrix alignment
+        - 2D reprezentace 3D struktur
+          - vytvoření 2D matice, nezávislá na coordinátech
+          - zajímá nás matice intrareziduálních vzdáleností
+          - čím blíže jsou rezidua blíže u sebe, tím je v matici vyšší skóre
+          - relativně jednoduché odhalování helixů etc.
+          - ve 2D maticích jsou postupně nalézané stejné patterny
+          - vytvoří se alignment na začátku
+          - alignment se seeduje (přidávají se postupně dvojice aminokyselin), monte carlo metoda, využívá se rozdíl ve skóre alignmentu
+          - skóre - rigidní a elastická podobnost
+
+
+- hledání podobných struktur
+
+
