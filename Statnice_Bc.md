@@ -84,12 +84,12 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
 8. fylogenetika – stavba stromů – základní metody tvorby stromů (ML, MP, NJ, Bayes) – bootstrap analýza
 
 ## Výpočet času
-|Okruh                           |n otázek|koef. učení|tok/h|hodin|reálně|
-|:-------------------------------|:------:|:---------:|:---:|:---:|:----:|
-|Matematika & informatika        |23      |1.25       |2    |57   ||
-|Biologie - molekulární a buněčná|27      |1.00       |2    |54   ||
-|Bioinformatika                  |8       |0.9        |2    |14.4 ||
-|Celkem                          |58      |-          |2    |125.4||
+|Okruh                           |n otázek|koef. učení|tok/h|hodin|reálně|reál. koef.|
+|:-------------------------------|:------:|:---------:|:---:|:---:|:----:|:---------:|
+|Matematika & informatika        |23      |1.25       |2    |57   |||
+|Biologie - molekulární a buněčná|27      |1.00       |2    |54   |||
+|Bioinformatika                  |8       |0.9        |2    |14.4 |19|1.1875|
+|Celkem                          |58      |-          |2    |125.4|||
 
 
 # Poznámky
@@ -524,6 +524,7 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
           - DALI
           - CE
           - MAMMOTH
+        - dále např. FATCAT, PROSUP, STRUCTAL
     - DALI
       - distance matrix alignment
         - 2D reprezentace 3D struktur
@@ -581,14 +582,152 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
         - další potenciál je pro délky vazeb (vazebný potenciál)
         - pak je úhlový potenciál pro tři po sobě jsoucí částice
         - nakonec dihedrální potenciál, který se týká úhlu, který svírají 4 po sobě jdoucí částice v řetězci
-        - daly by se najít i další potenciály, které se týkají dalších specifických věcí, např. potenciál pro S-S můstky
+        - daly by se najít i další potenciály, které se týkají dalších specifických věcí, např. potenciál pro S-S můstky, elektrostatický potenciál atd.
   - conformation space exploring (prozkoumání možností, jaké má protein na sbalení)
     - za zmínku stojí i Monte Carlo metody, které nějakým způsobem (zpravidla trochu náhodně) hýbají řetězcem proteinu a na základě energie (potenciální energie <=> potenciálu) v systému pak přijímají nebo zahazují nové stavy. to se opakuje zpravidla do ustálení systému
       - je to docela vhodná strategie pro prozkoumávání celého prostoru všech konformací proteinů - všechny prozkoumat nejdou (Levinthalův paradox)
   - fragment-based approaches
     - jednotlivé podsekvence mohou být docela dobře definované (motivy)
     - toho je možné využít a už je jen vhodně poskládat, aby vytvořili správnou strukturu
-- template-based metody <!-- TODO: pokračuj tadyy! :D -->
+- template-based metody
+  - obecně se dá postup těchto metod shrnout do 7 kroků
+    1. pro zadanou sekvenci aminokyselin najít podobné se známou strukturou -> vytvoření templatu
+    2. alignment zadané sekvence s nalezenou sekvencí
+    3. pro konzervované regiony (aktivní místa etc.) rovnou použít pozice atomů u známé struktury pro zadaný protein
+    4. vytvořit model pro ostatní regiony
+    5. modelovat v těchto regionech postranní řetězce aminokyselin
+    6. optimalizovat model
+    7. vyzkoušet kvalitu získaného modelu
+  - pro výběr tempatu se dá použít BLAST, FASTA nebo PSI-BLAST
+  - alignment je dobré udělat s více sekvencemi najednou - lepší odhalení reálně konzervovaných regionů
+  - dobře konzervované úseky pro překopírování jsou zpravidla nějaké sekundární struktury
+  - velmi obtížné modelování loopů - zpravidla nejsou dobře konzervované, změna jedné aminokyseliny v tomto úseku většinou neovlivní funkci proteinu
+  - optimalizace 
+    - zkoušení rotace jednotlivých postranních řetězců a drobné změny v $C_\alpha$ backbonu struktury
+    - dále zpravidla něco na způsob molekulové dynamiky
+      - silová pole dokončí nuance ve vzájemných polohách atomů
+  - threading a profile-based metody - když chybí blízký homolog, ale existují alespoň podobné struktury (podrobně popsané v přednášce 12, slidy 49-53)
+  - vyhodnocení se dělá pomocí RMSD a GDT-TS
+    - RMSD je fajn, ale kvadratické -> hodně ošklivé RMSD i pro velmi hezky namodelované struktury
+    - RMSD je kvadratické - i jedna velmi vzdálená subsekvence RMSD silně zvýší
+    - GDT-TS
+      - nevím jak vysvětlit, je to na slidu 57, 12 přednáška
+  - je spoustu nástrojů, které tento přístup používají
+    - MODELLER, ROSSETA, SWISS-MODEL etc.
+    - budu se spíš věnovat AlphaFoldu 2, který je v současnosti zdaleka nejlepší (vyhrál CASP 14 (2020) s ohromným předstihem)
 
+### 8. Fylogenetika
+> fylogenetika – stavba stromů – základní metody tvorby stromů (ML, MP, NJ, Bayes) – bootstrap analýza
 
+- literatura
+  - [Bioinformatické algoritmy na GDrivu](https://drive.google.com/drive/u/2/folders/1PxGQIhwFY3ZVHpoBSD0pbtg41LQU3QIV), přednáška 10, v podstatě ta přednáška pokrývá celou otázku
+
+- fylogenetika
+  - věda o evoluční spřízněnosti
+  - je možné dělat fylogenetiku např. na základě fosilií a porovnávání znaků organizmů
+  - bioinformatika vidí genové sekvence jako molekulární "fosilie"
+    - rozdíl mezi sekvencemi je výsledkem v čase se hromadících mutací, což zpětně dělá rozdíl i ve fenotypu organizmů
+  - předpoklady pro zkoumání fylogenetiky na sekvencích
+    - zkoumané sekvence jsou homologní (předpokládá se společný předek)
+    - jednotlivé pozice v sekvencích se vyvíjely nezávisle na sobě navzájem
+
+- stavba stromů
+  - nejdřív něco o stromech
+    - stromy jsou grafy, každý uzel grafu znamená jednu zkoumanou sekvenci
+    - mohou být zakořeněné -> pak dávají sekvence hierarchii
+    - pokud nejsou zakořeněné, tak jsou si všechny sekvence jakoby rovné
+    - hrany stromu mohou a nemusí být ohodnoceny funkcí vzdálenosti sekvencí
+    - pojmy
+      - taxa
+        - jeden druh
+      - clade - monofyletická skupina
+        - skupina s jedním společným předkem
+      - lineage
+        - větev, která ukazuje vztah ancestor-descendant
+      - fylogeneze
+        - topologie fylogenetického stromu
+  - jak rekonstruovat strom?
+    - unresolved tree
+      - všechny listy jsou připojeny ke společnému předku
+    - multifurcation -> strom, kde jeden taxon má více než dva potomky (chceme získat bifurkace)
+    - vytvoření stromu má dvě fáze
+      1. vytvoření nezakořeněného stromu (topologie) (pro N uzlů jich je (2N-5))
+      2. zakořenění stromu
+        - dvě možnosti
+          - middleway
+            - vezmu dvě nejvzdálenější taxy a přesně mezi ně ve stromě dám kořen
+            - předpokládá, že jsou evoluční hodiny (rychlost mutací) konstantní, což často neplatí
+          - outgroup
+            - přidám taxu vzdáleně příbuznou se zkoumanými sekvencemi (má s ostatníma společného předka, ale mimo zkoumanou skupinu a se všemi steného)
+  - stromy 
+  - Cladogram ... délky hran nemají žádný význam
+  - Phylogram ... délky hran označují evoluční odlišnost mezi uzly
+  - Newick format ... jsou reprezentovány v textové podobě, jako uzávorkované skupiny
+- postup 
+  1. výběr sekvencí
+  2. MSA sekvencí
+  3. výběr modelu evoluce - získání evolučních vzdáleností
+  4. vybudování stromu
+  5. vyhodnocení
+- výběr sekvencí
+  - podle rychlosti evoluce
+    - nejpomalejší ribozomální RNA
+    - kódující DNA
+    - nekódující DNA
+    - mitochondriální DNA
+- měření rychlosti mutace
+  - p-distance
+    - $p = \frac{D}{L}$
+      - počet změněných mutací děleno délkou sekvence
+      - nevýhody: často dojde ke změně na jedné pozici vícekrát
+        - u krátkých sekvencí udělá i jen pár změn velký rozdíl v p-distance
+  - poisson-corrected distance
+    - zkombinujeme pozorovaný počet mutací (p-distance) a aktuální počet mutací
+      - předpoklad, že pravděpodobnost výskytu k událostí se řídí poissonovým rozdělením
+      - v přednášce je vysvětlen postup, jak se k tomu dostat
+        - vzoreček je $d_p=-ln(1-p)$ 
+  - Jukes-Cantorův model
+
+- základní metody tvorby stromů (ML, MP, NJ, Bayes)
+  - distance-based metody
+    - UPGMA a Neighbor join (NJ)
+  - character based
+    - maximum parsimony (MP)
+    - maximum likelihood (ML)
+  - UPGMA
+    - Unweighted Pair Group Method with Arithmetic Mean    - předpoklad konstantních molekulárních hodin
+    - jednoduchá metoda
+    - spočítá se vzdálenost všech sekvencí mezi sebou
+    - ti nejbližší jsou prohlášeni za sousedy
+    - update vzdáleností
+      - pokud bych spojil sekvence A a B, pak sekvence C bude mít k A-B vzdálenost vzdálenosti $(A-C + B-C)/2$
+    - UPGMA funguje úplně správně, jen když je strom ultrametrický
+  - Neighbor Join
+    - pokud jsou vzdálenosti mezi listy *aditivní*
+    - postup
+      - máme multifurkaci
+      - postupně vybíráme, které taxony propojíme novým uzlem
+      - vytvoříme vzdálenostní matici mezi uzly
+      - matici modifikujeme (vznikne nová matice "D") ... úplně jsem nepochopil proč, ale má se od vzdáleností odečíst ještě průměr vzdáleností k ostatním uzlům
+      - z uzlů i, j definujeme nový uzel "k" se vzdálenostmi k ostatním uzlům m
+        - $d_{km}=1/2(d_{im}+d_{jm}-d_{ij})$
+      - takhle postupujeme až dokud nemáme nezakořeněný strom
+      - strom zakořeníme (ideálně neighbor-join)
+  - parsimonie
+    - snaha vysvětlit evoluci sekvencí
+    - včetně snahy o nalezení pravděpodobného předka
+    - tradiční parsimonie
+      - 1 substituce má hodnotu 1
+    - modifikovaná parsimonie
+      - různé záměny mají různou hodnotu
+  - [TODO: Maximum Likelihood není pokrytý v přednášce](http://www.deduveinstitute.be/~opperd/private/max_likeli.html)
+
+- bootstrap analýza
+  - jde o to zjistit, jestli jsou fylogenetické stromy vygenerovány správně
+  - generování podobných sekvencí, jako byl vstupní dataset
+    - např. vynechání malé části, či prohozené sloupce
+    - může se udělat třeba 1000 replik a pro každou z nich se udělá strom
+    - udělá se konsenzus strom - z těch 1000 replik
+    - změří se, kolikrát můj původní strom byl obsažen v tom konsenzus stromě
+- 
 
