@@ -100,6 +100,42 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
 
 
 
+
+## Matematika & informatika
+### 1. Matematická analýza
+- k celé matematické analýze jsou [sripta od Klimošové ("poznámky z přednášek") na disku](https://drive.google.com/drive/u/2/folders/1iJyceZk9aKkYBAnl3T4XAQ2f2PTM7tpD)
+- dále [řešená cvičení](https://drive.google.com/drive/u/2/folders/1w_V7L8AeSFNtrY82J33ATe0AU3vG7-6z)
+
+- trochu nevím, jestli sem dávat i nějaká cvičení, nebo jestli jsou i otázky z matematiky a informatiky jen "povídací"
+#### 1. Posloupnosti a řady, konvergence, Cauchyovské posloupnosti
+- přednášky 2, 3 ve skriptech
+
+- nejprve definice posloupnosti:
+  - Nechť *M* je množina. Pak posloupnost s hodnotami v M je zobrazení z ***ℕ*** do *M*.
+    - Každé přirozené číslo je tedy zobrazené na nějaký prvek z *M*
+    - $(a_1,a_2,a_3,...)$ se značí jako $(a_n)_{n=1}^{∞}$
+- posloupnost může být:
+  1. omezená (shora/zdola)
+  2. rostoucí/klesající
+  3. monotónní <=> nerostoucí nebo neklesající
+
+- posloupnost může mít limitu
+  - vlastní limita je definovaná v reálných číslech
+  - definice pro limitu v nekonečnu (nevlastní limita) je podobná
+  - Řekneme, že posloupnost $(a_n)_{n=1}^{∞}$ má limitu v bodě L, pokud
+    - L ∈ ℝ
+    - pro každé $ϵ$ ∈ ℝ existuje $n_0$ ∈ ℕ
+      - pro každé $n$ > $n_0$, $n$ ∈ ℕ
+      - $a_n$ - L < $ϵ$
+
+1. Reálně funkce jedné proměnné. Limita v bodě a spojitost. Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
+2. Integrální počet. Primitivní funkce a Newtonův integrál. Určitý (Riemannův) integrál a jeho použití.
+
+
+
+
+
+
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
 > "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
@@ -419,11 +455,11 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
       - sdružuje členské databáze, které je možné prohledávat z jejich interfacu...
 
 - predikce transmembránových proteinů
-  - <!-- TODO Nemůžu najít přednášku? -->
+  - TODO Nemůžu najít přednášku?
 
 
 - predikce buněčné lokalizace a postranslačních modifikací
-  - <!-- TODO Materiály-->
+  - TODO Materiály
 
 ### 5. Databáze
 > databáze – vlastnosti databází – formáty dat- validace dat – významné bioinformatické databáze
@@ -453,6 +489,7 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
   - [BED](https://en.wikipedia.org/wiki/BED_(file_format))
     - Browser Extensible Data
     - obsahuje informace o genomických regionech...
+
   - soubory v PDB databázi
     - PDB file
       - human readable
@@ -464,12 +501,13 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
       - modernější PDB soubor, hůře čitelný, ale obecně lepší pro software a má neomezenou kapacitu (PDB format se vyvinul asi z děrných štítků)
 
 - validace dat
-  - <!-- TODO Trochu netuším, co sem dát :D Asi jsme se to neučili nebo nevím, nevím jakým směrem by to mělo jít. Jakože  -->
+  - TODO Trochu netuším, co sem dát :D Asi jsme se to neučili nebo nevím, nevím jakým směrem by to mělo jít.
 
 - významné bioinformatické databáze
   - RefSeq, GeneBank
     - obojí pro genomická data
     - RefSeq je "curated", vybírá existující data a pak je teprve přidává, také má jen modelové organizmy
+
   - PDB
     - struktury proteinů
     - anotace etc.
@@ -481,14 +519,23 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
     - každý protein má čtyřznakový permanentní kód (číslo a tři písmena)
     - formáty - PDB a mmCIF
       - ukládají se nejen proteiny, ale i ligandy a DNA
-    - SCOP - Structural Classification of Protein Structures
-      - human curated
-      - hierarchická klasifikace proteinů
-        - podle funkční a strukturní blízkosti
-    - CATH
-      - podobně jako CATH, ale automatizovaná
+  - [SCOP](https://scop.mrc-lmb.cam.ac.uk/) - Structural Classification of Protein Structures
+    - human curated
+    - hierarchická klasifikace proteinů
+      - podle funkční a strukturní blízkosti
+  - [CATH](http://www.cathdb.info/)
+    - podobně jako CATH, ale automatizovaná
   - UniProt
     - zahrnuje i SwissProt
+    - UniProtKB
+      - SwissProt
+        - reviewed
+      - TrEMBL
+        - unreviewed
+    - UniRef
+      - 3 databases of clustered proteins
+    - UniParc
+      - sbírá data z veřejných databází a třídí je tak, aby nebyly redundantní
   - PIR
   - PROSITE, Pfam (InterPro), Silva
 
