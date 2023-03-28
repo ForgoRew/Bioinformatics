@@ -9,6 +9,10 @@ Vycházím ze [státnicových otázek na SISu](https://is.cuni.cz/studium/predme
 
 U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vycházím (přednášky etc.).
 
+==========
+
+Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsané dost mašťácky. Tak to berte pls jako spíš moje poznámky, kterými si připomínám teorii a pro cokoliv podrobnějšího se podívejte do zdrojů, které tam mám napsané. Sorry :D
+
 # Otázky
 ## Požadavky znalostí k bakalářské státní závěrečné zkoušce z bioinformatiky
 
@@ -106,9 +110,16 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
 - k celé matematické analýze jsou [sripta od Klimošové ("poznámky z přednášek") na disku](https://drive.google.com/drive/u/2/folders/1iJyceZk9aKkYBAnl3T4XAQ2f2PTM7tpD)
 - dále [řešená cvičení](https://drive.google.com/drive/u/2/folders/1w_V7L8AeSFNtrY82J33ATe0AU3vG7-6z)
 
-- trochu nevím, jestli sem dávat i nějaká cvičení, nebo jestli jsou i otázky z matematiky a informatiky jen "povídací"
-#### 1. Posloupnosti a řady, konvergence, Cauchyovské posloupnosti
-- přednášky 2, 3 ve skriptech
+- u státnic jsou otázky i v matematice prý spíš povídací
+- u důkazů jsou potřeba vědět hlavně jejich myšlenky
+- jsou potřeba základní definice
+- počítací věci jen hodně v základu, určitě žádné "špeky"
+#### 1. Posloupnosti a řady
+> Posloupnosti a řady, konvergence, Cauchyovské posloupnosti
+
+- literatura
+  - přednášky 2, 3 ve skriptech
+  - kromě Cauchyovské posloupnosti - [dávám odkaz na Wikipedii](https://cs.wikipedia.org/wiki/Cauchyovsk%C3%A1_posloupnost)
 
 - nejprve definice posloupnosti:
   - Nechť *M* je množina. Pak posloupnost s hodnotami v M je zobrazení z ***ℕ*** do *M*.
@@ -128,12 +139,80 @@ U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vych�
       - pro každé $n$ > $n_0$, $n$ ∈ ℕ
       - $a_n$ - L < $ϵ$
 
-1. Reálně funkce jedné proměnné. Limita v bodě a spojitost. Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
-2. Integrální počet. Primitivní funkce a Newtonův integrál. Určitý (Riemannův) integrál a jeho použití.
+  - věta o jednoznačnosti limity
+    - každá posloupnost má nejvýše jednu limitu
+    - => když najdeme dvě podposloupnosti s různými limitami, posloupnost nemá limitu
+  - věta o aritmetice limit
+    - pro dvě posloupnosti s limitami
+    - součet posloupností má limitu danou součtem limit původních posloupností
+    - to stejné platí o součinu i o podílu, jen je potřeba si zkontrolovat, že je výraz definovaný (žádné dělení nulou nebo součiny nekonečna s mínus nekonečnem)
+  - věta o limitě a uspořádání
+    - pro dvě posloupnosti s limitami v bodech a,b ∈ ℝ
+    - pokud a>b, tak pro nějaké $n_0$ budou i další hodnoty první posloupnosti větší než druhé
+  - věta o dvou policajtech
+    - pokud si můžeme "uzavřít" posloupnost do dvou posloupností - jedna bude vždycky větší a druhá vždycky menší - a ty mají limitu v jednom čísle, tak i ta uzavřená posloupnost v něm má limitu
+  -  věta monotónní posloupnosti
+    -  každá monotónní posloupnost má monotónní podposloupnost
 
+- řada je vlastně suma členů posloupnosti
+  - nekonečná řada je suma všech prvků posloupnosti
+  - n-tý částečný součet řady je součet pouze prvních n prvků posloupnosti
 
+  - důležité příklady řad
+    - geometrická řada
+      - $\sum_{n=0}^∞q^n$
+        - q ∈ (-1,1) ... součet řady je $\frac{1}{1-q}$
+        - q ∈ [1,∞) ... dtto je ∞
+        - q ∈ [-1,-∞) ... dtto neexistuje
+    - řady typu
+      - $\sum_{n=0}^∞\frac{1}{n^s}$
+        - konvergují, pokud s>1
+        - jinak divergují
+        - pokud s = 1 -> **harmonická řada**
+          - diverguje, ale její prvky konvergují k 0
 
+- Cauchyovské posloupnosti
+  - používá se pro definici metrického prostoru
+  - je to posloupnost, jejíž členové mohou být libovolně blízko sebe
+    - tzn. pro libovolné reálné číslo budou existovat 2 prvky této posloupnosti, které budou mít k sobě menší vzdálenost
+    - každá konvergující posloupnost je zároveň Cauchyovská
+      - opačně implikace neplatí
+        - např. pokud operujeme v racionálních číslech, tak Cauchyovská posloupnost může konvergovat k iracionálnímu číslu
+    - metrický prostor úplný pouze tehdy, když má každá Cauchyovská posloupnost v tomto prostoru i svou limitu
 
+#### 2. Reálně funkce jedné proměnné. Limita v bodě a spojitost. Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
+> Reálně funkce jedné proměnné. Limita v bodě a spojitost. Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
+
+- literatura
+  - kapitola 4
+
+- Reáln**ě** funkce jedné proměnné
+  - funkce, které řešíme, jsou definované z M do R, M je podmnožina R
+  - funkce může být
+    - shora/zdola omezená - pro funkci existuje horní/dolní závora
+    - rostoucí/klesající
+    - monotónní/nerostoucí/neklesající
+    - periodická - existuje *p*, které když přičteme k jakémukoli *x*, tak dostaneme zase stejnou hodnotu funkce
+    - prostá - různé hodnoty v definičním oboru implikují různé hodnoty v oboru hodnot
+  - inverzní funkce k $f$
+    - $f^{<-1>}(y)=x$ <=> $f(x)=y$
+  - elementární funkce
+    - Eulerovo číslo ... definováno jako součet řady
+      - $e(x):=\sum_{n=0}^∞\frac{x^n}{n!}$
+      - $e:=e(1)≈2.7$
+    - logaritmus - řešení rovnice $e^x=y$
+    - goniometrické funkce
+      - sinus, cosinus, tangens, cotangens
+    - cyklometrické funkce
+      - arcsin, arccos, arctan
+        - inverzní funkce na intervalu (-1,1)
+
+- Limita v bodě a spojitost.
+  - str. 16 TODO: Pokračuj zde :)
+
+- Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
+
+#### 3. Integrální počet. Primitivní funkce a Newtonův integrál. Určitý (Riemannův) integrál a jeho použití.
 
 
 ## Bioinformatika
