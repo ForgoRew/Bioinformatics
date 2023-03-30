@@ -102,11 +102,14 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - Hidden Markov Models
   - [Bioinformatické algoritmy, přednášky 7,8,9](https://drive.google.com/drive/u/2/folders/1jAY334cmBiOS3Tx06VBPDkjNM--tGqBo)
 
+- derivace
+  - základní vzorečky pro derivování
 ## Co bych si rád ještě připoměl
 - derivace
   - vzoreček pro definici derivace
   - leibnitzova formule
-
+  - Taylorův polynom
+  - zkusit si pár příkladů
 
 
 
@@ -114,6 +117,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 ### 1. Matematická analýza
 - k celé matematické analýze jsou [sripta od Klimošové ("poznámky z přednášek") na disku](https://drive.google.com/drive/u/2/folders/1iJyceZk9aKkYBAnl3T4XAQ2f2PTM7tpD)
 - dále [řešená cvičení](https://drive.google.com/drive/u/2/folders/1w_V7L8AeSFNtrY82J33ATe0AU3vG7-6z)
+  - a tamtéž je i fajn tahák ze studnice vědomostí (vzorečky na hodnoty goniometrických funkcí, derivace, integrování etc.)
 
 - u státnic jsou otázky i v matematice prý spíš povídací
 - u důkazů jsou potřeba vědět hlavně jejich myšlenky
@@ -185,7 +189,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
         - např. pokud operujeme v racionálních číslech, tak Cauchyovská posloupnost může konvergovat k iracionálnímu číslu
     - metrický prostor úplný pouze tehdy, když má každá Cauchyovská posloupnost v tomto prostoru i svou limitu
 
-#### 2. Reálné funkce jedné proměnné. Limita v bodě a spojitost. Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů.
+#### 2. Reálné funkce a limity
 > Reálně funkce jedné proměnné. Limita v bodě a spojitost. Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
 
 - literatura
@@ -276,7 +280,11 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - to platí i pro jednostranné limity
   - věta: nutná podmínka pro lokální extrém
     - pokud funkce v bodě $a$ nemá nulovou derivaci, pak se v bodě $a$ nenachází (lokální) extrém funkce
-  - věta: Rolleova a Lagrangeova
+
+      - 
+
+- věty o střední hodnotě
+  - věta: Rolleova a Lagrangeova (o střední hodnotě)
     - Rolleova věta
       - pomocí ní jde ověřit, že na nějakém intervalu je minimum
       - nechť $-∞ < a <b < ∞$
@@ -288,13 +296,65 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - Lagrangeova věta je zobecnění Rolleovy věty.
       - f(a) se nemusí rovnat f(b)
       - existuje c takové, že $f'(c)=\frac{f(b)-f(a)}{b-a}$
-- TODO: pokračujeme na straně 39!
+    - ze vzorečku Lagrangeovy věty se dá vyjít pro definování konvexity a konkavity funkce
+      - Pro interval $I$ a funkci $f: I→ℝ$
+        - $f$ je konvexní na $I$, pokud pro všechna $a,x,b ∈ I$,
+          - $a<x<b$
+        - platí, že $f(x)≤f(a)+(x-a)\frac{f(b)-f(a)}{b-a}$
+          - tzn oproti jakékoli přímce vytvořené na fuknkci dvěma body je funkce vydutá
+        - pro konkávní je to stejné, jen naopak - je vypouklá
+          - $f(x)≥f(a)+(x-a)\frac{f(b)-f(a)}{b-a}$
+        - ryze konvexní a ryze konkávní je funkce, když platí rovnice bez rovnosti - funkce |x| je konkávní, ale ne ryze
 
+- derivace vyšších řádů
+  - věta: konvexita, konkavita a druhá derivace
+    - mějme funkci f na intervalu I
+      - pokud je druhá derivace f'' na I kladná, pak je f na I konvexní
+      - pokud je druhá derivace f'' na I záporní, pak je f na I konkávní
 
-- věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
+- Extrémy funkcí.
+  - v poznámkách jsem to trochu přejel, ale myslím, že se to řeší přes derivaci funce - kde je derivace 0 tam může být lokální extrém, viz teorii okolo Rolleovy věty
+
+- Aplikace, např. průběh funkcí,
+  
+- Taylorův polynom.
+  - pomocí něj se dají aproximovat různé funkce
+  - pro motivaci - aproximace funkce $f$ v bodě např. $a$
+    - bude funkce $t(x) = f(a)+f'(a)(x-a) $
+      - tedy přímka procházející bodem $a$ se směrnicí $f'(a)$
+    - $t$ je v tomto případě polynom stupně 1, pro který platí
+      - $\lim_{x→a}\frac{f(x)-t(x)}{x-a}=0$
+  - nyní hledáme polynom P stupně nejvýše n, pro který platí
+    - $\lim_{x→a}\frac{f(x)-P(x)}{(x-a)^n}=0$ (existuje právě jeden)
+  - definice Tailorova polynomu
+    - $a ∈ ℝ$
+    - $f$ je definovaná v okolí $a$ a má zde derivaci $n$-tého stupně ($f^{n}(a) ∈ ℝ$)
+    - pokud $n = 0$, předpokládáme spojitost $f$ v bodě $a$
+    - pak Taylorův polynom řádu $n$ funkce $f$ v bodě $a$ je definován jako suma:
+      - $T^{f,a}_n:=∑_{i=0}^n\frac{f^i(a)}{i!}(x-a)^i$
 
 #### 3. Integrální počet. Primitivní funkce a Newtonův integrál. Určitý (Riemannův) integrál a jeho použití.
+> Integrální počet. Primitivní funkce a Newtonův integrál. Určitý (Riemannův) integrál a jeho použití.
 
+- Literatura
+  - skripta, kapitoly 10-13
+
+- primitivní funkce
+  - funkce, která umožňuje z derivované funkce rekonstruovat původní funkci
+  - definice primitivní funkce
+    - nechť $-∞ < a < b < ∞$
+    - nechť je definovaná funkce $f: (a,b) → ℝ$
+    - nechť je definovaná funkce $F: (a,b) → ℝ$, která má na $(a,b)$ derivaci $F'$
+    - pokud $F'(x) = f(x)$ pro všechna $x ∈ (a,b)$, nazveme funkci $F$ primitivní funkcí k funkci $f$
+  - výše uvedená definice nám ještě moc neříká o tom, jak integrovat, jen, že je to opačný proces k derivování
+  - navíc je určena až na konstantu
+    - tzn., pokud je $F_1$ primitivní funkce $f$, pak $F_2 = F_1 + c$, $c ∈ ℝ$, je také primitivní funkce k $f$
+    - $∫$ je symbol, který označuje množinu všech primitivních funkcí
+    - $F(x) ∈ ∫f(x)dx$
+  - 
+
+
+$∈ ℝ, \geq, \le ∞ ∫$, →
 
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
