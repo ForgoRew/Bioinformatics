@@ -102,6 +102,11 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - Hidden Markov Models
   - [Bioinformatické algoritmy, přednášky 7,8,9](https://drive.google.com/drive/u/2/folders/1jAY334cmBiOS3Tx06VBPDkjNM--tGqBo)
 
+## Co bych si rád ještě připoměl
+- derivace
+  - vzoreček pro definici derivace
+  - leibnitzova formule
+
 
 
 
@@ -180,13 +185,13 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
         - např. pokud operujeme v racionálních číslech, tak Cauchyovská posloupnost může konvergovat k iracionálnímu číslu
     - metrický prostor úplný pouze tehdy, když má každá Cauchyovská posloupnost v tomto prostoru i svou limitu
 
-#### 2. Reálně funkce jedné proměnné. Limita v bodě a spojitost. Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
+#### 2. Reálné funkce jedné proměnné. Limita v bodě a spojitost. Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů.
 > Reálně funkce jedné proměnné. Limita v bodě a spojitost. Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
 
 - literatura
   - kapitola 4
 
-- Reáln**ě** funkce jedné proměnné
+- Reálné funkce jedné proměnné
   - funkce, které řešíme, jsou definované z M do R, M je podmnožina R
   - funkce může být
     - shora/zdola omezená - pro funkci existuje horní/dolní závora
@@ -208,9 +213,85 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
         - inverzní funkce na intervalu (-1,1)
 
 - Limita v bodě a spojitost.
-  - str. 16 TODO: Pokračuj zde :)
+  - je potřeba definovat okolí bodu
+    - $δ$-okolí bodu $a$ - $U(a,δ)$
+      - $δ ∈ ℝ$, $δ > 0$
+      - $a ∈ ℝ$
+      - $U(a,δ) := {x ∈ ℝ: |a-x|<δ}$
+        - pro a ∈ {-∞, ∞}
+          - pro ∞, podobně pro -∞: $U(a,δ) := {x ∈ ℝ: x>1/δ}$
+    - prstencové okolí bodu je definované jako okolí bodu bez toho bodu
+  - definice limity
+    - limita pro funkci $f$ má v bodě $a$ hodnotu $A$, pokud pro všechna $ϵ$ existuje $δ$ takové, že se prstencové okolí bodu $a$ zobrazí na okolí bodu $A$
+      - $x∈P(a,ϵ) => f(x)∈U(A,δ)$
+    - zajímavé je, že funkce ani nemusí být definovaná v bodě a, aby tam mohla mít limitu
+    - ještě je zajímavé, že když sčítáme, násobíme a dělíme funkce navzájem, tak se stejně dá operovat s jejich limitami (musí být ale definované a i ty operace musí být definované)
+  - spojitost funkce
+    - funkce $f$ je spojitá v bodě $a ∈ ℝ$, pokud hodnota její limity je rovna hodnotě funkce $f$ v tomto bodě
+    - např. absolutní hodnota signum ($|sgn|$) není spojitá v nule - limita je v bodě 0 rovna 1, ale funkce má v bodě 0 hodnotu také 0
+  - na spojitých funkcích je např. zajímavé, že zobrazuje interval vždy na nepřerušený interval
 
-- Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
+- Derivace funkcí: definice a základní pravidla
+  - derivace z fyzikálního pohledu říká něco jako "rychlost" růstu určité funkce
+    - toho se využívá při aproximacích funkcí, např. pomocí Taylorova polynomu
+  - definice derivace:
+    - máme funkci $f:M→ℝ$,
+    - bod $b∈M$,
+    - okolí bodu $U(b,δ)$, $δ>0$
+    - pak derivace funkce $f$ v bodě $b$ je definovaná takto:
+      - $f':=lim_{h→0}\frac{f(b+h)-f(b)}{h}=lim_{x→b}\frac{f(x)-f(b)}{x-b}$
+  - vlastnosti derivace
+    - derivace existuje, pokud existují příslušné jednostranné derivace
+    - zajímavost (viz úvod) - druhá definice derivace je v podstatě směrnice přímky dané bodem [x,f(x)] a [b,f(b)]
+  - věta: diferencovatelnost implikuje spojitost funkce
+    - pokud existuje v bodě $b$ derivace, pak je funkce v bodě $b$ spojitá
+  - věta: aritmetika derivací
+    - trochu složitější oproti limitám!
+    - sčítání funkcí funguje v pohodě
+    - násobení funkce reálným číslem je taky v pohodě
+    - pro násobení je Leibnitzova formule:
+      - $f, g: U(b,δ)→ℝ$ jsou funkce, které mají v bodě b derivace
+      - $(f⋅g)'(b) = f'(b)g(b) + f(b)g'(b)$
+    - pro dělení je formule docela podobná násobení
+      - $(\frac{f}{g})(b)' = \frac{f'(b)g(b) - f(b)g'(b)}{g(b)^2}$
+  - věta: derivace složené funkce
+    - funkce $f,g$,
+    - body $a,b$,
+    - $f$ má derivaci v bodě $b$
+    - $g$ má derivaci v bodě $a$
+    - $g(a) = b$
+    - $g$ je spojitá v bodě $a$
+    - pak platí, že
+      - $(f(g))'(a) = f'(b)g'(a)$
+  - věta: derivace inverzní funkce
+    - $f→J$ je na $J$ spojitá a ryze monotónní funkce a $f(a)=b$
+    - pak když $b!=0$: $(f^{<-1>})'(b) = 1/f'(a)$
+    - jinak když je $f$ rostoucí, tak $(f^{<-1>})'(b) = ∞$
+      - (když je klesající, tak -∞)
+  - věta: L'Hospitalovo pravidlo
+    - funkce $f,g$ mají na $P(a,δ)$ vlastní derivaci a $g'(a)!=0$ na $P(a,δ)$
+    - pak i pokud jejich limity na $P(a,δ)$ jsou rovny nule, platí, že
+      - $lim_{x→a}\frac{f(x)}{g(x)}=lim_{x→a}\frac{f'(x)}{g'(x)}$
+    - pokud má funkce $g$ limitu rovnou $+-∞$, pak platí výše uvedená rovnice také.
+    - to platí i pro jednostranné limity
+  - věta: nutná podmínka pro lokální extrém
+    - pokud funkce v bodě $a$ nemá nulovou derivaci, pak se v bodě $a$ nenachází (lokální) extrém funkce
+  - věta: Rolleova a Lagrangeova
+    - Rolleova věta
+      - pomocí ní jde ověřit, že na nějakém intervalu je minimum
+      - nechť $-∞ < a <b < ∞$
+      - funkce $f$
+        - je na intervalu $[a,b]$ spojitá
+        - má na intervalu $(a,b)$ derivaci
+        - $f(a)=f(b)$
+      - Pak existuje $c∈(a,b)$ takové, že $f'(c)=0$.
+    - Lagrangeova věta je zobecnění Rolleovy věty.
+      - f(a) se nemusí rovnat f(b)
+      - existuje c takové, že $f'(c)=\frac{f(b)-f(a)}{b-a}$
+- TODO: pokračujeme na straně 39!
+
+
+- věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
 
 #### 3. Integrální počet. Primitivní funkce a Newtonův integrál. Určitý (Riemannův) integrál a jeho použití.
 
@@ -664,7 +745,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
           - skóre - rigidní a elastická podobnost
       - CE
         - postupně hledá podobné strukturní (AFP, aligned fragment pair) úseky jdoucí v sekvencích po sobě
-        - ombinatoricky vyhledává optimální AFP s ohledem na minimalizaci RMSD
+        - kombinatoricky vyhledává optimální AFP s ohledem na minimalizaci RMSD
       - PROSUP, STRUCTAL
         - opakovaný alignment struktur
           1. vytvoří se první seed - alignment
