@@ -110,6 +110,10 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - leibnitzova formule
   - Taylorův polynom
   - zkusit si pár příkladů
+- integrály
+  - definice primitivní funkce
+  - vzorečky pro výpočet délky křivky funkce a objem tělesa
+- 
 
 
 
@@ -119,10 +123,11 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - dále [řešená cvičení](https://drive.google.com/drive/u/2/folders/1w_V7L8AeSFNtrY82J33ATe0AU3vG7-6z)
   - a tamtéž je i fajn tahák ze studnice vědomostí (vzorečky na hodnoty goniometrických funkcí, derivace, integrování etc.)
 
-- u státnic jsou otázky i v matematice prý spíš povídací
-- u důkazů jsou potřeba vědět hlavně jejich myšlenky
-- jsou potřeba základní definice
-- počítací věci jen hodně v základu, určitě žádné "špeky"
+- podle spolužáků, co už mají státnice za sebou:
+  - u státnic jsou otázky i v matematice prý spíš povídací
+  - u důkazů jsou potřeba vědět hlavně jejich myšlenky
+  - jsou potřeba základní definice
+  - počítací věci jen hodně v základu, určitě žádné "špeky"
 #### 1. Posloupnosti a řady
 > Posloupnosti a řady, konvergence, Cauchyovské posloupnosti
 
@@ -333,7 +338,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - pak Taylorův polynom řádu $n$ funkce $f$ v bodě $a$ je definován jako suma:
       - $T^{f,a}_n:=∑_{i=0}^n\frac{f^i(a)}{i!}(x-a)^i$
 
-#### 3. Integrální počet. Primitivní funkce a Newtonův integrál. Určitý (Riemannův) integrál a jeho použití.
+#### 3. Integrály
 > Integrální počet. Primitivní funkce a Newtonův integrál. Určitý (Riemannův) integrál a jeho použití.
 
 - Literatura
@@ -351,18 +356,121 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - tzn., pokud je $F_1$ primitivní funkce $f$, pak $F_2 = F_1 + c$, $c ∈ ℝ$, je také primitivní funkce k $f$
     - $∫$ je symbol, který označuje množinu všech primitivních funkcí
     - $F(x) ∈ ∫f(x)dx$
-  - 
+  - věta: spojitá funkce má primitivní funkci
+  - věta: funkce s primitivní funkcí má Darbouxovu vlastnost
+    - (interval se zobrazí na interval)
+  - věta: aritmetika primitivních funkcí
+    - pozor, na rozdíl od derivací není obecný vzoreček pro násobení a dělení!
+    - mějme funkce $f,g$,
+    - které mají na intervalu I ∈ ℝ
+    - primitivní funkce $F,G$
+    - mějme skaláry $α, β ∈ ℝ$
+    - pak platí, že
+      - $(αF + βG)' = αf+βg$
+    - tzn. funguje sčítání, odčítání a násobení skalárem
+  - neexistuje univerzální technika pro výpočet primitivní funkce (ve skriptech uvádí [Klimošová tohle přirovnání](https://xkcd.com/2117/)):
+  - ![differentiation_and_integration](differentiation_and_integration.png)
 
+- počítání primitivních funkcí
+  - věta o substituci
+    - je to věta o derivaci složené funkce naruby
+    - $∫ f(ϕ'(t))ϕ'(t) dt = F(ϕ(t))+c$
+  - věta: integrace per partes
+    - pro funkce $f,g$,
+    - které jsou spojité na intervalu $I ∈ ℝ$
+    - a mají na $I$ primitivní funkce $F,G$
+    - platí, že
+      - $∫f(x)G(x)dx + ∫F(t)g(t)dt = F(x)G(x) + c$
+    - ((vzoreček je Leibnitzova formule naruby))
+  - aplikace věty o integraci per partes
+    - předchozí věta dává přímočaře vzoreček na úpravu integrálu, který se občas může hodit
+      - $∫f(x)G(x)dx = F(x)G(x) - ∫F(t)g(t)dt$
+  - řešení racionálních funkcí
+    - obecně jsou integrály pro racionální funkce (funkce, která je možná napsat jako podíl dvou polynomů)
+    - řešitelné
+      - výsledná funkce se bude skládat z racionálních funkcí, logaritmu a arctangens
+    - to sice nedává ještě návod k jejich řešení, ale tak co už
 
-$∈ ℝ, \geq, \le ∞ ∫$, →
+- určitý integrál
+  - přímo k primitivním funkcím se vztahuje Newtonův integrál
+  - definice Newtonova integrálu
+    - hodí se, když na intervalu známe hodnotu primitivní funkce pro funkci
+    - mějme funkci $f: (a,b)→ℝ$,
+    - $a, b ∈ ℝ$
+    - předpokládáme, že $F$ je primitivní funkce $f$ na intervalu $(a,b)$ s limitami v bodech $a,b$
+    - pak Newtonův integrál je toto:
+    - $[F]_a^b=∫_a^bf(x)dx = F(b^-)-F(a^+)=\lim_{x→b^-}F(x)-\lim_{x→a^+}F(x)$
+      - tady vidím analogii pro počítání pravděpodobnosti jevu ve spojitém rozdělení pomocí CDF v určitém intervalu
+  - pro Newtonův integrál fungují metody zmíněné u výpočtu primitivní funkce
+    - věta: per partes
+    - věta: substituce
+  - druhý typ integrálu (Riemannův integrál) vychází z trochu víc geometrické motivace
+    - jde o to spočítat plochu pod grafem funkce $f$
+  - definice Riemannova integrálu
+    - definice je trochu složitější,
+    - je potřeba si definovat dělení intervalu a horní a dolní sumu
+    - horní a dolní Riemannův integrál
+      - pak když se tyto rovnají, máme teprve Riemannův integrál
+    - začneme tím, že máme body $a,b ∈ ℝ$ (tedy bez nekonečen)
+    - "dělení" $D$ je $k$-tice bodů $(a_0,a_1,...,a_k)$, splňující, že
+      - $a = a_0 < a_1 < ... < a_k = b$
+      - dělení $D$ dělí interval $I=[a,b]$ na intervaly
+        - $I_i = [a_i,a_{i+1}]$ s délkou $|I_i|$
+    - nyní můžeme definovat horní (S) a dolní (s) sumu
+      - pro dělení $D$ má horní suma hodnotu součtu nejvyšších hodnot funkce $f$ na intervalech $I_i$
+        - formálněji
+          - $m_i=inf{f(x):x∈I_i}$
+          - $M_i=sup{f(x):x∈I_i}$
+        - $s(f,D) = ∑_{i=0}^{k-1}m_i×|I_i|$
+        - $S(f,D) = ∑_{i=0}^{k-1}M_i×|I_i|$
+      - pardoon, nechce se mi dopisovat horní a dolní integrál, ale jde o to, že jsou definované jako nejvyšší resp. nejnižší suma přes všechna dělení
+      - pokud se rovnají, mají hodnotu Riemannova integrálu
+- vlastnosti určitých integrálů
+  - tvrzení: když není funkce omezená, Riemannův integrál neexistuje
+  - věta: vlastnosti dělení a horního/dolního Riemannova integrálu
+    - jako to je docela obvious, ale pro všechna dělení je dolní suma ≤ dolní integrál ≤ horní integrál ≤ horní suma
+  - příklad na počítání
+    - pro výpočet Riemannova integrálu funkce 1/x na intervalu [0,1] se použilo vlastně převodu hledání nejmenší a největší sumy na limitu posloupnosti
+      - $∫_0^1xdx$
+      - dělení $D_n = (0, 1/n, 2/n, ... 1)$
+        - sumy
+          - $s(f,D_n)=∑_{i=1}^n 1/n \frac{i-1}{n}$
+          - $S(f,D_n)=∑_{i=1}^n 1/n \frac{i}{n}$
+        - $lim_{n→∞}(∑_{i=1}^n 1/n\frac{i-1}{n}) = lim_{n→∞}(∑_{i=1}^n 1/n\frac{i}{n})=1/2$
+  - věta: kritérium integrovatelnosti
+    - funkce je Riemannovsky integrovatelná právě tehdy, když pro všechna $ϵ>0$ existuje dělení $D$ takové, že $0≤ S(f,D)-s(f,D) < ϵ$
+  - věta: pokud je funkce monotónní, pak je Riemannovsky integrovatelná
+  - věta: pokud je funkce spojitá, pak je také Riemannovsky integrovatelná
+  - věta: 1. základní věta analýzy
+    - pokud je funkce $f$ na intervalu $[a,b] ∈ ℝ$ Riemannovsky integrovatelná a uděláme funkci "F", která je definována jako Riemannův integrál $f$ od bodu $a$ do bodu $x∈[a,b]$, pak "F" je spojitá a její derivace je rovna funkci $f$
+    - tedy věta přiznává Riemannovskému integrálu některé vlastnosti primitivní funkce
+  - věta: 2. základní věta analýzy
+    - pokud existuje Newtonův a Riemannův integrál funkce, pak jsou si rovny
+  - věta: spojité funkce jsou Newtonovsky i Riemannovsky integrovatelné
+    - pozor, existují funkce s Newtonovým, ale ne Riemannovým integrálem a naopak
+  - věta: integrální kritérium konvergence
+    - dává do souvislosti konvergenci řad a limitu integrálu
+- aplikace
+  - integrály jsou fajn na počítání ploch a délek křivek
+    - pro složitější případy je potřeba vícerozměrný integrál
+  - věta: délka křivky funkce
+    - nechť funkce $f: [a,b] → ℝ$ má na $[a,b]$ spojitou derivaci $f'$
+      - pak na délku křivky funkce $f$ platí vzoreček
+        - $∫_a^b\sqrt{1+(f'(t))^2}dt$ 
+  - věta: objem a povrch rotačního tělesa
+    - těleso O, vzniklé rotací rovinného útvaru daného funkcí $f: [a,b] → ℝ$ a body $a,b ∈ ℝ$ okolo osy $x$
+      - objem ... $π∫_a^bf(t)^2dt$
+      - povech ... $2π∫_a^bf(t)\sqrt{1+(f'(t))^2}dt$
 
+$1   ℝ, \geq \le ∞ αβϵ  ∑≤∫∈  →   2$
+
+### 2. 
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
 > "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
 
 - literatura
    - [Evžen - zápisky](https://eugleo.github.io/bioinformatika/doc/zaklady-bioinformatiky/notes.html)
-     - [lokálně](Statnice_Bc_materialy/bioinf_z%C3%A1pisy.html)
    - [Marian - základy bioinformatiky](https://web.natur.cuni.cz/~marian/kurz/course.html)
    - [Wiki: Bioinformatics](https://en.wikipedia.org/wiki/Bioinformatics)
   
@@ -833,17 +941,17 @@ $∈ ℝ, \geq, \le ∞ ∫$, →
   - a dá nám to i spoustu dalších informací, jako jak mohou být funkce regulovány, chování v roztoku etc.
 - struktura makromolekul může být zpravidla experimentálně určena, ale pro např. drug design by bylo mnohem praktičtější umět vlastnosti biopolymerů simulovat na počítači
 - pro určení struktury makromolekul se používá
-  1. rentgenová krystalografie (difrakce X-ray paprsků)
-  2. NMR spektroskopie (nuclear magnetic resonance, dá hodnoty vzdáleností různých typů atomů od sebe, zpětně se konstuuje struktura)
-  3. 3D cryo elektronová mikroskopie (mnoho 2D snímků naráz po megarychlém zchlazení -> 3D mapa hustoty částic -> konstruování modelu z mapy)
+  1. **rentgenová** krystalografie (difrakce X-ray paprsků)
+  2. NMR spektroskopie (**nuclear magnetic resonance**, dá hodnoty vzdáleností různých typů atomů od sebe, zpětně se konstuuje struktura)
+  3. **3D cryo elektronová mikroskopie** (mnoho 2D snímků naráz po megarychlém zchlazení -> 3D mapa hustoty částic -> konstruování modelu z mapy)
 - pro odhad struktury se používají 2 typy metod
-  - de novo
-  - homologní modelování
-- je fajn do začátku zmínit, že pro proteiny do určité míry platí tzv. Anfinsenovo paradigma, které říká, že struktura proteinu závisí pouze na primární struktuře (čili že nám naše snažení o odhad struktury reálného proteinu nekazí např. nějaké zlovolné posttranslační modifikace)
+  - **de novo**
+  - **homologní** modelování
+- je fajn do začátku zmínit, že pro proteiny do určité míry platí tzv. **Anfinsenovo paradigma**, které říká, že struktura proteinu závisí pouze na primární struktuře (čili že nám naše snažení o odhad struktury reálného proteinu nekazí např. nějaké zlovolné posttranslační modifikace)
 - de novo metody
   - mají několik podkategorií
     - tak trochu fyzikální metody, které napodobují folding proteinů třeba v buňce
-      - nejhojněji je dneska používána metoda molekulové dynamiky, která pro každý krátký časový krok v simulačním čase konstruuje pro každou částici silová pole, která na ní působí a na jejich základě pak pohne s částicí
+      - nejhojněji je dneska používána metoda **molekulové dynamiky**, která pro každý krátký časový krok v simulačním čase konstruuje pro každou částici silová pole, která na ní působí a na jejich základě pak pohne s částicí
       - u de novo metod je možná fajn říct, jaké používají různé potenciály
         - mezi každými dvěma částicemi je nevazebný potenciál
         - další potenciál je pro délky vazeb (vazebný potenciál)
@@ -852,11 +960,11 @@ $∈ ℝ, \geq, \le ∞ ∫$, →
         - daly by se najít i další potenciály, které se týkají dalších specifických věcí, např. potenciál pro S-S můstky, elektrostatický potenciál atd.
   - conformation space exploring (prozkoumání možností, jaké má protein na sbalení)
     - za zmínku stojí i Monte Carlo metody, které nějakým způsobem (zpravidla trochu náhodně) hýbají řetězcem proteinu a na základě energie (potenciální energie <=> potenciálu) v systému pak přijímají nebo zahazují nové stavy. to se opakuje zpravidla do ustálení systému
-      - je to docela vhodná strategie pro prozkoumávání celého prostoru všech konformací proteinů - všechny prozkoumat nejdou (Levinthalův paradox)
-  - fragment-based approaches
+      - je to docela vhodná strategie pro prozkoumávání celého prostoru všech konformací proteinů - všechny prozkoumat nejdou (viz **Levinthalův paradox**)
+  - **fragment-based** approaches
     - jednotlivé podsekvence mohou být docela dobře definované (motivy)
     - toho je možné využít a už je jen vhodně poskládat, aby vytvořili správnou strukturu
-- template-based metody
+- **template-based** metody
   - obecně se dá postup těchto metod shrnout do 7 kroků
     1. pro zadanou sekvenci aminokyselin najít podobné se známou strukturou -> vytvoření templatu
     2. alignment zadané sekvence s nalezenou sekvencí
@@ -874,14 +982,15 @@ $∈ ℝ, \geq, \le ∞ ∫$, →
     - dále zpravidla něco na způsob molekulové dynamiky
       - silová pole dokončí nuance ve vzájemných polohách atomů
   - threading a profile-based metody - když chybí blízký homolog, ale existují alespoň podobné struktury (podrobně popsané v přednášce 12, slidy 49-53)
-  - vyhodnocení se dělá pomocí RMSD a GDT-TS
+  - **vyhodnocení se dělá zpravidla pomocí RMSD a GDT-TS**
     - RMSD je fajn, ale kvadratické -> hodně ošklivé RMSD i pro velmi hezky namodelované struktury
     - RMSD je kvadratické - i jedna velmi vzdálená subsekvence RMSD silně zvýší
-    - GDT-TS
+    - **GDT-TS**
       - nevím jak vysvětlit, je to na slidu 57, 12 přednáška
   - je spoustu nástrojů, které tento přístup používají
-    - MODELLER, ROSSETA, SWISS-MODEL etc.
-    - budu se spíš věnovat AlphaFoldu 2, který je v současnosti zdaleka nejlepší (vyhrál CASP 14 (2020) s ohromným předstihem)
+    - MODELLER, ROSSETA, **SWISS-MODEL** etc.
+    - budu se spíš věnovat **AlphaFoldu 2**, který je v současnosti zdaleka nejlepší (vyhrál CASP 14 (2020) s ohromným předstihem)
+      - ... v přednášce
 
 ### 8. Fylogenetika
 > fylogenetika – stavba stromů – základní metody tvorby stromů (ML, MP, NJ, Bayes) – bootstrap analýza
