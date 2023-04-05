@@ -462,9 +462,196 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
       - objem ... $π∫_a^bf(t)^2dt$
       - povech ... $2π∫_a^bf(t)\sqrt{1+(f'(t))^2}dt$
 
-$1   ℝ, \geq \le ∞ αβϵ  ∑≤∫∈  →   2$
 
-### 2. 
+### 2. Lineární algebra
+- mám záměr dělat celou lingebru z Hladíkovy učebnice - Lineární algebra nejen pro informatiky
+  - je na [Google Disku Bioinformatika](https://drive.google.com/drive/folders/0BzEbjnxrwP6Obi1BT0dzX25zelE?resourcekey=0-FmLJvLRy3SlujojoDsMReA&usp=sharing)
+#### 1. Soustavy lineárních rovnic, metody řešení.
+> Soustavy lineárních rovnic, metody řešení.
+- tahle otázka se většinou řeší na začátku skript, jako dobrá motivace pro zavedení matic
+- důležité pojmy jsou kromě matice tzv. elementární operace, tedy operace s maticí, které nezmění množinu řešení lieárních rovnic, které matice reprezentuje
+- dále Gaussova(-Jordanova) eliminace, což jsou postupy, jak z maticové reprezentace lineárních rovnic získat jejich řešení
+- z dalších kapitol víme, že soustava má právě jedno řešení, pokud je matice regulární - v opačném případě má soustava 0 nebo nekonečně mnoho řešení a matice je singulární
+
+- strašně moc se mi nechce se vypisovat s definicí matice a vektoru, doufám, že to je jasný (prostě tabulka/jednorozměrná tabulka čísel)
+- soustava lineárních rovnic je *n* rovnic, Ax=b, kde x je vektor neznámých, b je to za rovnítkem u rovnic a A je to před rovnítkem. Soustava má řešení, pokud existuje právě jeden vektor x, který rovnici vyhovuje
+- elementární operace jsou ty, které nezmění množinu řešení soustavy rovnic
+  1. vynásobení řádku (reálné nenulové číslo)
+  2. přičtení násobku jednoho řádku k druhému
+  3. prohození řádků
+- Gaussova eliminace
+  1. dopředná eliminace - pomocí elementárních úprav je matice převedená do odstupňovaného stavu
+  2. substituce - postupně se dosazují hodnoty neznámých do rovnic a určují se zatím neurčené
+- odstupňovaný tvar matice (REF(A), row echelon form) 
+  - pro matici $n×m$
+    - řádky 1...r jsou nenulové
+    - řádky r+1 ... m jsou nulové
+    - každý nenulový řádek má jednoho pivota
+      - tady to je potřeba napsat matematicky, hrozně se mi do toho nechce
+        - $p_i=min(j: a_{ij}!= 0)$, $p_1<p_2<p_3<...<p_r$
+      - sloupce p1,...pr se nazývají bázické, ostatní nebázické - to pak souvisí s vektorovými prostory...
+- hodnost matice ($rank(A)$) je počet nenulových řádků (tedy číslo *r*)
+- redukovaný REF (RREF(A), reduced row echelon form)
+  - jako REF, ale na místech pivotů jsou jen jedničky a jinak nuly, vlastně to odstraňuje nutnost provést krok substituce - máme přímo hodnoty jednotlivých neznámých
+- Frobeniova věta
+  - soustavy jsou řešitelné právě tehdy, když hodnost matice A je stejný jako hodnost rozšířené matice A|b (b je vektor hodnot za rovnítkem u rovnic)
+
+
+- soustavy lineárních rovnic, metody řešení.
+
+
+#### 2. Matice, operace s maticemi
+> Matice, operace s maticemi. Hodnost matice, regulární matice a inverzní matice. Odstupňovaný tvar matice.
+
+- matice je tabulka čísel, pro reálná čísla, n řádků a m sloupců se tato matice značí $ℝ^{n×m}$
+- vektor je speciální případ matice s pouze 1 sloupcem
+
+- hodnost matice je počet pivotů po převedení matice do REF tvaru
+- regulární matice je speciální typ matice
+  - pojem má smysl jen pro čtvercovou matici (m=n)
+  - matice A je regulární, pokud soustava $Ax=0^n$ má pouze jedno řešení - $x=0^n$
+  - jinak se matice nezývá *singulární*
+- regulárita matice $A ∈ ℝ^{n×n}$ je ekvivalentní s tím, že
+  - matice $RREF(A) = I_n$ ($I_n$ je jednotková matice - má jedničky na diagonále)
+  - $rank(A)=n$
+- tohle má vztah i k řešení soustavy lineárních rovnic
+  - A je regulární je ekvivalentní s tím, že soustava rovnic Ax=b má řešení pro libovolné b
+- co se týká maticového násobení, pokud A,B jsou regulární matice, pak jejich součin je regulární
+- pokud alespoň jedna z nich je singulární, pak i jejich násobek je singulární
+- elementární úpravy - jde snadno ukázat, že celý proces Gaussovy(-Jordanovy) eliminace jde vyjádřit jako násobení matice A regulární maticí elementárních úprav Q
+- mch., každá regulární matice jde vytvořit postupnými elementárními operacemi jednotkové matice
+- a to se teď využije u inverzní matice
+  - $RREF(A) = AQ = I_n$
+  - $I_nQ^{-1}=A$
+  - Q je inverzní matice k A (A^{-1}=Q)
+
+- regularita matice je ekvivalentní s tím, že matice má inverzní matici
+- jinak inverzní matice je definována tak, že $A^{-1}$ je inverzní k matici A, pokud $A^{-1}A = AA^{-1} = I_n$
+
+- transponovaná matice - $A^T$ - matice s prohozenými indexy řádků a sloupců
+
+- odstupňovaný tvar matice je popsaný v předchozí otázce
+
+
+#### 3. Základní algebraické struktury: grupy, tělesa, vektorové prostory.
+> Základní algebraické struktury: grupy, tělesa, vektorové prostory.
+
+- úvod
+  - tohle téma je pokryté ve dvou přednáškách
+  - grupy a tělesa jsou potřeba pro použití 
+
+- grupa
+  - mega abstraktní pojem
+  - množina s binární operací
+    - aby množina s tou nějakou operací byla grupa, musí splňovat 3 podmínky
+      1. operace je asociativní (je jedno, v jakém pořadí jsou na prvcích operace provedeny, např. (1 + 2) + 3 = 1 + (2 + 3))
+      2. existuje neutrální prvek, (tzn. v množině je prvek, který přes operaci nezmění výsledek (0+1 = 1, 0 je neutrální prvek))
+      3. ke každému prvku existuje inverzní prvek (tzn. při operaci prvku a inverzního prvku je výsledkem neutrální prvek, např. 1 + (-1) = 0)
+  - speciální typ grupy je Abelova grupa, která splňuje komutativitu (je jedno, jestli sčítám 1+2 nebo 2+1)
+  - konkrétní příklady grup jsou ve skriptech na str. 63-64
+  - prvky v grupě mají několik vlastností (Tvrzení 4.4)
+    - docela u toho funguje intuice ze sčítání na celých číslech a násobení na $R\{0}$...
+  - grupa může mít tzv. podgrupu, což je grupa, jejíž množina prvků je podmnožinou té původní grupy a její operace dává na jejích prvcích stejný výsledek, jako originální operace
+- ve skriptech jsou teď permutace, ale to bych přeskočil
+- důležité, že permutační grupy jsou zajímavá skupina grup...
+
+- těleso
+  - potřebujeme množinu a dvě operace, které vytvoří Abelovy grupy
+  - Těleso je množina $T$ s dvěma operacemi ("+" a "×")
+    - (T,+) je Abelova grupa, nulový prvek "0" a inverzní prvek k prvku a je -a
+    - (T\\{0},×) je také Abelova grupa, nulový prvek je "1" a inverzní prvek prvku a je a$^{-1}$
+    - také musí platit distributivita
+      - a × (b + c) = a × b + a × c
+    - charakteristika tělesa ... kolik "1" musíme "sečíst" ("+"), abychom získali "0"
+      - $Z_n$ má charakteristiku $n$
+      - pokud $n$ neexistuje (nekonečná tělesa, např. $R$), je charakteristika 0
+    - věta: Malá Fermatova
+      - prvočíslo p,
+      - těleso $Z_p$
+      - $0 \neq a ∈ Z_p$
+        - platí, že $a^{p-1} = 1$ v tělese $Z_p$
+- vektorový prostor
+  - je v něm definováno sčítání vektorů a násobení skalárem
+  - je definován nad nějakým tělesem
+  - vektorový prostor nad tělesem T je množina (V), s operacemi sčítání vektorů a násobení vektoru skalárem
+    - musí splňovat 5 vlastností
+      1. (V,+) je Ábelova grupa, neutrální prvek *o* a inverzní k v je -v
+      2. násobení skalárem je asociativní (a×(b×v) = (a×b)×v)
+      3. 1v = v (násobení vektoru neutrálním prvkem z T)
+      4. distributivita pro skaláry (a×v + b×v = (a+b)×v)
+      5. distributivita pro vektory (a×(u+v)=a×u+a×v)
+  - tvrzení: vlastnosti vektorového prostoru
+    - 0v = o
+    - ao = o
+    - av = 0 => a=0 v v=o
+    - (-1)v = -v
+
+
+#### 4. Základní vlastnosti konečně generovaných vektorových prostorů, vektorové podprostory. Báze a dimenze.
+- vektorový podprostor
+  - U je podmnožina V
+  - U je podprostorem, když platí 3 podmínky:
+    1. o ∈ U
+    2. pro všechny vektory u,v z U platí, že u+v ∈ U
+    3. pro všechny a ∈ T a u ∈ U platí, že au ∈ U
+- věta: průnik vektorových prostorů je opět vektorový prostor
+- lineární obal
+  - definovaný pro množinu vektorů
+  - nejmenší možný podprostor pro dané vektory
+  - je actually definován jako průnik všech vektorových prostorů, které tuto množinu obsahují
+- s tím se blízce pojí lineární kombinace vektorů
+- věta: všechny lineární kombinace množiny vektorů tvoří vektorový prostor rovný lineárnímu obalu těchto vektorů
+- lineární závislost
+  - vektory jsou lineárně závislé, když by odebrání nějakého vektoru z množiny neovlivnilo vektorový prostor, který tato množina generuje
+  - také se to dá popsat tak, že nějaký vektor z množiny je lineární kombinací ostatních vektorů
+- báze
+  - lineárně nezávislý systém generátorů (lineárně nezávislá množina vektorů generujících vektorový prostor)
+  - věta: pro každý vektor u z vektorového prostoru, který má bázi v1,v2,...,vn platí, že existují jednoznačně dané koeficienty a1,a2,...,an takové, že
+    - $u=\sum_{i=1}^na_iv_i$
+    - jednoznačnost plyne z lineární nezávislosti vektorů báze
+- souřadnice
+  - na základě předchozí věty o jednoznačném určení koeficientu pro lineární kombinaci daného vektoru je možné definovat souřadnice
+  - Mějme vektorový prostor V s bází B = {v1,v2,...,vn}. Pak souřadnice vektoru u z V jsou koeficienty a1,a2,...,an, pro které platí, že $u=\sum_{i=1}^na_iv_i$. Vektor souřadnic se značí $[u]_B :=  (a1, a2,...,an)$.
+  - pro souřadnice platí, že
+    - $[av]_B = a[v]_B$ a 
+    - $[u+v]_B=[u]_B+[v]_B$
+  - Steinitzova věta o výměně
+    - lepší ve skriptech, ale v principu jde o to, že pokud máme lineárně nezávislý systém n vektorů, tak tyto vektory mohou nahradit v bázi vektorového prostoru n bazických vektorů
+  - i z toho pak je důsledek, že všechny možné báze jednoho vektorového prostoru budou mít stejný počet vektorů
+- dimenze vektorového prostoru
+  - na základě tohoto poznatku můžeme definovat dimenzi
+    - dimenze je velikost báze vektorového prostoru
+  - pokud máme lineárně nezávislý systém vektorů z vp V o velikosti dimenze V, pak tento lineárně nezávislý systém vektorů je báze V
+- tady na stránce 89 je super obrázek na znázornění různých podprostorů $R^3$
+- spojení podprostorů
+  - buďte U,V podprostory vektorového prostoru W
+  - pak spojení vektorových podprostorů je definováno takto:
+    - $U+V := {u + v: uϵU, vϵV}$
+  - to dovysvětluje ještě tvrzení, že $U+V = span(U ∪ V)$
+  - tzn., (poznámka pro mě, abych si to ujasnil)
+    - $U∪V ⊆ U+V$
+    - to popisuje i další věta
+      - $dimU+dimV=dim(U+V)+dim(U ∩ V)$
+
+- maticové prostory
+  - máme sloupcový prostor matice (prostor generovaný sloupci matice, jakoby to byly vektoru) (S(A))
+  - řádkový prostor matice (to stejný jen pro řádky?) (R(A))
+  - a jádro - prostor řešení rovnice Ax=o (značí se Ker(A))
+
+- zajímavý point - součin Ax (x libovolný vektor odpovídající dimenze) dává množinu lineárních kombinací sloupců matice A
+- pokud se podíváme na matici A v RREF tvaru, tak prvních r sloupců RREF(A) tvoří bázi vp S(A) (jsou lineárně nezávislé a generují celý prostor S(A)), r je hodnost matice A
+- to celé dává pointu, že rank(A)+dim(ker(A))=n, pokud A je m×n
+  - např. pokud je A regulární, n×n, tak rank(A) = n, ker(A) = 0
+  - když je singulární, tak existuje alespoň jedna dimenze v ker(A) - vektory alespoň jedné dimenze matice A "pohltí" a pronásobí na 0
+
+#### 5. Lineární zobrazení. Základní vlastnosti, maticová reprezentace, skládání lineárních zobrazení.
+
+- 
+
+$ℝ, \geq \le ∞ α β ϵ ∑ ≤ ∫ ∈ → \cup \cap$
+#### 6. Skalární součin a norma. Vlastnosti v reálném i komplexním případě, Cauchy-Schwarzova nerovnost. Kolmost. Ortogonální doplněk a jeho vlastnosti, ortogonální projekce.
+#### 7. Determinanty. Definice a základní vlastnosti determinantu. Úpravy determinantů, výpočet.
+#### 8.  Vlastní čísla a vlastní vektory matic. Výpočet a základní vlastnosti. Diagonální tvar matice, diagonalizovatelnost. Jordanův normální tvaru (v obecném případě).
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
 > "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
@@ -1056,7 +1243,7 @@ $1   ℝ, \geq \le ∞ αβϵ  ∑≤∫∈  →   2$
     - $p = \frac{D}{L}$
       - počet změněných mutací děleno délkou sekvence
       - nevýhody: často dojde ke změně na jedné pozici vícekrát
-        - u krátkých sekvencí udělá i jen pár změn velký rozdíl v p-distance
+      - u krátkých sekvencí udělá i jen pár změn velký rozdíl v p-distance
   - poisson-corrected distance
     - zkombinujeme pozorovaný počet mutací (p-distance) a aktuální počet mutací
       - předpoklad, že pravděpodobnost výskytu k událostí se řídí poissonovým rozdělením
@@ -1071,7 +1258,8 @@ $1   ℝ, \geq \le ∞ αβϵ  ∑≤∫∈  →   2$
     - maximum parsimony (MP)
     - maximum likelihood (ML)
   - UPGMA
-    - Unweighted Pair Group Method with Arithmetic Mean    - předpoklad konstantních molekulárních hodin
+    - Unweighted Pair Group Method with Arithmetic Mean
+    - předpoklad konstantních molekulárních hodin
     - jednoduchá metoda
     - spočítá se vzdálenost všech sekvencí mezi sebou
     - ti nejbližší jsou prohlášeni za sousedy
