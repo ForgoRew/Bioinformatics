@@ -644,12 +644,126 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - např. pokud je A regulární, n×n, tak rank(A) = n, ker(A) = 0
   - když je singulární, tak existuje alespoň jedna dimenze v ker(A) - vektory alespoň jedné dimenze matice A "pohltí" a pronásobí na 0
 
-#### 5. Lineární zobrazení. Základní vlastnosti, maticová reprezentace, skládání lineárních zobrazení.
+#### 5. Lineární zobrazení.
+> Lineární zobrazení. Základní vlastnosti, maticová reprezentace, skládání lineárních zobrazení.
 
-- 
+- lineární zobrazení je funkce ($f$), která zobrazuje vektor ($u,v$) na jiný vektor ($w$) ($f: v → w$)
+  - pro $f$ platí, že
+    - $f(u+v) = f(u) + f(v)$
+    - $f(αv) = αf(v)$ ($α$ je z tělesa nad kterým je vektorový prostor)
 
-$ℝ, \geq \le ∞ α β ϵ ∑ ≤ ∫ ∈ → \cup \cap$
-#### 6. Skalární součin a norma. Vlastnosti v reálném i komplexním případě, Cauchy-Schwarzova nerovnost. Kolmost. Ortogonální doplněk a jeho vlastnosti, ortogonální projekce.
+- maticemi je možné reprezentovat jakékoli lineární zobrazení
+  - v rovině ($R^2$) jsou lineární zobrazení operace
+    - překlopení (dá se udělat jako kombinace natažení s koeficientem $α=-1$ a rotace o 180˚)
+    - natažení (mám pocit, že to bude matice $αI_n$, $α>0$)
+    - rotace
+      - speciálně pro rotaci je fajn vědět matici
+      - $A=\begin{bmatrix}
+        cos(α) & -sin(α) \\
+        sin(α) & cos(α)
+        \end{bmatrix}$
+  - posunutí není lineární zobrazení!
+- jádro zobrazení - $ker(f)$ - je množina vektorů z vektorového prostoru V, které zobrazení $f$ zobrazí na nulový vektor
+- jádro zobrazení souvisí přímo s jádrem matice
+  - pokud f(v) = Av, pak ker(f) = ker(A)
+- v učebnici se postupně dochází k závěru, že zobrazení lineární kombinace vektorů je lineárním kombinací zobrazených vektorů se stejnými koeficienty
+- to nám dává přímý odrazový můstek k tomu, že pro každé lineární zobrazení existuje matice lineárního zobrazení, která toto zobrazení provede
+- matice lineárního zobrazení
+  - máme bázi vektorového prostoru U, $B_U$ a bázi V, $B_V$
+  - když máme lineární zobrazení $f$, které zobrazuje vektory z U do V (vektorových prostorů), tak pro každý vektor x z U platí, že
+    - existuje matice $_{B_V}[f]_{B_u}$ taková, že
+      - $[f(x)]_{B_v} = _{B_V}[f]_{B_u}[x]_{B_U}$
+    - matice $_{B_V}[f]_{B_u}$ tedy převádí souřadnice vektoru x na souřadnice jeho obrazu
+    - tato matice je jenom jedna pro dané zobrazení
+- matice přechodu
+  - pro dané dvě báze existuje matice, která převede souřadnice vektoru v jedné bázi na souřadnice v druhé bázi
+- isomorfismus
+  - isomorfismus je vzájemně jednoznačné zobrazení pro vektorové prostory U, V
+    - isomorfismus má inverzní zobrazení
+    - dimenze prostorů s isomorfizmem je stejná (dim(U)=dim(V))
+    - zobrazení složené ze dvou isomorfních zobrazní je také isomorfní
+    - zobrazení je isomorfní právě tehdy, když se jakákoliv báze U zobrazí na nějakou bázi V
+- pro počítání matice přechodu z jednoho VP do druhého je možné použít "mnemotechniku"
+  - $([B_u]|[B_v])~^{RREF}([I_n]|_{B_v}[id]_{B_U})$
+- věta o jádru a obrazu
+- důsledek - matice lineárního zobrazení
+  - $f$ je prosté právě tehdy, když má matice zobrazení lineárně nezávislé sloupce
+  - $f$ je "na" právě tehdy, když má matice lineárně nezávislé řádky
+
+#### 6. Skalární součin a norma.
+>Skalární součin a norma. Vlastnosti v reálném i komplexním případě, Cauchy-Schwarzova nerovnost. Kolmost. Ortogonální doplněk a jeho vlastnosti, ortogonální projekce.
+
+- jde o operaci vektorů mezi sebou navzájem
+- pro u,v z V nad T, a z T, u × v = a
+  - standardní skalární součin: $x^Ty=∑_{i=0}^n x_i y_i$
+  - z hlediska geometrie platí, že $x^Ty=||x||||y||cos(ϕ)$
+- skalární součin ve vektorovém prostoru V nad R je zobrazení $<.,.>: V^2 → R$, které pro všechna x,y,z z V a α z R splňuje tyto 4 podmínky:
+  1. $<x,x> ≥ 0$ a rovnost nastane jen pro x=0
+  2. $<x+y,z> = <x,z> + <y,z>$
+  3. $<αx,y>=α<x,y>$
+  4. $x,y>=<y,x>$
+- norma indukovaná skalárním součinem je odmocněný skalární součin sama se sebou
+- kolmost: vektory jsou kolmé, když jejich skalární součin je nula
+- pythagorova věta: spíš zajímavé, že má v tomhle kontexu docela jednoduchý důkaz
+  - $||x+y||^2=<x+y,x+y>=<x,x+y>+<y,x+y>=<x+y,x>+<x+y,y>=<x,x>+<y,x>+<x,y>+<y,y>=$(($<x,y>=<y,x>=0$, protože $x,y$ jsou kolmé))$<x,x>+<y,y>=||x||^2+||y||^2$
+- Cauchyho-Swarzova nerovnost
+  - pro všechny x,y z V platí, že $|<x,y>|≤||x|| ||y||$
+    - pro reálná čísla, standardní skalární součin a euklidovskou normu se dá nerovnost nahlédnout z toho, že víme, že $<x,y>=||x|| ||y|| cos(ϕ)$, přičemž $cos(ϕ)≤1$
+- norma obecně
+  - norma je zobrazení ||.|| vektoru do reálných čísel, které je vždy kladné, lineární pro násobení skalárem a splňující trojúhelníkovou nerovnost
+
+- ortogonální a ortonormální systém vektorů
+  - tyhle pojmy úzce souvisí s bázemi v otázce č. 4, např. vektory e1,e2 a e3 tvořící kanonickou bázi v.p. $R^3$ splňují obě vlastnosti
+  - systém vektorů je
+    - ortogonální, když jsou všechny vektory na sebe vzájemně kolmé
+    - ortonormální, když mají všechny vektory normu 1 a navíc je systém ortogonální
+- ortonormální vektory jsou vzájemně lineárně nezávislé
+- ortogonalizace báze (Gram-Smidtova)
+  - pro nějakou bázi se postupně vektory nakolmují (vezme se první, na něj se nakolmí druhý, třetí atd.) a po nakolmení se ještě normalizují (podělí vlastní normou)
+  - používají se při tom Fourierovy koeficienty
+  - máme bázi {x1,x2,x3}={(2,0,0), (-1,1,0), (0,1,2)}
+    - nejprve upravíme první vektor
+      - ten se nenakolmuje
+      - y1 = x1
+      - z1 = y1/||y1||=(1,0,0)
+    - u druhého vektoru již využijeme nakolmení
+      - $y_2 = x_2 - ∑_{i=1}^1<x_2,z_i>z_i = (-1,1,0)-(-1×(1,0,0)) = (0,1,0)$
+      - z2 = y2/||y2|| = (0,1,0)
+    - třetí vektor
+      - $y_3 = x_3 -  ∑_{i=1}^2<x_2,z_i>z_i = (0,1,2)-(0×(1,0,0)+1×(0,1,0)) = (0,0,2)$
+      - z3 = y3/||y3|| = (0,0,1)
+    - vyšla tedy kanonická báze - cože je dané tím, že první vektor byl násobkem vektoru z kanonické báze. Kdybych začal s třeba x3, tak by výsledek dopadl jinak
+- výrazu <x,z> pro vektor x a vektor z z ortonormálního systému vektorů se říká "Furierův koeficient"
+
+- ortogonální doplněk
+  - množina vektorů $M$ má ortogonální doplněk $M^⊥$ tvořený vektory kolmými na vektory množiny $M$
+  - ortogonální doplněk má následující základní vlastnosti (M,N množina vektorů z V, $M^⊥$, vektorový prostor V):
+    1. $M^⊥ ∩ V$
+    2. pokud $M$ je podmnožina $N$, pak $N^⊥$ je podmnožina $M^⊥$
+    3. $M^⊥$ je ortogonálním doplňkem vektorového prostoru generovaného $M$ ($span(M)$)
+
+- ortogonální doplněk je možné definovat i pro vektorový protor
+  - pokud U je podprostor vektorového prostoru V, tak platí
+    1. pokud z1,z2,...,zm je ortonormální báze U a z1,...,zm+1,...,zn je rozšíření této báze na bázi V, pak zm+1,...,zn je báze U$^⊥$
+    2. dimenze V je součtem dimenze U a jeho ortogonálního doplňku
+    3. V = U + U$^⊥$
+    4. $(U^⊥)^⊥=U$
+    5. průnik U s jeho ortogonálním doplňkem je vektorový prostor pouze s nulovým vektorem
+
+- ortogonální projekce
+  - mějme vektorový prostor V a jeho podprostor U. Ortogonální projekce vektoru x z V do podprostoru U je jeho obraz x$_U$, který splňuje, že $||x-x_U||={min_{y ∈ U}(x-y)}$
+- věta: existuje právě jedna projekce pro daný vektor
+  - pokud je báze (z1,...,zn) prostoru U ortonormální, pak $x_U=∑_{i=0}^n <x,z_i>z_i$
+  - 
+
+- co tu chybí
+  - ortogonální doplněk a projekce v $R^n$
+  - ortogonální matice
+  - metoda nejmenších čtverců
+
+
+$ℝ, \geq \le ∞ α β ϕ ϵ ∑ ≤ ∫ ∈ → \cup \cap$
+
 #### 7. Determinanty. Definice a základní vlastnosti determinantu. Úpravy determinantů, výpočet.
 #### 8.  Vlastní čísla a vlastní vektory matic. Výpočet a základní vlastnosti. Diagonální tvar matice, diagonalizovatelnost. Jordanův normální tvaru (v obecném případě).
 ## Bioinformatika
