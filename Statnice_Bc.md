@@ -510,7 +510,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - regulární matice je speciální typ matice
   - pojem má smysl jen pro čtvercovou matici (m=n)
   - matice A je regulární, pokud soustava $Ax=0^n$ má pouze jedno řešení - $x=0^n$
-  - jinak se matice nezývá *singulární*
+  - jinak se matice nazývá *singulární*
 - regulárita matice $A ∈ ℝ^{n×n}$ je ekvivalentní s tím, že
   - matice $RREF(A) = I_n$ ($I_n$ je jednotková matice - má jedničky na diagonále)
   - $rank(A)=n$
@@ -562,14 +562,14 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - (T\\{0},×) je také Abelova grupa, nulový prvek je "1" a inverzní prvek prvku a je a$^{-1}$
     - také musí platit distributivita
       - a × (b + c) = a × b + a × c
-    - charakteristika tělesa ... kolik "1" musíme "sečíst" ("+"), abychom získali "0"
-      - $Z_n$ má charakteristiku $n$
-      - pokud $n$ neexistuje (nekonečná tělesa, např. $R$), je charakteristika 0
-    - věta: Malá Fermatova
-      - prvočíslo p,
-      - těleso $Z_p$
-      - $0 \neq a ∈ Z_p$
-        - platí, že $a^{p-1} = 1$ v tělese $Z_p$
+  - charakteristika tělesa ... kolik "1" musíme "sečíst" ("+"), abychom získali "0"
+    - $Z_n$ má charakteristiku $n$
+    - pokud $n$ neexistuje (nekonečná tělesa, např. $R$), je charakteristika 0
+  - věta: Malá Fermatova
+    - prvočíslo p,
+    - těleso $Z_p$
+    - $0 \neq a ∈ Z_p$
+      - platí, že $a^{p-1} = 1$ v tělese $Z_p$
 - vektorový prostor
   - je v něm definováno sčítání vektorů a násobení skalárem
   - je definován nad nějakým tělesem
@@ -583,7 +583,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - tvrzení: vlastnosti vektorového prostoru
     - 0v = o
     - ao = o
-    - av = 0 => a=0 v v=o
+    - av = o => a=0 v v=o
     - (-1)v = -v
 
 
@@ -780,11 +780,47 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - platí ale tzv. řádková linearita determinantu
       - těžký přesně popsat slovy, matematicky:
         - $det(A+e_ib^T)=det(A)+det(A+e_ib^T-A_{i*})$
-        - 
+  - snadno se spočítá determinant trojůhelníkové matice
+    - je roven pouze jednomu produktu, a to produktu prvků na diagonále, protože ostatní permutace použijí v produktu alespoň jednou nulu
+      - pokud je matice A horní trojúhelníková, pak její determinant (det(A)) je možné spočítat jako $∏_{i=0}^{n}a_{ii}$
+  - na základě toho, se vyplatí vědět, jak se mění determinant při převodu matice do REF, protože tím si matici převedeme na trojúhelníkovou
+    - při elementární úpravě (matice A' je matice po provedení dané elementární úpravy)
+      - vynásobení i-tého řádku koeficientem $α$
+        - $det(A')=α×det(A)$
+      - výměna i-tého a j-tého řádku
+        - $det(A')=-det(A)$
+    - pro výpočet determinantu pomocí převodu matice na REF tvar nám stačí si pouze pamatovat koeficient, kterým byl původní determinant přenásoben
+  - matice A o rozměrech n×n je regulární právě tehdy, když $det(A)\neq 0$
+  - součin determinantů matic A,B je roven determinantu součinu matic A,B
+    - $det(A)×det(B)=det(AB)$
+  - pro regulární matici ($det(A)\neq 0$) platí, že $det(A^{-1})=det(A)^{-1}$
+  - výpočet determinantu pomocí Laplaceova rozvoje
+    - determinant matice $A ϵ T^ {n×n}$, n>2 je možné spočítat tak, že pro vybraný (i-tý) řádek spočítáme součet determinantů matic vzniklých vyškrtnutím i-tého řádku a j-tého sloupce pro j=1,...,n a vhodným pronásobením, viz vzoreček
+      - $det(A)=∑_{j=1}^{n}(-1)^{i+j}a_{ij}det(A^{ij})$
+- Cramerovo pravidlo
+  - řešení soustavy rovnic (Ax=b) je možné dát i explicitním vzorcem, přestože to není ve většině případů ten nejrychlejší způsob, jak najít řešení
+    - Buď $A ϵ T^ {n×n}$ regulární
+      - $b ϵ T^n$
+      - $(A+(b-A_{*i})e_i^T)$ je matice A s nahrazeným i-tým sloupcem vektorem b
+      - pak $x_i=\frac{det(A+(b-A_{*i})e_i^T)}{det(A)}$
 
-$ℝ, \geq \le ∞ α β ϕ ϵ ∑ ≤ ∫ ∈ → \cup \cap$
+- asi to nebude potřeba, ale dál učebnice uvádí adjugovanou matici
+  - po prvcích je adjugovaná matice k matici A definována takto
+    - $adj(A)_{ij}=(-1)^{i+j}det(A^{ij})$
+      - $A^{ij}$ je opět matice A s vyškrtnutým i-tým a j-tým řádkem/sloupcem
+    - je tam podobnost s laplaceovým rozvojem pravidlem (mnemotechnika)
+    - zajímavý je výpočet inverzní matice, protože $A^{-1}=\frac{1}{det(A)}adj(A)$
 
-#### 8.  Vlastní čísla a vlastní vektory matic. Výpočet a základní vlastnosti. Diagonální tvar matice, diagonalizovatelnost. Jordanův normální tvaru (v obecném případě).
+
+#### 8.  Vlastní čísla a vlastní vektory matic
+> Vlastní čísla a vlastní vektory matic. Výpočet a základní vlastnosti. Diagonální tvar matice, diagonalizovatelnost. Jordanův normální tvaru (v obecném případě).
+
+
+
+
+
+$ℝ, \geq \le ∞ α β ϕ ϵ ∑ ∏ ≤ ∫ ∈ → \cup \cap$
+
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
 > "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
