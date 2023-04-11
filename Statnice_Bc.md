@@ -762,9 +762,28 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - metoda nejmenších čtverců
 
 
+
+#### 7. Determinanty
+>Determinanty. Definice a základní vlastnosti determinantu. Úpravy determinantů, výpočet.
+
+- determinant je taková zvláštní vlastnost matice
+- pomocí determinantu se dá spočítat inverzní matice k regulární matici
+- zobrazení pomocí matice A mění "objem" objektu s koeficientem det(A) (délku/plochu/objem)
+
+- mějme matici A, která je n×n a všechny permutace indexů $S_n={1,...,n}$
+  - $det(A) = ∑_{pϵP_n}sgn(p)∏_{i=0}^{n}a_{ip(i)}$
+
+- vlastnosti determinantu
+  - $det(A) = det(A^T)$
+    - to vyplývá z definice determinantu
+  - obecně determinant součtu matic není roven součtu determinantů matic
+    - platí ale tzv. řádková linearita determinantu
+      - těžký přesně popsat slovy, matematicky:
+        - $det(A+e_ib^T)=det(A)+det(A+e_ib^T-A_{i*})$
+        - 
+
 $ℝ, \geq \le ∞ α β ϕ ϵ ∑ ≤ ∫ ∈ → \cup \cap$
 
-#### 7. Determinanty. Definice a základní vlastnosti determinantu. Úpravy determinantů, výpočet.
 #### 8.  Vlastní čísla a vlastní vektory matic. Výpočet a základní vlastnosti. Diagonální tvar matice, diagonalizovatelnost. Jordanův normální tvaru (v obecném případě).
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
