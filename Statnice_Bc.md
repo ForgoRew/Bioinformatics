@@ -610,13 +610,14 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - $u=\sum_{i=1}^na_iv_i$
     - jednoznačnost plyne z lineární nezávislosti vektorů báze
 - souřadnice
-  - na základě předchozí věty o jednoznačném určení koeficientu pro lineární kombinaci daného vektoru je možné definovat souřadnice
+  - na základě předchozí věty o jednoznačném určení koeficientu pro lineární kombinaci daného vektoru je možné definovat souřadnice 
   - Mějme vektorový prostor V s bází B = {v1,v2,...,vn}. Pak souřadnice vektoru u z V jsou koeficienty a1,a2,...,an, pro které platí, že $u=\sum_{i=1}^na_iv_i$. Vektor souřadnic se značí $[u]_B :=  (a1, a2,...,an)$.
   - pro souřadnice platí, že
     - $[av]_B = a[v]_B$ a 
     - $[u+v]_B=[u]_B+[v]_B$
-  - Steinitzova věta o výměně
-    - lepší ve skriptech, ale v principu jde o to, že pokud máme lineárně nezávislý systém n vektorů, tak tyto vektory mohou nahradit v bázi vektorového prostoru n bazických vektorů
+
+- Steinitzova věta o výměně
+  - lepší ve skriptech, ale v principu jde o to, že pokud máme lineárně nezávislý systém n vektorů, tak tyto vektory mohou nahradit v bázi vektorového prostoru n bazických vektorů
   - i z toho pak je důsledek, že všechny možné báze jednoho vektorového prostoru budou mít stejný počet vektorů
 - dimenze vektorového prostoru
   - na základě tohoto poznatku můžeme definovat dimenzi
@@ -632,6 +633,13 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - $U∪V ⊆ U+V$
     - to popisuje i další věta
       - $dimU+dimV=dim(U+V)+dim(U ∩ V)$
+#### 5. Lineární zobrazení.
+> Lineární zobrazení. Základní vlastnosti, maticová reprezentace, skládání lineárních zobrazení.
+
+- lineární zobrazení je funkce ($f$), která zobrazuje vektor ($u,v$) na jiný vektor ($w$) ($f: v → w$)
+  - pro $f$ platí, že
+    - $f(u+v) = f(u) + f(v)$
+    - $f(αv) = αf(v)$ ($α$ je z tělesa nad kterým je vektorový prostor)
 
 - maticové prostory
   - máme sloupcový prostor matice (prostor generovaný sloupci matice, jakoby to byly vektoru) (S(A))
@@ -644,13 +652,6 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - např. pokud je A regulární, n×n, tak rank(A) = n, ker(A) = 0
   - když je singulární, tak existuje alespoň jedna dimenze v ker(A) - vektory alespoň jedné dimenze matice A "pohltí" a pronásobí na 0
 
-#### 5. Lineární zobrazení.
-> Lineární zobrazení. Základní vlastnosti, maticová reprezentace, skládání lineárních zobrazení.
-
-- lineární zobrazení je funkce ($f$), která zobrazuje vektor ($u,v$) na jiný vektor ($w$) ($f: v → w$)
-  - pro $f$ platí, že
-    - $f(u+v) = f(u) + f(v)$
-    - $f(αv) = αf(v)$ ($α$ je z tělesa nad kterým je vektorový prostor)
 
 - maticemi je možné reprezentovat jakékoli lineární zobrazení
   - v rovině ($R^2$) jsou lineární zobrazení operace
@@ -666,8 +667,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - jádro zobrazení - $ker(f)$ - je množina vektorů z vektorového prostoru V, které zobrazení $f$ zobrazí na nulový vektor
 - jádro zobrazení souvisí přímo s jádrem matice
   - pokud f(v) = Av, pak ker(f) = ker(A)
-- v učebnici se postupně dochází k závěru, že zobrazení lineární kombinace vektorů je lineárním kombinací zobrazených vektorů se stejnými koeficienty
-- to nám dává přímý odrazový můstek k tomu, že pro každé lineární zobrazení existuje matice lineárního zobrazení, která toto zobrazení provede
+- pro každé lineární zobrazení existuje matice lineárního zobrazení, která toto zobrazení provede
 - matice lineárního zobrazení
   - máme bázi vektorového prostoru U, $B_U$ a bázi V, $B_V$
   - když máme lineární zobrazení $f$, které zobrazuje vektory z U do V (vektorových prostorů), tak pro každý vektor x z U platí, že
@@ -685,7 +685,15 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - zobrazení je isomorfní právě tehdy, když se jakákoliv báze U zobrazí na nějakou bázi V
 - pro počítání matice přechodu z jednoho VP do druhého je možné použít "mnemotechniku"
   - $([B_u]|[B_v])~^{RREF}([I_n]|_{B_v}[id]_{B_U})$
-- věta o jádru a obrazu
+- věta o dimenzi jádra a obrazu
+  - mějme f: U→V,
+  - $B_U$ je báze U
+  - $B_V$ je báze V
+  - A = $_{B_V}[f]_{B_U}$
+  - Pak
+    - $dim(ker(f)) = dim(ker(A))$
+    - $dim(f(U)) = dim(S(A))$
+- to má důsledek, že dim(U) = dim(ker(f))+dim(f(U))
 - důsledek - matice lineárního zobrazení
   - $f$ je prosté právě tehdy, když má matice zobrazení lineárně nezávislé sloupce
   - $f$ je "na" právě tehdy, když má matice lineárně nezávislé řádky
@@ -815,11 +823,102 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 #### 8.  Vlastní čísla a vlastní vektory matic
 > Vlastní čísla a vlastní vektory matic. Výpočet a základní vlastnosti. Diagonální tvar matice, diagonalizovatelnost. Jordanův normální tvaru (v obecném případě).
 
+- vlastní čísla představují další možnou charakteristiku matice
+  - definice
+    - pro matici $A ϵ C^{n×n}$
+    - je číslo $λ ϵ C$ vlastním číslem matice A,
+    - pokud existuje jemu příslušný vlastní vektor $x ϵ C^{n}$ tak, že platí
+      - $Ax = λx$ a $x \neq o$
+
+- vlastní čísla a vektory mají hezkou geometrickou interpretaci
+  - vektor x se zobrazením pomocí matice A pouze prodlouží, či zkrátí a to právě λ-krát
+
+- věta: charakteristika vlastního čísla a vektoru
+  - pro matici a platí, že λ je vlastním číslem matice A právě tehdy, když $det(A-λI_n)=0$
+  - x je vlastním vektorem právě tehdy, když náleží do $Ker(A-λI_n)$
+- důsledkem této věty je, že k jednomu vlastnímu číslu náleží $n-rank(A-λI_n)=dim(Ker(A-λI_n))$ lineárně nezávislých vektorů
+
+- vlastní čísla je možné získat zkombinováním znalostí vlastností vlastních čísel a determinantu
+  - $det(A-λI_n)=0$ -> rozepsáním definice determinantu získáme rovnici, kterou je možné převést na tzv. charakteristický polynom matice A
+  - $p_A(λ)=det(A-λI_n)$
+  - $det(A-λI_n) = (-1)^{n}λ^{n}+a_{n-1}λ^{n-1}+...+a_1λ+a_0$
+    - tady jsem nepochopil to převedení na polynom takhle přímočaře, ale v principu to nevadí..
+
+- výpočet vlastních čísel pomocí charakteristického polynomu
+  - příklad
+    - $$A = \begin{bmatrix}
+        0 & -2 \\
+        2 & 0
+        \end{bmatrix}
+        $$
+    - $$A-λI_n = \begin{bmatrix}
+      -λ & -2 \\
+       2 &  -λ
+      \end{bmatrix}
+      $$
+    - $det(A - λI_n) = λ^2 + 4$
+    - kořeny jsou $\plusmn2i$, což jsou i vlastní čísla matice (obor komplexních čísel)
+- spektrum a spektrální poloměr
+  - spektrum je množina vlastních čísel matice
+  - spektrální poloměr je (v absolutní hodnotě) největší vlastní číslo
+- algebraická a geometrická násobnost vlastního čísla
+  - algebraická násobnost je násobnost λ, kořene charakteristického polynomu
+  - geometrická násobnost je počet lineárně nezávislých vlastních vektorů (tedy pro matici n×n je rovno $n-rank(A-λI_n)$)
+  - algebraická násobnost je vždy větší/rovna geometrické násobnosti
+- vlastní čísla trojúhelníkové matice jsou prvky matice na diagonále
+- tvrzení
+  - det(A)=λ1×λ2×...×λn
+  - trace(A)=λ1+λ2+...+λn
+    - trace(A)=a11+a22+...ann
+- typy a úpravy matic a vlastní čísla
+  1. ekvivalence - vlastní číslo je nula a matice je singulární
+  2. matice je regulární, inverzní matice má vlastní čísla jako inverzní prvky k původním, vlastní vektory se nezmění
+  3. umocnění matice umocní vlastní čísla, vlastní vektory se nezmění
+  4. přičtení násobku jednotkové matice k matici zvýší vlastní čísla o tento násobek
+  5. násobení matice skalárem vynásobí skalárem vlastní čísla
+  6. transpozice matice zachová vlastní čísla, ale může změnit vektory
+- platí, že pokud vlastní číslo λ je komplexní číslo, pak i komplexně sdružené číslo k λ je vlastní číslo matice
+
+- matice společnice
+  - ukazuje převoditelnost problému hledání kořenů polynomu na problém hledání vlastních čísel matice
+  - mějme polynom $p(x)=x^n+a_{n-1}n^{n-1}+...a_1x+a_0$
+  - pak matice společnice je definovaná tak, že na pozicích $C_{2,1}$ až $C_{n,n-1}$ jsou jedničky a v pravém sloupci jsou sestupně koeficienty $a_i$ (hezčí je obrázek na str. 175), v prvním řádku je $a_{n-1}$ a v posledním řádku $a_0$
 
 
+- Cayleyho-Hamiltonova věta
+  - přeskakuji, není v otázce
+
+- diagonalizovatelnost
+  - pokud se povede diagonalizovat matici, pak její vlatní čísla v této podobě můžeme přímo vyčíst z diagonály matice
+  - nejdřív se ale definuje podobnost
+    - matice A a B jsou si "podobné", pokud existuje regulární matice S tak, že $A = SBS^{-1}$
+  - věta: podobné matice mají stejná vlastní čísla
+  - věta: podobné matice mají stejný počet lineárně nezávislých vlastních vektorů
+  - matice je diagonalizovatelná, pokud se podobá nějaké diagonální matici
+    - tedy $A = SΛS^{-1}$, kde S je regulární a  diagonální
+  - věta: matice je diagonalizovatelná právě tehdy, když má $n$ lineárně nezávislých vlastních vektorů
+    - pokud známe vlastní vektory a vlastní čísla matice A, tak matici S sestavíme jako vektory (podle sloupců) a matici Λ bude mít pouze vlastní čísla na diagonále (tak, aby odpovídaly vlastním vektorům)
+    - pokud má matice n navzájem různých vlastních čísel, pak je diagonalizovatelná
+  - pokud je matice diagonalizovatelná, pak má mnoho fajn vlastností
+    - např. $A^k = S Λ^ kS^{-1}$
+    - pomocí diagonalizovatelných matic se dají (mocněním diagonální matice) řešit rekurzivně zadané posloupnosti
+
+- Jordanova normální forma
+  - "nejjednodušší tvar matice pro podobnost"
+  - Jordanova buňka
+    - pro komplexní číslo λ a
+    - přirozené číslo k
+    - je Jordanova buňka $J_k(λ)$ čtvercová matice řádu k
+      - má tvar, že pokud i=j, je tam λ
+      - a jednu buňku nad λ je jednička, pokud i není 1 
+        - možná lepší, pokud indexy i=j+1, je tam jednička
+  - Jordanova normální forma
+    - matice je v Jordanově normální formě, pokud má na diagonále jako podmatice Jordanovy buňky, jinak má všude 0
+    - věta: každá matice má k sobě podobnou matici v Jordanově normální formě. Tato matice je až na pořadí Jordanových buněk jednoznačná
+    - počet vlastních vektorů je roven počtu Jordanových buněk
 
 
-$ℝ, \geq \le ∞ α β ϕ ϵ ∑ ∏ ≤ ∫ ∈ → \cup \cap$
+$ℝ, \geq \le ∞ α β ϕ λ Λ ϵ ∑ ∏ ≤ ∫ ∈ → \cup \cap$
 
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
