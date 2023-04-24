@@ -633,6 +633,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - $U∪V ⊆ U+V$
     - to popisuje i další věta
       - $dimU+dimV=dim(U+V)+dim(U ∩ V)$
+
 #### 5. Lineární zobrazení.
 > Lineární zobrazení. Základní vlastnosti, maticová reprezentace, skládání lineárních zobrazení.
 
@@ -918,8 +919,237 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - počet vlastních vektorů je roven počtu Jordanových buněk
 
 
+
+
+### 3. Kombinatorika, pravděpodobnost a statistika
+- materiály na učení
+  - zkusím, co půjde, brát z ["Kapitol z diskrétní matematiky"](https://drive.google.com/drive/u/2/folders/0BzEbjnxrwP6Ob0lCMGFoRXZldG8?resourcekey=0-mbJ_xaUndffDgaZGjEh0XA) (na Bioinformatickym GDrivu)
+  - zbytek asi doberu z Wikipedie, pamatuju si, že mi v prváku některé věci z učebnice nějak nedávaly smysl
+  - toky v sítích jsem musel vzít z jiných zdrojů, konkrétně z [webovek Martina Kouteckého](https://research.koutecky.name/db/teaching:kg12021_prednaska) (je to 7-8 přednáška na uvedené stránce)
+
+#### 1. Binární relace, ekvivalence a částečná uspořádání. Kombinatorické počítání: kombinační čísla, binomická věta, princip inkluze a exkluze.
+- binární relace
+  - ekvivalence/uspořádání
+  - binární relace je zavedená na nějaké množině
+  - prvky množiny tuto relaci buďto splňují, nebo nesplňují
+  - prvky množiny mohou být např. další množiny nějakých prvků, např.
+    - A={1,2,3,4}
+    - B={4,3,2,1}
+    - C={1,3}
+    - D={1,5,6,7}
+  - relace mohou mít čtyři základní vlastnosti:
+    - jsou reflexivní
+    - jsou symetrické
+    - jsou antisymetrické
+    - jsou tranzitivní
+  1. reflexivita - prvek množiny je v relaci sám se sebou
+    - např. $A\subseteq A$
+    - např. "nebýt podmnožinou" není reflexivní, protože množina nemůže nebýt podmnožinou sama sebe
+  2. symetrie
+    - pokud platí, že v relaci ("R(.,.)") je jsou např. R(A,D), pak relace platí i pro R(D,A)
+      - např. relace "obsahuje stejný počet prvků" - |A|=|D| je symetrická
+      - naopak
+  3. antisymetrie
+    - jediný případ, kdy platí symetrie je, když je relace na prvku sama se sebou (např. A=A)
+    - tady jsem trochu vždycky nechápal, kde je to odlišení od symetrie, ale je to v tom, že u symetrie musí to prohození fungovat úplně vždycky (R(a,b) => R(b,a) pro všechna a,b), zatímco antisymetrie funguje jen pro ten stejný prvek
+  4. tranzitivita
+    - když relace platí mezi a-b a b-c, platí mezi a-c
+  - ekvivalence 
+    - kategorie relací, které dávají něco jako zobecněnou rovnost - např. "množiny mají stejnou velikost" nebo "předměty mají stejnou barvu"
+    - ekvivalence jsou všechny relace, které jsou reflexivní, symetrické a tranzitivní
+  - (částečné) uspořádání
+    - je to něco jako zobecněné porovnávání prvků
+    - např. "být podmnožinou" je částečné uspořádání
+    - musí splňovat reflexivitu, antisymetrii a tranzitivitu
+    - to "částečné" znamená, že nejde porovnat každý prvek množiny s každým
+      - např. pro množiny A-C mohu říct, že $A\subseteq C$, ale pro A-D nemůžu říct ani že $A\subseteq D$, ani že $D\subseteq A$
+      - například $\geq$ na reálných číslech je úplné uspořádání - pro každá dvě čísla mohu říct, které je větší/rovno tomu druhému
+        - rovnost nastane pouze pokud jsou čísla stejná - antisymetrie
+  - trochu se rozepisuju ... pro mě je důležitý si ty pojmy ujasnit, i když jejich obsah je docela intuitivní...
+  - ještě je fajn zmínit **Hasseův diagram**, což je zobrazení částečně upořádané množiny, v učebnici v něm ukazovali příklad na množině 1,2,...,10 a relaci "dělitelnost"
+
+- kombinatorické počítání
+  - s pojmem kombinatorického počítání souvisí pojmy 
+    - permutace,
+    - variace a
+    - kombinace
+  - jde o pojmy pro různé typy uspořádaných a neuspořádaných k-tic prvků dané množiny
+  - **permutace**
+    - na množině (A) jsou všechny uspořádané n-tice prvků A, přičemž n = |A|
+    - pro A={1,2,3} jsou permutace
+      - (1,2,3),
+      - (1,3,2),
+      - (2,1,3),
+      - (2,3,1),
+      - (3,1,2),
+      - (3,2,1)
+    - velikost množiny všech permutací prvků množiny A je $n!$
+  - **variace**
+    - jsou uspořádané k-tice prvků z množiny (A), $k\leq n=|A|$
+    - pro A={1,2,3} a k=2 jsou variace
+      - (1,2)
+      - (1,3)
+      - (2,1)
+      - (2,3)
+      - (3,1)
+      - (3,2)
+    - velikost množiny variací je $\frac{n!}{n-k!}$
+    - tohle byly variace bez opakování, pro variace s opakováními (každý prvek může být použit i vícekrát) platí vzoreček $n^k$ - pro příklad výše by přibyly ještě (1,1), (2,2), (3,3)
+  - kombinační čísla,
+    - něco jako variace bez opakování, které nejsou navíc uspořádané ({1,2}={2,1})
+    - vlastně stačí podělit vzoreček pro variaci ještě počtem permutací k prvků, což je k!
+    - počet prvků v množině kombinací je $\frac{n!}{k!(n-k)!}$, což se značí $n\choose k$
+      - možná je kvůli dalšímu matfyzovýmu používání lepší znát formulku pro kombinační čísla $\frac{\prod_{i=0}^{n-k}(n-i)}{k!}$
+    - pro A jsou kombinace pouze 3
+      - {1,2}
+      - {1,3}
+      - {2,3}
+    - pro kombinační číslo platí několik základních vztahů
+      - $n \choose 0$ $= \frac{n!}{0!×(n-0)!} =$ $n\choose n$ $=\frac{n!}{n!×(n-n)!}$ $=1$
+      - $n \choose k$$=$$n \choose n-k$
+      - $n \choose k$$+$$n \choose k+1$$=$$n+1 \choose k+1$
+      - tohle je dobře vidět u [Pascalova trojúhelníku](https://cs.wikipedia.org/wiki/Pascal%C5%AFv_troj%C3%BAheln%C3%ADk)
+- binomická věta
+  - ještě je fajn zmínit, že množinu všech k-prvkových podmnožin množiny (X) značíme $X \choose k$ a její velikost je pro n=|X| rovna $n\choose k$
+  - binomická věta v základu říká, že
+    - $(a+b)^n = \sum_{k=0}^n$$n \choose k$$a^kb^{n-k}$
+      - např. $(a+b)^3 = a^3×b^0 + a^2b^1 + a^1b^2 + a^0b^1$
+- princip inkluze a exkluze
+  - pro množiny s konečným počtem prvků A,B platí, že
+    - $|A \cup B| = |A|+|B|-|A \cap B|$
+    - tohle se dá zobecnit
+      - nechce se mi vzoreček rozepisovat (je v učebnici na str. 84)
+      - jde o to, že se pro lichý počet množin průniky lichých k-tic množin přičítají a sudých k-tic odčítají a naopak
+
+#### 2. Teorie grafů. Základní pojmy teorie grafů: grafy a podgrafy, izomorfismus. Stromy a jejich základní vlastnosti, kostra grafu.
+- Základní pojmy teorie grafů grafy a podgrafy
+  - graf G je dvojice (V,E), kde V je neprázdná množina a E je množina hran
+    - $v_1,v_2,...,v_n ∈ V$ jsou vrcholy
+    - dvojice $e_{ij}=\{v_i,v_j\}∈E$, i,j ∈ {1,2,...,n}, i!=j (pro neorientované grafy bez hran sama na sebe) jsou hrany
+      - dvoubodové podmnožiny V
+  - podgraf H=(V',E') je podgrafem grafu G=(V,E), pokud $V'\subseteq V$ a $E' \subseteq E$
+    - hrany E' jsou tvořeny pouze vrcholy z V' ($E' \subseteq E \cap$$V' \choose 2$)
+    - H je indukovaným podgrafem G, pokud jsou zachovány všechny hrany, které mohly být zachovány ($u,v ϵ V':\{u,v\} ϵ E \implies \{u,v\} ϵ E'$)
+    - 
+- izomorfismus
+  - dva grafy (G,G') nazveme *izomorfní*, jestliže existuje vzájemně jednoznačné zobrazení $f : V \rightarrowtail V'$, že platí {x,y}∈E právě tehdy, když {f(x),f(y)}∈E'
+- možná se vyplatí i vědět pojmy jako
+  - vrcholová souvislost
+    - (počet vrcholů, které je potřeba odebrat, aby se graf rozpadl na dvě komponenty)
+  - hranová souvislost
+  - stupeň vrcholu
+    - (počet hran z vrcholu)
+- Stromy a jejich základní vlastnosti
+  - strom je souvislý graf bez cyklu
+  - možná fajn vědět pojmy
+    - tah
+      - pro $v_0,v_1,...,v_t ϵ V$ a $e_1,e_2,...,e_t ϵ E$ ($e_i = \{v_{i-1},v_i\}$)
+      - pro $i \neq j$ platí, že $e_i \neq e_j$
+      - je tah posloupnost $(v_0,e_1,v_1,...,e_t,v_t)$
+        - v tahu se tedy nemohou opakovat hrany, ale mohou se opakovat vrcholy
+        - tah je např., když se kreslí na jeden pokus takovej ten domeček na 5 vrcholech
+    - cesta
+      - jako tah, jen se tam nesmí opakovat ani vrcholy
+    - cyklus
+      - jako cesta, jenom $v_0 = v_t$
+    - délka hrany - funkce dávající každé hraně číselnou hodnotu
+    - algoritmus pro nejkratší cestu
+      - Dijkstrův algoritmus
+  - lemma: strom (mající alespoň dva vrcholy) má alespoň 2 vrcholy stupně 1 (koncové vrcholy, říká se jim *list*)
+  - tvrzení: pokud G je graf a v ∈ G je list pak G je strom právě tehdy, když G-v je také strom
+  - věta: charakterizace stromu
+    - následují je ekvivalentní:
+    - G je strom
+    - G je souvislý a vynecháním libovolné hrany vznikne nesouvislý graf
+    - pro každé dva vrcholy z G existuje právě jedna cesta
+    - G neobsahuje kružnici a když se přidá mezi libovolnými dvěma vrcholy G hrana, tak vzniklý graf bude mít kružnici
+    - G je souvislý a platí Eulerův vzorec: |V|=|E|+1
+
+- kostra grafu
+  - kostra grafu G je jeho podgraf, který je zároveň strom
+    - je vidět, že G má kostru právě tehdy, když je souvislý
+      - strom musí splňovat souvislost + vznikne jen odstraňováním hran z G
+      - kostra obsahuje jen hrany, které v G už byly, takže protože strom je souvislý tak i G musí být souvislý
+    - kostra se docela snadno konstruuje
+      - vezmeme vrcholy z G a postupně k nim budeme (v jakémkoliv pořadí) přidávat hrany
+      - pokud vznikne přidáním nějaké hrany kružnice, zahodíme ji a pokračujeme s dalšími
+      - po projití všech hran máme kostru grafu G (pokud byl graf souvislý)
+    - můžeme řešit problém minimální kostry
+      - vtipné je, že na to funguje hladový Kruskalův algoritmus
+        - hrany se seřadí podle velikosti
+        - provede se výše zmíněný algoritmus na vytváření kostry grafu v pořadí hran od nejmenší do největší
+  - počet koster na úplném grafu
+    - popisuje Cayleyho formule (asi důležitý vědět)
+      - k ní je spoustu důkazů
+      - pro kompletní graf na n vrcholech $\kappa(n)$ platí, že počet stromů tohoto grafu je roven $n^{n-2}$
+        - říkal jsem si, že bych rád uměl aspoň ten důkaz Cayleyho formule s obratlovcema, tak ho tu zkusim reprodukovat
+
+- obratlovčí důkaz Cayleyho formule
+  - máme úplný graf $\kappa(n)$ o n vrcholech
+  - obratlovec je kostra grafu s jedním vrcholem označeným čtvercem a jedním jako kolečkem
+  - množina $O$ označuje všechny obratlovce
+  - každá jedna kostra má $n^2$ obratlovců
+  - počet koster je tedy $\frac{|O|}{n^2}$
+  - teď se využije lemma, které se dokáže potom
+    - mezi zobrazením množiny všech zobrazení vrcholů V sama na sebe (je jich tolik, kolik je variací s opakováním délky n pro n prvků, tedy $n^n$) a množinou všech obratlovců existuje bijekce ($F$)
+  - z bijekce vyplývá, že počet zobrazení vrcholů V na sebe je stejný, jako počet všech obratlovců, tedy $|O|=n^n$
+  - protože počet koster známe, můžeme dosadit $\frac{|O|}{n^2}=\frac{n^n}{n^2}=n^{n-2}$. $\square$
+  - hmhm. to lemma je docela velký, nechce se mi to rozepisovat.
+  - cílem je ukázat, že každý obratlovec dané kostry má k sobě právě jednu permutaci vrcholů a že z každé permutace je možné zpětně zkonstruovat toho obratlovce, přičemž tam platí bijekce
+    - důkaz je vlastně konstruktivní, ukazuje se způsob, jak pro každého obratlovce udělat zobrazení
+    - postup je takový, že se nejprve udělá zobrazení vrcholů z "páteře", tedy cesty z kroužku do čtverečku, sama na sebe (permutace), a pak se zobrazí každý další vrchol směrem na vrchol co jde k páteři
+    - jen se ještě musí dokázat, že teda každé zobrazení má obratlovce, který se z něj dá rekonstruovat
+
+
+#### 3. Rovinné grafy, barvení grafů. Toky v sítícha aplikace. Souvislost grafů (míra souvislosti), Mengerovy věta.¨
+- Rovinné grafy
+  - graf můžeme "nakreslit" do roviny
+  - nakreslení je funkce, která každému vrcholu grafu z množiny V přiřadí bod b(v) v rovině a každé hraně z E přiřadí v rovině oblouk (křivku?) o(e)
+  - Kuratowského věta
+    - graf je rovinný právě tehdy, když není isomorfní dělení grafu $K_{3,3}$ ani $K_5$
+
+- barvení grafů
+  - rovinné grafy jde obarvit 4 barvami
+    - dost složitý důkaz
+    - pro 5 barev není důkaz složitý
+  - obarvení je funkce, která každému vrcholu grafu přiřazuje prvek z množiny {1,2,...,k}, žádná hrana nesmí spojovat dva vrcholy stejné barvy
+  - barevnost grafu, značí se k(G), je minimální počet barev potřebných k obarvení grafu G
+
+- toky v sítích a aplikace
+  - v principu jsou toky definované na orientovaných grafech (hrany mohou být dané v případě potřeby tam i zpátky)
+  - kapacita toku je funkce, která dává každé hraně v grafu nezápornou hodnotu
+  - zdroj a stok jsou dva specifické vrcholy
+  - tok je funkce, která každé hraně dá hodnotu, která bude mezi 0 a její kapacitou
+    - pro každý uzel kromě zdroje a stoku musí navíc platit, že kolik do něj vstoupí, tolik musí i vystoupit
+      - tahle vlastnost se jmenuje 1. Kirhofův zákon
+      - pro zdroj platí, že z něj vystupuje více/rovno, než do něj vstupuje
+      - pro stok platí naopak, že do něj vstupuje více/rovno, než do něj vstupuje
+  - "Síť" je čtveřice (G,z,s,c)
+    - G je orientovaný graf
+    - z,s ϵ V(G)
+    - $c: E(G) → ℝ\geq0$
+  - "Tok" je funkce $f:E(G)→R\geq0$, která splňuje následující podmínky
+    1. pro každou hranu e platí, že $f(e) \leq c(e)$
+    2. pro každý vrchol $vϵV(G)-\{z,s\}$ platí, že $\sum_{(x,v)ϵE(G)}f(x,v)=\sum_{(v,y)ϵE(G)}f(v,y)$ 
+  - "velikost toku" je to, co odtéká ze zdroje bez toho, co do něj přitéká
+  - "maximální tok" - existuje
+  - řez je množina hran, které rozdélí graf tak, že nevede žádná cesta ze zdroje do stoku
+  - kapacita řezu
+    - kolik je součet kapacit na řezu
+  - maximálmní tok grafu je roven kapacitě nejmenšího řezu
+  - Ford-Fulkersonův algoritmus
+    - hledání maximálního toku
+    - opakovaně se najde nenasycená cesta a nasytí se
+    - pro racionální čísla najde vždy maximální tok
+
+- Souvislost grafů (míra souvislosti)
+
+- Mengerovy věta.
+
 $ℝ, \geq \le ∞ α β ϕ λ Λ ϵ ∑ ∏ ≤ ∫ ∈ → \cup \cap$
 
+
+#### 4. Náhodné jevy, podmíněná pravděpodobnost, nezávislost náhodných jevů. Náhodné veličiny, střední hodnota, linearita střední hodnoty. Bodové odhady a testování hypotéz.
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
 > "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
