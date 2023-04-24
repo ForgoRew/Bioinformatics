@@ -1143,10 +1143,21 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - pro racionální čísla najde vždy maximální tok
 
 - Souvislost grafů (míra souvislosti)
+  - hranový řez je množina hran $F \subseteq G$, jejichž odstraněním z grafu přestane být graf souvislým
+    - vrcholový řez podobně pro vrcholy, $A⊆G$
+  - hranová souvislost
+    - velikost minimálního hranového řezu
+  - kritická souvislost - odebrání libovolného vrcholu/hrany sníží souvislost (např. stromy jsou hranově kriticky 1-souvislé)
+  - $k_v(G) \leq k_e(G)$
+  - $k_e(G)-1 \leq k_e(G-e) \leq k_e(G)$
+  - Ford-Fulkersonova věta - pro G t.ž. $k_e(G) = k$ existuje právě $k$ hranově disjunktních cest
 
-- Mengerovy věta.
+- Mengerova věta: G je $k_v(G)\geq t$ vrcholově souvislý právě tehdy, když mezi každými dvěma vrcholy existuje $\geq t$ vrcholově disjunktních cest
+  - dokazuje se trikem z Ford-Fulkersonovy věty
+    - každý vrchol se nahradí dvěma - jeden vstupní a druhý výstupní - a mezi nimi je hrana kapacity 1
+      - tím se problém převede na problém hranové souvislosti
 
-$ℝ, \geq \le ∞ α β ϕ λ Λ ϵ ∑ ∏ ≤ ∫ ∈ → \cup \cap$
+$ℝ, \geq \le ∞ α β ϕ λ Λ ϵ ∑ ∏ ≤ ∫ ∈ → ⊆ \cup \cap$
 
 
 #### 4. Náhodné jevy, podmíněná pravděpodobnost, nezávislost náhodných jevů. Náhodné veličiny, střední hodnota, linearita střední hodnoty. Bodové odhady a testování hypotéz.
