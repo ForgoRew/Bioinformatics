@@ -1157,10 +1157,47 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - každý vrchol se nahradí dvěma - jeden vstupní a druhý výstupní - a mezi nimi je hrana kapacity 1
       - tím se problém převede na problém hranové souvislosti
 
+
+
+#### 4. Pravděpodobnost a statistika 
+> Náhodné jevy, podmíněná pravděpodobnost, nezávislost náhodných jevů. Náhodné veličiny, střední hodnota, linearita střední hodnoty. Bodové odhady a testování hypotéz.
+
+- literatura
+  - používám skripta z předmětu PaSt I. od Roberta Šámala, jsou na [GDrivu](https://drive.google.com/drive/u/2/folders/1R81slCRWpVnEALIiYgbiQjoGgATiVhIB)
+
+- náhodné jevy
+  - tady asi stojí za to definovat pravděpodobnostní prostor
+    - $\Omega$ je množina elementárních jevů
+    - $F ∈ \Phi(\Omega)$ je prostor jevů ($\Phi(\Omega)$ je potenční množina $\equiv$ prostor všech možných jevů)
+    - $P$ je funkce: $P: F → [0,1]$ - zobrazuje prvky z prostoru jevů na reálné číslo od 0 do 1 tak, že
+      - $P(\Omega)=1$ a
+      - pravděpodobnost sjednocení po dvou disjunktních jevů je rovna součtu jejich pravděpodobností (jev je množina podmnožina množiny elementárních jevů)
+    - pravděpodobnostní prostor je trojice $(\Omega, F, P)$
+  - příklady pravděpodobnostních prostorů
+    - klasický - konečná množina elementárních jevů, každý elementární jev má stejnou pravděpodobnost
+    - diskrétní - konečná množina elementárních jevů, jednotlivé prvky množiny mají různé pravděpodobnosti
+    - geometrický - $\Omega \sube \Reals^n$, pravděpodobnost je daná přímo úměrně k velikosti vybrané množiny jevů - např. v dim 1 je to uniformní rozdělení
+
+- podmíněná pravděpodobnost
+  - pravděpodobnost jevu A za podmínky, že platí jev B
+  - $P(A|B)=\frac{P(A\cap B)}{P(B)}$
+  - 
+
+- nezávislost náhodných jevů
+  - jevy jsou nezávislé, pokud $P(A\cap B) = P(A)P(B) \equiv P(A|B) = P(A)$
+
+- náhodné veličiny
+
+- střední hodnota
+
+- linearita střední hodnoty
+
+- bodové odhady
+
+- testování hypotéz
+
 $ℝ, \geq \le ∞ α β ϕ λ Λ ϵ ∑ ∏ ≤ ∫ ∈ → ⊆ \cup \cap$
 
-
-#### 4. Náhodné jevy, podmíněná pravděpodobnost, nezávislost náhodných jevů. Náhodné veličiny, střední hodnota, linearita střední hodnoty. Bodové odhady a testování hypotéz.
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
 > "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
