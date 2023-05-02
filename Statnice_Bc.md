@@ -113,7 +113,18 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - integrály
   - definice primitivní funkce
   - vzorečky pro výpočet délky křivky funkce a objem tělesa
-- 
+- nerovnosti
+  - Markovova
+    - na wiki se jmenuje "Čebyševova nerovnost I. typu"
+    - pro náhodnou veličinu X a $\epsilon>0$ platí
+      - $P(X>\epsilon) \leq \frac{E(X)}{\epsilon}$
+  - Čebyševova
+    - na wiki "Čebyševova nerovnost II. typu"
+    - pro náhodnou veličinu X a $\epsilon>0$
+      - $P(|X-E(X)<\epsilon) \geq \frac{var(X)}{\epsilon^2}$
+  - Cauchy-Schwarzova
+    - lingebra
+      - absolutní hodnota skalárního součinu dvou vektorů je nejvýše hodnota součinu norem těchto vektorů
 
 
 
@@ -1168,7 +1179,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - náhodné jevy
   - tady asi stojí za to definovat pravděpodobnostní prostor
     - $\Omega$ je množina elementárních jevů
-    - $F ∈ \Phi(\Omega)$ je prostor jevů ($\Phi(\Omega)$ je potenční množina $\equiv$ prostor všech možných jevů)
+    - $F \sube \Phi(\Omega)$ je prostor jevů ($\Phi(\Omega)$ je potenční množina $\equiv$ prostor všech možných jevů)
     - $P$ je funkce: $P: F → [0,1]$ - zobrazuje prvky z prostoru jevů na reálné číslo od 0 do 1 tak, že
       - $P(\Omega)=1$ a
       - pravděpodobnost sjednocení po dvou disjunktních jevů je rovna součtu jejich pravděpodobností (jev je množina podmnožina množiny elementárních jevů)
@@ -1187,16 +1198,273 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - jevy jsou nezávislé, pokud $P(A\cap B) = P(A)P(B) \equiv P(A|B) = P(A)$
 
 - náhodné veličiny
+  - diskrétní náhodná veličina
+    - funkce $X : \Omega \rightarrow \Reals$
+      - pokud Im(X) je spočetná a
+      - pro všechna $x \in \Reals:X^{-1}(x) \in F$
+        - (F je prostor jevů)
+        - ((tady je pro mě trochu confusing to "všechna x" - jakože asi to nechápu, jak to je napsaný ve skriptech. Na wiki píšou, že dnv je v praxi definovaná jako funkce, která každýmu prvku z elementárních jevů dá bod na reálné ose...))
+  - pravděpodobnostní funkce
+    - $px: \Reals \rightarrow [0,1]$
+      - px(x)=P({X=x})
+  - označení X=x je množina, která pro reálné číslo x obsahuje prvky z množiny elementárních jevů, které se na x zobrazí pomocí náhodné veličiny X ($\{x=X\} = \{ \omega \in \Omega : X(\omega) = x \}$)
+    - tohle bylo pro mě na statistice dost confusing zapsání, takže to tu mám potřebu dát explicitně :D
+  - pravděpodobnost px(x)=P({X=x}) se běžně zapisuje pouze jako P(X=x)
+
+  - Bernoulliho (alternativní) rozdělení
+    - náhodná veličina,
+    - pro x=1 je pravděpodobnost p,
+    - pro x=0 je pravděpodobnost 1-p,
+    - pro x>1 je pravděpodobnost 0
+      - p je parametr [0,1]
+      - např. pravděpodobnost, že při jednom hodu kostkou padne 6 je 1/6, tedy p=1/6
+      - pokud by mince nebyla cinklá, tak číslo kolikrát padne panna při jednom hodu je také dána Bernoulliho rozdělením, p=0.5
+    - střední hodnota je p
+  - Geometrické rozdělení
+    - $P(X=x)=p×(1-p)^x-1$ pro x=1,2,3,...
+      - pro jiná x je P(X=x)=0
+    - pravděpodobnost, že v x-tém bodu padla šestka poprvé
+    střední hodnota 1/p
+  - Binomické rozdělení
+    - pro x=k={0,1,...,n} je pravděpodobnost
+    - $px(k)=$$n \choose{} k$$p^k × (1-p)^{n-k}$
+      - p je pravděpodobnost jednoho úspěšného pokusu
+    - např. pravděpodobnost k-úspěšných hodů pro n-celkových hodů
+    - střední hodnota je np
+  - hypergeometrické
+    - taháme n míčků z krabice, kde je celkem N míčků, z toho K červených
+    - jaká je pravděpodobnost, že vytáhneme právě k červených míčků? ($0\leq k\leq n\leq N$, $k<K$)
+      - $p_X(k)=($$K \choose k$$N-K \choose n-k$$)/$$N \choose n$
+      - E(X)=$\frac{nK}{N}$
+  - Poissonovo rozdělení
+    - např. kolik přijde emailů za hodinu
+    - parametr $\lambda$
+    - $p_X(k) = \frac{\lambda^k}{k!}e^{-\lambda}$
+    - střední hodnota $\lambda$
 
 - střední hodnota
+  - pro danou diskrétní náhodnou veličinu je definována jako
+    - $E(X) = \sum_{x\in Im(X)}x×P(X=x)$
+  - platí pro ní linearita
+    - tzn. E(a.X + b) = a.E(X) + b
+    - a E(X+Y) = E(X) + E(Y)
 
-- linearita střední hodnoty
+- rozptyl
+  - $var(X) = E((X-E(X))^2)$
+    - pro DNV se počítá prakticky pomocí sumy
+      - $var(X) = \sum_{x \in Im(X)} (x-E(X))^2$
+- směrodatná odchylka
+  - odmocnina z rozptylu
+
+- spojité náhodné veličiny
+  - podobně jako diskrétní
+  - každý bod má samostatně nulovou pravděpodobnost, počítá se s pravděpodobností v intervalu
+    - kumulativní distribuční funkce (CDF, značí se většinou $F_X$) pro danou veličinu je něco jako primitivní funkce, jen k funkci rozdělení dané veličiny
+    - CDF je definovaná i pro diskrétní náhodné veličiny
+  - funkce pravděpodobnosti se nazývá "hustota náhodné veličiny" (PDF, značí se $f_x$) a definuje se jako
+    - $F_X(x) = \int_{-\infty}^x f_X(t) dt$
+  - střední hodnota je definována jako integrál
+    - $E(X)=\int_{-\infty}^{\infty}xf_X(x)dx$
+  - rozptyl
+    - $var(X)=E(X-E(X)) = \int_{-\infty}^{\infty} (x-E(X))^2 dx$
+      - u rovnosti se využívá "pravidlo naivního statistika", že střední hodnota veličiny v nějaké funkci je přímočaře výpočet střední hodnoty z definice s hodnotami veličiny upravené podle té funkce
+- spojitá rozdělení
+  - uniformní rozdělení
+    - pro interval od a do b je konstantní pravděpodobnost
+    - PDF je f(x)=1/(b-a)
+    - CDF je
+      - (x-a)/(b-a) pro x z [a,b]
+      - 0 pro x<a
+      - 1 pro x>b
+    - E(X) = (a+b)/2
+  - exponenciální rozdělení
+    - PDF(x)
+      - 0 pro x<0
+      - $1-e^{-\lambda x}$
+  - normální rozdělení (asi nejčastěji využívané)
+    - standardní rozdělení
+      - $PDF(x) = \phi(x) = \frac{1}{\sqrt{2\pi}}e^{-x^2/2}$
+    - obecné normální rozdělení
+      - značí se $N(\mu,\sigma^2)$
+        - $\mu$ je střední hodnota
+        - $\sigma$ je směrodatná odchylka
+        - vlastně se jen přeškáluje obecné normální rozdělení
+          - $N(\mu,\sigma^2)(x) = \frac{\phi(\frac{x-\mu}{\sigma})}{\sigma}$
+
+- kvantilová funkce
+  - značí se $Q_X(p)$
+  - dává pro danou pravděpodobnost nejnižší hodnotu x z X takovou, že $p \leq F_X(x)$
+  - u spojitých rozdělení je to inverzní funkce k CDF
+  - medián je Q(0.5)
+  - n-tý kvartil je Q(n/4)
+  - n-tý percentil je Q(n/100)
+  - atd.
+
+- nerovnosti
+  - Markovova
+    - na wiki se jmenuje "Čebyševova nerovnost I. typu"
+    - pro náhodnou veličinu X a $\epsilon>0$ platí
+      - $P(X>\epsilon) \leq \frac{E(X)}{\epsilon}$
+  - Čebyševova
+    - na wiki "Čebyševova nerovnost II. typu"
+    - pro náhodnou veličinu X a $\epsilon>0$
+      - $P(|X-E(X)<\epsilon) \geq \frac{var(X)}{\epsilon^2}$
+
+- statistika
+  - náhodný výběr
+    - posloupnost n.n.v. $X_1,X_2,...,X_n$ se stejným rozdělením
+
+- intervalové odhady nejsou v otázce zahrnuty...
 
 - bodové odhady
+  - pro náhodný výběr X1,X2,...,Xn ~ Fθ, parametr $\theta$ a funkci g nazveme bodový odhad $\Theta_n$
+    - nevychýlený, pokud $E(\Theta_n)=g(\theta)$
+    - asymptoticky nevychýlený, pokud $lim_{n\rightarrow\infty}E(\Theta_n)=g(\theta)$
+    - konzistentní, pokud $\Theta$ jde k $g(\theta)$ v pravděpodobnosti
+  - vychýlení - rozdíl mezi $E(\Theta)$ a skutečnou hodnotu parametru $\theta$
+  - střední kvadratická chyba (MSE)
+    - $MSE(\Theta_n)=E((\Theta-\theta)^2)$
+  - máme tři základní výběrové bodové odhady
+    1. výběrový průměr $X̄_n = \frac{1}{n} \sum_{i=1}^n X_i$
+    2. výběrový rozptyl 1 - $S_n^2 = \frac{1}{n} \sum_{i=1}^n (X_i-X̄_n)^2$  
+    3. výběrový rozptyl 2 - $\^S_n^2 = \frac{1}{n-1} \sum_{i=1}^n (X_i-X̄)^2$
+  - $X̄_n$ je konzistentní a nestranný odhad střední hodnoty
+  - $\^S^2_n$ je konzistentní a nestranný odhad rozptylu
+  - $\^S^2_n$ a $S_n^2$ jde mezi sebou převádět pomocí tzv. Besselovy korekce - to je pronásobení členem $\frac{n}{n-1}$
+- metoda momentů
+  - 1. moment je střední hodnota
+  - 2. z momentu se počítá rozptyl
+  - 3. z momentu se počítá šikmost (skewness)
+  - 4. z momentu se počítá špičatost (curtosis)
+  - $m_r(\theta):=E(X^r)$ ... r-tý moment náhodné veličiny $X$
+  - $\^m_r(\theta):=\frac{1}{n}\sum_{i=1}^n X_i^r$ ... r-tý výběrový moment náhodné veličiny
+    - $\^m_r(\theta)$ je konzistentní nestranný odhad $m_r(\theta)$
+  - pro střední hodnotu se tedy pomocí metody momentů odhadne tak, že vezmeme výběr hodnot, dáme je do vzorečku pro $\^m_1(\theta)$, což je to stejné jako výběrový průměr, tedy $\frac{1}{n} \sum_{i=1}^n X_i$
+  - pro rozptyl využijeme to, že $E(X^2)=var(X)+E(X)$
+    - to dává, že $var(X) = E(X^2)-E(X)$, tedy odhadneme pomocí prvního a druhého momentu ... $\^m_2(\theta) - \^m_1(\theta)$ (což mch. je ale výběrový rozptyl 1, $S_n^2 = \frac{1}{n} \sum_{i=1}^n (X_i-X̄_n)^2$)
+  - upřímně - v téhle fázi jsem nepochopil, proč by mě měla metoda momentů zajímat, ale tak co už
+- metoda maximální věrohodnosti (maximal likelihood)
+
+- Studentův t-test
+  - intervalový odhad náhodné veličiny
+  - věta
+    - X1,X2,...,Xn je náhodný výběr z $N(\mu,\sigma^2)$. Parametr $\theta=(\mu,\sigma)$ neznáme, určujeme $\sigma$.
+    - $\alpha \in (0,1)$,
+    - Studentovo t-rozdělení s n-1 stupni volnosti má CDF $\Psi_{n-1}$, hodnota $t_{\alpha/2}$ je definována tak, že $\Psi_{n-1}(t_{\alpha/2})=1-\alpha/2$
+    - nechť $\delta = t_{\alpha/2}\frac{\^S_n}{\sqrt{n}}$
+    - a nechť $C'''''''_n=[X̄_n-\delta,X̄_n+\delta]$
+    - pak $P(\mu \in C'_n)\geq 1-\alpha$
 
 - testování hypotéz
+  - máme dvě hypotézy
+    - $H_0$ ... nulová hypotéza, to, co předpokládáme
+    - $H_1$ ... alternativní hypotéza
+  - hladina významnosti ($\alpha$)
+    - pokud je pravděpodobnost naměřeného jevu nižší, než hladina významnosti za nulové hypotézy, tak nulovou hypotézu musíme odmítnout
+    - dále se označuje jako $1 - \beta$ "síla testu", tedy pravděpodobnost, že naměřená data nejsou z kritického oboru (to, že máme zamítnout nulovou hypotézu), za předpokladu, že platí alternativní hypotéza (pravděpodobnost, že nebylo přijato to, co mělo být odmítnuto) lol už jsem asi unavenej :D
+      - $\alpha$ prostě označuje pravděpodobnost, že vznikne chyba prvního typu
+      - $\beta$ označuje pravděpodobnost, že vznikne chyba 2. typu
+  - p-value ... pravděpodobnost, že tak "špatná" pozorovaná data vznikla 
+  - testy dobré shody
+    - už se mi nechce rozepisovat...
 
-$ℝ, \geq \le ∞ α β ϕ λ Λ ϵ ∑ ∏ ≤ ∫ ∈ → ⊆ \cup \cap$
+### 4. Algoritmy a datové struktury
+- asi na celý použiju knížku ["Průvodce labyrintem algoritmů"](https://pruvodce.ucw.cz/)
+- fajn je pro ujasnění si pustit algoritmy tady: [Visualgo](https://visualgo.net/en)
+  - a tady [Algovision](https://www.algovision.org/Algovision/pool.html)
+
+#### 1. Časová složitost algoritmů. Metoda ,,rozděl a panuj'' - aplikace a analýza složitosti, dynamické programování.
+> Časová složitost algoritmů. Metoda ,,rozděl a panuj'' - aplikace a analýza složitosti, dynamické programování.
+
+- časová složitost algoritmů
+  - kapitola 2.3 v Průvodci
+  - časová složitost se obvykle uvádí v závislosti na velikosti vstupu
+  - je zavedené značení složitosti podle tříd složitosti
+  - každá ze tříd je definovaná podle nejrychleji rostoucího členu
+    - navíc se zanedbávají konstanty
+  - např. složitost $3n^2+log(n)$ je v třídě $O(n^2)$
+  - formálně se to definuje takhle:
+    - máme funkce $f,g: \N \rightarrow \Reals$, $c\in \Reals^{0,+}$
+      - říkáme, že $f(n)$ je třídy $O(g(n))$, pokud pro "skoro všechna n" platí, že $f(n) \leq cg(n)$
+    - "skoro všechna n" znamená, že může existovat konečně mnoho hodnot n, pro která nerovnost neplatí. Nebo se to může zjednodušit, že existuje nějaké $n_0$ t.ž. pro všechna $n > n_0$ je $f(n) \leq cg(n)$
+
+- metoda rozděl a panuj
+  - kapitola 10 v Průvodci
+    - princip - rozdělení problému na části, které už je možné vyřešit jednoduše
+  - aplikace    - příklady
+      - Hanojské věže
+        - přenesení celé věže až na největší kámen z 1 kolíku na 3 kolík
+        - pak přesunutí hlavního kamenu z 1 kolíku na 2 kolík
+        - pak přesunutí celé věže z 3 kolíku na 2 kolík
+      - MergeSort
+  - analýza složitosti
+    - nejjednodušší je vytvořit strom rekurze
+      - např. pro MergeSort
+        - vytvoření stromu, kde každý uzel je slévání
+          - kořen je slévání dvou polí velikosti n/2 (n je počet prvků v tříděném poli)
+          - -> n/2 porovnávání
+        - kořen (a každý další vrchol) má dva syny, které mají poloviční velikost, takže k-tá "hladina" vrcholů bude mít $n/2^k$ vrcholů
+        - složitost bude rovna součtu operací v hladině * počet hladin
+          - v k-hladině je $2^{k-1}$ uzlů a každý z nich má $n/2^k$ operací, což se v každé hladině sečte na $n/2$ operací
+          - hladin je $log_2(n)$
+          - složitost je $O((n/2)*log_2(n))=O(log(n))$
+
+- dynamické programování
+  - princip: převedení rekurzivního programování zpravidla do tabulky
+    - využívá se toho, že podproblému v rekurzivním algoritmu mají stejná částečná řešení (kešujeme je)
+    - příklady:
+      - výpočet Fibonacciho čísel pomocí rekurze
+      - alignment 2 sekvencí aminokyselin
+
+#### 2. Binární vyhledávací stromy, vyvažování, haldy.
+- binární vyhledávací stromy
+  - kapitola 8 v Průvodci
+  - v základu - zakořeněný strom, každý uzel má nejvýše 2 potomky
+  - vyhledávací strom
+    - levý potomek je menší než rodič a ten je zas menší než pravý potomek
+    - výhoda oproti poli - rychlé vyhledávání v třídě O(log(n))
+    - problém - přidávání potomků tak, aby byl strom vyvážený
+      - ve špatném případě může vyhledávání trvat až O(n)
+- vyvažování
+  - binární vyhledávací strom je "dokonale vyvážený", pokud pro každý vrchol v platí, že $|L(v)|-|R(v)| \leq 1$
+  - důležitější je pojem "hloubkově vyvážený strom" - $|h(l(v))-h(p(v))| \leq 1$
+    - AVL stromy využívají hloubkové vyvážení
+    - operace Insert a Delete na stromě budou normálně přidávat/odebírat vrcholy, ale pak ještě ověří, jestli strom zůstal hloubkově vyvážený, příp. udělají vyvážení
+      - v každém z vrcholů je kromě hodnoty uloženo znaménko {+,0,-} - o kolik se hloubkově liší pravý a levý podstrom
+      - vyvážení se dělá dvěma operacemi (Průvodce, str. 193)
+        - rotace
+        - dvojitá rotace
+- AB-stromy
+  - více hodnot ve vrcholech
+  - jednodušší vyvažování
+  - $a\geq 2$, $b\geq 2a-1$
+  - každý uzel má a až b synů, vrchol může mít 2 až b synů
+  - všechny vnější vrcholy jsou ve stejné hloubce (prázdné vrcholy),
+  - pro k synů má vrchol k-1 hodnot
+  - přidávání - vyhledá se místo, kam přidat hodnotu
+    - pokud je v uzlu méně ne
+
+- haldy
+  - Kapitola 4.2 v Průvodci
+  - halda je datová struktura ve tvaru binárního stromu
+  - pro každý vrchol platí, že má nejvýše takovou hodnotu, jako jeho synové (směrem k potomkům hodnota stoupá)
+  - ve vrcholu je tedy minimum
+  - všechny hladiny jsou zaplněné, až na poslední
+    - poslední hladina je zaplněná zleva
+  - přidávání
+    - prvek se přidá na co nejlevější místo v poslední hladině
+    - pokud se porušilo haldové uspořádání (syn je větší než rodič), tak se "probublává" - přidaný prvek se prohodí s rodičem, vyzkouší se, jestli rodič není větší - pokud ano, zase se prohodí atd., nejvýše až ke kořenu haldy
+    - přidání má složitost O(log(n)) (počet hladin)
+  - odebírání
+    - zpravidla se halda dělá kvůli rychlému nalezení minima
+      - odebírá se minimum v kořeni
+      - po odebrání kořene
+        - na místo kořene jde poslední prvek v nejnižší hladině
+        - probublává dolu - vyměňuje se s menším z obou synů
+
+#### 3. Třídění - sekvenční třídění, porovnávací algoritmy, přihrádkové třídění, třídící sítě.
+#### 4. Grafové algoritmy - prohledávání do hloubky a do šířky, souvislost, topologické třídění, nejkratší cesta, kostra grafu, toky v sítích. Tranzitivní uzávěr.
+#### 5. Algoritmy vyhledávání v textu - Aho-Corasicková, KMP, sufixový strom, sufixové pole. Algebraické algoritmy - DFT, Euklidův algoritmus. RSA. Aproximační algoritmy. Automaty a gramatiky - typy automatů a gramatik, vztahy, příklady.
 
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
@@ -1226,7 +1494,6 @@ $ℝ, \geq \le ∞ α β ϕ λ Λ ϵ ∑ ∏ ≤ ∫ ∈ → ⊆ \cup \cap$
   - 1990 Altshul, Lipman et al., BLAST
   - 1992 NCBI - GenBank
   - 1995 První osekvenovaný celý genom, Haemophilus influenze
-
 
 - oblasti bioinformatiky
   - sekvenční (informační biopolymery, proteiny)
