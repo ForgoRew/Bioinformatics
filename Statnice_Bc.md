@@ -1462,9 +1462,137 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
         - na místo kořene jde poslední prvek v nejnižší hladině
         - probublává dolu - vyměňuje se s menším z obou synů
 
-#### 3. Třídění - sekvenční třídění, porovnávací algoritmy, přihrádkové třídění, třídící sítě.
-#### 4. Grafové algoritmy - prohledávání do hloubky a do šířky, souvislost, topologické třídění, nejkratší cesta, kostra grafu, toky v sítích. Tranzitivní uzávěr.
-#### 5. Algoritmy vyhledávání v textu - Aho-Corasicková, KMP, sufixový strom, sufixové pole. Algebraické algoritmy - DFT, Euklidův algoritmus. RSA. Aproximační algoritmy. Automaty a gramatiky - typy automatů a gramatik, vztahy, příklady.
+#### 3. Třídění
+> Třídění - sekvenční třídění, porovnávací algoritmy, přihrádkové třídění, třídící sítě.
+
+
+- přímé aloritmy
+  - select sort
+  - buble sort
+  - insert sort
+- rychlejší algoritmy
+  - merge sort
+
+- přihrádkové třídění,
+  - counting sort
+    - (započítá se, kolikrát bylo číslo k na vstupu pro čísla od 1 do r)
+  - bucket sort
+    - jako counting sort, jen pro obecné "klíče" u položek, místo počítadla je tam seznam
+  - lexikografický bucket sort
+    - pokud klíč není jedno číslo, ale k-tice čísel
+    - vlastně se udělá bucket sort pro jednotlivé pozice v k-tici, začíná se s nejméně významnou
+  - radix sort
+    - upřímně, nechápu rozdíl mezi radix sortem a lexikografickým bucket sortem v myšlence, až na to, že lex-bucket sort třídí obecné klíče a radix sort na místo nich třídí jednotlivé číslovky, kde jedna přihrádka je dolní celá část logaritmu k o základu "z" plus 1
+      - (nevím, jak se dělá dolní celá část v LaTeXu)
+- třídící sítě
+    - komparátorová síť
+      - Průvodce, str. 392 (kapitola 15.3)
+      - výstup je permutace, setříděný vstup
+      - např. pro bubble sort má O(n^2) hradel na n vrstvách -> paralelizace, setřídění v O(n)
+      - přes bitonické třídičky se výklad stáčí ke slévacím třídičkám
+        - síťový merge sort
+        - síť hloubky $\Theta(log^2n)$
+          - $\Theta(nlog^2n)$ komparátorů
+
+#### 4. Grafové algoritmy
+> 4. Grafové algoritmy - prohledávání do hloubky a do šířky, souvislost, topologické třídění, nejkratší cesta, kostra grafu, toky v sítích. Tranzitivní uzávěr.
+
+- přehled některých grafových algoritmů (abych si nepletl jména)
+  - Dijkstrův algoritmus
+    - hledání nejkratší cesty
+    - Průvodce kap. 6.2
+    - nefunguje pro záporné cykly
+  - relaxační algoritmy
+    - zobecnění Dikstry
+    - Průvodce kap. 6.3
+    - Dijkstra jen vybírá z množiny otevřených vrcholů ten s nejnižší prozatimní délkou cesty od počátku
+  - BFS
+    - hledání do šířky, je trochu analogický s Dijkstrovým algoritmem
+    - Průvodce str. 110
+  - Bellman-Fordův algoritmus
+    - jako Dijkstra, jen se z otevřených vrcholů nevezme ten s nejnižším ohodnocením, ale nejdéle přidaný (fronta)
+  - Floyd-Warshal
+    - matice vzdáleností každého vrcholu s každým
+    - Průvodce kap. 6.4
+  - Ford-Fulkersonův algoritmus
+    - hledání maximálního toku
+
+- prohledávání do hloubky a do šířky
+  - do šířky - BFS (breadth-first search), Průvodce str. 110 (fronta)
+  - do hloubky - DFS (deep-first search), Průvodce kap. 5.6 (zásobník)
+- souvislost
+  - hranová vs. vrcholová souvislost
+    - mosty ... hrana není most, když leží na kružnici
+    - artikulace ... vrchol, jehož odebráním se graf rozpadne na více komponent
+  - komponenty souvislosti (v neorientovaném grafu)
+    - v náhodném nenavštíveném vrcholu spustíme BFS
+      - pokud jsme navštívili všechny vrcholy -> graf je souvislý
+      - jinak jsme objevili celou komponentu souvislosti
+      - další komponentu nalezneme tak, že spustíme BFS na dalším dosud nenavštíveném vrcholu
+  - jak rozpoznat DAG (directed acyclic graph)
+    - např. spouštění DFS, podobně jako u hledání mostů, opakovaně
+- topologické třídění,
+  - asi ekvivalent topologického uspořádání?
+  - Průvodce str. 128
+  - vztahuje se na DAGy
+    - nejprve se najde "zdroj"
+      - ten se umaže a prohlásí za první v uspořádání
+      - pak se znovu najde zdroj, druhý v uspořádání atd.
+  - 
+- nejkratší cesta
+  - Dijkstrův algoritmus
+  - Bellman-Fordův algoritmus
+  - Floyd-Warshalův algoritmus
+
+- kostra grafu,
+  - graf může mít mnoho koster
+  - algoritmy se mohou lišit v tom, kterou kostru naleznou
+  - vždy se snaží nalézt minimální kostru (i těch ale může být i víc)
+    - Jarníkův algoritmus
+      - seřadí hrany podle vah
+      - přidává nejmenší hranu do tvořené kostry (právě jeden z vrcholů ale musí být "nový", tj. ještě není přidaný)
+      - to, že Jarníkův algoritmus dá kostru není zas tak těžké nahlédnout (vždy se přidá "nový" vrchol, takže nevznikne cyklus a každý vrchol (který není v jiné komponentě) bude nakonec přidán)
+      - trochu složitější je to s minimalitou, ale to se zase nahlédne z toho, že nejlehčí hrana z nějakého elementárního řezu bude v kostře grafu
+    - Borůvkův algoritmus
+      - kdyby Jarník pěstoval jeden strom, Borůvka pěstuje mnoho naráz (tolik, kolik je vrcholů)
+      - postupně stromy slučuje (spojuje vždy dva vrcholy nejmenší možnou hranou)
+    - Kruskalův algoritmus
+      - přidává do "lesa" vždy nejmenší hranu, poté, co zkontroluje, že by nevytvořila cyklus
+    - Union-Find
+      - datová struktura, která pomáhá u Kruskalova algoritmu
+      - pro dva vrcholy zjistí, zda leží ve stejné komponentě (FIND)
+      - umí přidat hranu a spojit dvě komponenty (UNION)
+      - implementováno pomocí "keříků"
+        - 1 komponenta = 1 keřík
+        - keřík má kořen a ten má ohodnocení hloubkou
+        - pokud spojíme dva keříky, přepojíme mělčí keřík pod kořen toho hlubšího
+
+- toky v sítích
+  - maximální tok = minimální řez
+  - základní algoritmus je Ford-Fulkersonův
+    - Ford-Fulkersonův algoritmus
+      - hledá zlepšující cestu
+      - vždycky se zlepší cesta o "bottle-neck"
+    - FF algoritmus je dobrý i pro hledání maximálního párování v bipartitním grafu
+    - Diniciův algoritmus
+      - definuje si "průtok hranou"
+      - síť rezerv
+      - blokující tok
+        - pokud je na každé cestě alespoň jedna hrana, která brání zlepšení (dosáhla kapacity)
+      - pročišťování
+    - Goldbergův algoritmus
+
+
+- tranzitivní uzávěr
+  - tranzitivní uzávěr je množina hodnot true/false pro všechny dvojice vrcholů, zda se z prvního je možné dostat do druhého nějakou cestou v grafu
+  - zpravidla se reprezentuje jako matice
+  - je možné jej získat pomocí Ford-Fulkersona
+  - také existuje docela fajn trik
+    - když se udělá matice (A), kde jednička na pozici i,j znamená, že z vrcholu i vede do vrcholu j (orientovaná) hrana, tak $A^2$ je matice, kde na pozici i-j je jednička, když vede z i do j cesta přes dvě hrany
+    - pokud je v grafu n vrcholů, tak $A+A^2+...+A^n$ je matice tranzitivního uzávěru na grafu G
+
+#### 5. Textové algoritmy
+> 5. Algoritmy vyhledávání v textu - Aho-Corasicková, KMP, sufixový strom, sufixové pole. Algebraické algoritmy - DFT, Euklidův algoritmus. RSA. Aproximační algoritmy. Automaty a gramatiky - typy automatů a gramatik, vztahy, příklady.
 
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
