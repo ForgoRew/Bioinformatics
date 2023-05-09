@@ -1591,9 +1591,131 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - když se udělá matice (A), kde jednička na pozici i,j znamená, že z vrcholu i vede do vrcholu j (orientovaná) hrana, tak $A^2$ je matice, kde na pozici i-j je jednička, když vede z i do j cesta přes dvě hrany
     - pokud je v grafu n vrcholů, tak $A+A^2+...+A^n$ je matice tranzitivního uzávěru na grafu G
 
-#### 5. Textové algoritmy
+#### 5. Další algoritmy
 > 5. Algoritmy vyhledávání v textu - Aho-Corasicková, KMP, sufixový strom, sufixové pole. Algebraické algoritmy - DFT, Euklidův algoritmus. RSA. Aproximační algoritmy. Automaty a gramatiky - typy automatů a gramatik, vztahy, příklady.
 
+- Algoritmy vyhledávání v textu
+  - Aho-Corasicková,
+    - Průvodce, kap. 13.3
+    - textový algoritmus pro vyhledávání mnoha slov najednou
+    - FSA, zpětné hrany (failure state), zkratky
+    - [Vizualizace](https://brunorb.com/aho-corasick/)
+
+  - KMP,
+    - Průvodce, kap. 13.2
+    - Knuth-Morris-Pratt
+    - textový algoritmus, který vyhledává výskyty pro zadané slovo
+      - vytvoří se FSA s přechody mezi písmeny slova a tím se proskenuje celý text
+      - oproti Aho-Corasickové dokáže vyhledat jen 1 slovo
+        - FSA vypadá jako nerozvětvený řetízek
+  - sufixový strom
+    - je možné jej v lineárním čase převést na sufixové pole a naopak
+    - Průvodce, kap. 13.5
+    - trie - složená ze všech sufixů sekvence
+    - vyhledáme jehlu v trii (u vrcholů je uvedené, kde mají dané sekvence začátek)
+  - sufixové pole
+    - asi jsme se to na ADS neučili..
+    - Průvodce, kap. 13.4 (za Rabin-Carpem)
+    - tabulka na opakované vyhledávání v textu
+    - celý text se rozseká na všechny sufixy od pozice 1 do n (pro text délky n)
+      - např. rokoko se rozseká na
+        1. rokoko
+        2. okoko
+        3. koko
+        4. oko
+        5. ko
+        6. o
+        7. $\epsilon = \empty$
+    - sufixy se setřídí abecedně a najdou se pro ně 3 hodnoty
+      - X(i) ... původní pořadí v abecedě i-tého sufixu
+      - R(i) ... inverzní funkce k X $\rightarrow R(X(i))=i$
+      - L(i) ... nejdelší společný suffix se sekvencí, která následuje v abecedě
+
+|$i$|$X$|$R$|$L$| sufix |
+|:-:|:-:|:-:|:-:|:------|
+| 0 | 6 | 6 | 0 |$\epsilon$|
+| 1 | 4 | 5 | 2 | ko    |
+| 2 | 2 | 2 | 0 | koko  |
+| 3 | 5 | 4 | 1 | o     |
+| 4 | 3 | 1 | 3 | oko   |
+| 5 | 1 | 3 | 0 | okoko |
+| 6 | 0 | 0 | - | rokoko|
+
+- 
+  -
+    - pro zadanou "jehlu" je potřeba najít jen začátek a konec oblasti, kde sufixy začínají na tuto jehlu
+    - všechny sufixy mezi nimi také začínají na jehlu, takže jejich pozice (hodnota X) vrátíme
+    - protože můžeme vyhledávat binárně, časová složitost je logaritmická
+    - velikost tabulky je lineární vůči délce sekvence, protože stačí uložit pouze číselné hodnoty, suffixy existují implicitně
+
+- Algebraické algoritmy
+  - DFT
+    - Průvodce, kap. 17
+    - Diskrétní Fourierova transformace je lineární zobrazení vektoru komplexních čísel na jiný vektor komplexních čísel podle vzorce
+      - $F: \Complex^n \rightarrow \Complex^n$ tak, že
+        - $F(x)=y$, $x,y \in \Complex^n$
+        - $y_j = \sum_{k = 0}^{n-1} x_k × e^{-\frac{i2\pi}{n}jk}$,
+          - $e^{-\frac{i2\pi}{n}}$ je jedna z primitivních n-tých odmocnin jedničky
+            - také je možné ji zapsat jako
+              - $cos(\frac{2\pi}{n})+isin(\frac{2\pi}{n})$
+    - možná by bylo fajn trochu rozepsat FFT (Rychlou Furierovu transformaci)
+    - FFT
+      - implementace DFT se složitostí $\Theta(nlog(n))$
+      - využívá rekurze
+      - zvoli jako koeficienty pro převedení polynomu do grafového tvaru mocniny nějaké n-té primitivní odmocniny jedničky (komplexní číslo) a pak provádí rekurzivní proceduru
+        - v principu - polynom rozdělí na dva, jeden se sudými a jeden s lichými koeficienty - to je možné, protože jsme zvolili hodnoty bodů, kde má být polynom vyhodnocen tak, aby body byly spárované (i-tá hodnota "x" je až na znaménko stejná, jako i+n/2 tá hodnota)
+        - díky tomu, že hodnoty "x" jsou mocniny primitivního čísla, až na hodnotu "x^0" tam není jednička
+        - je tam dalších několik myšlenek, díky kterým to funguje, ale v principu
+        - využívá se rekurzivního převedení polynomu na jeho koordináty tak, že se v každém kroku rekurze zmenší na polovinu
+      - DFT se dá využít např. pro rychlé násobení polynomu, odpovídá spektrálnímu rozkladu signálu na siny a cosiny - využívá se u MP3 a JPEG a u rozpoznávání řeči
+  - Euklidův algoritmus
+    - GCD (greatest common divisor)
+    - Průvodce, str. 30-31
+    - odčítací algoritmus
+  - RSA
+    - Zdroj: [Wiki](https://cs.wikipedia.org/wiki/RSA)
+    - Rivest-Shamir-Adleman
+    - algoritmus pro asymetrickou kryptografii, který vygeneruje veřejný a privátní klíč pro kódování/dekódování zprávy
+    - jeho "neprolomitelnost" závisí na velké složitosti pro rozklad velkých čísel na prvočísla
+    - vytvoření klíčů
+      - náhodně se zvolí vysoká prvočísla p,q
+      - n=pq
+      - Eulerova funkce $\phi(n)=(p-1)(q-1)$
+        - eulerova funkce dává počet čísel k od 1 do n takových, že NSD(k,n)=1
+      - zvolí se celé číslo (prvočíslo) e (veřejný klíč) t.ž. $e<\phi(n)$ a $nsd(\phi(n),e)=1$ (většinou se používá e=65537)
+      - najde se číslo d (privátní klíč) t.ž. $(e*d)\mod\phi(n)=1$ (to je možné v konstantním čase)
+      - a to je všechno, (e,n) je veřejný klíč a (d,n) je soukromý klíč
+    - zašifrování
+      - m je zpráva
+      - zašifrovaná zpráva $c=m^e\mod n$
+    - dešifrování
+      - $m = c^d \mod n$
+  - Aproximační algoritmy
+    - Průvodce, kap. 19.6
+    - hledáme "dostatečně dobré řešení"
+    - pro nějakou "cenu" řešení hledáme aproximaci, která svojí cenou nebude příliš odlišná od ceny - pro minimalizační algoritmy a $\alpha>1$, optimální cenu $c^*$ a aproximaci $c'$ bude $c'<\alpha c^*$, obdobně pro maximalizační problémy a $\alpha<1$
+  
+- Automaty a gramatiky
+  - (1. přednáška od [Bartáka](http://ktiml.mff.cuni.cz/~bartak/automaty/lectures/lecture01.pdf))
+  - typy automatů a gramatik,
+    - (konečný) automat je pětice
+      - množina stavů automatu
+      - počáteční stav
+      - přechodová funkce
+      - vstupní symboly
+      - množina přijímajících stavů
+  - (6. přednáška od [Bartáka](http://ktiml.mff.cuni.cz/~bartak/automaty/lectures/lecture06.pdf)) gramatika je čtveřice - set neterminálních symbolů, set terminálních symbolů, počáteční terminální symbol a produkční systém
+    - produkční systém vygeneruje ze zadané n-tice tvořené terminálními a neterminálními symboly jinou n-tici, první n-tice musí obsahovat alespoň jeden neterminální symbol
+  - vztahy,
+    - gramatika jde převést na automat
+      - pravidla gramatiky se přepíšou do "hran" automatu (přechodové funkce)
+      - vstupní sekvence je podle pravidel v automatu přes neterminály zpracovaná a vyústí v nějakém terminálu
+  - příklady.
+
+## 5. Aplikovaná informatika
+   1. Principy a základy implementace objektově orientovaných jazyků - třída, dědičnost, polymorfismus, virtuální funkce, atd. Generické programování a knihovny šablony a generika, kompilační polymorfismus.
+   2. Normální formy, referenční integrita. Základy SQL.
+   3. Unix - základní pojmy (systém souborů, komunikace mezi procesy), shell (syntaxe, programové konstrukty), základní utility.
 ## Bioinformatika
 ### 1. Obor "bioinformatika"
 > "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
