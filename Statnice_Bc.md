@@ -479,6 +479,9 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - je na [Google Disku Bioinformatika](https://drive.google.com/drive/folders/0BzEbjnxrwP6Obi1BT0dzX25zelE?resourcekey=0-FmLJvLRy3SlujojoDsMReA&usp=sharing)
 #### 1. Soustavy lineárních rovnic, metody řešení.
 > Soustavy lineárních rovnic, metody řešení.
+
+- 
+
 - tahle otázka se většinou řeší na začátku skript, jako dobrá motivace pro zavedení matic
 - důležité pojmy jsou kromě matice tzv. elementární operace, tedy operace s maticí, které nezmění množinu řešení lieárních rovnic, které matice reprezentuje
 - dále Gaussova(-Jordanova) eliminace, což jsou postupy, jak z maticové reprezentace lineárních rovnic získat jejich řešení
@@ -713,6 +716,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 #### 6. Skalární součin a norma.
 >Skalární součin a norma. Vlastnosti v reálném i komplexním případě, Cauchy-Schwarzova nerovnost. Kolmost. Ortogonální doplněk a jeho vlastnosti, ortogonální projekce.
 
+- Skalární součin
 - jde o operaci vektorů mezi sebou navzájem
 - pro u,v z V nad T, a z T, u × v = a
   - standardní skalární součin: $x^Ty=∑_{i=0}^n x_i y_i$
@@ -1344,6 +1348,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - to dává, že $var(X) = E(X^2)-E(X)$, tedy odhadneme pomocí prvního a druhého momentu ... $\^m_2(\theta) - \^m_1(\theta)$ (což mch. je ale výběrový rozptyl 1, $S_n^2 = \frac{1}{n} \sum_{i=1}^n (X_i-X̄_n)^2$)
   - upřímně - v téhle fázi jsem nepochopil, proč by mě měla metoda momentů zajímat, ale tak co už
 - metoda maximální věrohodnosti (maximal likelihood)
+  - z [Wiki](https://en.wikipedia.org/wiki/Computational_phylogenetics#Maximum_likelihood) jsem pochopil, že je to metoda velmi podobná max. parsimonii, jen je možné nastavit pravděpodobnosti záměn na jednotlivých pozicích / obodovat je
 
 - Studentův t-test
   - intervalový odhad náhodné veličiny
@@ -1713,10 +1718,146 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - příklady.
 
 ## 5. Aplikovaná informatika
-   1. Principy a základy implementace objektově orientovaných jazyků - třída, dědičnost, polymorfismus, virtuální funkce, atd. Generické programování a knihovny šablony a generika, kompilační polymorfismus.
-   2. Normální formy, referenční integrita. Základy SQL.
-   3. Unix - základní pojmy (systém souborů, komunikace mezi procesy), shell (syntaxe, programové konstrukty), základní utility.
+### 1. Objektově orientované a generické programování
+> 1. Principy a základy implementace objektově orientovaných jazyků - třída, dědičnost, polymorfismus, virtuální funkce, atd. Generické programování a knihovny šablony a generika, kompilační polymorfismus.
+
+- trochu mi není jasné, co všechno se po nás chce v téhle otázce, ale prostě si napíšu, co mě k pojmům v základu napadá
+
+- [OOP na Wiki](https://cs.wikipedia.org/wiki/Objektov%C4%9B_orientovan%C3%A9_programov%C3%A1n%C3%AD)
+
+- Objektově orientované jazyky
+  - programovací jazyky, které pracují s "objekty", tzn., všechno je v nich svým způsobem objekt. Objekty mají určité vlastnosti - atributy a metody
+  - oproti základnímu imperativnímu programování, které využívá sekvenci příkazů pro provedení určitého algoritmu, má OOP základ v tom, že pracujeme s objekty, které samy v sobě zpracují určitý výsledek a pak jej dají navenek. Spíš určujeme, jakým způsobem se mají objekty chovat a vzájemně interagovat
+- třída
+  - každý objekt patří do nějaké třídy
+  - třída objektu popisuje, jaké bude mít objekt vlastnosti
+  - správně by se do vlastností objektů nemělo zasahovat jinak, než skrze např. metody, které jsou právě definované ve třídě (zapouzdřenost)
+- dědičnost
+  - třídy jsou provázané relací dědičnosti
+  - správně by každá třída měla mít právě jednoho předka (stromová struktura relace), až na nějakou obecnou třídu (v Javě třída Object)
+  - třída dědí od svých rodičů atributy a metody, které ale může pozměnit
+  - je možné vytvářet jen částečně implementované "abstraktní" třídy, které nemají objekty a jejich potomci musí jednotlivé vlastnosti doimplementovat
+- polymorfismus
+  - polymorfismus označuje to, že třídy v linii dědičnosti sdílejí alespoň část svých vlastností s rodičovskou třídou. Rodičovská třída se všemi třídami ve své linii dědičnosti sdílí celé své rozhraní
+  - přestože je potřeba si být vědom, že potomci mohou vlastnosti rodičovské třídy implementovat vlastním způsobem, je možné je využít místo rodičovské třídy
+- virtuální funkce
+  - [Wiki](https://cs.wikipedia.org/wiki/Virtu%C3%A1ln%C3%AD_funkce)
+  - pokud je funkce virtuální, je její implementace platná jen pro objekt rodiče, objekt potomka bude mít vlastní implementaci
+  - nevirtuální funkce naopak je napevno implementovaná v rodiči
+  - v Javě jsou funkce implicitně virtuální, v C# a C++ naopak 
+  - metody třídy nemohou být virtuální
+  - tím, jestli je funkce virtuální, či ne, se řeší problém se záměnností tříd v proměnné
+    - při kompilaci se ještě neví, jestli bude do proměnné vložen objekt rodiče, nebo potomka, ale už je potřeba mít jasno, jaká metoda se spustí
+    - pokud není virtuální, bude se spouštět vždy metoda rodiče, pokud virtuální je, program se před spuštěním funkce podívá, jaký objekt proměnná ve skutečnosti obsahuje
+- atd.
+
+- Generické programování
+  - [Wiki](https://cs.wikipedia.org/wiki/Generick%C3%A9_programov%C3%A1n%C3%AD)
+  - metoda programování, která umožňuje psát daný objekt/metodu obecně s tím, že to, jak bude výsledek vypadat se určí až dosazením konkrétního typu
+  - např. ArrayList v Javě je generický, protože může být určen pro různé typy objektů (ArrayList<Integer>, ArrayList<String>), ale může být i velmi obecný, pokud jej definujeme pro jakékoli objekty (ArrayList<Object>).
+
+- knihovny
+  - [Wiki](https://cs.wikipedia.org/wiki/Knihovna_(programov%C3%A1n%C3%AD))
+  - v objektově orientovaném programování je knihovna zpravidla třída, která obsahuje různé funkce pro běh programu
+  - knihovnou může být i prostě jen soubor s různými funkcemi
+  - u komplexnějších programů jsou knihovny často zřetězené (dependentní), ideálně se stromovou strukturou, ale po čase programování tam vzniknou cykly a pak je to hrozně messy - v Javě 
+
+- šablony a generika
+  - šablony (*templates*) jsou obecně napsané algoritmy/datové struktury
+  - jsou obecné (generické), takže budou fungovat pro jakýkoliv typ, který se jim dá
+  - samozřejmě všechny algoritmy nebudou fungovat obecně (např. výpočet NSD je algoritmus specifický pro integery), ale např. pro datové struktury jako list/fronta/halda (pokud dodefinujeme funkci pro porovnávání) to bude fungovat dobře
+
+- kompilační polymorfismus
+  - polymorfizmus (možnost nahradit jeden typ druhým) má dvě formy
+    - kompilační
+    - run-time
+    - kompilační polymorfizmus znamená, že ještě v době kompilace nevíme, jaký typ se použije
+    - například v Javě nastává při tzv. overloadingu
+
+### 2. Databáze
+> 2. Normální formy, referenční integrita. Základy SQL.
+
+- Normální formy
+  - [Wiki](https://cs.wikipedia.org/wiki/T%C5%99et%C3%AD_norm%C3%A1ln%C3%AD_forma)
+  - v kontextu databázových systémů jsou normální formy pravidla pro vytvoření funkční databáze
+  - existují základní 3 normální formy, které se ve svých požadavcích na podobu databáze zvyšují (1NF, 2NF, 3NF)
+  - 3NF
+    - nejlepší norma běžně používaná norma, umožňuje efektivní ukládání dat i práci s tabulkami v SQL
+    - existují případy, kdy mohou vznikat duplicity a anomálie při modifikacích dat i v 3NF - existují ještě 4NF a 5NF
+    - má 5 pravidel
+      1. tabulky neobsahují duplicitní sloupce
+      2. každá tabulka obsahuje pouze data jedné kategorie objektů, objekty jsou označeny primárním klíčem
+      3. v jednotlivých sloupcích tabulky je jen dále nedělitelná informace
+      4. pokud mají data v určitém sloupci stejnou hodnotu (např. adresy lidí, přičemž lidé jsou si příbuzní), tak jsou data převedena do nové tabulky, která má primární klíč. Původní tabulka se na ní bude odkazovat pomocí cizího klíče
+      5. v tabulce nejsou sloupce závislé na jiných sloupcích kromě primárního klíče (např. pokud se sloupec s učitelkou kurzu navštěvovaného studentem odvíjí od jména kurzu (jméno učitelky by mělo být někde v tabulce kurzů nebo v tabulce učitelek, ne v tabulce studentů navštěvujících kurzy))
+
+
+- referenční integrita
+  - [Wiki](https://cs.wikipedia.org/wiki/Referen%C4%8Dn%C3%AD_integrita)
+  - pro dvě tabulky (T1, T2), které mají definovanou relaci, je potřeba kontrolovat, zda zachovávají integritu
+  - zpravidla je to realizované tak, že
+    - jedna tabulka (T1) má jako jednu z hodnot nějaký primární klíč (na základě primárního klíče je záznam jednoznačně odlišitelný od ostatních, čili 2 klíče nesmí být shodné a také nesmí být NULL)
+    - druhá tabulka (T2) se na tu první odkazuje - má hodnotu označenou jako cizí klíč (foreign key)
+    - pak mezi cizím klíčem v T2 a primárním klíčem v T1 je definované pravidlo, že v hodnotě cizího klíče T2 musí být hodnota obsažená v primárním klíči T1, nebo NULL, pokud nechceme uvádět relaci
+    - naopak pro jakoukoli změnu záznamu, či odstranění záznamu v primárním klíči T1 musíme nejdřív zkontrolovat, že se na něj neodkazuje cizí klíč v T2
+    - T1 se označuje jako master tabulka
+    - T2 jako slave tabulka
+    - např. tabulka firem F má jako cizí klíč PSČ pošt, čili se odkazuje na tabulku se seznamem pošt
+      - tabulka pošt obsahuje jako primární klíč právě PSČ (např. dvě pošty v jednom městě jsou odlišené právě pomocí PSČ)
+      - pak je vidět, že na jednu stranu nemůžeme přidat do PSČ firmy neexistující poštu (pokud si nejsme jistí, uvedeme NULL)
+      - na druhou stranu nemůžeme z naší databáze odstranit poštu, dokud firmě nedáme jinou příslušnou hodnotu PSČ
+
+- Základy SQL
+  - tady trochu nechápu, co se po nás chce
+  - v základu SQL a SQL-based jazyky jsou asi nejvíc používané jazyky pro práci s databázemi
+  - SQL umožňuje vybírat a třídit data z tabulek (vyber 10 zaměstnanců s nejlepšími příjmy)
+    - vkládat záznamy
+    - odstraňovat a modifikovat záznamy
+    - definovat relace (primární a cizí klíč)
+    - umožňuje definovat závislosti dat na sobě (definovat primární klíč)
+
+### 3. Unix - základní pojmy (systém souborů, komunikace mezi procesy), shell (syntaxe, programové konstrukty), základní utility.
+> 3. Unix - základní pojmy (systém souborů, komunikace mezi procesy), shell (syntaxe, programové konstrukty), základní utility.
+
+- literatura
+  - [Wiki](https://en.wikipedia.org/wiki/Unix)
+
+- Unix
+  - rodina operačních systémů
+  - založené na principu modularity
+  - jednotlivé procesy jsou seřazené do "pipes", předávají si postupně výstupy a na konci vypadne výsledek
+
+- systém souborů,
+  - stromová struktura
+  - pomocí znaku `/` jsou oddělené složky
+  - root je prostě jen znak `/`
+  - jinak je to dost podobné jako u Windowsů
+  - jinak asi nejčastěji se pracuje ve složce `/home/[name-of-user]/`
+
+- komunikace mezi procesy
+  - procesy jsou realizované pomocí pipes
+    - tenhle princip je rozdílný oproti běžnému přístupu, kdy jeden program implementuje všechny nástroje, které používá sám (ale dochází tam k častým duplicitám)
+  - každý nástroj má jasně daný účel, input i output
+
+- shell (syntaxe, programové konstrukty)
+  - může se používat přímo v terminálu, nebo v podobě skriptů
+  - základní syntax je `[jméno nástroje] [možnosti] [input] >[output]`, např. `cat -T file.txt > output.txt`
+  - příkazy se můžou řadit za sebe
+    - znak `|` pošle výstup jednoho nástroje do druhého
+    - znak `&&` spustí další nástroj, jen když doběhl předchozí proces úspěšně
+    - znak `||` spustí další nástroj naopak, pokud předchozí proces dopadl neúspěšně
+
+- základní utility
+  - ?? asi už popsané? možná distribuce softwaru / package management system typu APT
+
 ## Bioinformatika
+### Nástroje a algoritmy
+- fylogenetika
+  - UPGMA
+  - Maximal Parsimony
+  - Neighbor-Join
+  - 
+  - bootstrap analýza
 ### 1. Obor "bioinformatika"
 > "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
 
