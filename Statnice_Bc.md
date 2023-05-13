@@ -778,14 +778,18 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - mějme vektorový prostor V a jeho podprostor U. Ortogonální projekce vektoru x z V do podprostoru U je jeho obraz x$_U$, který splňuje, že $||x-x_U||={min_{y ∈ U}(x-y)}$
 - věta: existuje právě jedna projekce pro daný vektor
   - pokud je báze (z1,...,zn) prostoru U ortonormální, pak $x_U=∑_{i=0}^n <x,z_i>z_i$
-  - 
 
 - co tu chybí
   - ortogonální doplněk a projekce v $R^n$
   - ortogonální matice
-  - metoda nejmenších čtverců
+  
 
-
+- metoda nejmenších čtverců
+  - ortogonální projekce - funguje na principu, že matice projekce do prostoru $S(A)$ je $A(A^TA)^{-1}A^T$
+  - hledáme prostor takový, aby vzdálenosti řešení jednotlivých rovnic byly od prostoru co nejmenší
+  - ukazuje se, že stačí pouze známou rovnici $Ax=b$ přenásobit $A^T$ zleva
+    - $A^TAx'=A^Tb$
+    - $x'=(A^TA)^{-1}A^Tb$
 
 #### 7. Determinanty
 >Determinanty. Definice a základní vlastnosti determinantu. Úpravy determinantů, výpočet.
