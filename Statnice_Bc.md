@@ -87,14 +87,6 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 7. predikce struktury makromolekul
 8. fylogenetika – stavba stromů – základní metody tvorby stromů (ML, MP, NJ, Bayes) – bootstrap analýza
 
-## Výpočet času
-|Okruh                           |n otázek|koef. učení|tok/h|hodin|reálně|reál. koef.|
-|:-------------------------------|:------:|:---------:|:---:|:---:|:----:|:---------:|
-|Matematika & informatika        |23      |1.25       |2    |57   |||
-|Biologie - molekulární a buněčná|27      |1.00       |2    |54   |||
-|Bioinformatika                  |8       |0.9        |2    |14.4 |19|1.1875|
-|Celkem                          |58      |-          |2    |125.4|||
-
 
 # Poznámky
 ## Co jsem ještě nestihl doprojít
@@ -205,7 +197,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
         - např. pokud operujeme v racionálních číslech, tak Cauchyovská posloupnost může konvergovat k iracionálnímu číslu
     - metrický prostor úplný pouze tehdy, když má každá Cauchyovská posloupnost v tomto prostoru i svou limitu
 
-#### 2. Reálné funkce a limity
+#### 2. Reálné funkce a limity, derivace
 > Reálně funkce jedné proměnné. Limita v bodě a spojitost. Derivace funkcí: definice a základní pravidla, věty o střední hodnotě, derivace vyšších řádů. Extrémy funkcí. Aplikace, např. průběh funkcí, Taylorův polynom.
 
 - literatura
@@ -480,7 +472,6 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 #### 1. Soustavy lineárních rovnic, metody řešení.
 > Soustavy lineárních rovnic, metody řešení.
 
-- 
 
 - tahle otázka se většinou řeší na začátku skript, jako dobrá motivace pro zavedení matic
 - důležité pojmy jsou kromě matice tzv. elementární operace, tedy operace s maticí, které nezmění množinu řešení lieárních rovnic, které matice reprezentuje
@@ -587,7 +578,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - vektorový prostor
   - je v něm definováno sčítání vektorů a násobení skalárem
   - je definován nad nějakým tělesem
-  - vektorový prostor nad tělesem T je množina (V), s operacemi sčítání vektorů a násobení vektoru skalárem
+  - vektorový prostor nad tělesem T je množina vektorů (V), s operacemi sčítání vektorů a násobení vektoru skalárem
     - musí splňovat 5 vlastností
       1. (V,+) je Ábelova grupa, neutrální prvek *o* a inverzní k v je -v
       2. násobení skalárem je asociativní (a×(b×v) = (a×b)×v)
@@ -766,7 +757,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     2. pokud $M$ je podmnožina $N$, pak $N^⊥$ je podmnožina $M^⊥$
     3. $M^⊥$ je ortogonálním doplňkem vektorového prostoru generovaného $M$ ($span(M)$)
 
-- ortogonální doplněk je možné definovat i pro vektorový protor
+- ortogonální doplněk je možné definovat i pro vektorový prostor
   - pokud U je podprostor vektorového prostoru V, tak platí
     1. pokud z1,z2,...,zm je ortonormální báze U a z1,...,zm+1,...,zn je rozšíření této báze na bázi V, pak zm+1,...,zn je báze U$^⊥$
     2. dimenze V je součtem dimenze U a jeho ortogonálního doplňku
@@ -817,6 +808,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
         - $det(A')=α×det(A)$
       - výměna i-tého a j-tého řádku
         - $det(A')=-det(A)$
+      - přičtení $\alpha$ násobku jednoho řádku ke druhému determinant nemění
     - pro výpočet determinantu pomocí převodu matice na REF tvar nám stačí si pouze pamatovat koeficient, kterým byl původní determinant přenásoben
   - matice A o rozměrech n×n je regulární právě tehdy, když $det(A)\neq 0$
   - součin determinantů matic A,B je roven determinantu součinu matic A,B
@@ -862,7 +854,6 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - $det(A-λI_n)=0$ -> rozepsáním definice determinantu získáme rovnici, kterou je možné převést na tzv. charakteristický polynom matice A
   - $p_A(λ)=det(A-λI_n)$
   - $det(A-λI_n) = (-1)^{n}λ^{n}+a_{n-1}λ^{n-1}+...+a_1λ+a_0$
-    - tady jsem nepochopil to převedení na polynom takhle přímočaře, ale v principu to nevadí..
 
 - výpočet vlastních čísel pomocí charakteristického polynomu
   - příklad
@@ -1032,7 +1023,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - ještě je fajn zmínit, že množinu všech k-prvkových podmnožin množiny (X) značíme $X \choose k$ a její velikost je pro n=|X| rovna $n\choose k$
   - binomická věta v základu říká, že
     - $(a+b)^n = \sum_{k=0}^n$$n \choose k$$a^kb^{n-k}$
-      - např. $(a+b)^3 = a^3×b^0 + a^2b^1 + a^1b^2 + a^0b^1$
+      - např. $(a+b)^3 = a^3×b^0 + 3a^2b^1 + 3a^1b^2 + a^0b^1$
 - princip inkluze a exkluze
   - pro množiny s konečným počtem prvků A,B platí, že
     - $|A \cup B| = |A|+|B|-|A \cap B|$
@@ -1863,6 +1854,8 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - 
   - bootstrap analýza
 ### 1. Obor "bioinformatika"
+> 1. definice oboru- historie bioinformatiky – oblasti bioinformatiky- biologická data
+
 > "Bioinformatika je souborem metod, které slouží k třídění, analýze a interpretaci biologických dat (především *in silico*)." (Janet Thornton)
 
 - literatura
