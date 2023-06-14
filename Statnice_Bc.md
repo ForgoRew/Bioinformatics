@@ -1373,7 +1373,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - fajn je pro ujasnění si pustit algoritmy tady: [Visualgo](https://visualgo.net/en)
   - a tady [Algovision](https://www.algovision.org/Algovision/pool.html)
 
-#### 1. Časová složitost algoritmů. Metoda ,,rozděl a panuj'' - aplikace a analýza složitosti, dynamické programování.
+#### 1. Časová složitost algoritmů, rozděl a panuj a dynamické programování
 > Časová složitost algoritmů. Metoda ,,rozděl a panuj'' - aplikace a analýza složitosti, dynamické programování.
 
 - časová složitost algoritmů
@@ -1408,6 +1408,8 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
           - v k-hladině je $2^{k-1}$ uzlů a každý z nich má $n/2^k$ operací, což se v každé hladině sečte na $n/2$ operací
           - hladin je $log_2(n)$
           - složitost je $O((n/2)*log_2(n))=O(log(n))$
+  - Kuchářková věta <!-- TODO -->
+
 
 - dynamické programování
   - princip: převedení rekurzivního programování zpravidla do tabulky
@@ -1417,6 +1419,8 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
       - alignment 2 sekvencí aminokyselin
 
 #### 2. Binární vyhledávací stromy, vyvažování, haldy.
+> Binární vyhledávací stromy, vyvažování, haldy.
+
 - binární vyhledávací stromy
   - kapitola 8 v Průvodci
   - v základu - zakořeněný strom, každý uzel má nejvýše 2 potomky
@@ -1712,8 +1716,8 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
       - vstupní sekvence je podle pravidel v automatu přes neterminály zpracovaná a vyústí v nějakém terminálu
   - příklady.
 
-## 5. Aplikovaná informatika
-### 1. Objektově orientované a generické programování
+### 5. Aplikovaná informatika
+#### 1. Objektově orientované a generické programování
 > 1. Principy a základy implementace objektově orientovaných jazyků - třída, dědičnost, polymorfismus, virtuální funkce, atd. Generické programování a knihovny šablony a generika, kompilační polymorfismus.
 
 - trochu mi není jasné, co všechno se po nás chce v téhle otázce, ale prostě si napíšu, co mě k pojmům v základu napadá
@@ -1769,7 +1773,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - kompilační polymorfizmus znamená, že ještě v době kompilace nevíme, jaký typ se použije
     - například v Javě nastává při tzv. overloadingu
 
-### 2. Databáze
+#### 2. Databáze
 > 2. Normální formy, referenční integrita. Základy SQL.
 
 - Normální formy
@@ -1811,7 +1815,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - definovat relace (primární a cizí klíč)
     - umožňuje definovat závislosti dat na sobě (definovat primární klíč)
 
-### 3. Unix - základní pojmy (systém souborů, komunikace mezi procesy), shell (syntaxe, programové konstrukty), základní utility.
+#### 3. Unix - základní pojmy (systém souborů, komunikace mezi procesy), shell (syntaxe, programové konstrukty), základní utility.
 > 3. Unix - základní pojmy (systém souborů, komunikace mezi procesy), shell (syntaxe, programové konstrukty), základní utility.
 
 - literatura
@@ -1844,6 +1848,308 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 
 - základní utility
   - ?? asi už popsané? možná distribuce softwaru / package management system typu APT
+
+## Biologie
+- literatura
+  - asi zkusím jet podle Campbella ([je na Bioinf disku](https://drive.google.com/drive/u/2/folders/1kWWqsS6XROSkxkqcxRPV3bUSRDlbdkZo))
+  - obsah je na str. xxxii (35)
+### 1. Složení živých buněk - malé molekuly a makromolekuly, jejich interakce, vlastnosti vody a vodných roztoků důležité pro život, kyseliny, zásady a pufry, role vody v živých tělech
+- složení živých buněk - Campbell str. 29 (včetně vody, asi se počítá hmotnost, ne moly)
+  - O ... 65%
+  - C ... 18.5%
+  - H ... 9.5%
+  - N ... 3.3%
+  - Zbytek 3.7% (Ca 1.5%, P 1%)
+
+- interakce (Campbell str. 38-39)
+  - pro malé molekuly jsou významné
+    - vazebné interakce (velmi pevné)
+    - nevazebné interakce
+      - Van der Waalsova interakce - mezi pozitivně a negativně nabitou částí molekuly
+
+- vlastnosti vody (Cpb str. 45-49)
+  - silné nevazebné interakce (H~O, vodíkové můstky, spadá pod VdW interakce)
+    - vysoké povrchové napětí
+    - kapilární síly (vzlínání vody ve stromech)
+  - vysoké specifické teplo
+    - 1l vody potřebuje 4.184kJ pro ohřátí o 1˚C
+      - vodní plochy mají schopnost brzdit výkyvy teplot
+  - vysoké skupenské teplo
+    - cca 2x vyšší než ethanol či amoniak
+    - organizmy se mohou ochlazovat tím, že nechávají odpařovat vodu
+  - nižší hustota vody za různých teplot
+    - od 4˚C výše se voda rozpíná při zvyšování teploty (to je běžné i u dalších kapalin)
+    - pod 4˚C zvláštnost - rozpíná se při snižování teploty
+      - při 0˚C (změna skupenství na led) je ~ o 10% nižší hustota, než při 4˚C
+    - voda v oceánech nezamrzá celá, vytváří se jen krusta ledu na povrchu
+      - život může dál existovat při 4˚C pod ledem
+  - polární rozpouštědlo
+    - voda dobře rozpouští polární látky (např. sůl)
+    - molekuly vody obalí ionty
+    - nerozpouští nepolární látky
+    - lipidové membrány (amfiterní molekula, má hydrofilní a hydrofobní část)
+
+- kyseliny a zásady (Cpb str. 51)
+  - i voda samotná má vlastnosti kyselin a zásad (spontánní rozpad na H3O+ a OH-, koncentrace toho je $10^{-7}$)
+    - hydroxid OH- a hydronium H3O+
+  - voda vytváří s různými prvky kyseliny a zásady
+    - poučka, že (cca) když je elektronegativita prvku nižší, než vodíku, vznikne zásada, když vyšší, kyselina
+    - ale třeba bor (2.04) vytváří kyselinu, a to má vodík elektronegativitu 2.2
+- pufry (Cpb 52)
+  - shopnost se chovat jako kyselina i zásada v závislosti na pH
+    - nízké pH - přijetí H+ -> zvýšení pH
+    - vysoké pH - odštěpení H+ -> snížení pH
+    - v lidském těle velmi důležitý pufr kyselina uhličitá (vzniká spontánně z CO2 rozpuštěného ve vodě)
+    - krev se udržuje na pH 7.4
+
+- pH (Cpb str. 52)
+  - záporný logaritmus koncentrace H+ iontů v roztoku
+  - čistá voda má pH 7 (koncentrace H3O+ je $10^{-7}$)
+
+
+### 2. Stavba buňky, funkce buněčných kompartmentů, srovnání buněčné stavby pro- a eukaryot, povrchové struktury buněk, význam specifických struktur rostlinných buněk (buněčné stěny, plastidů, vakuol) pro životní strategii rostlin
+- literatura
+  - v Campbellovi kapitola 6
+
+![eukaryotická buňka (schéma)](Statnice_Bc/St-Cpb-eukaryoticka-bunka.png)  
+![eukaryotická buňka (schéma)](Statnice_Bc/St-Cpb-prokaryot-bunka.png)  
+
+- porovnání eukaryot a prokaryot
+  - obojí mají **plasmatickou membránu**
+  - membrána obaluje **cytosol**, ve kterém jsou umístěny další struktury
+  - eukaryota mají DNA v jádře
+  - prokaryota mají DNA v regionu **nukleoid**, který ale není striktně ohraničený
+  - eukaryota mají v cytosolu **kompartmenty** (ohraničené membránou)
+  - prokaryota mají procesy přímo v cytoplasmě
+  - velikost
+    - eukaryota ... 10-100 × 10^-6m
+    - prokaryota ... typicky 1-5 × 10^-6m
+    - prokaryota jsou limitovány tím, že se vrámci jedné buňky všechno potkávat, aby mohl probíhat metabolismus, eukaryota díky kompartmentalizaci můžou mít větší rozměry
+
+- sorry, přijde mi to tak jasný a středoškolský, že to přeskočim - jen doporučuju obrázky jednotlivých typů buněk v Campbellovi na str. 100, 101
+
+- tak jen přehled
+- eukaryotická buňka má (skoro vždycky) (viz Cpb 100)
+  - jádro
+  - hrubé a hladké endoplazmatické retikulum
+  - mitochondrie
+  - ribozomy
+  - plasmatickou membránu
+  - Golgiho aparát
+  - cytoskelet (taky centrozomy)
+  - jadérko (nukleolus)
+
+- prokaryotická buňka má (viz Cpb 97)
+  - vždycky
+    - membránu
+    - nukleoid (1x chromozom)
+    - ribozomy
+  - často
+    - buněčnou stěnu
+    - bičíky
+    - glykokalyx
+
+- povrchové struktury buněk
+  - plasmatická membrána (Cpb, kapitola 7)
+    - především lipidy
+    - membránové proteiny (receptory, kanálky/přenašeče a další funkce)
+    - konkrétněji v otázce 3
+  - buněčná stěna (Cpb, kapitola 27.1)
+    - může být z peptidoglykanu (bakterie)
+    - nebo z celulózy/chitin (rostliny/houby)
+  - [glykokalyx](https://en.wikipedia.org/wiki/Glycocalyx)
+    - vrstva z glykoproteinů (buňky střevního epitelu, bakterie)
+
+- specifické struktury rostlin
+  - [plastidy](https://en.wikipedia.org/wiki/Plastid)
+    - mají vlastní DNA (buňka v buňce)
+    - chloroplast
+      - fotosyntéza a s tím spolené procesy (viz otázka 6)
+    - chromoplast
+      - syntéza a skladování barviv
+    - leukoplast
+      - syntéza a skladování látek (monoterpeny etc.)
+      - má podkategorie
+        - např. amyloplast (ukládá škrob)
+  - [vakuola](https://en.wikipedia.org/wiki/Vacuole)
+    - organela, která je ohraničená membránou
+    - umí se zvětšovat a zmenšovat
+    - různé typy - sklad
+      - voda
+      - malé molekuly
+      - odpadní látky
+      - proteiny
+      - sacharidy
+      - může také vyvažovat pH buňky a množství rozpuštěných iontů
+  - [buněčná stěna](https://en.wikipedia.org/wiki/Cell_wall)
+    - v rostlinách složená z celulózy, hemicelulózy a pektinu
+    - především mechanické vlastnosti - chrání před mechanickým stresem, umožňuje rostlině růst do výšky etc.
+    - je spíš elastická než rigidní
+    - v daném tvaru je udržuvána tlakem buňky "zevnitř"
+
+### 3. Membrány - stavba, biogeneze a funkce membrán, membránové proteiny, membránový potenciál a transmembránový přenos látek
+- literatura
+  - Asi hlavně Campbell kap. 7
+  - [přednáška ze základů biochemie o lipidech](https://drive.google.com/file/d/10wC3dtHqRt-MTdTnu6M9qtzaBh6zmnVB/view) (BZ-12) na biosouborech
+
+- typy
+  - vnější membrána
+  - membrána organel
+  - membrána jádra
+
+- všechny organely jsou tvořené především lipidy
+- částečně cholesterol
+- \+ membránové proteiny
+
+- asi by bylo fajn říct hlavní typy lipidů, co jsou v membránách
+  - [tady přednáška ze základů biochemie](https://drive.google.com/file/d/10wC3dtHqRt-MTdTnu6M9qtzaBh6zmnVB/view?usp=sharing), je to na slidech od 20 dál
+  - důležité je dělení na **nasycené a nenasycené**
+    - v nenasycená vazba (dvojná) v mastné kyselině způsobí zalomení molekuly -> membrána je mobilnější
+  - glycerolfosfolipidy × sfingolipidy
+    - 2 zbytky mastných kyselin na glycerolu, pak PO4 a alkohol
+    - vs. sphingosine + 1 zbytek MK a PO4 + cholin/ mono/oligosacharid
+    - typický glycerolfosfolipid - 2x kys. stearová/oleová, PO4 + ethanol
+    - fosfatidylcholin (PC)
+    - fosfatidyletanolamin (PE)
+    - sfingomyelin (SM)
+
+- lipidové struktury (ve vodě)
+  - jsou udržované hydrostatickým tlakem
+  - mycely (kuličky, hydrofobní konce dovnitř, hlavičky ven)
+  - membrána (bilayer)
+  - lypozóm (jakoby membrána obalující uvnitř zase vodu)
+  - divná je dvojmembrána u jádra - normálně jsou tam dvě membrány za sebou, mezi sebou mají vodu
+
+- složení lidské buněčné membrány (přednáška z biochemie, slide 34)
+  - protein 30%
+  - fosfolipid 30%
+  - cholesterol 19%
+  - další lipidy (galaktolipidy ...)
+
+- biogeneze (Cpb 7.1 str. 131)
+  - v endoplazmatickém retikulu se syntetizují proteiny i lipidy
+  - pak vesikulárním transportem jdou do Golgiho aparátu, kde
+    - se dokončí modifikace glycoproteinů
+    - z některých lipidů se vytvoří glykolipidy
+  - přesun opět ve váčcích k vnější membráně
+  - obsah váčků se exocytuje, co je zakomponováno v membráně váčku jde do vnější membrány
+
+- prostupnost membrány a přenos přes membránu (Cpb str 132)
+  - přes membránu mohou přejít pouze hydrofobní malé molekuly (CO2, O2)
+  - ionty neprojdou, H+ neprojde
+    - membránový potenciál (svaly, neurony)
+      - je možné vypumpovat ionty na druhou stranu membrány - osmotický tlak - je možné depolarizovat otevřením kanálů
+  - transportní transmembránové proteiny
+    - aquaporiny
+      - přenos vody, 4 podjednotky, kanál pro vodu
+    - pasivní transport
+      - otevření kanálu pro specifickou molekulu
+      - na principu osmózy (rozdíl v koncentraci iontů)
+    - aktivní transport
+      - např. výměna 3Na za 2K atd. Na-K ATPázou (antiport)
+      - protonová pumpa - zvýšení koncentrace H+ mimo buňku, symport H+ s glukózou
+        - podobně Na+ pumpa
+
+### 4. Struktury proteinů a nukleových kyselin - primární, sekundární, terciální a kvartérní struktury, motivy a domény, supramolekulární komplexy (ribosom, spliceosom, proteasom...); princip komplementarity bází, primární a sekundární struktury DNA a RNA
+- primární struktura - sekvence AA/NK
+- sekundární struktura - lokální prostorová konformace
+  - spontánně vzniká ještě před sbalením celé molekuly
+- terciární struktura - globální prostorová konformace (celá molekula)
+- kvartérní struktura - více molekul dohromady
+
+- proteiny
+  - primární struktura
+    - aminokyseliny - polymerované aminokyseliny, backbone + sidechains, vyjímka je prolin (rovnou "zalamuje" řetězec), jednotlivé typy aminokyselin (je jich 20(21 se selenocysteinem))
+    - (deoxy-)ribonukleová kyselina - polymer (deoxy-)ribózy, jsou spojené fosfátovou skupinou, jednotlivé báze (ACGT)
+  - sekundární struktura
+    - především alpha-helixy a beta sheety, občas se do toho počítají nějaké fragmenty ve stylu motivů (motifs)
+    - význam zde mají Van der Waalsovy síly (elektrostatická interakce) mezi aminoskupinou a COO- skupinou u aminokyselin -> stáčení molekuly, nebo krabatění
+  - terciární struktura
+    - sbalená molekula, velkou roli v tom hraje hydrofobní kolaps (má následek, že jsou hydrofilní AA na povrchu a hydrofobní uvnitř molekuly)
+    - asi by se mezi to počítala dvojšroubovice DNA, RNA má občas fakt divný struktury
+      - třeba jedna podjednotka jednotka ribozomu by se do toho taky počítala
+  - kvartérní struktura
+    - velká část proteinů i ribozomy mají různé modifikace (glykosilace atd.)
+    - více podjednotek dohromady (hemoglobin ~ 4 podjednotky hemu s železem)
+    - celý ribozom
+
+- motivy a domény
+  - motivem se rozumí nějaká lokální struktura, která se objevuje u nepříbuzných proteinů, které mají ale podobnou funkci, resp. ten motiv má podobnou funkci
+  - doména je část proteinu s nějakou danou funkcí
+    - proteiny často fungují tak, že mají více docela jasně oddělených domén, kdy každá má nějakou funkci
+
+- ribosom (Cpb kap. 6.3, Cpb kap. 17, str 335, [wiki](https://en.wikipedia.org/wiki/Ribosome))
+  - komplex rRNA a proteinů
+  - dvě podjednotky (30S a 50S)
+    - 30S je hlavně dekódující
+    - 50S je hlavně katalytická
+  - mRNA je dopraveno k ribozomu a je zahájena translace
+  - v závislosti na tripletech RNA jsou "přitahovány" tRNA nesoucí aminokyseliny
+  - syntetizuje se vlákno proteinu, které opouští ribozom a skládá se
+  - ribozom může být volně v cytosolu i nasedlý na "pór" v endoplasmatickém retikulu a syntetizovat protein do něj
+- spliceosom ([wiki](https://en.wikipedia.org/wiki/Spliceosome))
+  - ribonukleoprotein
+  - struktura pro "sestřihávání" pre-mRNA po jeho transkripci (vystřihávání intronů, spojování exonů)
+  - nachází se v jádře eukaryotických buněk
+  - 5 krátkých snRNA (U1-U6 bez U3) je v komplexu s mnoha proteiny
+- proteasom ([wiki](https://en.wikipedia.org/wiki/Proteasome))
+  - proteinový komplex, který degraduje proteiny
+  - především kvůli nepotřebným proteinům (recyklace)
+  - také špatně složené proteiny
+  - 3 podjednotky (2x cap, 1x tube)
+  - degradovaný protein musí projít skrz "caps" část, která rozpoznává polyubiquitinové značky na něm
+    - -> protease-ubiquitin system
+
+- princip komplementarity bazí
+  - AG je komplementární s T(U)C
+  - purin s pyrimidinem
+  - A (purin) má na 1- pozici parciální záporný náboj na N a na 6- pozici NH2 skupinu (kladně nabitou)
+  - T (pyrimidin) má na 2- pozici O-, na 3- pozici NH a na 4- pozici O ... páruje 3,4 pozicí s 1,6 pozicí adeninu
+    - Uracil je stejný, jen thymin má ještě na 5-pozici methyl- skupinu
+  - G (purin) má na 1 pozici kladné NH, na 2 pozici kladné NH2 skupinu a na 6 pozici zápornou O skupinu
+  - C (pyrimidin) má na 2 pozici O, na 3 pozici záporné N a na 4 pozici kladnou NH2 skupinu
+    - C-G párují 2-1, 3-2, 4-6
+
+- DNA vytváří dvojšroubovici ([wiki](https://en.wikipedia.org/wiki/DNA#Alternative_DNA_structures))
+  - běžné tedy dsDNA, viry a vyjímečně ssDNA
+  - sense a antisense strand
+  - A-DNA
+    - pravotočivá, jakoby stužka smotaná do válce
+  - B-DNA
+    - pravotočivá, nejčastější
+    - jakoby vrtule, ale není symetrická - jeden "žlábek" je větší než druhý
+  - Z-DNA
+    - levotočivá, spíš divnost, vzniká, když je DNA hodně metylovaná
+
+- RNA struktura
+  - většinou v ss formě (single strand)
+  - existuje i ds (double strand), především u virů
+
+### 5. Enzymy a jejich vlastnosti - mechanismy katalýzy, regulace enzymové aktivity, názvosloví enzymů
+- 
+
+### 6. Energetický metabolismus - makroergní fosfátové sloučeniny, glykolýza a citrátový cyklus, fermentace, oxidativní fosforylace a transport elektronů, fotosyntéza - celkový přehled, dílčí reakce a komplexy, jejich lokalizace
+### 7. Zpracování genetické informace. Centrální dogma molekulární biologie, struktura virových, pro- a eukaryotických genomů. Vertikální a horizontální přenos dědičné informace. Transpozony, viry, epigenetická dědičnost, priony
+### 8. Základy genetiky - Mendelovy zákony, základní pojmy, různé verze definice genu. Intra- a intergenové interakce, genová vazba, genetické aspekty sexuality, chromozomové určení pohlaví, pohlavně vázaná dědičnost, mimojaderná dědičnost.
+### 9.  Mutace a mutageneze - mutace genové, chromozomové a genomové, molekulární podstata mutací, mutageny, reparace poškozené DNA
+### 10. Exprese genů a její regulace na úrovni transkripční, posttranskripční, translační a posttranslační, genetický kód, syntéza a distribuce proteinů v buňce, folding a účast chaperonů, posttranslační modifikace, regulace stability proteinů
+### 11. Dynamika a funkce buněčných kompartmentů - endoplasmatické retikulum, Golgiho komplex, vezikulární transport, endo- a exocytóza, sekreční dráha a nitrobuněčné adresování proteinů, lyzosom, vakuoly, peroxisom, hydrogenosom
+### 12. Funkční anatomie buněčného jádra - stavba jádra, jaderný obal, organizace genetické informace, chromozomy, chromatin, jadérko
+### 13. Semiautonomní organely - evoluční historie, stavba, funkce, replikace a exprese organelového genomu
+### 14. Cytoskelet - cytoskeletální proteiny, molekulární motory a jiné asociované proteiny, interakce s dalšími buněčnými strukturami, úloha v morfogenezi buňky a buněčném cyklu, růst a pohyb buněk
+### 15. Mezibuněčné spoje a mezibuněčná hmota –napojení buněk na mezibuněčnou hmotu, složení a význam mezibuněčné hmoty; buněčná stěna u prokaryot a eukaryot
+### 16. Buněčný cyklus a programovaná buněčná smrt - porovnání cyklu prokaryotní a eukaryotní buňky, fáze cyklu, replikace DNA, u eukaryot jaderné dělení, mitoza a meioza, rekombinace DNA, cytokineze, apoptóza, buněčná onkogeneze
+### 17. Komunikace uvnitř buněk a mezi buňkami, mezibuněčný a intracelulární přenos signálu, membránové a intracelulární receptory, vybrané příklady signálních drah
+### 18. Principy základních metod molekulární biologie - metody analytické separace makromolekul, PCR, sekvenování, molekulární klonování, genomika, proteomika, transkriptomika. Modelové organismy v molekulární biologii a genetice a jejich krátký popis a srovnání. Nejvýznamnější sekvenační projekty 
+### 19. Evoluce, různá její pojetí, významné události v dějinách teorie evoluce.
+### 20. Lamarckismus, darwinismus, neodarwinismus
+### 21. Mechanismy evoluce - drift, draft, evoluční tahy, genový tok, selekce
+### 22. Mutace jako zdroj evolučních novinek, typy mutací, náhodnost mutací co do místa, času a směru
+### 23. Selekce - mechanismus, typy, úrovně
+### 24. Pohlavní výběr - intrasexuální a intersexuální selekce, epigamní znaky, evoluce
+### 25. Speciace: mechanismy a typy speciací
+### 26. Evoluce pohlavního rozmnožování
+### 27. Homologie, analogie, plesiomorfie a apomorfie v evoluci organismů
 
 ## Bioinformatika
 ### Nástroje a algoritmy
@@ -2252,6 +2558,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
       - 3 databases of clustered proteins
     - UniParc
       - sbírá data z veřejných databází a třídí je tak, aby nebyly redundantní
+  - NCBI
   - PIR
   - PROSITE, Pfam (InterPro), Silva
 
@@ -2278,7 +2585,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - superposition-based similarity
       - hledá ideální superpozici dvou struktur
       - obecně má 4 kroky
-        1. pro dvě zaddané struktury (P1, P2) jsou extrahovány jejich vlastnosti (pro struktury jsou vygenerované množiny vektorů jejich vlastostí)
+        1. pro dvě zadané struktury (P1, P2) jsou extrahovány jejich vlastnosti (pro struktury jsou vygenerované množiny vektorů jejich vlastostí)
         2. na množinách vlastností je vytvořen alignment (podobnost dvojic)
         3. vytvoření strukturní superpozice
         4. skórování alignmentu
