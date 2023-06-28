@@ -2057,7 +2057,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - terciární struktura - globální prostorová konformace (celá molekula)
 - kvartérní struktura - více molekul dohromady
 
-- proteiny
+- proteiny (Cpb str 129)
   - primární struktura
     - aminokyseliny - polymerované aminokyseliny, backbone + sidechains, vyjímka je prolin (rovnou "zalamuje" řetězec), jednotlivé typy aminokyselin (je jich 20(21 se selenocysteinem))
     - (deoxy-)ribonukleová kyselina - polymer (deoxy-)ribózy, jsou spojené fosfátovou skupinou, jednotlivé báze (ACGT)
@@ -2096,7 +2096,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - proteinový komplex, který degraduje proteiny
   - především kvůli nepotřebným proteinům (recyklace)
   - také špatně složené proteiny
-  - 3 podjednotky (2x cap, 1x tube)
+  - 3 jednotky (2x cap, 1x tube)
   - degradovaný protein musí projít skrz "caps" část, která rozpoznává polyubiquitinové značky na něm
     - -> protease-ubiquitin system
 
@@ -2126,13 +2126,339 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - existuje i ds (double strand), především u virů
 
 ### 5. Enzymy a jejich vlastnosti - mechanismy katalýzy, regulace enzymové aktivity, názvosloví enzymů
-- 
+- enzymy jsou proteinové biokatalyzátory (další jsou např. ribozymy)
+- katalýza má většinou 3 části
+  - binding reagované molekuly (substrátu)
+  - katalýza
+  - vypuštění koncové molekuly, restart funkce
+
+- binding je specifický, díky velmi přesně komplementární struktuře enzymu k substrátu, vč. komplementárních parciálních nábojů etc.
+- katalýza má více mechanizmu - obecně
+  - stabilizace
+    - zastabilizování molekuly v jejím nižším energetickém stavu
+  - destabilizace
+    - krátkodobé vyhození substrátu z jeho stavu nízké energie (např. přiblížení OH skupiny na tyrosinu)
+  - usměrnění průběhu reakce
+    - krátkodobé navázání substrátu proteinem, které vytvoří jiné než běžné podmínky pro reakci
+- enzymy mají aktivní místo - active site - kde je prováděna katalytická reakce, regulace in situ
+- také mají alosterické místo, pomocí kterého jsou regulovány (např. glykolitické proteiny jsou inhibovány nízkou hladinou glukózy)
+
+- názvosloví - řekne se, na co působí, příp. jaký typ akce to dělá a pak se řekne "áza"
+  - glokoza-1-fosfatáza
+  - DNA-polymeráza
+  - atd.
 
 ### 6. Energetický metabolismus - makroergní fosfátové sloučeniny, glykolýza a citrátový cyklus, fermentace, oxidativní fosforylace a transport elektronů, fotosyntéza - celkový přehled, dílčí reakce a komplexy, jejich lokalizace
+- literatura
+  - zkouším z hlavy + Campbell + wikiskripta
+
+- makroergní fosfátové sloučeniny
+  - především ATP a GTP
+    - Adenosin/guanosin trifosfát
+  - ATP je využívané skoro všude, kde je potřeba udělat endotermickou enzymatickou reakci
+  - GTP má většinou speciální využití - G-proteiny
+  - existuje i CTP, TTP a UTP, ale jen velmi minoritní využití
+
+- glykolýza
+  - zpracování glukózy (ostatní cukry jsou převedeny na glukózu)
+  - kaskáda postupných fosforylací,
+  - přeměna na ribózu 1-6difosfát
+  - rozštěpení na 2 pyruváty
+  - pyruvát -> PDH (pyruvát dehydroxyláza) -> acetyl-CoA
+    - alternativně může být na pyruvát připojena molekula CO2 pyruvát karboxylázou za vzniku oxaloacetátu - výchozí molekula citrátového cyklu
+  - acetyly jdou do citrátového cyklu (citrátový cyklus, protože kys. citronová = citrát)
+  - za běžných podmínek je výtěžnost 1 glukózy 30-32 ATP, za anaerobních funguje jen právě glykolýza a výtěžnost je pouze 2ATP/glukózu
+
+- citrátový cyklus
+  - sled 8 reakcí, které "spálí" acetyl CoA
+  - vznikne během něj 20ATP
+  - teď bych mohl vyjmenovat reakce, ale dám [odkaz na wikiskripta](https://www.wikiskripta.eu/w/Citr%C3%A1tov%C3%BD_cyklus)
+  - energie z něj se odebírá přes nabíjení NAD+ na NADH+H - to se nabíjí protonový gradient na vnitřní membráně mitochondrie a pohání ATP syntázu
+  - FADH2 se také převádí na NADH+H
+  - vytvoří se rovnou GTP
+
+- fermentace
+  - proces anaerobního metabolismu pyruvátu
+  - metabolizuje se na kyselinu mléčnou
+  - za spotřeby NADH+H+ se mění pyruvát na kyselinu mléčnou
+
+- [oxidativní fosforylace](https://www.wikiskripta.eu/w/Adenosintrifosf%C3%A1t#Oxidativn%C3%AD_fosforylace)
+  - má 5 komplexů
+  - I,III,IV přenáší protony na vnější stranu za spotřeby NADH+H+ na NAD+
+    - přenese se 10 protonů
+  - II spotřebovává FADH2 - elektrony posílá do dalších komplexů
+    - přenese se 6 protonů
+  - V je protein s rotujícími podjednotkami, za přenosu 4 protonů vytvoří 1 ATP
+
+- fotosyntéza (Cpb kap. 10)
+  - proces, kdy se za pomocí energie z fotonu syntetizuje glukóza z CO2 a H2O (C6H12O6 = 6CO2+6H20-6O2 (z vody se produkuje O2))
+  - probíhá v chloroplastech
+  - má dvě fáze - světlou a tmavou, ke světlé je potřeba světlo
+  - světlá fáze
+    - v thylakoidech (na vnitřní membráně chloroplastu) se nabíjí ATP a NADPH
+      - rozkládá se voda za vzniku kyslíku
+  - tmavá fáze
+    - Calvin cycle
+    - mezi membránami chloroplastu (ve stromě)
+    - spotřeba ATP, NADPH a CO2, produkce glukózy
+  - víc konkrétně
+    - světlá fáze
+      - ve chlorophyl (a,b) nebo karotenové barvivo zachytí foton, excituje se a uvolní elektron s vysokou energií
+      - fotosystém
+        - komplex
+          - reakčního centra (přijímá excitovaný e-)
+          - light harvesting complex (má molekuly chlorofylu a/b nebo karotenů)
+        - rostliny používají zároveň fotosystémy II (P680) a I (P700)
+      - ve P680 se excituje elektron
+      - chybějící elektron je doplněn elektronem z H2O - ta se štěpí na 2H+ a O (elektrony si bere P680)
+      - elektrotransportní řetězec získá excitovaný elektron a vyrobí ATP
+      - elektron jde dál do P700
+      - ve P700 se elektron znovu excituje
+      - je zachycen v NADPH (za spotřeby H+)
+    - temná fáze
+      - CO2 + NADPH se předělá na cukr
+      - CO2 se v RuBP (ribulose-biphosphate) carboxylase-oxygenase (rubisco) fixuje na zmíněnou ribulózu
+      - syntéza glukózy probíhá podobně, jako glykolýza, ale v opačném pořadí
+      - 2bisfosfoglyceráty -> 2 glyceraldehydy bisfosfáty
+      - to probíhá v kelvinově cyklu
+        - dobré je počítat uhlíky v jednotlivých fázích cyklu
+        - 3* (5C + 1C) -> 3 * 6C
+        - 3* 6C -> 6* 3C
+        - 5* 3C + 3C (jeden glyceraldehyd bisfosfáty se může využít)
+        - 5* 3C -> 3 * 5C
+      - popsaný postup probíhá v C3 rostlinách, protože do další fáze jdou molekuly C3
+      - ještě jsou C4 rostliny - produkt z navázání CO2 má 4 uhlíky
+        - nemají rubisco, ale PEP karboxylázu
+      - pak jsou ještě CAM rostliny, které jsou fajn do suchých podmínek
+        - ananas to umí
+        - přes noc skladují CO2 do vakuol (organických kyselin)
+        - přes den zavřou průduchy a jen fotosyntetizují
+  
+
 ### 7. Zpracování genetické informace. Centrální dogma molekulární biologie, struktura virových, pro- a eukaryotických genomů. Vertikální a horizontální přenos dědičné informace. Transpozony, viry, epigenetická dědičnost, priony
+- centrální dogma molekulární biologie
+  - DNA transkripce RNA translace protein
+    - RNA může být reverzně transkribováno do DNA
+    - nikdy ale nemůže dojít k přenosu informace z proteinů přímo do DNA (to, že proteiny např. přepisují DNA a mohou v něm dělat i programově chyby, se nepočítá)
+      - nefunguje Lamarckismus
+- virová (deoxy-)ribonukleová kyselina
+  - [více typů virů](https://cs.wikipedia.org/wiki/Virus#Baltimorova_klasifikace)
+    - I. dsDNA
+    - II. ssDNA
+    - III. dsRNA
+    - IV. +ssRNA
+    - V. -ssRNA
+    - VI. retroviry (RNA -> DNA -> RNA)
+    - VII. dsDNA -> RNA -> DNA
+  - většinou genetická informace uložená v kapsidě, která je tvořena proteiny a někdy lipidy
+- prokaryota
+  - cyklická DNA + plasmidy
+    - dělení - "ori" úsek - zde začíná replikace
+  - plazmidy - horizontální přenos gen. informace
+- eukaryota
+  - DNA je organizována v jádře buňky
+  - poměrně složitá struktura
+  - chromozomy
+  - haploidie/di/tetra/polyploidie
+  - organizace přes histony
+  - methylace histonů je jednou z hlavních epigenetických regulací
+  - plastidová DNA
+- co je možné najít v DNA
+  - hlavně non-coding DNA (junk)
+    - inaktivovaná/jinak nefunkční DNA
+    - transpozony/LongTerminalRepeat (LTR) sekvence
+  - regulační DNA (důležité pro regulaci transkripce ostatních úseků)
+  - RNA-coding DNA - především pro rRNA a tRNA
+    - velmi konzervované
+  - coding RNA
+    - vrámci toho ještě introny/exony - introny jsou vystřihávány
+- vertikální genový přenos
+  - jde přes germinální linii (linie pohlavních buněk)
+  - z generace na generaci
+- horizontální genový přenos
+  - mezi dvěma jedinci/dvěmi buňkami
+  - může být zprostředkováno např. retroviry
+  - u prokaryot pomocí F-plasmid pilů
+
+- transpozony
+  - DNA transpozony
+    - často se ani nereplikují
+    - jen se přesouvají vrámci DNA z místa na místo
+  - retrotranspozony
+    - mají vlastní RNA polymerázu (II, III)
+    - rozkopírovávají se
+    - v lidském genomu až 45%
+    - v rostlinách ještě hojnější
+    - LTR/non-LTR transpozony
+    - 
+- viry
+  - zmíněné kategorie virů
+  - obecně
+    - přichytí se na buňku, pomocí jejích receptorů se dostane dovnitř
+    - využije buďto vlastní nebo buněčné proteiny, aby rozkopíroval svoje DNA/RNA
+    - vytvoří nové proteiny virové kapsidy
+    - kapsida se (vč. genetické informace) složí
+    - vir nějak opouští buňku
+  - retroviry
+    - specifické pro obratlovce
+    - nejprve RNA překopírována v cytoplasmě na DNA
+    - DNA může být reverzní transkriptázou zapsáno do jaderné DNA buňky (horizontální přenos!)
+    - pomocí RNA jsou vytvořené kapsidové proteiny
+    - virus opouští buňku a vezme s sebou část její membrány
+    - infekce retrovirem je doživotní (zůstává v jaderné DNA)
+
+- RISC complex & argonaut
+  - proti dsRNA v jádře (viry a retrotranspozony)
+  - rozseká dsRNA na malé kousky (~asi 8bp, už si to moc nepamatuju, učili jsme se to v povinně volitelné genetice)
+  - tuším, že argonaut si vezme tu "small interfering" RNA a pak s ní umlčuje komplementární sekvence v DNA a transkribované mRNA
+
+- priony
+  - infekční patogenní komplex bílkovin
+  - neurony savců obsahují bílkovinný prionový komplex
+  - pokud se dostane do patogenní konformace - ztratí původní účel, přeměňuje ostatní komplexy také do patologické konformace
+  - nemoc kuru (lidský kanibalismus)
+  - BSE (krávy), TSE (kozy, ovce)
+
+- epigenetická dědičnost
+  - epigenetické modifikace histonů i DNA se doplňují
+  - i při replikaci DNA se velká část z nich zametyluje, jak byla (metylace DNA indukuje metylaci histonů a naopak)
 ### 8. Základy genetiky - Mendelovy zákony, základní pojmy, různé verze definice genu. Intra- a intergenové interakce, genová vazba, genetické aspekty sexuality, chromozomové určení pohlaví, pohlavně vázaná dědičnost, mimojaderná dědičnost.
+- [mendelovy zákony](https://cs.wikipedia.org/wiki/Mendelovy_z%C3%A1kony_d%C4%9Bdi%C4%8Dnosti)
+  - fenotypové zákony
+    1. při křížení dominantního homozygota s recesivním homozygotem v F0 generaci mají všichni jejich potomci v F1 generaci znaky dominantního homozygota (víme, že jsou všichni heterozygoti)
+    2. při křížení potomků v F1 generaci (heterozygoti) jsou v F2 generaci znaky rozloženy v poměru 3:1 (dominantní:recesivní znak), (víme, že 25% jsou dominantní homozygoti, 50% jsou heterozygoti, kteří mají fenotyp dominantní alely a 25% jsou recesivní homozygoti)
+  - genotypové zákony
+    1. zákon o samostatnosti alel (každý znak je určen dvojicí samostatných alel)
+    2. zákon o segregaci alel (do gamet jde jen jedna alela)
+    3. zákon o volné kombinaci alel (v jednom jedinci může být libovolná kombinace alel)
+- pojmy
+  - gen
+    - více definic, v mendelovské genetice je to částice obsažená v organizmu, která určuje 1 konkrétní znak
+  - alela
+    - varianta genu (varianta znaku)
+  - homozygot
+    - má dvě stejné alely
+  - heterozygot
+    - má dvě různé alely
+  - dominantní/recesivní znak
+    - pokud jsou v organizmu 2 různé alely téhož genu, bude fenotyp organizmu určen dominantní alelou
+  - lokus a chromozom
+
+- Hardy-Weinbergův zákon
+  - 2 alely (A,a), mají frakvence (p,q)
+  - musí platit p+q=1
+  - ohledně frekvence jednotlivých jedinců v populaci musí platit, že frekcvence
+    - AA je $p^2$
+    - aA je $2pq$
+    - aa je $q^2$
+
+- [morganovská genetika](https://cs.wikipedia.org/wiki/Morganovy_z%C3%A1kony_d%C4%9Bdi%C4%8Dnosti)
+  - zavádí do hry chromozomy
+    - geny na jednom chromozomu jsou vazebná skupina
+    - funguje crossing over, který může promixovat chromozomy jedince při tvorbě gamet
+    - morgany - uvádí se pro dva geny na jednom chromozomu
+      - počet potomků, u nichž proběhl crossing over / celkový počet potomků
+      - také vazebná vzdálenost
+- intra a intergenové interakce
+  - gen může určovat daný znak samostatně, nebo v souvislosti s jinými geny
+    - barva květu hrachu je samostatná
+    - výška člověka je souhra různých genů
+    - často může být "kumulativní" vliv genů (každý přidává trochu)
+    - na fenotyp může mít vliv i prostředí
+- určení pohlaví je často zajištěno chromozomy
+  - u vyšších obratlovců jde o XY a WZ (ptáci) systém
+  - XX ženské
+  - XY mužské
+  - WZ ženské
+  - ZZ mužské
+- pohlavně vázaná dědičnost
+  - některé geny jsou jen na chromozomu X u lidí
+  - všichni muži mají jen 1 alelu
+  - i skryté alely pro barvoslepost se u mužu projeví statisticky mnohem častěji
+- mimojaderná dědičnost
+  - u lidí především mitochondrie
+  - dědí se od matky (Eva mitochondriální DNA - cca 140000let)
+
 ### 9.  Mutace a mutageneze - mutace genové, chromozomové a genomové, molekulární podstata mutací, mutageny, reparace poškozené DNA
+- [mutace](https://en.wikipedia.org/wiki/Mutation)
+  - na nukleové kyselině
+  - vlivem záření
+  - toxických látek, mutagenů
+  - virů
+  - spontánně při replikaci
+  - chybnými opravami DNA
+
+- více typů
+  - genové mutace - jednotlivé nukleotidy jsou zaměněny za chybný nukleotid
+  - chromozomové - celé úseky chromozomu mohou být vzácně přehozeny (translokace, inverze, nehomologní cross-over)
+    - u vyšších obratlovců letální
+    - u rostlin se to stává a občas to ta kytka přežije
+    - s tím také souvisí polyploidizace u rostlin
+
+- mutace mohou a nemusí ovlivnit proteiny
+  - aby mutace měla vliv, tak
+    - musí být v oblasti coding-DNA
+    - musí být v exonu
+    - nesmý být synonymní (musí změnit aminokyselinu, která je translatována)
+    - aminokyselina musí ovlivnit protein - např. v active site nebo v místě alosterické regulace
+    - aby měla vliv i na evoluční procesy, tak musí proběhnout v germline
+
+- molekulární podstata mutací
+  - změna v sekvenci nukleotidů
+  - nejčastěji změna purinu za purin a pyrimidin za pyrimidin (tranzice)
+    - méně častý purin za pyrimidin (transverze)
+  - nejčastější je mutace methylovaného C za T (G-T mutace)
+
+- [opravy DNA](https://en.wikipedia.org/wiki/DNA_repair)
+  - z UV světla - spojení pyrimidinů vazbou - fotolyáza, u lidí nucleotide excision repair (při mutaci z UV záření)
+  - pokud se mutace týká jen jednoho řetězce
+    - nejprve odstranění poškozených částí - exonukleáza, poté dosyntetizování pomocí DNA polymerázy (template je druhý strand)
+  - dvouvláknová poškození
+    - někdy se prostě nepoznají
+    - zlomy v obou vláknech jsou nebezpečné - hrozí chromosome rearangement
+      - nehomologní napojení - DNA ligasa může vlákna znovu napojit na sebe
+      - template indukované napojení - může být mutagenní, probíhají vždy delece - nejdřív exonukleáza a pak napojení
+      - homologní napojení
+        - docela složitý proces - podobně jako crossover, využije se uspořádání genomu v homologním chromozomu
+
 ### 10. Exprese genů a její regulace na úrovni transkripční, posttranskripční, translační a posttranslační, genetický kód, syntéza a distribuce proteinů v buňce, folding a účast chaperonů, posttranslační modifikace, regulace stability proteinů
+- literatura
+  - Cpb kap. 18
+
+- na úrovni transkripce
+  - negativní a pozitivní ragulace
+    - negativní regulace se dělí na
+      - represivní a
+      - indukující
+    - pozitivní regulace
+      - operon je naopak neaktivní a potřebuje regulaci, aby byla RNA polymeráza schopna se navázat
+  - represivní regulace
+    - např. u E. Coli - inhibice trp operonu
+    - když je v buňce moc tryptofanu, ten se váže na konstantně produkovaný inhibiční protein - aktivace trpR (represoru) - inhibice trp operonu - zastavení produkce tryptofanu
+  - indukující regulace
+    - např. u lac operonu také u E. Coli
+    - když do buňky přijde laktóza, její část se mění na allolaktózu (izomer laktózy)
+    - lac operon je inhibovaný lac represorem
+    - na lac represor se váže allolaktóza, represor se deaktivuje
+      - je produkována galaktosidáza, která umožňuje zpracovat laktózu
+  - pozitivní regulace
+    - u lac operonu je ještě potřeba CRP (cAMP receptor protein)
+    - lac operon je aktivní jen když je v buňce málo glukózy
+    - málo glukózy -> produkce cAMP -> aktivace CRP -> aktivace lac operonu
+  - u eukaryot jsou ještě před (upstream) i za (downstream) samotným genem enhancing elementy, které zvyšují afinitu sekvence pro nasednutí RNA polymerázy a kontrolní elementy před promotorem, které mohou zabránit nasednutí RNA polymerázy - to umožňuje komplexnější regulaci exprese
+
+- modifikace chromatinu
+  - acetylace histonů - rozvolnění chromatinu - možnost transkripce
+  - metylace histonů - kondenzace chromatinu - zastavení transkripce
+- modifikace DNA
+  - metylace - umlčování
+- alternativní sestřih
+  - 90% genů u člověka má možnost alternativního sestřihu
+  - u Drosophily je gen pro membránový protein, který má 19000 možností alternativního sestřihu
+- proteiny jsou posttranslačně modifikovány
+  - methylace na lysinu/argininu
+  - fosforilace (aktivace/deaktivace)
+  - ubiquitinace (malý peptid ubiquitin), označení pro zničení ve proteasomu
 ### 11. Dynamika a funkce buněčných kompartmentů - endoplasmatické retikulum, Golgiho komplex, vezikulární transport, endo- a exocytóza, sekreční dráha a nitrobuněčné adresování proteinů, lyzosom, vakuoly, peroxisom, hydrogenosom
 ### 12. Funkční anatomie buněčného jádra - stavba jádra, jaderný obal, organizace genetické informace, chromozomy, chromatin, jadérko
 ### 13. Semiautonomní organely - evoluční historie, stavba, funkce, replikace a exprese organelového genomu
