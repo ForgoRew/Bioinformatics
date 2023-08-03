@@ -3131,14 +3131,132 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 
 
 ### 19. Evoluce, různá její pojetí, významné události v dějinách teorie evoluce.
+- https://en.wikipedia.org/wiki/Evolution
+- https://en.wikipedia.org/wiki/Evolution#History_of_evolutionary_thought
+- https://en.wikipedia.org/wiki/Modern_synthesis_(20th_century)
+- teorie evoluce vznikla v reakci na otázku po původu druhů
+- nejprve se řešila na úrovni znaků (fenotyp)
+- z toho vznikly dvě větve - darwinistická a lamarckistická
+  - darwinistická odvozuje, že vývoj znaků probíhá nahodile a skrz selekci jedinců s nejlepší fitness
+  - lamarckistická cca 1808 předpokládá nějaký mechanizmus, který potomkům jedince předá znaky, které se mu nejvíce hodily pro jeho fitness
+- 1857 Ch. Darwin publikoval "O původu druhů", kde popisuje podrobně jeho teorii evoluce
+  - teorie je podložena tím, že
+    - jedinci produkují více potomků, než kolik se zvládne samo rozmnožit
+    - i potomci jednoho jedince mají různé znaky
+    - znaky se ale přesto dědí - málokdy se objeví znak, který se nevyskytuje u předků
+    - některé znaky dávají lepší šance na přežití -> vyšší šance, že přejdou do další generace
+- Gregor Mendel objevil  zákony dědičnosti - jak se znaky předávají do dalších generací
+- Dva vzájemně komplementární přístupy (genetika a teorie evoluce fenotypu) byly sloučeny do jednoho frameworku v první polovině 20. století
+  - Julian Huxley 1942 - Evolution:The modern synthesis ~ neodarwinismus
+- Molekulární biologie - zkoumá molekulární principy vč. dědičnosti znaků na molekulární úrovni
+- popsání molekuly DNA - Watson&Crick 1953
+- centrální dogma molekulární biologie - Crick 1957
 
 ### 20. Lamarckismus, darwinismus, neodarwinismus
+- lamarkismus tyjo nevim co sem napsat víc než v předchozí otázce
+- https://en.wikipedia.org/wiki/Lamarckism
+  - prostě jedna z užitečných, ale slepých uliček vývoje teorie o vývoji druhů
+  - vychází z toho, že organizmům se mění znaky i během života a potomci často mají také takové znaky
+  - není to koherentní s tím, jak chápeme mechanizmus evoluce na molekulární úrovni
+  - nějaké prvky lamarckismu vykazuje epigenetika - reakce savců na hlad -> vyšší míra obezity v další generaci a např. zvýšená míra mutace u T-lymfocitů, které se snaží najít vhodnou kombinaci na produkci protilátek s co nejvyšší afinitou k antigenu
+  - jinak jsou např. fyziologické změny při cvičení atd. nepřenosné
+- darwinismus
+- taky už jsem zmiňoval
+
+- neodarwinismus
+  - https://en.wikipedia.org/wiki/Neo-Darwinism#Current_meaning
+  - většinou označuje teorii, jak propojit genetiku vycházející od G. Mendela a evoluci Ch. Darwina
+  - někdy se do neodarwinismu zahrnuje Moderní syntéza
+  - např. R. Dawkins a jeho teorii sobeckého genu je také možné zařadit do neodarwinismu
+
+- R. Dawkins a teorie sobeckého genu
+  - https://en.wikipedia.org/wiki/Gene-centered_view_of_evolution
+  - 1976
+  - díky poznání molekulární podstaty evoluce se pohled posunul k samotným genům
+  - teze: aktéry nejsou jedinci, ale pouze geny - množící se komponenty evoluce nejnižší úrovně
+  - genu "jde o to" se co nejvíc namnožit
+  - např. rekombinace způsobuje, že se geny distibuují na sobě nezávisle -> další podpora teorie zacentrované na gen jako aktér evoluce
+
 
 ### 21. Mechanismy evoluce - drift, draft, evoluční tahy, genový tok, selekce
+- drift
+  - přenos alel jednotlivých genů probíhá v reálných konečných populacích nenáhodně (výběr na základě fitness) i náhodně -> drift
+  - do driftu spadají např. všechny jevy typu "na superfit alfajedince stáda spadl meteorit" apod. (kdyby byla populace nekonečně velká, určitě by existovali ještě další jedinci nesoucí dané alely a ty by se tak neztratily a dokonce by se ani nezměnil poměr alel v populaci)
+    - nebo se prostě náhodně dostane do další generace méně gamet nesoucích danou alelu...
+  - to vede k tomu, že časem nějaká alela dosáhne 100% v populaci a tím pádem se "zafixuje"
+  - čím větší "efektivní velikost populace", tím delší dobu trvá, než se (skoro) neutrální mutace zafixuje
+  - pokud je efektivní velikost populace velmi malá, např. u vymírajícího druhu či při kolonizaci nového prostředí několika jedinci, je síla driftu velmi velká -> malý význam selekce na základě fitness
 
+- genetický draft / genetic hitchhiking
+  - pokud je neutrální alela na chromozomu s pozitivní mutací, šíří se spolu s ní do dalších generací (zahrnout rekombinaci)
+  - u velmi výhodné mutace může na úrovni chromozomu dojít i k tzv. selektivnímu vymetení - silně pozitivní mutace přetlačí vliv i mírně negativních mutací
+    - selectivní vymetení (selective sweep) velmi snižuje genetickou variabilitu v populaci -> cokoli bylo na alternativních chromozomech je z populace ztraceno
+
+- evoluční tahy
+  - přirozené tendence, které na molekulární úrovni vychylují pravděpodobnost určitých mutací z očekávané hodnoty
+  - např. vyšší pravděpodobnost tranzice oproti transverzi u nukleotidů
+  - [wiki](https://cs.wikipedia.org/wiki/Evolu%C4%8Dn%C3%AD_tah) uvádí 4 typy
+    - mutační tah
+      - asi hlavní, že methylovaný C jde reparací na T (deaminace) -> adaptace, pokud je dvojice TG, prioritně se opraví T -> C
+    - reparační tah
+      - reparace prioritně opraví TG pár na CG. Pokud ale TA pár mutuje na TG, opraví se na CG
+    - molekulární tah
+      - genová konverze - reparace vlákna pomocí druhého chromozomu -> přenost genů napříč chromozomy
+      - nelegitimní rekombinace - např. rekombinace chromozomu sama se sebou, nebo na špatném místě - jeden chromozom se zkrátí, druhý prodlouží
+      - sklouznutí templatu - když je hodně stejných nukleotidů (AAA), polymeráza může "sklouznout" a začít celý úsek znovu -> ten se tak pomnoží v genomu
+      - patří sem i retrotranspozony - transpozony s reverzní transkriptázou - vpisují se na nepůvodní místa v genomu
+    - meiotický tah
+      - při vytváření vajíčka - určité geny (známý je t-lokus drosophily)
+        - 3 pólová tělíska -> neobsahují t-lokus, ostatní obsahují
+
+- genový tok
+  - přesun genů z populace do populace
+  - v teoretické panmiktické populaci probíhá náhodně (každý jedinec má stejnou pravděpodobnost páření s jakýmkoliv dalším)
+  - reálně existuje mnoho bariér, které odchylují populaci od rovnoměrné náhody
+  - např. fyzická bariéra (oddělení subpopulací), pohlavní výběr
+
+- selekce
+  - selekce je proces, který "určuje" zda jedinec postoupí geny do další generace, či nikoliv
+  - má hodně podkategorií
+    - tvrdá a měkká
+      - tvrdá selekce - všichni jedinci s negativní mutací jsou např. neplodní
+      - měkká selekce - pozitivní alela zvedá šanci, že se jedinec rozmnoží, negativní snižuje
+      - specifická - např. srpkovitá anémie, může být prospěšné být heterozygot, rezistence vůči malárii
+    - přirozený výběr (na úrovni jedince)
+      - přírodní výběr - dokáže se jedinec obstarat dost potravy etc., aby se dožil reprodukce?
+      - pohlavní výběr - dokáže najít partnera ke zplození potomstva?
+      - rodičovský výběr - jsou do něj jeho rodiče ochotni investovat svou energii?
+    - skupinový výběr - je daná smečka schopna obstát?
+  - směr selekce
+    - disruptivní - průměrný jedinec je znevýhodněn
+    - stabilizující - průměr je zvýhodněn
+    - směřovaná - určitý znak je zvýhodněn (např. schopnost se potápět u kachen)
 ### 22. Mutace jako zdroj evolučních novinek, typy mutací, náhodnost mutací co do místa, času a směru
-
+- mutace
+  - na molekulární úrovni jde především o substituce, inzerce a delece nukleotidů
+  - substituce
+    - tranzice - A <-> G, C <-> T
+    - transverze - A <-> C/T, G <-> C/T
+  - inzerce - může být zprostředkovaná i transponibilním elementem či virem
+  - náhodnost
+    - existují místa, tzv. "hot-spots", která jsou k mutacím náchylnější
+      - CpG ostrovy
+      - souvisí s metylací C -> častější mutace na T (deaminace)
+    - častěji dojde k mutaci během replikace DNA
+    - tranzice častější než transverze
+    - reparační tah na mutaci AT -> GC (GT -> GC)
+    - rychlost ovlivňují další faktory
+      - mutageny
+      - fyziologická aktivita buněk
+      - záření
+      - četnost replikací etc.
+      - reparační mechanizmy
+      - absolutní hodnotu také ovlivňuje velikost genomu
+    - germline buňky mají obecně větší investice do zamezení mutací
+      - Drosophila má 4.65 oproti 390 mutacím u germline vs somatic cells
+      - u mužů jsou u člověka mutace častější než u žen 
 ### 23. Selekce - mechanismus, typy, úrovně
+- tyjo doufám, že už jsem to popsal u 21. otázky, kdyžtak pls doplňte :D
 
 ### 24. Pohlavní výběr - intrasexuální a intersexuální selekce, epigamní znaky, evoluce
 
