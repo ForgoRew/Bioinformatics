@@ -2459,21 +2459,691 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - methylace na lysinu/argininu
   - fosforilace (aktivace/deaktivace)
   - ubiquitinace (malý peptid ubiquitin), označení pro zničení ve proteasomu
+
 ### 11. Dynamika a funkce buněčných kompartmentů - endoplasmatické retikulum, Golgiho komplex, vezikulární transport, endo- a exocytóza, sekreční dráha a nitrobuněčné adresování proteinů, lyzosom, vakuoly, peroxisom, hydrogenosom
+- literatura
+  - Cpb 6.4
+  - přijde mi, že to je v té učebnici názorný, ale trochu rozvláčně psaný, jdu si to hledat na wikiskriptech a wikipedii
+
+- [endoplasmatické retikulum](https://www.wikiskripta.eu/w/Endoplazmatick%C3%A9_retikulum)
+  - navazuje (je součástí) zdvojené membrány buněčného jádra
+  - hladké a hrubé
+  - hladké slouží pro různé chemické procesy (např. zpracovávání toxinů v jaterních buňkách, syntéza triacyl glycerolů, vysoká koncentrace Ca iontů (svalový stah), polysacharidy...)
+  - hrubé - vypadá jako naskládaný pita chleba
+    - nasedlé ribozomy do něj syntetizují proteiny (které mají být dále zpracovány/ mají jít do membrány buňky/ systetizují membránové lipidy)
+  - z hrubého jde vesikulární transport látek do cis Golgiho aparátu
+
+- [Golgiho aparát](https://www.wikiskripta.eu/w/Golgiho_apar%C3%A1t)
+  - cis/střední/trans
+  - do cis přichází váčky z endoplasmatického retikula
+  - mezi cis a trans jsou ještě např. proteiny upraveny (v cisternách - uzavřených váčcích)
+  - z trans odchází váčky směrem k membráně
+
+- lysosom
+  - typ "vakuoly" - váček nesoucí trávicí enzymy a má malé pH
+    - pH má účel, aby enzymy nezničily buňku např. při náhodném jednorázovém vylití váčku do cytosolu buňky
+- fagocytóza
+  - obalení potravy membránou buňky, následné ztrávení
+  - umí jednobuněčné organizmy, u člověka makrofágy
+
+- [transport vesicles](https://en.wikipedia.org/wiki/Vesicle_(biology_and_chemistry)#Transport_vesicles)
+  - tvoření váčků
+    - (rough) endoplasmatické retikulum -> cis Golgi - COat Protein komplex II (COPII)
+    - cis Golgi -> (rough) ER - COPI
+    - clathrin ... endosomatické váčky (mimo buňku do buňky), trans Golgi -> cytoplasmatická membrána
+  - dockování váčků
+    - SNARE (t-,v-) - merge membrán, pak ponechání na fyzikálních procesech
+
+- [nitrobuněčné adresování proteinů](https://www.wikiskripta.eu/w/Posttransla%C4%8Dn%C3%AD_%C3%BApravy_a_targeting_protein%C5%AF)
+  - při translatování proteinů na membráně ER je nejprve nasyntetizován krátký peptid, který má signální funkci
+  - ribozom se díky této sekvenci naváže na správný membránový protein na membráně ER (SRP - signal recognition particle)
+  - endoplasmatické retikulum pak pošle (translokuje) proteiny na správné místo
+  - k správnému nasměrování proteinů slouží i glykosilace proteinu (signální značka)
+
+- [vakuoly](https://cs.wikipedia.org/wiki/Vakuola)
+  - běžně u rostlin
+    - taková trochu skládka
+    - zásobní a odpadní produkty, většinou nižší pH
+    - může ovlivňovat tlak buňky a tak ovlivňovat její tvar
+  - u živočichů u adipocytů (tuková tkáň), v širším slova smyslu mají vakuoly buňky mléčných žláz a sekreční buňky v trávicím systému, které pouštějí např. do lumen střeva trávicí enzymy ~ v kůži mají melanin atd.
+- [peroxisom](https://www.wikiskripta.eu/w/Peroxizom)
+  - tvoří se v endoplasmatickém retikulu
+  - obsahuje H2O2
+  - redukujícím způsobem degraduje jinak pro buňku toxické látky
+  - má dvojitou membránu
+  - rozkládá puriny, vytváří žlučové kyseliny, velmi dlouhé mastné kyseliny
+- [hydrogenosom](https://cs.wikipedia.org/wiki/Hydrogenozom)
+  - nálevníci, trichomonády a houby
+  - dvojitá membrána
+  - produkuje ATP
+  - podobná mitochondrii, ale neobsahuje DNA a funguje v anaerobních podmínkách
+
 ### 12. Funkční anatomie buněčného jádra - stavba jádra, jaderný obal, organizace genetické informace, chromozomy, chromatin, jadérko
+- literatura
+  - Cpb 6.3 (str. 151)
+
+- jádro
+  - obsahuje většinu DNA eukaryotické buňky
+  - je obaleno dvojitou membránou
+- membrána
+  - vrstvy jsou od sebe vzdáleny 20-40nm
+  - skrz celou membránu pronikají *pore complexy* - 100nm široké "dírky" skrz obě vrstvy membrány
+  - vnitřní strana membrány je podpořena nukleární laminou
+    - u živočichů se proteiny nazývají intermediální filamenta
+- chromozomy jsou tvořeny jednou dlouhou molekulou DNA + asociovanými proteiny - především histony
+  - DNA + proteiny = **chromatin**
+  - chromatida - jedna větev dělícího se chromozomu
+  - centromera - část, kde jsou chromatidy propojeny
+  - kratší a delší rameno
+- jadérko - nukleolus
+  - hustější a kompaktnější část jádra, kde je produkováno ribozomální RNA
+
+- ups, to je nějak krátký - jakože asi by se dalo mluvit třeba o nějakejch částech chromozomů etc. Taky že jsou třeba neuspořádaný, dokud se buňka nedělí
+  - pak se teprve uspořádají do těch hezkých mašlí
+
 ### 13. Semiautonomní organely - evoluční historie, stavba, funkce, replikace a exprese organelového genomu
+- literatura
+  - Cpb 6.5 str 158
+
+- semiautonomní organely vznikly endocytózou symbiotického prokaryota (wiki)
+- slouží k přeměně energie - cukr na ATP a světlo na cukr
+- patří mezi ně mitochondrie a chloroplast
+
+- mitochondrie
+  - 2 membrány
+  - mezimembránový prostor
+  - uvnitř vnitřní membrány (v matrix) je DNA, proteiny atd.
+  - jsou velké 1-10mikrometrů
+  - velmi dynamické - tvoří provazce, přeskupují se a dělí
+  - mají kristy - výběžky vnitřní membrány, které umožňují efektivnější produkci ATP
+  - krebsův cyklus probíhá uvnitř matrix
+  - při poodukci ATP jdou H+ ionty z mezimembránového prostoru do matrix - zvenku dovnitř
+- chloroplasty
+  - vnitřní membrána má vychlípeniny - thylakoidy
+  - okolo thylakoidů je stroma (podobně jako matrix mitochondrií
+  - cca 2-10 mikromenrů
+  -  obsahuje DNA), probíhá tam calvinův cyklus
+  - thylakoidy jsou uspořádány do gran - palačinky na sobě
+
+
 ### 14. Cytoskelet - cytoskeletální proteiny, molekulární motory a jiné asociované proteiny, interakce s dalšími buněčnými strukturami, úloha v morfogenezi buňky a buněčném cyklu, růst a pohyb buněk
+- literatura
+  - Cpb 6.6 161
+
+- mikrotubuly
+  - složené z dimerů - alpha/beta tubulin
+  - 25nm, 15nm průměr dutiny
+  - přítomen ve všech eukaryotických buňkách
+  - má + a - konec
+    - + je dynamičtější - přidávání nových dimerů = růst i jejich odbourávání = zkracování
+  - centrozom & centriola
+    - centrozom je oblast v buňce živočichů, ze které vyrůstají mikrotubuly, obsahuje 2 centrioly
+    - centriola je speciální struktura 2 válců z mikrotubulů, ze které vyrůstají mikrotubuly
+    - ostatní eukaryota často centrozom nemají a mikrotubuly organizují jiným způsobem
+  - cilia a flagela
+    - mikrotubuly obsahující útvary pro aktivní pohyb
+    - cilium jsou řasinky - člověk je má např. v hrtanu a dalších částech na epitelu v dýchací soustavě, podle wiki prý i ve vejcovodu - pohybují vajíčkem
+    - flagela - bičíky - hadovitý pohyb - např. spermie
+    - u prvoků obě tyto struktury slouží pro pohyb
+    - pohyb je zajišťován dyneiny
+    - vždy 9 párů mikrotubulů v kruhu, 2 uprostřed (říká se tomu 9+2 pattern a mají ho skoro všechna eukaryota)
+- mikrofilamenta jsou tvořena aktinem - dvě vlákna omotaná okolo sebe
+  - 7nm
+  - mikrotubuly "tlačí" vnějšek buňky
+  - mikrofilamenta naopak táhnou
+  - funguje s různými typy myozinů
+    - cpb zmiňuje jen ten svalový, ale existuje více typů
+    - i rostliny mají myozin - zajišťuje např. cirkulaci organel v buňce
+    - myozin I - monomer - např. váčkový transport
+    - myozin II - polymer, např. svalový stah
+- intermediální filamenta
+  - 8-12nm
+  - velmi odolná síť vláken, statická
+  - podpora tvaru buňky - např. jádro u živočichů
+  - obsahuje keratinová vlákna, která se smotávají dohromady
+
+- intermediální filamenta
+- dynein
+  - mikrotubulární transportní protein, vždy směřuje k - konci
+- kinezin
+  - mikrotubulární transportní protein, zpravidla jde k + konci
+
+- 
+
+
 ### 15. Mezibuněčné spoje a mezibuněčná hmota –napojení buněk na mezibuněčnou hmotu, složení a význam mezibuněčné hmoty; buněčná stěna u prokaryot a eukaryot
+- literatura
+  - https://www.wikiskripta.eu/w/Mezibun%C4%9B%C4%8Dn%C3%A1_hmota
+  - https://www.wikiskripta.eu/w/Mukopolysacharidy
+  - https://www.wikiskripta.eu/w/Bun%C4%9B%C4%8Dn%C3%A1_spojen%C3%AD
+  - https://www.wikiskripta.eu/w/Gap_junctions
+  - https://www.wikiskripta.eu/w/Zonula_occludens
+  - https://www.wikiskripta.eu/w/Zonula_adherens
+  - https://cs.wikipedia.org/wiki/Bun%C4%9B%C4%8Dn%C3%BD_spoj
+  - https://cs.wikipedia.org/wiki/Baz%C3%A1ln%C3%AD_lamina
+  - https://cs.wikipedia.org/wiki/Hemidesmozom
+  - https://cs.wikipedia.org/wiki/Bun%C4%9B%C4%8Dn%C3%A1_st%C4%9Bna#Prokaryotick%C3%A1_bun%C4%9B%C4%8Dn%C3%A1_st%C4%9Bna
+  - https://cs.wikipedia.org/wiki/Peptidoglykan
+  - https://cs.wikipedia.org/wiki/Peptidoglykan
+
+
+- mezibuněčné spoje
+  - 3 typy spojení:
+    - těsná spojení (tight junction)
+    - komunikační spojení (gap junction)
+    - adhezní spojení (desmozomy, hemidesmozomy, fokální kontakty)
+  - těsná spojení
+    - pásy bodového propojení dvou buněk
+    - využívá se tam, kde je potřeba zabránit propustnosti vody
+    - v řádce jsou seskládány proteiny, které propojují membrány jednotlivých buňek
+      - membrány se ale neslijí
+    - čím víc "proužků" těsného spojení, tím nepropustnější spoj je -> např. ledviny propouští více, než močový měchýř
+    - záměr je, aby látky např. ze střeva neprocházely z jeho apikální části do bazolaterální přímo, ale výhradně přes cytoplasmu buněk
+    - proteinový komplex zajišťující bodové propojení sestává z *klaudinu*, *okludinu*, *kadherinu* a dalších proteinů vč. aktinu
+    - komunikační spojení - gap junctions
+      - neslouží k adhezi buněk
+      - buňky si skrze ně mohou posílat malé molekuly - ionty, chemické posly, ATP atd.
+        - ale probíhá to spíš samovolně, difuzí látek
+      - několik "kanálů" - dutých proteinových komplexů, které propojují membrány buněk
+      - zajišťují komplexy proteinů, tzv. *konexony*
+        - konexony jsou složeny se šesti *konexinů*
+    - adhezní spojení
+      - zonula adherens
+        - buňky mají "políčko" na membráně, které je vyztuženo proteinovým komplexem (aktin, kadherin atd.)
+        - ven z buňky pronikají kadherinová vlákna, která se propojují s vlákny dalších buněk
+        - komplex se nazývá *desmozom*
+      - hemidezmozom
+        - napojení buňky na bazální laminu - na extracelulární protein laminin
+        - intermediální filamenta - oproti aktinu dezmozomu
+        - integriny
+      - fokální adheze
+        - pojivová tkáň - *fibronektin*
+        - napojení na aktinová filamenta buňky
+
+- mezibuněčná hmota
+  - proteiny - např. bazální lamina
+  - glykosaminoglykany
+  - glykoproteiny
+  - slouží k větší odolnosti tkání, uspořádání buněk v tkáních, k homeostáze
+
+- glykosaminoglykany
+  - především kyselina hyalurunová
+    - opakující se disacharidová podjednotka
+  - z centrálního vlákna kyseliny hyalurunové vychází "jako kartáč" vlákna proteinů - proteiny jsou glykosylovány -> ještě větší hustota vláken
+
+- bazální lamina
+  - velmi tenká vrstva v některých tkáních - epiteliální a svalové buňky
+  - tloušťka - desítky nanometrů
+  - 2 části
+  - tzv. *lamina densa* - kolagen, taková "pevnější část" bazální laminy
+  - tzv. *lamina lucida* - laminin, přiléhá přímo na tělo buněk - za ní se drží hemidesmozomy
+
+- buněčná stěna
+  - prokaryota
+    - ochrana před prostředím a před osmotickou lyzí
+    - gram pozitivní bakterie - tlustá buněčná stěna z peptidoglykanů, je barvitelná genciánovou violetí
+    - gram negativní mají jen tenkou peptidoglykanovou vrstvu
+      - pak lipopolysacharidy a druhá membrána
+      - modrou barvu je z nich možné vymýt alkoholem
+  - archaea
+    - buněčná stěna z (pseudo-)peptidoglykanu
+  - houby
+    - chitinová stěna
+    - funkce - vnější opora buněk, ochrana před osmotickou lyzí
+  - rostliny
+    - buněčná stěna navíc funguje oproti prokaryotám a houbám i jako místo pro ukládání některých látek
+    - je tvořena celulózou, hemicelulozou a pektiny
+      - beta-D-glukóza
+    - má 2-3 části
+      - střední lamela
+        - při dělení buněk, první vytvořená část
+      - primární buněčná stěna
+        - celuloza, hemiceluloza, pektiny, umožňuje růst buněk
+      - sekundární buněčná stěna
+        - obohacená dalšími organickými i anorganickými látkami
+        - vlákna uspořádána pravidelně a souběžně
+        - dřevnatění - může vést k odumření buňky
+        - 
+
+- peptidoglykan
+  - podobně jako glykosaminoglykany i peptidoglykan obsahuje n-acetyl glukosamin, kromě toho obsahuje kyselinu muramovou
+  - polysacharid
+
 ### 16. Buněčný cyklus a programovaná buněčná smrt - porovnání cyklu prokaryotní a eukaryotní buňky, fáze cyklu, replikace DNA, u eukaryot jaderné dělení, mitoza a meioza, rekombinace DNA, cytokineze, apoptóza, buněčná onkogeneze
+- literatura
+  - Cpb 12 (The cell cycle)
+  - Cpb 13.3 Meióza
+  - https://cs.wikipedia.org/wiki/Replikace_DNA#U_prokaryot
+  - https://www.wikiskripta.eu/w/Apopt%C3%B3za
+  - https://www.wikiskripta.eu/w/Poruchy_signalizace_apopt%C3%B3zy_v_n%C3%A1dorov%C3%BDch_bu%C5%88k%C3%A1ch
+
+- Buněčný cyklus
+  - asi budu popisovat eukaryotickou buňku
+  - s prokaryotickou to pak porovnám
+- fáze cyklu
+  - Interfáze
+    - G1 buňka roste
+    - S fáze (nejdelší) buňka replikuje DNA (2N->4N)
+    - G2 buňka zase roste
+  - Mitóza
+    - profáze
+      - chromozomy se seskládávají do kompaktních chromatid
+      - formuje se mitotické vřeténko
+    - prometafáze
+      - rozpouští se obal jádra na fragmenty
+      - dva centrosomy začínají napojovat chromozomy za kinetochor
+    - metafáze
+      - dokončuje se napojování chromozomů
+      - formuje se rovinný útvar z chromozomů
+    - anafáze
+      - chromozomy se odtrhují od sebe
+      - jsou přitahovány k opačným pólům buňky
+    - telofáze
+      - buňka začíná citokinezi - dělí se
+      - obnovuje se jaderná membrána z fragmentů původního jádra
+- replikace DNA
+  - eukaryota
+    - mají asi 15 typů DNA polymeráz
+    - mají řádově stovky až tisíce replikačních počátků (ARS)
+    - [obrázek DNA polymerázového komplexu](https://www.wikiskripta.eu/w/Replikace_DNA#/media/Soubor:DNA_replication_en.svg.png)
+    - nejprve je potřeba rozvinout DNA
+      - suprahelikální struktury ... gyráza
+      - dvoušroubovice ... helikáza
+      - na leading strandu - kde se polymeruje od 3 k 5 konci - probíhá polymerace nepřerušeně (leading strand) ... Pol-delta
+      - na 5 k 3 konci probíhá polymerace pomocí Okazakiho fragmentů
+        - RNA primáza dělá tzv. očka - jeden nukleotid RNA na DNA řetězci
+        - Pol-alpha nasedne na očko a dosyntetizuje fragment
+        - DNA ligáza pospojuje Okazakiho fragmenty do souvislého řetězce
+  - prokaryota
+    - 5 DNA polymeráz
+      - polymeráza 3 je určena k replikaci DNA
+      - princip vypadá dost podobně - jen je zapojena DNA polymeráza 3 a částečně DNAPol 1
+      - jen jeden začátek (ori), ale 4 terminační sekvence
+  - mitochondrie a plastidy - spíš prokaryota
+  - archea - podobné spíš eukaryotám
+- u eukaryot jaderné dělení
+  - karyokineze
+  - jádro se celé rozpustí
+  - jaderná membrána se fragmentuje na takové váčky
+  - asi už je to popsané v mitóze...
+
+- mitoza a meioza
+  - mitóza byla popsaná, tak spíš jak se odlišuje meioza
+  - meioza má dvě fáze (I,II)
+  - v první fázi se již z dřívějška namnožené chromozomy rekombinují a vytvoří se 2 buňky (2N) s rekombinovanými chromozomy
+  - ve druhé fázi se tyto páry chromozomů dále oddělí a vytvoří další 2 buňky (1N)
+  - každá fáze má
+    - profázi
+    - metafázi
+    - anafázi
+    - telofázi + cykokineze
+  - přehledně popsané na Cpb str. 309, 310
+  - profáze I
+    - těsně před profází ještě dojde ke crossing overu
+      - crossing over se provádí v regionu odděleném tzv. chiazmaty - spoje připomínající centromeru - oba páry chromozomů jsou tam přitisknuté k sobě
+    - rozpouští se jádro
+    - začínají se napojovat mikrotubuly na kinetochory chromozomů
+  - metafáze I
+    - formuje se zase metafázová rovina
+    - příprava na anafázi I
+  - anafáze I
+    - chromozomy se rozestupují
+  - telofáze I
+    - znovu se formují 2 jádr
+    - cytokineze
+  - nyní neprobíhá replikace DNA
+  - profáze II
+    - znovu se rozpouští jaderná membrána
+    - ...
+  - teď bych copy-pastoval meiózu I
+  - prostě stejný proces, jen teď nejsou 4 chromatidy, ale jen 2
+  - do další fáze se dostane jen jedna sada chromozomů, vznikají gamety
+- kohezin
+  - protein, který drží pohromadě dvě (čtyři) chromatidy
+- rekombinace DNA
+  - chromatidy jsou plně seskládané a spojené koheziny
+  - dojde k dotyku - synapse
+  - místa, kde dojde ke crossing overu, se nazývají *chiazmata*
+- cytokineze
+  - dělení probíhá jinak u organizmů s buněčnou stěnou a bez ní
+  - u živočichů vzniká jakoby po obvodu buňky aktinový prstenec
+  - pomocí myozinů se prstenec stahuje, až buňku zaškrtí
+  - u rostlin vzniká "cell plate" -přibližně v polovině buňky se vylévá obsah váčků z původního golgiho aparátu, který obsahuje celulozu další látky buněčné stěny
+  - jsou směřované mikrotubuly fragmoplastu - ty později tvoří základ pro plazmodezmata
+- programovaná buněčná smrt
+  - také apoptóza (apoptoza je zároveň hlavní typ programované buněčné smrti (PCD) a zároveň se používá i jako synonymum PCD)
+  - jsou aktivovány kaspázy (cysteinové proteázy, které štěpí za aspartátem)
+  - následně jsou aktivovány endonukleázy - štěpí jadernou DNA
+  - má dvě "dráhy" - vnitřní a vnější
+  - vnitřní dráha
+    - nerovnováha v apoptotických regulátorech na vnější membráně mitochondrií
+      - způsebené nerovnováhou látek v cytoplasmě, poškozením DNA, nefunkční mitozou, defektem ER, či kyslíkovými radikály
+    - formace kanálů - únik cytochromu C do cytoplasmy
+    - cytochrom C se váže na APAF1 - formace komplexu apoptozomu s prokaspázou 9
+    - apoptozom aktivuje kaspázu 9 plně - zahájení proteolýzy v efektorové fázi apoptózy
+  - vnější dráha
+    - imunitní buňky mají na svém povrchu ligandy k receptoru TNF nebo Fas, které mají všechny buňky organizmu
+    - aktivuje se tzv. dead doména -> aktivace kaspázy 8
+  - efektorová fáze
+    - kaspázy 8 a 9 aktivují efektorové kaspázy 3,6,7
+    - štěpení některých, především reparačních, proteinů buňky
+    - aktivace endonukleázy - fragmentace DNA
+  - 
+- buněčná onkogeneze
+  - často ruku v ruce s blokací regulace apoptozy
+  - další disregulace, např. cyclin různých typů
+    - obejití "checkpointů"
+  - po "změně" na rakovinnou buňku - snaha zamezit napadení buňkou imunitního systému
+    - snížení množství vystaveného MHC I. atd.
+- porovnání cyklu prokaryotní a eukaryotní buňky
+  - u prokaryot je cyklus mnohem jednodušší, řádově cca 3x kratší než u eukaryot (20 minut v průměru oproti 1h 20 minut u Saccaromyces cerevisiae)
+
 ### 17. Komunikace uvnitř buněk a mezi buňkami, mezibuněčný a intracelulární přenos signálu, membránové a intracelulární receptory, vybrané příklady signálních drah
+- disclaimer: obecně mi přijde signalizace docela jasná, budu sem zapisovat jen příklady signálních drah, které je možné se naučit nějak víc konkrétně
+- literatura
+  - Cpb 11
+
+- mezibuněčný přenos signálu
+- intracelulární přenos signálu
+- membránové receptory
+- intracelulární receptory
+- vybrané příklady signálních drah
+
+- lokální signalizace
+  - parakrynní
+  - může probíhat difuzí signální molekuly do prostředí, nebo i skrz gap junctions/plazmodezmy
+  - synaptická signalizace - neurotransmitery
+- globální signalizace
+  - endokrinní
+  - hormony
+- *quorum sensing* - akce se provede až po dosažení určité hladiny / koncentrace signální molekuly v prostředí
+  - formace biofilmu bakterií až při dostatečné koncentraci bakterií
+- kvasinky
+  - pohlaví a a *alpha*
+    - fůzuje se
+    - poznají se na základě a a *alpha* faktoru
+    - každá buňka má receptor pro opačné pohlaví
+- růstový faktor
+  - parakrynní signalizace
+  - pro danou tkáň
+- ethylen v rostlinách
+  - šíří se skrz jednotlivé buňky i vzduchem
+  - zrání/růst
+- receptory na buněčné membráně
+  - adrenalin=epinephrin (receptor typu GPCR, sekundární posel cAMP)
+    - hormon, šíří se krevním řečištěm
+    - fight/flight reakce
+    - aktivace (mj.) glykogenu v játrech a ve svalech
+    - v něčem typický příklad signalizace
+      - přijetí signálu receptorem
+      - přenos signálu - receptor změní svojí konfiguraci, aktivuje sekvenci následujících proteinů (pathway)
+      - odpověď buňky - aktivace glykogen fosforylázy
+    - receptor je GPCR - G-protein coupled receptor
+    - vazba ligandu (mch., adrenalin může být nahrazen kofeinem) změní konfiguraci receptoru
+    - aktivuje se G-protein na vnitřní straně membrány
+    - ten musí v krátkém čase aktivovat efektorový enzym (než se GTP vymění opět za GDP)
+    - efektorový enzym je adenylil cykláza - mění ATP na cAMP
+    - v řádu sekund se koncentrace cAMP zvýší až 20x
+    - signál je ale potlačován - phosphodiesteráza konvertuje konstantně cAMP na AMP
+    - cAMP aktivuje protein *serine/threonin kinázu A* a ta dále aktivuje další enzymy v závislosti na typu buňky
+  - receptor typu tyrosin kináza (RTK)
+    - na signální molekulu reagují změnou konfigurace
+    - musí se potkat dvě tyrosin kinázy se změněnou konfigurací
+    - pak aktivace pomocí 6 molekul ATP - fosforylace tyrosinů
+    - fosforylace dalších signálních proteinů
+    - spustí najednou více signálních drah
+    - např. růst a reprodukce buněk, jejich mutace může vést k rakovině (např. aktivita i bez signalizace)
+  - receptor ~ iontový kanál
+    - na signalizační molekulu reaguje změnou konformace
+    - otevření iontového kanálu - Na+ nebo Ca2+ atd. - ty spustí nějakou reakci v buňce přímo
+      - např. nervový systém, svaly
+- vnitrobuněčné receptory
+  - molekula musí být dostatečně malá/hydrofobní, aby prošla cytoplasmatickou membránou
+    - molekula NO (oxid dusnatý)
+    - steroidní hormony
+    - thyroidní hormony
+  - aldosteron
+    - produkují nadledvinky
+    - buňky ledvin mají receptor
+    - receptor po aktivaci může z cytosolu buňky přejít do jádra a aktivovat expresi genů pro regulaci vody a sodíku v moči
+- kinázový přenos signálu
+  - proteiny v pathways jsou aktivovány tím, že je nějaká kináza (receptor nebo předchozí "vrstva") fosforyluje
+  - ty samotné mohou také být kinázami
+  - protože jedna kináza zvládne fosforylovat často mnoho proteinů v dalším sledu, signál se dobře amplifikuje
+  - tzv. fosforylační kaskáda
+- second messenger
+  - first messenger je signální molekula, která se dostane k buňce
+  - second messenger zajišťuje šíření a přenos signálu uvnitř buňky
+    - např. cAMP od epinephrinu
+    - (nebo cyt-C u apoptozy aktivuje APAF1 a prokaspázu 9 a vede ke vzniku apoptozomu)
+    - nebo Ca2+ ionty (zvýšení koncentrace)
+- cGMP
+  - relaxace svalových buněk ve stěnách cév
+  - vyšší průtok krve
+  - Viagra - blokace enzymu, který mění cGMP zpět na GMP
+  - zvýšený průtok krve cévami -> mj. erekce
+- Ca2+
+  - nízká koncentrace v cytosolu
+  - vysoká v ER a v matrix mitochondrie
+  - v ER - receptory na Inositol 3-fosfát a diacyl glycerol -> sekundární poslové G-proteinového receptoru na membráně (GPCR)
+  - zvýšená koncentrace Ca2+ - více funkcí
+- scaffolding proteins - rozdvojky v pathways
+  - scaffolding protein tvoří komplex s různými kinázami, takže když je aktivován, např. receptorem, tak spouští více pathways naráz
 ### 18. Principy základních metod molekulární biologie - metody analytické separace makromolekul, PCR, sekvenování, molekulární klonování, genomika, proteomika, transkriptomika. Modelové organismy v molekulární biologii a genetice a jejich krátký popis a srovnání. Nejvýznamnější sekvenační projekty 
+
+- metody analytické separace makromolekul
+  - https://en.wikipedia.org/wiki/Gel_electrophoresis
+  - jako asi je myšlená elektroforéza? jinak mě asi nic nenapadá
+  - gelová elektroforéza
+    - potřeba je
+      - vzorek (směs nukleové kyseliny)
+      - standardizovaná směs řetězců DNA/RNA (ví se kolik mají bp)
+      - gel (agaroza/polyakrylamid)
+      - voda
+      - elektrody (rovnoměrné)
+      - pufr (buffer) - poskytuje ionty
+      - barvivo na vzorek (ethidium bromid)
+    - postup
+      - na okraj gelu se dají vzorky a standardizovaný vzorek
+      - pustí se jednosměrný proud
+      - gel se obarví
+      - zjistíme, kolik tam čeho bylo
+        - existuje i varianta, kdy se takto rozdělený vzorek vyndá a použije se k něčemu dalšímu - snadné oddělení molekul DNA
+  - SDS-PAGE ... variace elektroforézy pro proteiny
+    - https://en.wikipedia.org/wiki/SDS-PAGE
+
+- PCR - polymerase chain reaction
+  - https://en.wikipedia.org/wiki/Polymerase_chain_reaction 
+  - potřeba je 
+    - amplifikovaná sekvence
+    - primery  - komplementární jak k 3' tak 5' konci sekvence
+    - DNA polymeráza
+    - dNTP - trifosfátové nukleotidy
+  - proces probíhá v cyklech, kdy se 20-40x směs zahřeje a schladí - při každém cyklu provedou DNA polymerázy polymeraci, ta se pak rozdělí a nasedne na ní nový primer, načež DNA polymeráza zase nasedne a tímhle stylem se exponenciálně zvyšuje množství DNA
+  - RT-PCR real time PCR
+    - https://en.wikipedia.org/wiki/Real-time_polymerase_chain_reaction
+    - díky fluorescenci monitoruje množství polymerované DNA ve vzorku **během** polymerace
+
+- sekvenování
+  - https://en.wikipedia.org/wiki/DNA_sequencing
+  - existují víc jednoduché a víc složité metody (next generation)
+  - jednoduché metody
+    - Maxam-Gilbert
+      - https://en.wikipedia.org/wiki/DNA_sequencing#Maxam-Gilbert_sequencing
+      - používalo se jen chvíli, brzy přetlačeno Sangerem
+      - radioaktivní labeling fragmentů DNA na základě toho, čím končily
+    - Sanger
+      - https://en.wikipedia.org/wiki/Sanger_sequencing
+      - https://www.youtube.com/watch?v=FvHRio1yyhQ
+      - potřeba je
+        - velmi přesné zařízení na elektroforézu (s přesností na 1bp)
+        - PCR
+        - dNTP a ddNTP (když se přisyntetizuje s ddNTP, tak se reakce syntézy zastaví)
+        - 4 zkumavky :D
+        - primery
+      - postup
+        - nejprve se namnoží potřebná sekvence
+        - pak se přidá dNTP, ddNTP a polymeráza
+        - pak se udělá syntetizující cyklus (jako při PCR)
+        - do každé zkumavky se dají všechny dNTP, ale jen jeden typ ddNTP
+        - tak se v tom velkém množství vzorků udělají různě dlouhé sekvence dsDNA, které ale vždy končí na tom nukleotidu, jaký typ jsme přidali do zkumavky jako ddNTP
+        - na elektroforéze se zjistí, z jaké zkumavky nám vznikly jak dlouhé molekuly
+        - z toho se určí, na jaké pozici je jaký nukleotid
+    - Syntetická sekvenace
+      - https://en.wikipedia.org/wiki/DNA_sequencing#Sequencing_by_synthesis
+      - základ pro některé Next Generation postupy
+      - při syntéze se postupně přidávájí a odebírají jednotlivé typy nukleotidů
+      - sleduje se, jestli byly přidány ke vzorku, nebo ne
+    - shotgun sequencing
+      - sanger je neúčinný pro dlouhé fragmenty
+      - https://en.wikipedia.org/wiki/DNA_sequencing#Shotgun_sequencing
+      - DNA je rozděleno na mnoho fragmentů z mnoha kopií
+      - fragmenty jsou jednotlivě sekvenovány pomocí Sangera
+      - posléze jsou sekvenované sekvence znovu seskládány dohromady
+    - high throughput
+      - asi bych nenapsal nic než co je na wikipedii...
+      - https://en.wikipedia.org/wiki/DNA_sequencing#High-throughput_methods
+    - 
+- molekulární klonování
+  - pomnožení vektoru v hostitelském organizmu
+  - https://en.wikipedia.org/wiki/Molecular_cloning
+  - vybere se vektor a organizmus, ve kterém se to pomnoží
+  - např. se používá kvasinka
+  - vektor se namnoží
+  - vloží se do organismu
+    - např. elektropolace membrány, nebo díky virovému vektoru
+  - otestuje se, že v organizmu skutečně je (poté, co se např. pomnoží)
+
+- genomika
+  - tyjo co tady napsat konkrétně?
+  - prostě věda o tom, jak je postavený a co obsahuje genom, přičemž se často bere jaderná DNA/mitochondriální DNA
+  - https://en.wikipedia.org/wiki/Genomics
+  - oproti genetice studuje genom víc jako celek
+  - využívá metody jako sekvenace
+- proteomika
+  - věda o proteinech - jaké má buňka proteiny, jak ji ovlivňují atd.
+  - https://en.wikipedia.org/wiki/Proteomics#Methods_of_studying_proteins
+  - proteiny se dají detekovat např. pomocí protilátek
+    - ELISA
+  - nebo třeba na SDS-PAGE
+
+
+- transkriptomika
+  - https://en.wikipedia.org/wiki/Transcriptomics_technologies
+  - studium toho, co buňka reálně využívá
+  - izoluje se samostatná RNA z buňky
+  - sekvenace
+  - hodně komplexních informací o organizmu - ukazuje např. i v jaké fázi života organizmus byl, co řešil za problémy etc.
+
+- Modelové organismy v molekulární biologii a genetice a jejich krátký popis a srovnání.
+  - Obecné vlastnosti ideálního modelu:
+    - vhodný pro řešení námi položené otázky, tedy pro typ experimentu (výzkumu), který hodláme provádět
+    - krátká generační doba
+    - lehce kultivovatelný a množitelný
+    - s dobrým (známým) genetickým pozadím
+    - maximálně probádaný (nabídka experimentálních technik, mutantů, kmenů, fyzikální a genetické mapy atd.)
+    - s možností kontroly párování
+    - s možností využití genetického inženýrství
+    - ve středu zájmu společnosti - tj. umožňující získání finančního prostředků
+
+- velikosti genomu:
+
+| Skupina | Druh | Česky | Velikost genomu |
+| ---- | ---- | ---- | ---- |
+| Řasy | Pyrenomonas salina | ~ Rhodomonas salina | 6,6 x 10e5 |
+| Mykoplasmata | Mycoplasma pneumoniae | dělá třeba bronchytidu | 1,0 x 10e6 |
+| Baktérie | Escherichia coli | střevní bakterie | 4,6 x 10e6 |
+| Kvasinky | Saccharomyces cerevisiae | kvasinka pekařská | 1,3 x 10e7 |
+| Hlenky | Dictyostelium discoideum | prostě druh hlenky, žije v půdě | 5,4 x 10e7 |
+| Nematoda | Caenorhabditis elegans | haďátko octové | 8,7 x 10e7 |
+| Krytosemenné | Arabidopsis thaliana | huseníček rolní | 1,3 x 10e8 |
+| Hmyz | Drosophila melanogaster | octomilka obecná | 1,4 x 10e8 |
+| Ptáci | Gallus domesticus | kur domácí | 1,2 x 10e9 |
+| Obojživelníci | Xenopus laevis | drápatka vodní | 3,1 x 10e9 |
+| Savci | Mus musculus | myš domácí | idk x 10e9 |
+- modelové organizmy
+  - Pyrenomonas salina
+    - jednobuněčná mořská řasa
+    - https://en.wikipedia.org/wiki/Rhodomonas
+  - Mycoplasma pneumoniae
+    - umí mimikovat povrch buňky hostitele
+    - anglická wiki ji řadí mezi bakterie a mycoplasmata jako kmen
+    - https://en.wikipedia.org/wiki/Mycoplasma_pneumoniae
+  - Escherichia coli
+    - střevní bakterie
+    - gram negativní
+    - https://en.wikipedia.org/wiki/Escherichia_coli
+  - Saccharomyces cerevisiae
+    - kvašení chleba, vína, piva
+    - množí se dělením i "pohlavně" - splynutí dvou pohlavních buněk do jedné
+      - diploidní forma umí ve stresu udělat 4 haploidní spory, ty se pak umí spojit opět do diploida
+    - může způsobovat infekci, pokud má člověk podlomenou imunitu
+    - https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae#A_human_pathogen
+  - Dictyostelium discoideum
+    - hlenka
+    - žije jako améba
+    - shlukuje se do mnohobuněčného organizmu
+    - ~ kvete (vytváří "fruiting body")
+    - spory
+    - má tři pohlaví (projeví se ve fázi améby)
+      - každé může s dalšími dvěmi vytvořit haploidní améby
+    - zkoumá se, protože má některé geny homologní s člověkem a protože je to velmi jednoduchý organizmus, který ale prodělává buněčnou diferenciaci
+    - https://en.wikipedia.org/wiki/Dictyostelium_discoideum
+  - Arabidopsis thaliana
+    - https://en.wikipedia.org/wiki/Arabidopsis_thaliana
+  - Caenorhabditis elegans
+    - haďátko octové
+    - má X0 pohlavní systém (hermafroditi a samci)
+    - žije v půdě a žere bakterie a obecně organickou hmotu (hnijící ovoce, kvasinky...)
+    - studuje se kvůli nervové soustavě (má cca 300 neuronů), chemotaxi, termotaxi, mechanotransdukci (převod tlaku na nervový signál) atd.
+    - https://en.wikipedia.org/wiki/Caenorhabditis_elegans#Use_as_a_model_organism
+  - Drosophila melanogaster
+    - ekologie asi jasná
+    - má trochu divnej systém na určení pohlaví
+      - X a Y chromozomy, ale pohlaví se určuje poměrem chromozomu X k autozomálním chromozomům - Y pouze kóduje produkci spermií, ale nemá na určení pohlaví vliv
+      - každá buňka se rozhoduje nezávisle, jestli bude samčí nebo samičí
+    - má zmapovaný konektom - nervovou soustavu
+    - https://en.wikipedia.org/wiki/Drosophila_melanogaster#Connectome
+  - Gallus domesticus
+    - kur domácí má ZW systém pro sex determination
+    - má docela rychlý reprodukční cyklus
+    - je dostupná atd.
+  - Xenopus laevis
+    - drápatka
+    - evoluční blízkost k člověku
+    - klade vajíčka během roku - snadné množení
+    - https://en.wikipedia.org/wiki/African_clawed_frog
+  - Mus musculus
+    - velmi podobná s člověkem
+    - https://en.wikipedia.org/wiki/House_mouse
+
+
+- Nejvýznamnější sekvenační projekty
+  - 1982 GeneBank
+  - https://www.nature.com/immersive/d42859-020-00099-0/index.html
+  - 2000 A. thaliana a D. melanogaster
+  - 2001 Human genome (shotgun sequencing)
+  - 2002 Mus musculus
+  - 2005 next generation sequencing
+  - 2012 Encode
+  - 2008 - 2012 1000 genomes
+    - https://en.wikipedia.org/wiki/1000_Genomes_Project
+
+
 ### 19. Evoluce, různá její pojetí, významné události v dějinách teorie evoluce.
+
 ### 20. Lamarckismus, darwinismus, neodarwinismus
+
 ### 21. Mechanismy evoluce - drift, draft, evoluční tahy, genový tok, selekce
+
 ### 22. Mutace jako zdroj evolučních novinek, typy mutací, náhodnost mutací co do místa, času a směru
+
 ### 23. Selekce - mechanismus, typy, úrovně
+
 ### 24. Pohlavní výběr - intrasexuální a intersexuální selekce, epigamní znaky, evoluce
+
 ### 25. Speciace: mechanismy a typy speciací
+
 ### 26. Evoluce pohlavního rozmnožování
 ### 27. Homologie, analogie, plesiomorfie a apomorfie v evoluci organismů
 
