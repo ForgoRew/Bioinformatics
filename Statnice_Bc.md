@@ -58,7 +58,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 8. Základy genetiky - Mendelovy zákony, základní pojmy, různé verze definice genu. Intra- a intergenové interakce, genová vazba, genetické aspekty sexuality, chromozomové určení pohlaví, pohlavně vázaná dědičnost, mimojaderná dědičnost.
 9. Mutace a mutageneze - mutace genové, chromozomové a genomové, molekulární podstata mutací, mutageny, reparace poškozené DNA
 10. Exprese genů a její regulace na úrovni transkripční, posttranskripční, translační a posttranslační, genetický kód, syntéza a distribuce proteinů v buňce, folding a účast chaperonů, posttranslační modifikace, regulace stability proteinů
-11. Dynamika a funkce buněčných kompartmentů - endoplasmatické retikulum, Golgiho komplex, vezikulární transport, endo- a exocytóza, sekreční dráha a nitrobuněčné adresování proteinů, lyzosom, vakuoly, peroxisom, hydrogenosom
+11. Dynamika a funkce buněčných kompartmentů - endoplasmatické retikulum, Golgiho komplex, vezikulární transport, endo- a exocytóza, sekreční dráha a nitrobuněčné adresování proteinů, lyzosom, vakuoly, peroxisom, hydrogenosom
 12. Funkční anatomie buněčného jádra - stavba jádra, jaderný obal, organizace genetické informace, chromozomy, chromatin, jadérko
 13. Semiautonomní organely - evoluční historie, stavba, funkce, replikace a exprese organelového genomu
 14. Cytoskelet - cytoskeletální proteiny, molekulární motory a jiné asociované proteiny, interakce s dalšími buněčnými strukturami, úloha v morfogenezi buňky a buněčném cyklu, růst a pohyb buněk
@@ -87,39 +87,6 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 7. predikce struktury makromolekul
 8. fylogenetika – stavba stromů – základní metody tvorby stromů (ML, MP, NJ, Bayes) – bootstrap analýza
 
-
-# Poznámky
-## Co jsem ještě nestihl doprojít
-<!-- TODO -->
-- Hidden Markov Models
-  - [Bioinformatické algoritmy, přednášky 7,8,9](https://drive.google.com/drive/u/2/folders/1jAY334cmBiOS3Tx06VBPDkjNM--tGqBo)
-
-- derivace
-  - základní vzorečky pro derivování
-## Co bych si rád ještě připoměl
-- derivace
-  - vzoreček pro definici derivace
-  - leibnitzova formule
-  - Taylorův polynom
-  - zkusit si pár příkladů
-- integrály
-  - definice primitivní funkce
-  - vzorečky pro výpočet délky křivky funkce a objem tělesa
-- nerovnosti
-  - Markovova
-    - na wiki se jmenuje "Čebyševova nerovnost I. typu"
-    - pro náhodnou veličinu X a $\epsilon>0$ platí
-      - $P(X>\epsilon) \leq \frac{E(X)}{\epsilon}$
-  - Čebyševova
-    - na wiki "Čebyševova nerovnost II. typu"
-    - pro náhodnou veličinu X a $\epsilon>0$
-      - $P(|X-E(X)<\epsilon) \geq \frac{var(X)}{\epsilon^2}$
-  - Cauchy-Schwarzova
-    - lingebra
-      - absolutní hodnota skalárního součinu dvou vektorů je nejvýše hodnota součinu norem těchto vektorů
-
-
-
 ## Matematika & informatika
 ### 1. Matematická analýza
 - k celé matematické analýze jsou [sripta od Klimošové ("poznámky z přednášek") na disku](https://drive.google.com/drive/u/2/folders/1iJyceZk9aKkYBAnl3T4XAQ2f2PTM7tpD)
@@ -139,9 +106,9 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - kromě Cauchyovské posloupnosti - [dávám odkaz na Wikipedii](https://cs.wikipedia.org/wiki/Cauchyovsk%C3%A1_posloupnost)
 
 - nejprve definice posloupnosti:
-  - Nechť *M* je množina. Pak posloupnost s hodnotami v M je zobrazení z ***ℕ*** do *M*.
+  - Nechť *M* je množina. Pak posloupnost s hodnotami v M je zobrazení z **N** do *M*.
     - Každé přirozené číslo je tedy zobrazené na nějaký prvek z *M*
-    - $(a_1,a_2,a_3,...)$ se značí jako $(a_n)_{n=1}^{∞}$
+    - $(a_1,a_2,a_3,...)$ se značí jako $(a_n)_{n=1}^{\infty}$
 - posloupnost může být:
   1. omezená (shora/zdola)
   2. rostoucí/klesající
@@ -150,11 +117,11 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - posloupnost může mít limitu
   - vlastní limita je definovaná v reálných číslech
   - definice pro limitu v nekonečnu (nevlastní limita) je podobná
-  - Řekneme, že posloupnost $(a_n)_{n=1}^{∞}$ má limitu v bodě L, pokud
-    - L ∈ ℝ
-    - pro každé $ϵ$ ∈ ℝ existuje $n_0$ ∈ ℕ
-      - pro každé $n$ > $n_0$, $n$ ∈ ℕ
-      - $a_n$ - L < $ϵ$
+  - Řekneme, že posloupnost $(a_n)_{n=1}^{\infty}$ má limitu v bodě L, pokud
+    - L náleží do reálných čísel
+    - pro každé $\epsilon$ z reálných čísel existuje $n_0$ z přirozených čísel
+      - pro každé $n$ > $n_0$, $n$ $\in$ $\N$
+      - $a_n$ - L < $\epsilon$
 
   - věta o jednoznačnosti limity
     - každá posloupnost má nejvýše jednu limitu
@@ -164,7 +131,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - součet posloupností má limitu danou součtem limit původních posloupností
     - to stejné platí o součinu i o podílu, jen je potřeba si zkontrolovat, že je výraz definovaný (žádné dělení nulou nebo součiny nekonečna s mínus nekonečnem)
   - věta o limitě a uspořádání
-    - pro dvě posloupnosti s limitami v bodech a,b ∈ ℝ
+    - pro dvě posloupnosti s limitami v bodech a,b $\in$ ℝ
     - pokud a>b, tak pro nějaké $n_0$ budou i další hodnoty první posloupnosti větší než druhé
   - věta o dvou policajtech
     - pokud si můžeme "uzavřít" posloupnost do dvou posloupností - jedna bude vždycky větší a druhá vždycky menší - a ty mají limitu v jednom čísle, tak i ta uzavřená posloupnost v něm má limitu
@@ -177,12 +144,12 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 
   - důležité příklady řad
     - geometrická řada
-      - $\sum_{n=0}^∞q^n$
-        - q ∈ (-1,1) ... součet řady je $\frac{1}{1-q}$
-        - q ∈ [1,∞) ... dtto je ∞
-        - q ∈ [-1,-∞) ... dtto neexistuje
+      - $\sum_{n=0}^{\infty} q^n$
+        - q $\in$ (-1,1) ... součet řady je $\frac{1}{1-q}$
+        - q $\in$ [1,∞) ... dtto je ∞
+        - q $\in$ [-1,-∞) ... dtto neexistuje
     - řady typu
-      - $\sum_{n=0}^∞\frac{1}{n^s}$
+      - $\sum_{n=0}^\infty\frac{1}{n^s}$
         - konvergují, pokud s>1
         - jinak divergují
         - pokud s = 1 -> **harmonická řada**
@@ -215,7 +182,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - $f^{<-1>}(y)=x$ <=> $f(x)=y$
   - elementární funkce
     - Eulerovo číslo ... definováno jako součet řady
-      - $e(x):=\sum_{n=0}^∞\frac{x^n}{n!}$
+      - $e(x):=\sum_{n=0}^\infty\frac{x^n}{n!}$
       - $e:=e(1)≈2.7$
     - logaritmus - řešení rovnice $e^x=y$
     - goniometrické funkce
@@ -227,11 +194,11 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - Limita v bodě a spojitost.
   - je potřeba definovat okolí bodu
     - $δ$-okolí bodu $a$ - $U(a,δ)$
-      - $δ ∈ ℝ$, $δ > 0$
-      - $a ∈ ℝ$
-      - $U(a,δ) := {x ∈ ℝ: |a-x|<δ}$
-        - pro a ∈ {-∞, ∞}
-          - pro ∞, podobně pro -∞: $U(a,δ) := {x ∈ ℝ: x>1/δ}$
+      - $δ \in ℝ$, $δ > 0$
+      - $a \in ℝ$
+      - $U(a,δ) := {x \in ℝ: |a-x|<δ}$
+        - pro a $\in$ {-∞, ∞}
+          - pro ∞, podobně pro -∞: $U(a,δ) := {x \in ℝ: x>1/δ}$
     - prstencové okolí bodu je definované jako okolí bodu bez toho bodu
   - definice limity
     - limita pro funkci $f$ má v bodě $a$ hodnotu $A$, pokud pro všechna $ϵ$ existuje $δ$ takové, že se prstencové okolí bodu $a$ zobrazí na okolí bodu $A$
@@ -278,13 +245,13 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - věta: derivace inverzní funkce
     - $f→J$ je na $J$ spojitá a ryze monotónní funkce a $f(a)=b$
     - pak když $b!=0$: $(f^{<-1>})'(b) = 1/f'(a)$
-    - jinak když je $f$ rostoucí, tak $(f^{<-1>})'(b) = ∞$
+    - jinak když je $f$ rostoucí, tak $(f^{<-1>})'(b) = \infty$
       - (když je klesající, tak -∞)
   - věta: L'Hospitalovo pravidlo
     - funkce $f,g$ mají na $P(a,δ)$ vlastní derivaci a $g'(a)!=0$ na $P(a,δ)$
-    - pak i pokud jejich limity na $P(a,δ)$ jsou rovny nule, platí, že
+    - pak i pokud $lim_{x→a}f(x)=lim_{x→a}g(x)=0$, platí, že
       - $lim_{x→a}\frac{f(x)}{g(x)}=lim_{x→a}\frac{f'(x)}{g'(x)}$
-    - pokud má funkce $g$ limitu rovnou $+-∞$, pak platí výše uvedená rovnice také.
+    - pokud má funkce $g$ limitu rovnou $+-\infty$, pak platí výše uvedená rovnice také.
     - to platí i pro jednostranné limity
   - věta: nutná podmínka pro lokální extrém
     - pokud funkce v bodě $a$ nemá nulovou derivaci, pak se v bodě $a$ nenachází (lokální) extrém funkce
@@ -295,7 +262,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - věta: Rolleova a Lagrangeova (o střední hodnotě)
     - Rolleova věta
       - pomocí ní jde ověřit, že na nějakém intervalu je minimum
-      - nechť $-∞ < a <b < ∞$
+      - nechť $-\infty < a <b < \infty$
       - funkce $f$
         - je na intervalu $[a,b]$ spojitá
         - má na intervalu $(a,b)$ derivaci
@@ -328,7 +295,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - Taylorův polynom.
   - pomocí něj se dají aproximovat různé funkce
   - pro motivaci - aproximace funkce $f$ v bodě např. $a$
-    - bude funkce $t(x) = f(a)+f'(a)(x-a) $
+    - bude funkce $t(x) = f(a)+f'(a)(x-a)$
       - tedy přímka procházející bodem $a$ se směrnicí $f'(a)$
     - $t$ je v tomto případě polynom stupně 1, pro který platí
       - $\lim_{x→a}\frac{f(x)-t(x)}{x-a}=0$
@@ -350,7 +317,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - primitivní funkce
   - funkce, která umožňuje z derivované funkce rekonstruovat původní funkci
   - definice primitivní funkce
-    - nechť $-∞ < a < b < ∞$
+    - nechť $-\infty < a < b < \infty$
     - nechť je definovaná funkce $f: (a,b) → ℝ$
     - nechť je definovaná funkce $F: (a,b) → ℝ$, která má na $(a,b)$ derivaci $F'$
     - pokud $F'(x) = f(x)$ pro všechna $x ∈ (a,b)$, nazveme funkci $F$ primitivní funkcí k funkci $f$
@@ -439,7 +406,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
         - sumy
           - $s(f,D_n)=∑_{i=1}^n 1/n \frac{i-1}{n}$
           - $S(f,D_n)=∑_{i=1}^n 1/n \frac{i}{n}$
-        - $lim_{n→∞}(∑_{i=1}^n 1/n\frac{i-1}{n}) = lim_{n→∞}(∑_{i=1}^n 1/n\frac{i}{n})=1/2$
+        - $lim_{n→\infty}(∑_{i=1}^n 1/n\frac{i-1}{n}) = lim_{n→\infty}(∑_{i=1}^n 1/n\frac{i}{n})=1/2$
   - věta: kritérium integrovatelnosti
     - funkce je Riemannovsky integrovatelná právě tehdy, když pro všechna $ϵ>0$ existuje dělení $D$ takové, že $0≤ S(f,D)-s(f,D) < ϵ$
   - věta: pokud je funkce monotónní, pak je Riemannovsky integrovatelná
@@ -1233,7 +1200,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - hypergeometrické
     - taháme n míčků z krabice, kde je celkem N míčků, z toho K červených
     - jaká je pravděpodobnost, že vytáhneme právě k červených míčků? ($0\leq k\leq n\leq N$, $k<K$)
-      - $p_X(k)=($$K \choose k$$N-K \choose n-k$$)/$$N \choose n$
+      - $p_X(k)=($$K \choose k$$N-K \choose n-k$$)/$ $N \choose n$
       - E(X)=$\frac{nK}{N}$
   - Poissonovo rozdělení
     - např. kolik přijde emailů za hodinu
@@ -1853,6 +1820,9 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - literatura
   - asi zkusím jet podle Campbella ([je na Bioinf disku](https://drive.google.com/drive/u/2/folders/1kWWqsS6XROSkxkqcxRPV3bUSRDlbdkZo))
   - obsah je na str. xxxii (35)
+  - nakonec jsem využil i další zdroje (Wikipedii, Wikiskripta, různé přednášky našich vyučujících), v Campbellovi to asi bylo, ale moc rozvlekle a neměl jsem na to čas
+
+
 ### 1. Složení živých buněk - malé molekuly a makromolekuly, jejich interakce, vlastnosti vody a vodných roztoků důležité pro život, kyseliny, zásady a pufry, role vody v živých tělech
 - složení živých buněk - Campbell str. 29 (včetně vody, asi se počítá hmotnost, ne moly)
   - O ... 65%
@@ -2460,7 +2430,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - fosforilace (aktivace/deaktivace)
   - ubiquitinace (malý peptid ubiquitin), označení pro zničení ve proteasomu
 
-### 11. Dynamika a funkce buněčných kompartmentů - endoplasmatické retikulum, Golgiho komplex, vezikulární transport, endo- a exocytóza, sekreční dráha a nitrobuněčné adresování proteinů, lyzosom, vakuoly, peroxisom, hydrogenosom
+### 11. Dynamika a funkce buněčných kompartmentů - endoplasmatické retikulum, Golgiho komplex, vezikulární transport, endo- a exocytóza, sekreční dráha a nitrobuněčné adresování proteinů, lyzosom, vakuoly, peroxisom, hydrogenosom
 - literatura
   - Cpb 6.4
   - přijde mi, že to je v té učebnici názorný, ale trochu rozvláčně psaný, jdu si to hledat na wikiskriptech a wikipedii
@@ -3259,20 +3229,150 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - tyjo doufám, že už jsem to popsal u 21. otázky, kdyžtak pls doplňte :D
 
 ### 24. Pohlavní výběr - intrasexuální a intersexuální selekce, epigamní znaky, evoluce
+- pohlavní výběr umožňuje vysvětlit i z hlediska přírodního výběru nepravděpodobné znaky
+  - jde o to, že jedinec musí dojít k úspěšnému předání genů do další generace
 
+- intrasexuální pohlavní výběr
+  - https://en.wikipedia.org/wiki/Intrasexual_competition
+  - wiki uvádí jen u samců
+  - samci mezi sebou svádí souboj o samičky
+  - často je vítězství v souboji i součástí větší atraktivity pro intersexuální výběr
+  - při malém množství samců se navzájem vybírají samec a samice s největší fitness
+  - při velkém množství samců to často selhává na několika krocích
+    - neúspěšní samci mohou vyvíjet postranní taktiky, např. jak oplodnit nečekaně vajíčka, aniž by vyhráli souboj
+    - samice také nejsou tlačeny do vysokých investic do rozmnožení - budou vybrány i samice s malým fitness, protože samců je moc
+
+- intersexuální pohlavní výběr
+  - http://web.natur.cuni.cz/~flegr/prezentace/13-pohlavn%C3%AD%20v%C3%BDb%C4%9Br.ppt
+  - např. výběr samečka samičkou a naopak
+  - podle Flegra se geny pro preferenci určitých znaků vytvořily přirozeným výběrem
+  - druhé pohlaví se tomuto tlaku muselo přizpůsobit (např. pávi s kratším ocasem nebyli preferováni)
+  - hypotéza dobrých genů & hypotéza dobrých rodičů
+    - samice si vybírají znaky, které signalizují zdraví nositele
+    - tou hypotézou dobrých rodičů si nejsem jistý, ale asi že samice preferují toho, o kterého se rodiče dobře postarali??
+  - handicapová hypotéza
+    - i když má nějaké např. zranění, samec byl přesto schopen se dožít reprodukčního věku -> pravděpodobně má v jiné oblasti extrémně dobré geny -> je samicemi nepravděpodobně preferován
+  - indikátory
+    - např. kvalita ontogeneze jedince
+    - sociální postavení
+      - samičky preferují samce, který je mezi samci vysoko v hierarchii
+    - kvalita zimoviště ..?
+  - handicap musí být takový, aby za něj samec geneticky "nemohl" - nedědí se
+  - naopak indikátor se má dědit
+  - Zahaviho hypotéza výkladní skříně
+    - epigamní znaky jsou poměrně složité - vyžadují množství genů
+    - snadno se na nich navíc odhalí přítomnost parazitů (nevím actually, jestli ty parazity si tam jen nepřidal Flegr, z jehož prezentace tohle čerpám :D)
+  - epigamní znaky musí být nákladné - barevnost peří - karoten je drahý
+    - hříva lvů
+    - vyšší hladina steroidních hormonů -> nižší imunita (hypotéza imunokompetičního handicapu)
+
+- epigamní znaky
+  - asi prostě znaky, které zvyšují atraktivitu jedince pro intersexuální výběr? Do toho by mohly spadat primární a sekundární pohlavní znaky, ale asi i další, které např. indikují dobrou ontogenezi?
 ### 25. Speciace: mechanismy a typy speciací
+- speciace = vytvoření nového druhu
+- https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/07-Speciace-2022.pdf
+- druh ... více definic, např.
+  - druh = soubor jedinců, kteří se mohou spolu pářit a plodit potomstvo (ideální definice, často se mohou pářit a plodit potomstvo i s dalšími druhy = hibridizace)
+  - nebo druh = soubor jedinců obývajících stejnou ekologickou niku
+  - etc.
+- proti směšování druhů stojí reprodukční bariéry:
+  - https://www.wikiskripta.eu/w/Druh_a_speciace#Reproduk%C4%8Dn%C4%9B_izola%C4%8Dn%C3%AD_mechanismy_(RIM)
+  - prekopulační bariéra
+    - jedinci ze dvou druhů nejsou sexuálně přitahováni
+    - nemají kompatibilní pohlavní orgány
+  - postkopulační bariéra
+    - pohlavní buňky nesplynou
+  - postzygotická bariéra
+    - nový jedinec není schopen rozmnožování (sterilní, nebo se ani nedostane do reprodukční fáze)
+
+- speciace
+  - geografická
+    - populace jsou fyzicky oddělené, vyvíjejí se nezávisle na sobě - vyvinou si nové znaky
+    - alopatrická - malá část populace se oddělí od mateřské a vyvíjí se nezávisle
+    - extinkční - vymře populace, která by propojovala dvě okrajové populace
+    - peripatrická - skrze osidlování nového prostředí se nová populace přizpůsobí na nové podmínky
+  - negeografické modely
+    - parapatrická - mezi oddělenými populacemi probíhá genová výměna
+    - sympatrická - uvnitř populace vznikne odlišně se vyvíjející subpopulace
+    - stasipatrická - náhlá změna, která vytvoří reprodukční bariéru
+      - např. závornatka - ulita je pravotočivá místo levotočivosti
+  - na úrovni molekulární biologie vede k vytvoření nového druhu
+    - hromadění odlišných alel
+    - podivná rekombinace
+    - chromozomální přestavba
+    - polyploidizace
+  - bariéra sterility
+    - Haldaneovo pravidlo
+      - pokud je jedno pohlaví sterilní po mezidruhovém křížení, zpravidla je to to heterogametické
+    - chromozom X/Z je zpravidla ten, který způsobuje sterilitu hybridů
+      - možná je tento efekt propojen s meiotickým tahem - velmi rychlá fixace genů pro meiotický tah
+    - sterilita může vzniknout i na úrovni mitochondrií - mito-nukleární nekompatibilita
+    - chromozomové translokace
+    - aktivace transpozonů - otec může předat transpozony, na které není maternálně děděné piRNA "připraveno"
+    - přesun genů z chromozomu na jiný chromozom - sterilita/omezená životaschopnost jedince
+
+- mezidruhový genový tok - může přinášet žádanou genetickou variabilitu
 
 ### 26. Evoluce pohlavního rozmnožování
+- http://natur.cuni.cz/~flegr/eb/evbiol_evoluce_sexuality.ppt
+- nevýhody sexuality
+  - rozpad osvědčených kombinací
+  - je drahá - samci jakoby neprodukují potomstvo, jen existují
+  - je drahá II - meióza je náročný proces
+  - když jedinec žije sám, nemůže se rozmnožit
+  - mohou se přenášet paraziti
+  - pro organizmy je těžké se zkoordinovat
+- výhody sexuality
+  - z hlediska evoluce
+    - větší rozmanitost - teorie životem kypícího břehu
+      - prostředí je komplexní, hodí se mít možnost udělat potomka, který není 100% kopie rodiče
+      - teorie božích mlýnů - vyšší plasticita, která není vykoupena ztrátou některých alel v prahové hodnotě
+    - zpomalení evoluce (zamrzlá plasticita - druh se vpodstatě nevyvíjí, dokud nedojde do bodu hrdla láhve, spíš funguje "elasticky" a reaguje na prostředí, přičemž alely jsou zachovány)
+    - výhodné mutace nejsou závislé na ostatních
+    - obrana proti nevýhodným mutacím (nezávisle na ostatních alelách je možné vylučovat ty negativní) - proti Mullerově rohatce
+    - udržení diploidie - možnost ponechat si takový testovací prostor pro mutace, aniž by to jedince vážně ohrozilo
+  - z hlediska jedince
+    - reparace mutací
+    - hypotéza vlastního pokoje
+      - z jiného pohledu podobné jako hypotéza kypícího přehu
+      - jedinec se rozmnoží, ale potomci mohou být přizpůsobeni i na trochu jiné niky než rodič
+      - vede k nižší vnitrodruhové konkurenci
+    - hypotéza loterie
+      - v homo i heterogenním prostředí si pravděpodobněji nějaký potomek najde místo v každé nice
+    - hypotéza červené královny
+      - vývoj přizpůsobení musí běžet co nejrychleji, aby linie alespoň přežila
+      - pohlavně se rozmnožující druh má vyšší variabilitu a možnost mutovat, aniž by jej to ohrozilo
+
 ### 27. Homologie, analogie, plesiomorfie a apomorfie v evoluci organismů
+- trochu nechápu, jak ty pojmy vyloženě vztáhnout k evoluci organizmů, ale tak zkusím je definovat a třeba z toho něco vyjde
+
+- tyhle pojmy se vztahují buňto ke genům, nebo ke znakům (orgánům, funkčním jednotkám etc.)
+- homologie
+  - stejný původ, stejná funkce
+- analogie
+  - stejná funkce, různý původ (konvergentní evoluce)
+- plesiomorfie
+  - znak, který má předek
+  - tento znak se může projevit u potomků zdánlivě náhodně - neposkytuje důkaz o tom, že jsou si příbuzní
+  - např. pra-savec měl zuby a více savčích "linií" má také zuby - to, že mají zuby ale neznamená, že jsou si vzájemně příbuznější, než s jakýmkoliv savcem, který zuby nemá
+    - lasička si s vakoveverkou (která má zuby) není nutně více příbuzná než s mravenečníkem, který má zuby
+- apomorfie
+  - apomorfie je znak, který je společný dceřiným liniím, ale ne předkovi
+  - napovídá příbuznost linií
+    - původní savec neměl placentu
+    - část savců má placentu -> to napovídá, že jsou si příbuznější než s bezplacentými savci
+
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC138949/#:~:text=Here%2C%20orthologs%20are%20defined%20as,not%20catalyze%20the%20same%20reaction.
+- ortolog
+  - homolog, který má zachovanou funkci
+- paralog
+  - homolog, který nemá zachovanou funkci
+- ohnolog :D
+  - není potřeba, jen to měl jednou Marian v prezentaci
+  - homologní geny, které ale vznikly celogenomovou duplikací (při polyploidizaci) - speciální typ paraloga
 
 ## Bioinformatika
-### Nástroje a algoritmy
-- fylogenetika
-  - UPGMA
-  - Maximal Parsimony
-  - Neighbor-Join
-  - 
-  - bootstrap analýza
+
 ### 1. Obor "bioinformatika"
 > 1. definice oboru- historie bioinformatiky – oblasti bioinformatiky- biologická data
 
