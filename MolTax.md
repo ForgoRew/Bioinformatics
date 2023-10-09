@@ -73,4 +73,44 @@
   - o struktuře
   - o evoluci sekvence
 
-- 
+- když najdeme podobné sekvence
+  - náhoda
+  - analogie
+  - homologie
+
+- 2 nehomologní proteiny
+  - pokud mají alespoň 100 AK ...
+  - tak jejich sekvenční identita je téměř jistě menší než 35%
+    - >35% ... likely homolog
+    - 20-35% ... "twilight zone"
+    - <20% ... midnight zone
+  - homologie je tranzitivní relace
+
+- proteiny jsou lepší než DNA
+  - DNA je by chance mnohem podobnější než proteiny
+  - genetický kód je degenerovaný
+  - někdy ale není vyloženě jiná možnost
+
+- skórovací matice
+  - PAM ... Margaret Dayhoff
+    - log odds ratio
+  - BLOSUM
+    - derived from blocks of sequences
+    - number means the percentage of identities between sequences in the blocks
+  - PAM 120 ~ BLOSUM 62
+
+- Needleman & Wunsch 1970
+  - alignment table
+  - backtracking
+    - zjišťování, z jaké pozice jsem pro danou pozici vyšel
+
+- MSA
+  - ClustalW, T-Coffee
+  - Clustal Omega
+  - MAFFT - used for phylogeny
+    - FAMSA - derived from MAFFT
+  - HMM methods ... HHMER, HH_suite
+  - Machine Learning methods..?
+
+- structure alignment (better than sequence alignment..?)
+  - Foldseek/structural alignment ... works?
