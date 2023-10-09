@@ -1,19 +1,24 @@
 # README
 Čauky!
 
-Tenhle soubor jsou moje poznámky z průběžnýho učení na státnice. Neříkám, že jsou kompletní, ale někomu by se mohly hodit :)
+Tohle jsou moje poznámky z učení na státnice z bakaláře bioinf (v AR 22/23 :D).
 
-Zatím jsou under construction :D
+Snažil jsem se, aby pokrývaly v základu úplně všechna témata, co jsou v otázkách ke státnicím. Kdybyste někde našli chybu (gramatickou i faktickou, i když faktickejm jsem se snažil vyhnout co to šlo), tak to pls buďto rovnou upravte v souboru `Statnice_Bc.md` (což je jak kdyby zdroják těch poznámek) a udělejte z toho zase pdfko, nebo mi napište na `milos.halda@natur.cuni.cz` a já to rád opravim :)
 
-Vycházím ze [státnicových otázek na SISu](https://is.cuni.cz/studium/predmety/index.php?id=7b4a1f9cb7c5f97f6a546844bfc00ea4&tid=&do=predmet&kod=MSZBB004&skr=2022).
+Jinak pdfko (`Statnice_Bc.pdf`) jsem dělal trochu oklikou přes Libre Office (`.md`->pandoc->`.odt`->Libre Office->`pdf`), protože konverze Markdownu rovnou do `pdf` pandocem nevytvořila obsah (a poznámky bez obsahu jsou docela na nic). Tak i proto mi klidně napište, ať tuhle proceduru udělám za vás :D
 
-U některých zpracovaných otázek jsou odkazy na materiály, ze kterých vycházím (přednášky etc.).
+Snažil jsem se (kde to šlo) dávat i odkaz na příslušný přednášky a další zdroje (byť často to byla kvůli mý pohodlnosti Wikipedie :D). Každopádně hodně zdrojů (obecně) je na našem [Bioinformatickym GDrivu](https://drive.google.com/drive/u/2/folders/0AM371S8d_iEFUk9PVA), [Biosouborech](https://drive.google.com/drive/u/2/folders/0AMS8AXfnIpIlUk9PVA) a často se dobrý odpovědi v biologii najdou ve WikiSkriptech. Na informaticko-matematický témata doporučuju učebnice (Průvodce labyrintem algoritmů, Hladíkova Lingebra nejen pro informatiky, skripta ze statistiky a analýzy atd.). Bioinformatika je celá pokrytá Hokszovym kurzem Bioinformatické algoritmy a databáze. A biologie je random, uceleně je asi jen v takovejch těch bichlo-učebnicích, na jednu - Campbella ([je na Bioinf disku](https://drive.google.com/drive/u/2/folders/1kWWqsS6XROSkxkqcxRPV3bUSRDlbdkZo)) se často odkazuju v poznámkách.
 
-==========
+Tož tak, ať slouží! A doufám, že se vám bude u státnic dařit!
+Miloš
 
-Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsané dost mašťácky. Tak to berte pls jako spíš moje poznámky, kterými si připomínám teorii a pro cokoliv podrobnějšího se podívejte do zdrojů, které tam mám napsané. Sorry :D
+====
 
-# Otázky
+Všiml jsem si, že jsou bohužel často rozsypané vzorečky v LaTexu u matematiky. Bohužel LibreOffice nebral syntax, která fungovala v rozšíření "Markdown All In One" ve VS Code, který jsem používal při psaní. Kdyby se to někomu chtělo opravit, tak budu moc rád, ale pokud budete používat poznámky zároveň s učebnicema, tak to neni potřeba... 
+
+Neptejte se mě, proč jsem to rovnou nepsal ve Wordu :D Začal jsem Markdownem a v půlce už se mi to nechtělo předělávat :D
+
+# Poznámky
 ## Požadavky znalostí k bakalářské státní závěrečné zkoušce z bioinformatiky
 
 ### Matematika & informatika
@@ -87,6 +92,14 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 7. predikce struktury makromolekul
 8. fylogenetika – stavba stromů – základní metody tvorby stromů (ML, MP, NJ, Bayes) – bootstrap analýza
 
+## Na co se mě ptali u státnic
+Bude super, když doplníte, na co se ptali vás. Aspoň z mý zkušenosti před státnicema - takový příklady toho, na co se můžou zeptat, bych platil zlatem :D
+
+- O. Pangrác se mě ptal na lineární zobrazení, co to je, jaký má vlastnosti a jak bych udělal matici lineárního zobrazení, když mám daný vektory a na co se zobrazej.
+- D. Hoksza se mě ptal na třídicí algoritmy, merge sort, časovou a prostorovou složitost a na třídění haldou (ale to asi jen kvůli mýmu příjmení :D)
+- Stopka po mě chtěl, ať dokážu, že existuje evoluce
+- Marian se ptal na homologní modelování a jaký vlastnosti by měly mít templaty (sekvenční podobnost atd.)
+
 ## Matematika & informatika
 ### 1. Matematická analýza
 - k celé matematické analýze jsou [sripta od Klimošové ("poznámky z přednášek") na disku](https://drive.google.com/drive/u/2/folders/1iJyceZk9aKkYBAnl3T4XAQ2f2PTM7tpD)
@@ -98,7 +111,9 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - u důkazů jsou potřeba vědět hlavně jejich myšlenky
   - jsou potřeba základní definice
   - počítací věci jen hodně v základu, určitě žádné "špeky"
+
 #### 1. Posloupnosti a řady
+
 > Posloupnosti a řady, konvergence, Cauchyovské posloupnosti
 
 - literatura
@@ -120,8 +135,8 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - Řekneme, že posloupnost $(a_n)_{n=1}^{\infty}$ má limitu v bodě L, pokud
     - L náleží do reálných čísel
     - pro každé $\epsilon$ z reálných čísel existuje $n_0$ z přirozených čísel
-      - pro každé $n$ > $n_0$, $n$ $\in$ $\N$
-      - $a_n$ - L < $\epsilon$
+      - pro každé $n$ > $n_0$, $n \in \N$
+      - |$a_n$ - L| < $\epsilon$
 
   - věta o jednoznačnosti limity
     - každá posloupnost má nejvýše jednu limitu
@@ -135,8 +150,8 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - pokud a>b, tak pro nějaké $n_0$ budou i další hodnoty první posloupnosti větší než druhé
   - věta o dvou policajtech
     - pokud si můžeme "uzavřít" posloupnost do dvou posloupností - jedna bude vždycky větší a druhá vždycky menší - a ty mají limitu v jednom čísle, tak i ta uzavřená posloupnost v něm má limitu
-  -  věta monotónní posloupnosti
-    -  každá monotónní posloupnost má monotónní podposloupnost
+  -  věta o monotónní podposloupnosti
+    - každá posloupnost má monotónní podposloupnost
 
 - řada je vlastně suma členů posloupnosti
   - nekonečná řada je suma všech prvků posloupnosti
@@ -244,8 +259,8 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
       - $(f(g))'(a) = f'(b)g'(a)$
   - věta: derivace inverzní funkce
     - $f→J$ je na $J$ spojitá a ryze monotónní funkce a $f(a)=b$
-    - pak když $b!=0$: $(f^{<-1>})'(b) = 1/f'(a)$
-    - jinak když je $f$ rostoucí, tak $(f^{<-1>})'(b) = \infty$
+    - pak když $b!=0$: $(f^{-1})'(b) = \frac{1}{f'(a)}$
+    - jinak když je $f$ rostoucí, tak $(f^{<-1>})$'$(b) = \infty$
       - (když je klesající, tak -∞)
   - věta: L'Hospitalovo pravidlo
     - funkce $f,g$ mají na $P(a,δ)$ vlastní derivaci a $g'(a)!=0$ na $P(a,δ)$
@@ -285,7 +300,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - věta: konvexita, konkavita a druhá derivace
     - mějme funkci f na intervalu I
       - pokud je druhá derivace f'' na I kladná, pak je f na I konvexní
-      - pokud je druhá derivace f'' na I záporní, pak je f na I konkávní
+      - pokud je druhá derivace f'' na I záporná, pak je f na I konkávní
 
 - Extrémy funkcí.
   - v poznámkách jsem to trochu přejel, ale myslím, že se to řeší přes derivaci funce - kde je derivace 0 tam může být lokální extrém, viz teorii okolo Rolleovy věty
@@ -436,6 +451,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 ### 2. Lineární algebra
 - mám záměr dělat celou lingebru z Hladíkovy učebnice - Lineární algebra nejen pro informatiky
   - je na [Google Disku Bioinformatika](https://drive.google.com/drive/folders/0BzEbjnxrwP6Obi1BT0dzX25zelE?resourcekey=0-FmLJvLRy3SlujojoDsMReA&usp=sharing)
+
 #### 1. Soustavy lineárních rovnic, metody řešení.
 > Soustavy lineárních rovnic, metody řešení.
 
@@ -454,8 +470,8 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - Gaussova eliminace
   1. dopředná eliminace - pomocí elementárních úprav je matice převedená do odstupňovaného stavu
   2. substituce - postupně se dosazují hodnoty neznámých do rovnic a určují se zatím neurčené
-- odstupňovaný tvar matice (REF(A), row echelon form) 
-  - pro matici $n×m$
+- odstupňovaný tvar matice (REF(A), row echelon form)
+  - pro matici $m×n$
     - řádky 1...r jsou nenulové
     - řádky r+1 ... m jsou nulové
     - každý nenulový řádek má jednoho pivota
@@ -466,11 +482,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - redukovaný REF (RREF(A), reduced row echelon form)
   - jako REF, ale na místech pivotů jsou jen jedničky a jinak nuly, vlastně to odstraňuje nutnost provést krok substituce - máme přímo hodnoty jednotlivých neznámých
 - Frobeniova věta
-  - soustavy jsou řešitelné právě tehdy, když hodnost matice A je stejný jako hodnost rozšířené matice A|b (b je vektor hodnot za rovnítkem u rovnic)
-
-
-- soustavy lineárních rovnic, metody řešení.
-
+  - soustavy jsou řešitelné právě tehdy, když hodnost matice A je stejná jako hodnost rozšířené matice A|b (b je vektor hodnot za rovnítkem u rovnic)
 
 #### 2. Matice, operace s maticemi
 > Matice, operace s maticemi. Hodnost matice, regulární matice a inverzní matice. Odstupňovaný tvar matice.
@@ -483,11 +495,11 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - pojem má smysl jen pro čtvercovou matici (m=n)
   - matice A je regulární, pokud soustava $Ax=0^n$ má pouze jedno řešení - $x=0^n$
   - jinak se matice nazývá *singulární*
-- regulárita matice $A ∈ ℝ^{n×n}$ je ekvivalentní s tím, že
+- regularita matice $A ∈ ℝ^{n×n}$ je ekvivalentní s tím, že
   - matice $RREF(A) = I_n$ ($I_n$ je jednotková matice - má jedničky na diagonále)
   - $rank(A)=n$
 - tohle má vztah i k řešení soustavy lineárních rovnic
-  - A je regulární je ekvivalentní s tím, že soustava rovnic Ax=b má řešení pro libovolné b
+  - regularita matice A je ekvivalentní s tím, že soustava rovnic Ax=b má právě jedno řešení pro libovolné b
 - co se týká maticového násobení, pokud A,B jsou regulární matice, pak jejich součin je regulární
 - pokud alespoň jedna z nich je singulární, pak i jejich násobek je singulární
 - elementární úpravy - jde snadno ukázat, že celý proces Gaussovy(-Jordanovy) eliminace jde vyjádřit jako násobení matice A regulární maticí elementárních úprav Q
@@ -715,12 +727,12 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
       - $y_3 = x_3 -  ∑_{i=1}^2<x_2,z_i>z_i = (0,1,2)-(0×(1,0,0)+1×(0,1,0)) = (0,0,2)$
       - z3 = y3/||y3|| = (0,0,1)
     - vyšla tedy kanonická báze - cože je dané tím, že první vektor byl násobkem vektoru z kanonické báze. Kdybych začal s třeba x3, tak by výsledek dopadl jinak
-- výrazu <x,z> pro vektor x a vektor z z ortonormálního systému vektorů se říká "Furierův koeficient"
+- výrazu <x,z> pro vektor *x* a vektor *z* z ortonormálního systému vektorů se říká "Furierův koeficient"
 
 - ortogonální doplněk
   - množina vektorů $M$ má ortogonální doplněk $M^⊥$ tvořený vektory kolmými na vektory množiny $M$
   - ortogonální doplněk má následující základní vlastnosti (M,N množina vektorů z V, $M^⊥$, vektorový prostor V):
-    1. $M^⊥ ∩ V$
+    1. $M^⊥$ je podprostorem $V$
     2. pokud $M$ je podmnožina $N$, pak $N^⊥$ je podmnožina $M^⊥$
     3. $M^⊥$ je ortogonálním doplňkem vektorového prostoru generovaného $M$ ($span(M)$)
 
@@ -813,7 +825,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - vektor x se zobrazením pomocí matice A pouze prodlouží, či zkrátí a to právě λ-krát
 
 - věta: charakteristika vlastního čísla a vektoru
-  - pro matici a platí, že λ je vlastním číslem matice A právě tehdy, když $det(A-λI_n)=0$
+  - pro matici A platí, že λ je vlastním číslem matice A právě tehdy, když $det(A-λI_n)=0$
   - x je vlastním vektorem právě tehdy, když náleží do $Ker(A-λI_n)$
 - důsledkem této věty je, že k jednomu vlastnímu číslu náleží $n-rank(A-λI_n)=dim(Ker(A-λI_n))$ lineárně nezávislých vektorů
 
@@ -873,7 +885,8 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - věta: podobné matice mají stejná vlastní čísla
   - věta: podobné matice mají stejný počet lineárně nezávislých vlastních vektorů
   - matice je diagonalizovatelná, pokud se podobá nějaké diagonální matici
-    - tedy $A = SΛS^{-1}$, kde S je regulární a  diagonální
+    - tedy $A = SΛS^{-1}$, kde S je regulární a  Λ diagonální
+    - $SΛS^{-1}$ se říká *spektrální rozklad*
   - věta: matice je diagonalizovatelná právě tehdy, když má $n$ lineárně nezávislých vlastních vektorů
     - pokud známe vlastní vektory a vlastní čísla matice A, tak matici S sestavíme jako vektory (podle sloupců) a matici Λ bude mít pouze vlastní čísla na diagonále (tak, aby odpovídaly vlastním vektorům)
     - pokud má matice n navzájem různých vlastních čísel, pak je diagonalizovatelná
@@ -1720,7 +1733,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - Generické programování
   - [Wiki](https://cs.wikipedia.org/wiki/Generick%C3%A9_programov%C3%A1n%C3%AD)
   - metoda programování, která umožňuje psát daný objekt/metodu obecně s tím, že to, jak bude výsledek vypadat se určí až dosazením konkrétního typu
-  - např. ArrayList v Javě je generický, protože může být určen pro různé typy objektů (ArrayList<Integer>, ArrayList<String>), ale může být i velmi obecný, pokud jej definujeme pro jakékoli objekty (ArrayList<Object>).
+  - např. ArrayList v Javě je generický, protože může být určen pro různé typy objektů (`ArrayList<Integer>`, `ArrayList<String>`), ale může být i velmi obecný, pokud jej definujeme pro jakékoli objekty (`ArrayList<Object>`).
 
 - knihovny
   - [Wiki](https://cs.wikipedia.org/wiki/Knihovna_(programov%C3%A1n%C3%AD))
@@ -1881,9 +1894,6 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - literatura
   - v Campbellovi kapitola 6
 
-![eukaryotická buňka (schéma)](Statnice_Bc/St-Cpb-eukaryoticka-bunka.png)  
-![eukaryotická buňka (schéma)](Statnice_Bc/St-Cpb-prokaryot-bunka.png)  
-
 - porovnání eukaryot a prokaryot
   - obojí mají **plasmatickou membránu**
   - membrána obaluje **cytosol**, ve kterém jsou umístěny další struktury
@@ -1984,7 +1994,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - sfingomyelin (SM)
 
 - lipidové struktury (ve vodě)
-  - jsou udržované hydrostatickým tlakem
+  - jsou udržované hydrofóbními silamy
   - mycely (kuličky, hydrofobní konce dovnitř, hlavičky ven)
   - membrána (bilayer)
   - lypozóm (jakoby membrána obalující uvnitř zase vodu)
@@ -2132,7 +2142,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - glykolýza
   - zpracování glukózy (ostatní cukry jsou převedeny na glukózu)
   - kaskáda postupných fosforylací,
-  - přeměna na ribózu 1-6difosfát
+  - přeměna na ribózu 1-6bisfosfát
   - rozštěpení na 2 pyruváty
   - pyruvát -> PDH (pyruvát dehydroxyláza) -> acetyl-CoA
     - alternativně může být na pyruvát připojena molekula CO2 pyruvát karboxylázou za vzniku oxaloacetátu - výchozí molekula citrátového cyklu
@@ -2197,8 +2207,23 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
         - 5* 3C + 3C (jeden glyceraldehyd bisfosfáty se může využít)
         - 5* 3C -> 3 * 5C
       - popsaný postup probíhá v C3 rostlinách, protože do další fáze jdou molekuly C3
-      - ještě jsou C4 rostliny - produkt z navázání CO2 má 4 uhlíky
-        - nemají rubisco, ale PEP karboxylázu
+      - C4 rostliny
+        - snaží se zamezit fotorespiraci Rubiska
+          - rubisco při nízkých koncentrací C02 funguje ~obráceně - produkuje CO2
+          - C3 rostliny tak mohou ztratit až 20% efektivity fotosyntézy
+        - C4 rostliny v jednom typu buněk naváží CO2 na fosfofoenolpyruvát (3 uhlíky)
+          - pomocí **PEP carboxylázy**
+        - vznikne oxaloacetát (4 uhlíky)
+        - ten je ještě převeden na aspartát nebo malát (4 uhlíky)
+        - aspartát/malát je přenesen do druhého typu buněk
+        - tady se nabohatí koncentrace CO2 a zamezí se tak fotorespiraci
+          - uvolní se CO2 a pyruvát
+        - pyruvát přenesen zpět do prvního typu buněk
+        - (v anglické wiki píší, že první typ buněk je *mezofil* a druhý typ buněk *bundle sheat*)
+        - celkově má proces spotřebu 2 ATP
+        - příklady C4 rostlin
+          - kukuřice, cukrová třtina, bambus
+          - ale i dvouděložné - např. laskavec (amarant)
       - pak jsou ještě CAM rostliny, které jsou fajn do suchých podmínek
         - ananas to umí
         - přes noc skladují CO2 do vakuol (organických kyselin)
@@ -2212,21 +2237,23 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - nikdy ale nemůže dojít k přenosu informace z proteinů přímo do DNA (to, že proteiny např. přepisují DNA a mohou v něm dělat i programově chyby, se nepočítá)
       - nefunguje Lamarckismus
 - virová (deoxy-)ribonukleová kyselina
-  - [více typů virů](https://cs.wikipedia.org/wiki/Virus#Baltimorova_klasifikace)
-    - I. dsDNA
-    - II. ssDNA
-    - III. dsRNA
-    - IV. +ssRNA
-    - V. -ssRNA
-    - VI. retroviry (RNA -> DNA -> RNA)
-    - VII. dsDNA -> RNA -> DNA
+  - [více typů virů](https://www.wikiskripta.eu/w/Viry#Klasifikace_dle_Baltimora)
+    1. I. dsDNA (rovnou na mRNA)
+    2. II. ssDNA (nejprve dsDNA, poté mRNA)
+    3. III. dsRNA (rovnou na mRNA)
+    4. IV. +ssRNA (nejprve vytvoření dsRNA, poté tvorba mRNA)
+    5. V. -ssRNA (rovnou mRNA, možnost i dsDNA, potom mRNA)
+    6. VI. ssRNA-RT (nejprve DNA/RNA, pak DNA a nakonec z něj mRNA)
+    7. VII. dsDNA-RT (rovnou mRNA)
   - většinou genetická informace uložená v kapsidě, která je tvořena proteiny a někdy lipidy
+  - cílem je vytvořit mRNA, v ribozomech se podle ní vytvoří potřebné proteiny
+  - kromě retrovirů se nukleová kyselina také přímo množí
 - prokaryota
   - cyklická DNA + plasmidy
     - dělení - "ori" úsek - zde začíná replikace
   - plazmidy - horizontální přenos gen. informace
 - eukaryota
-  - DNA je organizována v jádře buňky
+  - DNA je organizována v jádře buňky rovnou
   - poměrně složitá struktura
   - chromozomy
   - haploidie/di/tetra/polyploidie
@@ -2250,17 +2277,24 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - může být zprostředkováno např. retroviry
   - u prokaryot pomocí F-plasmid pilů
 
-- transpozony
+- [transpozony](https://cs.wikipedia.org/wiki/Transpozon)
   - DNA transpozony
     - často se ani nereplikují
     - jen se přesouvají vrámci DNA z místa na místo
-  - retrotranspozony
+  - [retrotranspozony](https://cs.wikipedia.org/wiki/Retrotranspozon)
+    - !! zdroj na wikipedii je z roku 2006, množství v lidském genomu je asi spíš orientační
     - mají vlastní RNA polymerázu (II, III)
     - rozkopírovávají se
     - v lidském genomu až 45%
     - v rostlinách ještě hojnější
     - LTR/non-LTR transpozony
-    - 
+      - LTR = long terminal repeat
+    - LTR se také nazývají "endogenní retroviry", cca 8% genomu člověka
+    - non-LTR mají 2 podtypy
+      - LINE - long intersperced nuclear elements, cca 21% genomu člověka
+        - kódují vlastní geny pro replikaci
+      - SINE - short (...), cca 11%, využívají geny LINE a další geny hostitele pro rozmnožení
+
 - viry
   - zmíněné kategorie virů
   - obecně
@@ -2282,16 +2316,18 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - rozseká dsRNA na malé kousky (~asi 8bp, už si to moc nepamatuju, učili jsme se to v povinně volitelné genetice)
   - tuším, že argonaut si vezme tu "small interfering" RNA a pak s ní umlčuje komplementární sekvence v DNA a transkribované mRNA
 
-- priony
+- [priony](https://cs.wikipedia.org/wiki/Prion)
   - infekční patogenní komplex bílkovin
   - neurony savců obsahují bílkovinný prionový komplex
   - pokud se dostane do patogenní konformace - ztratí původní účel, přeměňuje ostatní komplexy také do patologické konformace
   - nemoc kuru (lidský kanibalismus)
-  - BSE (krávy), TSE (kozy, ovce)
+  - BSE (krávy) (BSE je podtyp TSE, znamená Bovigní (=hovězí) Spongioformní Encefalopatie)
+  - TSE (kozy, ovce) (TSE znamená Transmisivní Spongioformní Encefalopatie)
 
 - epigenetická dědičnost
   - epigenetické modifikace histonů i DNA se doplňují
   - i při replikaci DNA se velká část z nich zametyluje, jak byla (metylace DNA indukuje metylaci histonů a naopak)
+
 ### 8. Základy genetiky - Mendelovy zákony, základní pojmy, různé verze definice genu. Intra- a intergenové interakce, genová vazba, genetické aspekty sexuality, chromozomové určení pohlaví, pohlavně vázaná dědičnost, mimojaderná dědičnost.
 - [mendelovy zákony](https://cs.wikipedia.org/wiki/Mendelovy_z%C3%A1kony_d%C4%9Bdi%C4%8Dnosti)
   - fenotypové zákony
@@ -2396,7 +2432,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - Cpb kap. 18
 
 - na úrovni transkripce
-  - negativní a pozitivní ragulace
+  - negativní a pozitivní regulace
     - negativní regulace se dělí na
       - represivní a
       - indukující
@@ -2460,7 +2496,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - tvoření váčků
     - (rough) endoplasmatické retikulum -> cis Golgi - COat Protein komplex II (COPII)
     - cis Golgi -> (rough) ER - COPI
-    - clathrin ... endosomatické váčky (mimo buňku do buňky), trans Golgi -> cytoplasmatická membrána
+    - clathrin ... endosomatické váčky (mimo buňku do buňky), trans Golgi -> cytoplasmatická membrána a naopak
   - dockování váčků
     - SNARE (t-,v-) - merge membrán, pak ponechání na fyzikálních procesech
 
@@ -2899,6 +2935,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - zvýšená koncentrace Ca2+ - více funkcí
 - scaffolding proteins - rozdvojky v pathways
   - scaffolding protein tvoří komplex s různými kinázami, takže když je aktivován, např. receptorem, tak spouští více pathways naráz
+
 ### 18. Principy základních metod molekulární biologie - metody analytické separace makromolekul, PCR, sekvenování, molekulární klonování, genomika, proteomika, transkriptomika. Modelové organismy v molekulární biologii a genetice a jejich krátký popis a srovnání. Nejvýznamnější sekvenační projekty 
 
 - metody analytické separace makromolekul
@@ -2923,28 +2960,31 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - https://en.wikipedia.org/wiki/SDS-PAGE
 
 - PCR - polymerase chain reaction
-  - https://en.wikipedia.org/wiki/Polymerase_chain_reaction 
+  - [Wiki](https://en.wikipedia.org/wiki/Polymerase_chain_reaction) 
   - potřeba je 
     - amplifikovaná sekvence
     - primery  - komplementární jak k 3' tak 5' konci sekvence
     - DNA polymeráza
     - dNTP - trifosfátové nukleotidy
   - proces probíhá v cyklech, kdy se 20-40x směs zahřeje a schladí - při každém cyklu provedou DNA polymerázy polymeraci, ta se pak rozdělí a nasedne na ní nový primer, načež DNA polymeráza zase nasedne a tímhle stylem se exponenciálně zvyšuje množství DNA
-  - RT-PCR real time PCR
-    - https://en.wikipedia.org/wiki/Real-time_polymerase_chain_reaction
+  - RT-PCR reverse transcription PCR
+    - [Wiki](https://en.wikipedia.org/wiki/Reverse_transcription_polymerase_chain_reaction)
+    - používá se pro sekvenování RNA
+  - qPCR (real-time)
+    - [Wiki](https://en.wikipedia.org/wiki/Real-time_polymerase_chain_reaction)
     - díky fluorescenci monitoruje množství polymerované DNA ve vzorku **během** polymerace
 
 - sekvenování
-  - https://en.wikipedia.org/wiki/DNA_sequencing
+  - [Wiki](https://en.wikipedia.org/wiki/DNA_sequencing)
   - existují víc jednoduché a víc složité metody (next generation)
   - jednoduché metody
     - Maxam-Gilbert
-      - https://en.wikipedia.org/wiki/DNA_sequencing#Maxam-Gilbert_sequencing
+      - [Wiki](https://en.wikipedia.org/wiki/DNA_sequencing#Maxam-Gilbert_sequencing)
       - používalo se jen chvíli, brzy přetlačeno Sangerem
       - radioaktivní labeling fragmentů DNA na základě toho, čím končily
     - Sanger
-      - https://en.wikipedia.org/wiki/Sanger_sequencing
-      - https://www.youtube.com/watch?v=FvHRio1yyhQ
+      - [Wiki](https://en.wikipedia.org/wiki/Sanger_sequencing)
+      - [YouTube](https://www.youtube.com/watch?v=FvHRio1yyhQ)
       - potřeba je
         - velmi přesné zařízení na elektroforézu (s přesností na 1bp)
         - PCR
@@ -2960,23 +3000,22 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
         - na elektroforéze se zjistí, z jaké zkumavky nám vznikly jak dlouhé molekuly
         - z toho se určí, na jaké pozici je jaký nukleotid
     - Syntetická sekvenace
-      - https://en.wikipedia.org/wiki/DNA_sequencing#Sequencing_by_synthesis
+      - [Wiki](https://en.wikipedia.org/wiki/DNA_sequencing#Sequencing_by_synthesis)
       - základ pro některé Next Generation postupy
       - při syntéze se postupně přidávájí a odebírají jednotlivé typy nukleotidů
       - sleduje se, jestli byly přidány ke vzorku, nebo ne
     - shotgun sequencing
       - sanger je neúčinný pro dlouhé fragmenty
-      - https://en.wikipedia.org/wiki/DNA_sequencing#Shotgun_sequencing
+      - [Wiki](https://en.wikipedia.org/wiki/DNA_sequencing#Shotgun_sequencing)
       - DNA je rozděleno na mnoho fragmentů z mnoha kopií
       - fragmenty jsou jednotlivě sekvenovány pomocí Sangera
       - posléze jsou sekvenované sekvence znovu seskládány dohromady
     - high throughput
       - asi bych nenapsal nic než co je na wikipedii...
-      - https://en.wikipedia.org/wiki/DNA_sequencing#High-throughput_methods
-    - 
+      - [Wiki](https://en.wikipedia.org/wiki/DNA_sequencing#High-throughput_methods)
 - molekulární klonování
   - pomnožení vektoru v hostitelském organizmu
-  - https://en.wikipedia.org/wiki/Molecular_cloning
+  - [Wiki](https://en.wikipedia.org/wiki/Molecular_cloning)
   - vybere se vektor a organizmus, ve kterém se to pomnoží
   - např. se používá kvasinka
   - vektor se namnoží
@@ -2987,19 +3026,19 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - genomika
   - tyjo co tady napsat konkrétně?
   - prostě věda o tom, jak je postavený a co obsahuje genom, přičemž se často bere jaderná DNA/mitochondriální DNA
-  - https://en.wikipedia.org/wiki/Genomics
+  - [Wiki](https://en.wikipedia.org/wiki/Genomics)
   - oproti genetice studuje genom víc jako celek
   - využívá metody jako sekvenace
 - proteomika
   - věda o proteinech - jaké má buňka proteiny, jak ji ovlivňují atd.
-  - https://en.wikipedia.org/wiki/Proteomics#Methods_of_studying_proteins
+  - [Wiki](https://en.wikipedia.org/wiki/Proteomics#Methods_of_studying_proteins)
   - proteiny se dají detekovat např. pomocí protilátek
     - ELISA
   - nebo třeba na SDS-PAGE
 
 
 - transkriptomika
-  - https://en.wikipedia.org/wiki/Transcriptomics_technologies
+  - [Wiki](https://en.wikipedia.org/wiki/Transcriptomics_technologies)
   - studium toho, co buňka reálně využívá
   - izoluje se samostatná RNA z buňky
   - sekvenace
@@ -3016,7 +3055,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - s možností využití genetického inženýrství
     - ve středu zájmu společnosti - tj. umožňující získání finančního prostředků
 
-- velikosti genomu:
+- velikosti genomu - tabulka
 
 | Skupina | Druh | Česky | Velikost genomu |
 | ---- | ---- | ---- | ---- |
@@ -3031,24 +3070,25 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 | Ptáci | Gallus domesticus | kur domácí | 1,2 x 10e9 |
 | Obojživelníci | Xenopus laevis | drápatka vodní | 3,1 x 10e9 |
 | Savci | Mus musculus | myš domácí | idk x 10e9 |
+
 - modelové organizmy
   - Pyrenomonas salina
     - jednobuněčná mořská řasa
-    - https://en.wikipedia.org/wiki/Rhodomonas
+    - [Wiki](https://en.wikipedia.org/wiki/Rhodomonas)
   - Mycoplasma pneumoniae
     - umí mimikovat povrch buňky hostitele
     - anglická wiki ji řadí mezi bakterie a mycoplasmata jako kmen
-    - https://en.wikipedia.org/wiki/Mycoplasma_pneumoniae
+    - [Wiki](https://en.wikipedia.org/wiki/Mycoplasma_pneumoniae)
   - Escherichia coli
     - střevní bakterie
     - gram negativní
-    - https://en.wikipedia.org/wiki/Escherichia_coli
+    - [Wiki](https://en.wikipedia.org/wiki/Escherichia_coli)
   - Saccharomyces cerevisiae
     - kvašení chleba, vína, piva
     - množí se dělením i "pohlavně" - splynutí dvou pohlavních buněk do jedné
       - diploidní forma umí ve stresu udělat 4 haploidní spory, ty se pak umí spojit opět do diploida
     - může způsobovat infekci, pokud má člověk podlomenou imunitu
-    - https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae#A_human_pathogen
+    - [Wiki](https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae#A_human_pathogen)
   - Dictyostelium discoideum
     - hlenka
     - žije jako améba
@@ -3058,22 +3098,22 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - má tři pohlaví (projeví se ve fázi améby)
       - každé může s dalšími dvěmi vytvořit haploidní améby
     - zkoumá se, protože má některé geny homologní s člověkem a protože je to velmi jednoduchý organizmus, který ale prodělává buněčnou diferenciaci
-    - https://en.wikipedia.org/wiki/Dictyostelium_discoideum
+    - [Wiki](https://en.wikipedia.org/wiki/Dictyostelium_discoideum)
   - Arabidopsis thaliana
-    - https://en.wikipedia.org/wiki/Arabidopsis_thaliana
+    - [Wiki](https://en.wikipedia.org/wiki/Arabidopsis_thaliana)
   - Caenorhabditis elegans
     - haďátko octové
     - má X0 pohlavní systém (hermafroditi a samci)
     - žije v půdě a žere bakterie a obecně organickou hmotu (hnijící ovoce, kvasinky...)
     - studuje se kvůli nervové soustavě (má cca 300 neuronů), chemotaxi, termotaxi, mechanotransdukci (převod tlaku na nervový signál) atd.
-    - https://en.wikipedia.org/wiki/Caenorhabditis_elegans#Use_as_a_model_organism
+    - [Wiki](https://en.wikipedia.org/wiki/Caenorhabditis_elegans#Use_as_a_model_organism)
   - Drosophila melanogaster
     - ekologie asi jasná
     - má trochu divnej systém na určení pohlaví
       - X a Y chromozomy, ale pohlaví se určuje poměrem chromozomu X k autozomálním chromozomům - Y pouze kóduje produkci spermií, ale nemá na určení pohlaví vliv
       - každá buňka se rozhoduje nezávisle, jestli bude samčí nebo samičí
     - má zmapovaný konektom - nervovou soustavu
-    - https://en.wikipedia.org/wiki/Drosophila_melanogaster#Connectome
+    - [Wiki - konektom](https://en.wikipedia.org/wiki/Drosophila_melanogaster#Connectome)
   - Gallus domesticus
     - kur domácí má ZW systém pro sex determination
     - má docela rychlý reprodukční cyklus
@@ -3082,28 +3122,29 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - drápatka
     - evoluční blízkost k člověku
     - klade vajíčka během roku - snadné množení
-    - https://en.wikipedia.org/wiki/African_clawed_frog
+    - [Wiki](https://en.wikipedia.org/wiki/African_clawed_frog)
   - Mus musculus
     - velmi podobná s člověkem
-    - https://en.wikipedia.org/wiki/House_mouse
+    - [Wiki](https://en.wikipedia.org/wiki/House_mouse)
 
 
 - Nejvýznamnější sekvenační projekty
   - 1982 GeneBank
-  - https://www.nature.com/immersive/d42859-020-00099-0/index.html
+  - [článek](https://www.nature.com/immersive/d42859-020-00099-0/index.html)
   - 2000 A. thaliana a D. melanogaster
   - 2001 Human genome (shotgun sequencing)
   - 2002 Mus musculus
   - 2005 next generation sequencing
   - 2012 Encode
   - 2008 - 2012 1000 genomes
-    - https://en.wikipedia.org/wiki/1000_Genomes_Project
+    - [Wiki](https://en.wikipedia.org/wiki/1000_Genomes_Project)
 
 
 ### 19. Evoluce, různá její pojetí, významné události v dějinách teorie evoluce.
-- https://en.wikipedia.org/wiki/Evolution
-- https://en.wikipedia.org/wiki/Evolution#History_of_evolutionary_thought
-- https://en.wikipedia.org/wiki/Modern_synthesis_(20th_century)
+- literatura
+  - [Wiki - Evoluce](https://en.wikipedia.org/wiki/Evolution)
+  - [Wiki - jak se vyvíjela teorie evoluce](https://en.wikipedia.org/wiki/Evolution#History_of_evolutionary_thought)
+  - [Wiki - moderní syntéza](https://en.wikipedia.org/wiki/Modern_synthesis_(20th_century))
 - teorie evoluce vznikla v reakci na otázku po původu druhů
 - nejprve se řešila na úrovni znaků (fenotyp)
 - z toho vznikly dvě větve - darwinistická a lamarckistická
@@ -3124,7 +3165,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 
 ### 20. Lamarckismus, darwinismus, neodarwinismus
 - lamarkismus tyjo nevim co sem napsat víc než v předchozí otázce
-- https://en.wikipedia.org/wiki/Lamarckism
+- [Wiki - Lamarckism](https://en.wikipedia.org/wiki/Lamarckism)
   - prostě jedna z užitečných, ale slepých uliček vývoje teorie o vývoji druhů
   - vychází z toho, že organizmům se mění znaky i během života a potomci často mají také takové znaky
   - není to koherentní s tím, jak chápeme mechanizmus evoluce na molekulární úrovni
@@ -3134,13 +3175,13 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - taky už jsem zmiňoval
 
 - neodarwinismus
-  - https://en.wikipedia.org/wiki/Neo-Darwinism#Current_meaning
+  - [Wiki](https://en.wikipedia.org/wiki/Neo-Darwinism#Current_meaning)
   - většinou označuje teorii, jak propojit genetiku vycházející od G. Mendela a evoluci Ch. Darwina
   - někdy se do neodarwinismu zahrnuje Moderní syntéza
   - např. R. Dawkins a jeho teorii sobeckého genu je také možné zařadit do neodarwinismu
 
 - R. Dawkins a teorie sobeckého genu
-  - https://en.wikipedia.org/wiki/Gene-centered_view_of_evolution
+  - [Wiki](https://en.wikipedia.org/wiki/Gene-centered_view_of_evolution)
   - 1976
   - díky poznání molekulární podstaty evoluce se pohled posunul k samotným genům
   - teze: aktéry nejsou jedinci, ale pouze geny - množící se komponenty evoluce nejnižší úrovně
@@ -3201,6 +3242,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - disruptivní - průměrný jedinec je znevýhodněn
     - stabilizující - průměr je zvýhodněn
     - směřovaná - určitý znak je zvýhodněn (např. schopnost se potápět u kachen)
+
 ### 22. Mutace jako zdroj evolučních novinek, typy mutací, náhodnost mutací co do místa, času a směru
 - mutace
   - na molekulární úrovni jde především o substituce, inzerce a delece nukleotidů
@@ -3225,6 +3267,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - germline buňky mají obecně větší investice do zamezení mutací
       - Drosophila má 4.65 oproti 390 mutacím u germline vs somatic cells
       - u mužů jsou u člověka mutace častější než u žen 
+
 ### 23. Selekce - mechanismus, typy, úrovně
 - tyjo doufám, že už jsem to popsal u 21. otázky, kdyžtak pls doplňte :D
 
@@ -3233,7 +3276,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
   - jde o to, že jedinec musí dojít k úspěšnému předání genů do další generace
 
 - intrasexuální pohlavní výběr
-  - https://en.wikipedia.org/wiki/Intrasexual_competition
+  - [Wiki](https://en.wikipedia.org/wiki/Intrasexual_competition)
   - wiki uvádí jen u samců
   - samci mezi sebou svádí souboj o samičky
   - často je vítězství v souboji i součástí větší atraktivity pro intersexuální výběr
@@ -3243,7 +3286,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - samice také nejsou tlačeny do vysokých investic do rozmnožení - budou vybrány i samice s malým fitness, protože samců je moc
 
 - intersexuální pohlavní výběr
-  - http://web.natur.cuni.cz/~flegr/prezentace/13-pohlavn%C3%AD%20v%C3%BDb%C4%9Br.ppt
+  - [Flegrova prezentace](http://web.natur.cuni.cz/~flegr/prezentace/13-pohlavn%C3%AD%20v%C3%BDb%C4%9Br.ppt)
   - např. výběr samečka samičkou a naopak
   - podle Flegra se geny pro preferenci určitých znaků vytvořily přirozeným výběrem
   - druhé pohlaví se tomuto tlaku muselo přizpůsobit (např. pávi s kratším ocasem nebyli preferováni)
@@ -3268,15 +3311,16 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 
 - epigamní znaky
   - asi prostě znaky, které zvyšují atraktivitu jedince pro intersexuální výběr? Do toho by mohly spadat primární a sekundární pohlavní znaky, ale asi i další, které např. indikují dobrou ontogenezi?
+
 ### 25. Speciace: mechanismy a typy speciací
 - speciace = vytvoření nového druhu
-- https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/07-Speciace-2022.pdf
+- [prezentace z evoluční genetiky](https://web.natur.cuni.cz/zoologie/biodiversity/prednasky/EvolucniGenetika/prezentace_2022/07-Speciace-2022.pdf)
 - druh ... více definic, např.
   - druh = soubor jedinců, kteří se mohou spolu pářit a plodit potomstvo (ideální definice, často se mohou pářit a plodit potomstvo i s dalšími druhy = hibridizace)
   - nebo druh = soubor jedinců obývajících stejnou ekologickou niku
   - etc.
 - proti směšování druhů stojí reprodukční bariéry:
-  - https://www.wikiskripta.eu/w/Druh_a_speciace#Reproduk%C4%8Dn%C4%9B_izola%C4%8Dn%C3%AD_mechanismy_(RIM)
+  - [WikiSkripta](https://www.wikiskripta.eu/w/Druh_a_speciace#Reproduk%C4%8Dn%C4%9B_izola%C4%8Dn%C3%AD_mechanismy_(RIM))
   - prekopulační bariéra
     - jedinci ze dvou druhů nejsou sexuálně přitahováni
     - nemají kompatibilní pohlavní orgány
@@ -3314,7 +3358,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 - mezidruhový genový tok - může přinášet žádanou genetickou variabilitu
 
 ### 26. Evoluce pohlavního rozmnožování
-- http://natur.cuni.cz/~flegr/eb/evbiol_evoluce_sexuality.ppt
+- [Flegrova prezentace](http://natur.cuni.cz/~flegr/eb/evbiol_evoluce_sexuality.ppt)
 - nevýhody sexuality
   - rozpad osvědčených kombinací
   - je drahá - samci jakoby neprodukují potomstvo, jen existují
@@ -3362,7 +3406,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - původní savec neměl placentu
     - část savců má placentu -> to napovídá, že jsou si příbuznější než s bezplacentými savci
 
-- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC138949/#:~:text=Here%2C%20orthologs%20are%20defined%20as,not%20catalyze%20the%20same%20reaction.
+- [odkaz na NCBI článek](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC138949/#:~:text=Here%2C%20orthologs%20are%20defined%20as,not%20catalyze%20the%20same%20reaction.)
 - ortolog
   - homolog, který má zachovanou funkci
 - paralog
@@ -3498,13 +3542,16 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
           2. manuálně udělat jejich alignment (ještě nemáme skórovací matici, abychom to udělali automaticky)
           3. spočítat pomocí pravděpodobnostního modelu skóre v matici: $PAM_n[i,j] = log(\frac{f(i,j)}{f(i)×f(j)})$
         - *reálně* se PAM dělá pomocí markovovských modelů
-          - z toho vyplývá, že PAM *n* se vyrábí umocněním PAM 1 na *n*-tou
+          - z toho vyplývá, že PAM *n* se vyrábí tak, že se skóre v PAM 1 pronásobí pravděpodobností přechodu daných aminokyselin ($M$), ta pravděpodobnost se umocní na n-tou ($M^n$)
       - BLOSSUM
         - Na bázi PROSITE
           - BLOCKS
             - bloky motivů derivované z PROSITE knihovny
         - podíl spatřených identit a očekávaných identit
         - BLOSSUM n se vytvoří tak, že z BLOCKS se odstraní sekvence s identitou vyšší než n%
+          - pak pro aminokyseliny i,j platí $BLOSSUM(i,j)=2\log\frac{n(i,j)}{f(i)f(j)}$, kde
+            - $n(i,j)$ je počet kombinací aminokyselin i,j přes všechny sloupce ku všem kombinacím a
+            - $f(i)$ je podíl aminokyseliny i na celku
 
 - metody dynamického programování
   - optimalizace rekurzivních algoritmů
@@ -3537,7 +3584,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
       - ME (Minimal Entropy) - počítá pravděpodobnost, že je reziduum x na pozici i, skóre je záporně zlogaritmované, aby byla 0 nejvyšší možné skóre
       - SP - Sum of Pairs
         - v podstatě se udělá skórování pomocí PAM / BLOSSUM přes všechny dvojice v každém sloupci MSA
-  - spoustu heuristických algoritmů pro MSA
+  - spoustu heuristických algoritmů pro MSA (v prezentacích 5 kategorií)
     - Progressive iterative methods
       - Feng&Doolitle
       - ClustalW, Clustal Omega
@@ -3550,6 +3597,81 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - Mix
       - MAFFT, 
       - MUSCLE
+  - Progresivní iterativní metody
+    - kroky:
+      1. určit pořadí sekvencí, jak budou přidávány (guide tree)
+      2. postupné sdružování sekvencí do MSA (různé možnosti - sekvence x sekvence, sekvence x MSA, MSA x MSA)
+    - Feng & Doolittle
+      - guide tree - vzdálenosti jsou zlogaritmované pairwise skóre sekvencí, na vytvoření stromu se používá *Fitch & Margoliash* algoritmus
+      - alignment se dělá pro kombinaci
+        - sekvence x sekvence - klasický alignment
+        - sekvence x už existující MSA - sekvence si udělá alignment s každou ze sekvencí v MSA, nejlépe skórující alignment se vezme jako určující
+        - MSA x MSA - alignment každé sekvence s každou mezi skupinami, vezme se opět nejlépe skórující 
+          - z prezentace úplně není jasné, jestli náhodou nepoužívá pro MSA x MSA ještě jiný způsob jako nějakou obměnu - je možné alignment hodnotit i pomocí všech sekvencí naráz - skóre přes všechny kombinace v daném sloupci
+    - ClustalW
+      - guide tree - vzdálenosti jsou evoluční vzdálenosti sekvencí, strom vytvořen pomocí Neighbor Join algoritmu (viz [Fylogenetika](#8-fylogenetika))
+      - pro alignment používá BLOSSUM 80/50 (podle toho, jestli jsou si evolučně blízké nebo ne)
+      - využívá několik heuristik, mj.
+        - změny penalizací za gapy podle toho, jestli je poblíž gap nebo ne a jestli má daná pozice strukturně nějaký význam
+        - guide tree může být upraven v průběhu běhu algoritmu
+    - Clustal Omega
+      - ClustalW je pomalý pro velké množství sekvencí
+      - Clustal Omega používá jiné nástroje
+        - mBed pro vytvoření guide tree
+        - každá sekvence je nahrazena vektorem vzdáleností k nějakým referenčním sekvencím
+      - klusterování pomocí UPGMA/K-means
+    - nevýhody
+      - jednou chyba, vždycky chyba (algoritmus je docela hladový)
+  - consistency-based algoritmy
+    - vyvažují nevýhody progresivního alignmentu
+    - T-Coffee
+      - probíhá ve 3 krocích:
+        1. vytvoření primární knihovny (primary library)
+        2. vytvoření rozšířené knihovny (extended library)
+        3. progresivní alignment
+      - primary library
+        - vytvoří se dvojice sekvencí (každá s každou)
+        - ohodnocení každého alignmentu dvojic (sum of weights)
+      - extended library
+        - každá dvojice se zkusí zalignovat znovu ještě pomocí "intermediate" sekvence - intermediate sekvence je každá jedna další sekvence ze vstupu
+        - pro každou intermediate sekvenci tedy získáme opět váhu alignmentu našich sekvencí
+      - provede se progresivní alignment na základě vah z extended library
+  - iterativní metody
+    - také vyvažují nevýhodu progresivního alignmentu
+    - Barton-Sternberg
+      - vlastně vytvoří nějaký i třeba špatný MSA
+        - nejvíc greedy - vezme nejlépe skórující pár a zalignuje ho a pak tam přidává postupně další sekvence
+      - když je vytvořený MSA, pro všechny sekvence opakuje, že sekvenci vyndá z MSA a znovu ji zalignuje
+      - to udělá pro všechny sekvence klidně i několikrát a skončí, když dokonverguje k nějaké hodnotě/ po určitém počtu iterací
+  - block-based metody
+    - opět vznikly pro vyvážení drawbacku progresivního alignmentu
+    - Dialign
+      - rozdělí vstupní sekvence na bloky pomocí lokálního alignmentu
+      - zalignuje jednotlivé bloky
+  - mixed approaches
+    - MAFFT
+      - dva cykly progresivního alignmentu a iterativní refinement
+      - zrychlení pomocí FFT (Fast Furier Transform) 
+        - vytvoří z reziduí 6-tice
+      - postup
+        - rychlé vytvoření guide tree - vzdálenosti pomocí počtu sdílených 6-tic
+          - strom pomocí UPGMA
+        - úplně přesně nerozumím tomu alignmentu, tak kdyžtak doplňte pls
+        - pak ještě ten iterative-refinement
+          - alignment je rozdělen na dva MSA a znovu alignován
+      - v nových verzích přidána možnost consistency based approache
+    - MUSCLE
+      - funguje na principu iterativního refinementu, jeho zlepšení a pak opakování refinementu
+        1. rychlý alignment
+        2. progresivní alignment
+        3. iterativní refinement
+      - první alignment slouží jen pro vypočítání lepší matice vzdáleností (Kimura distance matrix)
+      - progresivní alignment vytvořen - guide tree se dělá vždycky pomocí UPGMA
+      - zničí se náhodná hrana ve stromě - ten se rozpadne a vzniklé dva MSA se znovu zalignují
+        - pokud se skóre zhorší, nový alignment se zahodí
+        - opakuje se do konvergence/učitý počet iterací
+- testování MSA
+  - benchmark vzorové alignmenty [BAliBASE](https://www.lbgi.fr/balibase/)
 
 
 ### 3. Hledání podobných sekvencí v databázích
@@ -3760,7 +3882,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - hierarchická klasifikace proteinů
       - podle funkční a strukturní blízkosti
   - [CATH](http://www.cathdb.info/)
-    - podobně jako CATH, ale automatizovaná
+    - podobně jako SCOP, ale automatizovaná
   - UniProt
     - zahrnuje i SwissProt
     - UniProtKB
@@ -3821,6 +3943,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
           - alignment se seeduje (přidávají se postupně dvojice aminokyselin), monte carlo metoda, využívá se rozdíl ve skóre alignmentu
           - skóre - rigidní a elastická podobnost
       - CE
+        - [odkaz na algoritmus](https://www.sdsc.edu/pub/envision/v16.3/ce.html#Top)
         - postupně hledá podobné strukturní (AFP, aligned fragment pair) úseky jdoucí v sekvencích po sobě
         - kombinatoricky vyhledává optimální AFP s ohledem na minimalizaci RMSD
       - PROSUP, STRUCTAL
@@ -3833,8 +3956,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
 
       - SSAP
         - založené na 2 úrovních dynamického programování
-          - pro každou kombinaci aminokyselin se struktury zalignují a vznikne tedy n tabulek dynamického programování se vzdálenostmi aminokyselin
-          - ve druhém kroku se tabulky sečtou a ze skóre se určí optimální alignment
+          - tady sorry, asi jsem to nepochopil dost - jen se tam nějak dělají alignmenty a dělají matice vzdáleností, ale jak to reálně funguje ..? :/
 
 
 - hledání podobných struktur
@@ -3895,7 +4017,7 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - RMSD je fajn, ale kvadratické -> hodně ošklivé RMSD i pro velmi hezky namodelované struktury
     - RMSD je kvadratické - i jedna velmi vzdálená subsekvence RMSD silně zvýší
     - **GDT-TS**
-      - nevím jak vysvětlit, je to na slidu 57, 12 přednáška
+      - počty atomů v určitých vzdálenostech - podle vzdálenosti rozděleny do kategorií a ohodnoceny, je to na slidu 57, 12 přednáška
   - je spoustu nástrojů, které tento přístup používají
     - MODELLER, ROSSETA, **SWISS-MODEL** etc.
     - budu se spíš věnovat **AlphaFoldu 2**, který je v současnosti zdaleka nejlepší (vyhrál CASP 14 (2020) s ohromným předstihem)
@@ -3990,15 +4112,18 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
     - UPGMA funguje úplně správně, jen když je strom ultrametrický
   - Neighbor Join
     - pokud jsou vzdálenosti mezi listy *aditivní*
+    - na [wiki](https://en.wikipedia.org/wiki/Neighbor_joining) hezky popsané
     - postup
       - máme multifurkaci
       - postupně vybíráme, které taxony propojíme novým uzlem
-      - vytvoříme vzdálenostní matici mezi uzly
-      - matici modifikujeme (vznikne nová matice "D") ... úplně jsem nepochopil proč, ale má se od vzdáleností odečíst ještě průměr vzdáleností k ostatním uzlům
-      - z uzlů i, j definujeme nový uzel "k" se vzdálenostmi k ostatním uzlům m
-        - $d_{km}=1/2(d_{im}+d_{jm}-d_{ij})$
-      - takhle postupujeme až dokud nemáme nezakořeněný strom
-      - strom zakořeníme (ideálně neighbor-join)
+      - vybereme dvojici s nejnižším *Q*
+        - $Q(i,j)=(n-2)d(i,j)-\sum_{k=1}^n(d(i,k)+d(j,k))$
+      - vytvoříme nový uzel *m*, rodiče uzlů *i*, *j*, který má následující vzdálenosti:
+        - $d(i,m)=\frac{1}{2}d(i,j)+\frac{1}{2(n-2)}(\sum_{k=1}^nd(i,k)-d(j,k))$
+        - $d(j,m)=d(i,j)-d(i,m)$
+        - pro každý uzel *k*$\neq$*i,j,m*:
+          - $d(m,k)=\frac{1}{2}(d(i,k)+d(j,k)-d(i,j))$
+      - strom zakořeníme (ideálně middle group)
   - parsimonie
     - snaha vysvětlit evoluci sekvencí
     - včetně snahy o nalezení pravděpodobného předka
@@ -4006,7 +4131,11 @@ Teď uprostřed sepisování jsem si všiml, že některé poznámky jsou napsan
       - 1 substituce má hodnotu 1
     - modifikovaná parsimonie
       - různé záměny mají různou hodnotu
-  - [TODO: Maximum Likelihood není pokrytý v přednášce](http://www.deduveinstitute.be/~opperd/private/max_likeli.html)
+    - parsimonie je prý **nejpoužívanější** metoda na stavbu fylogenetického stromu, takže by bylo asi fajn vědět algoritmus
+      - co jsem pochopil, tak se prostě "nějak" generují stromy a těm se přisuzuje hodnota
+      - takže pomocí parsimonie je hodnotíme a pak vezmeme ten nejlepší
+      - nikde jsem nenašel, jak se stromy algoritmicky konstuují, kdyžtak pls doplňte
+  - [Pozor: Maximum Likelihood není pokrytý v přednášce](http://www.deduveinstitute.be/~opperd/private/max_likeli.html)
 
 - bootstrap analýza
   - jde o to zjistit, jestli jsou fylogenetické stromy vygenerovány správně
