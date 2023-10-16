@@ -114,3 +114,60 @@
 
 - structure alignment (better than sequence alignment..?)
   - Foldseek/structural alignment ... works?
+
+- sometimes we need to modify the alignment by ourselves
+
+## 3.
+
+### Whole genome
+- nemožnost alignovat celý genom
+- pro taxonomii jsou jiné metody, které umožňují porovnávat genomy a vytvářet stromy
+
+- databáze
+  - zpravidla veřejné - není samozřejmost
+  - easy to find
+  - FAIR
+    - findable,
+    - accessible,
+    - interoperable - enough data to identify relations of the item (connect with e.g. the same item in different database/old experiment),
+    - reusable
+  - attributes
+    - frequency of data update - might be a red flag
+    - frequency of software update - might be a red flag too
+    - redundancy
+    - tools to analyze the data
+      - databases are novadays not only bunches of data
+    - annotation of data
+
+- examples
+  - DNA databases
+    - GenBank (NCBI)
+    - ENA (EBI)
+    - DDJB (Japonsko)
+  - genome databases
+    - lot of them, e.g.
+    - Ensembl (EBI)
+      - high quality genomes
+      - many tools
+      - divided into groups
+        - Plants, Fungi, Protist, Bacteria, Metazoa...
+    - PGD (Pineapple Genomic Database)
+    - VGP
+      - all vertebrates (~70 000 genomes)
+      - data on Amazon cloud
+    - Earth Biogenome Project
+      - 60PB of data
+  - protein databases
+    - UniProtKB
+      - SwissProt (annotated)
+      - TrEMBL (not human-curated)
+    - BFD - Big Fantastic Database
+      - 10x bigger than UniProt
+    - MGnify
+      - also 10x bigger than Uniprot
+
+- Database search
+  - FASTA
+    - 
+  - BLAST
+    - BLOSSOM 62 table

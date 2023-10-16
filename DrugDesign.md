@@ -73,3 +73,78 @@ Vaclav Veverka
 - preclinical and clinical trials
 - Food Drug Agency (USA)
 - European Medicin Agency (EU)
+
+## 02 Struktura a dynamika biomolekul
+
+...
+
+### Covalent structure
+- both nucleic acids
+  - covalent modifications of the nucleotides
+    - methylation - A,G,C
+    - pseudouridine
+    - inosine
+
+### Non-covalent interactions
+- non-covalent interactions
+  - electrostatic
+    - hydrogen bonds
+    - ion interactions
+    - stacking interactions - phenylalanine
+  - van der Waals dispersion forces
+
+### Conformational (chemical ) space
+
+- solvation & desolvation
+
+### Secondary structure
+- helices, beta sheets, loops
+
+- prolines - seeding helices
+- glycine - breaking secondary structure elements (very free in conformation)
+
+- helices
+  - alpha
+  - straight
+
+- beta sheets
+  - paralel, anti-parallel
+
+### Quaternary structure
+- also antibodies
+- oligomerization/multimerization
+  - often huge biological benefit (avidity etc.)
+
+### Intrinsically disordered proteins
+- proteins/regions
+
+### Nucleic acids
+- canonical/non-canonical
+- structure of DNA
+  - single/double stranded
+  - minor/major groove
+
+- variability - different canonical pairing has different structure properties
+
+- RNA - more variability in structure
+  - pseudoknots
+- DNA
+  - G-quadruplexes
+  - triple-helix
+  - I-motifs
+  - DNA aptamers
+
+### Molecular complexes
+- biomolecules are always in context
+- made for cooperation
+
+- molecular complexes
+  - (even in UniProt there is section about protein's interactions)
+
+- lysine & glutamine make interaction
+
+### Dynamics
+- order/disorder
+
+- Targeting dynamic proteins
+  - KRAS oncoprotein

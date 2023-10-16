@@ -85,3 +85,50 @@ Martin Převorovský
   - cca 20kb
   - 3nk/sek
 
+- typical NGS workflow
+  - design of experiment
+  - obtaining DNA/RNA & quality control (=QC)
+  - sequencing
+  - QC of sequencing data
+  - read mapping (+QC)
+  - analysis
+- většinou není možné použít nějaké řešení, které ošetři všechny požadavky experimentu
+
+- design of experiment
+  - which animals/tissues
+  - size of sample - with respect to the statistics of the experiment
+  - blinded/double blinded tests
+    - control sample
+  - replicates
+  - read lengths
+    - usually Illumina, very short reads
+      - the shorter, the faster
+        - the cheaper
+        - sometimes - better quality
+  - sequencing depth
+    - how many reads you need
+    - Illumina's maximum is 150milion reads
+  - coverage
+    - while mapping the short reads to whole genome, it is how many short reads "cover" the long read
+  - single-end/paired-end
+  - strandedness
+    - is it in sense/antisense strand?
+  - multiplexing
+
+- MINSEQE guidelines
+  - Minimum INformation about high-troughput SEQuencing
+  - by Functional Genomics Data Society
+- primers
+  - functions
+    - catching the sequence
+    - "barcodes" - we know what starting sequence is on one size
+
+- single end/paired end sequences
+  - víme, jak vypadá začátek readu vs víme, začátek i konec readu
+
+- library preparation
+  - DNA fragmentation
+  - PCR amplification - need to meassure the concentration
+
+
+

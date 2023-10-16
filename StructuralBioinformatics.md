@@ -75,4 +75,118 @@ povrch makromolekul - rozdílný pro vodu a jiné molekuly
     - vzniká **fázový problém**!!
       - řeší se 5 způsoby
         - mj. **molecular replacement**
-    - 
+
+## 02 Validace modelů určených pomocí krystalografie
+- měření v experimentu
+- konzistence s experimentálními daty
+- konzistence modelu z hlediska fyziky
+
+- všechny modely jsou aproximace
+
+### Statistika
+- přesnost a správnost
+  - správnost - jak se blížíme realitě
+  - přesnost - konzistence měření
+  
+- statistika
+  - zabývá se přesností, ne správností
+
+
+### Chyby
+- **kde vznikají chyby** (gross and systematic errors)
+  - měření
+  - fázování
+  - refinement elektronových hustot
+
+- aproximace správnosti přesností můžeme provést, pouze pokud jsou naše chyby náhodné a ne systematické
+
+- existují nástroje na odhalování chyb
+
+- problém s normálním rozdělením
+  - jen málo jevů je normálně rozdělených
+  - často jsou nějak skosená
+
+### Refinement
+- 3 kroky
+- postupně se vylepšuje model
+
+- kritéria pro validaci
+  - konektivita backbone a side chain atomů
+    - valenční geometrie
+    - distribuce torzních úhlů
+      - Ramachandranův graf
+  - absence stérických srážek atomů v asymetrické jednotce a napříč symetrickými operacemi
+  - interpretace elektronových hustot
+  - distribuce B-faktorů
+
+- [R-factor](https://en.wikipedia.org/wiki/R-factor_(crystallography))
+  - suma strukturních a pozorovaných faktorů vydělených strukturními faktory
+  - počítá se v reciprokém prostoru
+- [Strukturní faktor](https://en.wikipedia.org/wiki/Structure_factor#Definition_of_Fhkl)
+  - souvisí nějak s fázovým prostorem, jak přesně..?
+
+- korelační koeficient (Real Space Correlation Coeficient, **RSCC**)
+  - měřím hustoty v různých bodech
+  - odečtu je od sebe u různých struktur
+  - počítá se buďto pro celý krystal, nebo lokálně
+  - počítá se pro hotové struktury
+  - někdy se používá **RSRZ** (normalizované RSCC)
+
+### Jaké vlastnosti má dobře udělaná struktura
+- přesnosti rozlišení
+  - 3Å, 2Å, 1.3Å, 1Å
+  - čím nižší tím lepší
+  - pod 1.3Å se mluví o atomových modelech
+- R factor
+  - >25%, 18-22% - většina struktur, 16-18% - docela fajn, <15% výborný
+- odchylky od geometrie vazeb
+  - délky vazeb ne více než 0.03Å
+  - úhly vazeb ne více než 3˚
+- konformační kritéria, Ramachandranův graf
+- RSCC - porovnání změřených a spočtených elektronových hustot
+
+- Ramachandranův graf
+  - populární - snadno se z toho něco vyčte
+  - úhly peptidových vazeb
+    - zpravidla jsou v trans poloze
+    - pokud jsou cis - může být, ale nepravděpodobné
+    - pro každou aminokyselinu jsou různé povolené možnosti
+
+- **RMSD / RSCC** graf
+  - kombinace těchto dvou ukazatelů
+  - některé oblasti velmi pravděpodobné
+  - některé velmi nepravděpodobné
+
+### Validační software
+- validace na PDB
+  - pro přidané struktury
+  - pro novou strukturu to taky jde, ale je to složitější
+  - Coot modeling software - vizualizace + podmínky
+  - Číselné
+    - Phenix
+    - Refmac
+
+- R-faktory mají různé modifikace
+  - (Fall ...) **Rall** - klasika R-faktor
+  - (Fobs) (F>3sigma) - **Robs**
+  - **Rfree** - zabránění přerafinování struktury - něco jako přetrénování modelu - přidání příliš tvrdých podmínek, převálcování experimentu
+    - z celkového počtu reflexí vezmeme 10%
+    - 90% refinujeme
+    - Rfaktor zfurierovaných reflexí se nesmí lišit od nezfurierovaných o moc (o 3 třeba)
+    - potom se přidá zbytek těch 10%, aby se dolepšila rafinace a pak se z toho spočítá Rall
+    - často se bere míň reflexí, třeba 5%, když jich je dost
+    - **Rwork** je to R-faktor z 90%
+
+- clashscore
+  - vážený počet a vážnost těsných kontaktů mezi atomy
+
+- 3D validace
+  - graficky ukázané potenciální problémy (clashe atd.)
+
+- **RMSZ**
+  - normalizovaná RMSD
+    - ale asi je to blbost..?
+
+
+
+
