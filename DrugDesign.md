@@ -148,3 +148,79 @@ Vaclav Veverka
 
 - Targeting dynamic proteins
   - KRAS oncoprotein
+
+## 03 Už drug design
+- chemical library screening
+
+- binding pose of compound onto the protein
+  - **native pose** - good pose
+  - **decoy pose** - bad pose
+- binding affinity (**score**)
+  - binding free energy (jakoby pravděpodobnost, že by se takhle chytl protein s kompoundem, sortuje se pomocí toho)
+
+- scoring of protein-ligand binding
+  - several steps (when analysing the scoring process)
+    - protein in water & ligand in water
+    - change the binding conformation
+    - imagine protein & compound in vacuum
+    - resolvation process - puting it back to water
+  - počítá se několik energií
+    - změna konformace, entropická, solvatační atd
+  - afinita = interakce + solvatace + entropie
+  - covalent drugs are often toxic (may attack some proteins and cause inreversible changes)
+
+- afinity - vzorce
+  - termodynamika
+    - reverzibilní reakce
+      - $K_i=e^{-\Delta G/RT}$
+        - $K_i$ je jakoby disociační konstanta pro *inhibitory*
+        - čím menší disociační konstanta, tím lépe se váže molekula na protein
+      - $\Delta G = \Delta H- T\Delta S$
+  - kinetika
+    - $K_i = k_{off}/k_{on}$
+
+- nekovalentní vazby
+  - Hydrogen bonds
+    - slabé (C-H ... 0, C-H ... $\pi$)
+    - klasické (H2O ... H2O asi)
+    - solné můstky
+  - další nepolární
+    - $\pi$ ... $pi$ interakce (benzenové kruhy)
+    - **$\sigma$ holes** - **halogen bonds**
+      - na vazbách halogenů s organickými sloučeninami
+      - zjištěno, že i Cl atom má kousek nabitý kladně!
+    - **chalcogen bonds** - i síra má takovou **sigma-hole**
+
+- covalent drugs
+  - aspirin
+  - penicilin
+  - warfarin
+  - bortezomib ... reverzible covalent bond, used for cancer
+
+### Practical aspects
+- protein preparation
+  - broblems with missing atoms
+    - often lysin with missing some atoms
+    - by modeling program - adding the atoms
+  - pH - what is protonated and what is not
+  - tautomerie (**tautomerism**)
+- ligand
+  - conformation of the ligand
+    - many different angles etc., choose only the most probable
+
+- docking
+  - ligand - we have ensamble of ligand conformations for docking
+  - **Anchor-Grow algorithm**
+
+- alchemical simulations
+  - jde o to zjistit energie přechodů mezi stavy
+    - navázaný/nenavázaný stav
+    - během simulace se postupně přechází mezi stavy (malé změny)
+
+- QM methods, MM methods (?? quantum mechanics, molecular mechanics = forcefield)
+
+- require supercomputers, many calcs&huge amount of data
+- long molecular dynamics often require also days/weeks
+
+
+

@@ -90,3 +90,57 @@ NPFL129
   - většinou se totiž už "použité" příklady v dané epoše znovu nepoužívají
 
 - ztrátová funkce
+
+- learning curves
+
+- one-hot features
+  - zakódování kategorických znaků do jedniček a nul
+  - `OneHotEncoder`
+
+- feature normalization
+  - znamená normalizaci i standardizaci
+    - normalizace
+      - posunutí minima na nulu a maxima na jedničku
+      - `MinMaxScaler`
+    - standardizace
+      - odečtení střední hodnoty a vydělení rozptylem
+      - `StandardScaler`
+
+# 03 Perceptron & logistická regrese
+
+### Binární klasifikace & perceptron
+- vstup buďto je, nebo není v dané kategorii
+- $x^Tw+b<0$ nebo $x^Tw+b>0$
+  - 0 nebo 1
+  - syntaktický hacky
+    - ale používá se target $t \in (-1, 1)$
+    - b je zase přidané k x a w jako poslední hodnota
+  - pokud můžeme hodnoty rozdělit přímkou - jedním perceptronem - nazveme je **lineárně separabilní**
+
+- **perceptronový algoritmus**
+  - input - lineárně separabilní dataset (X,t)
+  - output - váhy
+  - postup
+    1. w <- o (nulový vektor)
+    2. y <- $x_i^Tw$ (predikujeme hodnotu výsledku pro x_i)
+    3. pokud $t_iy<=0$
+      - w <- w + tixi
+- na tomhle algoritmu je blbý, že
+  - najde prostě nějakou nadrovinu - je zpravidla nekonečně mnoho možných nadrovin
+  - pokud není (X,t) lineárně separabilní, nikdy neskončí
+  - nezískáme pravděpodobnosti predikcí, jen jedničky a nuly (minus jedničky)
+
+### Common probability distributions
+- Bernoulliho distribuce
+  - hezká rovnice
+    - $P(x) = \phi^x × (1-\phi)^{1-x}$
+
+- categorial distribution
+  - mnoho výsledků - nejen 1/0, každý má vlastní pravděpodobnost
+
+### Information theory
+- self information
+- entropy
+  - střední hodnota "self information" v pravděpodobnosti veličiny
+- Cross-Entropy
+  - 

@@ -36,6 +36,37 @@
 - implantáty?
 - antolik.net
 
-# 5 Marian - struktura proteinů
+## 5 Marian - struktura proteinů
 zkloubení alphafoldu a možné ligandy atd.  
 nějaká fosforylace a takkk
+
+# 03
+
+## 1 Biocev - transkriptomika
+* Transkriptomika
+* bulk RNA-seq analysis
+  * ztráta prostorové informace
+* spatial RNA-seq
+* integrativní analýza
+
+## 2 Krimi ústav
+* genetické stopy
+* databáze - profily
+  * str markery - příbuzní 1. stupně
+  * srp (snp?) markery - vzdálenější příbuznost, až 8 generací
+* MyHeritage - příbuzenská databáze - hledání rodokmenu
+* krimi databáze Kodis
+
+## 3 Pluskal lab
+* biochemie
+* rostlinné molekuly
+
+## 4 Hoksza CUSBG
+* Strukturní bioinformatika
+* anotace proteinové struktury
+* drív protein - ligand - vazebná místa
+* aplikace jazykových modelů na predikci vazebných míst ve struktuře
+
+## 5 Vztah genotypu a fenotypu myši, Biocev
+* automatizace analýzy obrazových dat
+* obrázek sítnice apod

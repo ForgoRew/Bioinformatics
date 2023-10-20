@@ -1,3 +1,6 @@
+# Hodnocení předmětu
+Šíleně dlouhé přednášky. Zvlášť ze začátku nebyly informace buďto relevantní, nebo by se výklad dal zkrátit
+
 ## 01
 ### Chiralita
 - S- / R-
@@ -187,6 +190,44 @@ povrch makromolekul - rozdílný pro vodu a jiné molekuly
   - normalizovaná RMSD
     - ale asi je to blbost..?
 
+## 03 Databáze
+- **CSD** & PDB
+  - **CSD** je chemická databáze
+  - archivní databáze
+  - primární a sekundární informace
+    - struktura i anotace
+  - je možné v nich "snadno" vyhledávat
+- rozdíly
+  - formát archivovaných dat
+    - CSD - topologie
+    - PDB - fragmenty (monomery a ligandy zvlášť)
+  - architektura databáze
+    - úplně jiný
+  - dostupnost
+    - PDB mega dostupná
+    - CSD autorizovaný přístup, registrace atd., ale pro akademické využití to jde. Ale nefunguje v prohlížeči, vlastní software
 
+- 3D molekulární struktury
 
+* požadavky na databázi
+  * škálovatelnost
+    * při velkém množství položek je potřeba strukturovanější organizace
+  * flexibilita
+    * možnosti rozšíření informací
+    * např. při přidání NMR metody, tak jsou úplně jiné položky - ne rozlišení, ale např. více modelů naráz
+  * dlouhodobá podpora jazyka
+    * C++ např.
+    * ne Pearl
+    * S tím souvisí dobrá dokumentace
+  * plní 3 základní úkoly:
+    * umožňuje depozici
+    * archivaci a je dlouhodobě udržovaná (sustainability)
+    * distribuci
+
+* co dalšího potřebujeme od databáze
+  * dobrá znalost/kvalita dat
+    * znalost obsahu
+    * znalost struktury a kvalita struktury - slovník (= ontologie)
+  * organizace
+  * ... něco ještě
 

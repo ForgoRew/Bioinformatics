@@ -171,3 +171,33 @@
     - 
   - BLAST
     - BLOSSOM 62 table
+
+- P-value
+  - probability, that the two sequences are similar randomly
+- E-value (database P-value)
+  - = P-value×[size of database]
+  - probability, that the databases are found randomly in a database of given size
+
+* Chris Sander
+  * sequence identity of
+    * random alignments - 5.6%
+    * remotely homologous alignments - 8.5%
+
+* Smith-Waterman
+  * local-alignment
+
+* Better tools than BLAST
+  * profiles - families - PSI-BLAST
+    * Marian popisuje jiný styl dělání skóre pro PSSM
+  * HMM models
+    * umí zahrnout i insert a delete stavy
+    * HMMER
+      * vlastní webovky
+      * může se hledat i mezi jednotlivými HMM pro jednotlivé rodiny
+      * MMseqs2
+        * vyhledá pomocí HMM 10000 sekvencí, ty zalignují pomocí SW a drtivou většinu zahodí
+        * podobná senzitivita jako BLAST, ale 10x rychlejší
+        * výhodné pro giga databáze (BFD, MGnify)
+
+
+- 
