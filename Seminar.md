@@ -70,3 +70,40 @@ nějaká fosforylace a takkk
 ## 5 Vztah genotypu a fenotypu myši, Biocev
 * automatizace analýzy obrazových dat
 * obrázek sítnice apod
+
+# 4
+Lenka Gahurova - mole-rats
+
+- mole-rats - long-term fertility
+
+- cancer-resistance
+- social system - in colony, only "queen" ovulates
+- not many evolutionarily new transposons
+  - not many active transposons
+- relative to guineapigs?
+
+- interesting transcription factors in oocytes
+- they don't express demethylation gene in oocytes/inactive ones
+  - maybe in mouse the Dnmt3l is expressed and it's an exceotion
+
+- very conserved region (Dnmt3l binding site for expression in DNA)
+- for mouse & relatives, not in mammals
+
+
+- missing cytosceleton in mole-rat oocytes?
+
+- no signs of aging of ovaries in mole-rats - DNA damage marker&ovarian inflammaging
+- mole-rats does not show signs of aging (usually the ovaries are getting smaller)
+
+- mouse ovulate ~4days, while having babies 21-22days
+
+- sex associated chromosomes
+  - giant mole rat - super big both X&Y chromozomes
+  - many parts / subseuencies on the X chromosome map to mouse X chromosome
+  - small part of those are specific for the mole-rat
+  - different for naked/giant mole rat
+
+# 05
+- délka správně 15min
+  - 13min lepší než 18min
+

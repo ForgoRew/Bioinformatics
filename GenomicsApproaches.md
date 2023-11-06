@@ -1,18 +1,18 @@
 ## Sylabus
-Microarrays
-Sequencing technologies
-QC
-Resources - databases & large projects
-Mapping
-Assembly
-Variant calling
-CNV calling
-Phasing/Imputation
-RNA-seq, single-cell analyses
-ChIP-seq
-Structural variation
-Metagenomics
-Data integration, visualization
+1. Microarrays
+2. Sequencing technologies
+3. QC
+4. Resources - databases & large projects
+5. Mapping
+6. Assembly
+7. Variant calling
+8. CNV calling
+9. Phasing/Imputation
+10. RNA-seq, single-cell analyses
+11. ChIP-seq
+12. Structural variation
+13. Metagenomics
+14. Data integration, visualization
 
 ## 01 Next Generation Sequencing
 Martin Převorovský  
@@ -130,5 +130,24 @@ Martin Převorovský
   - DNA fragmentation
   - PCR amplification - need to meassure the concentration
 
+## 04 HTC-QC
+[prezentace](https://dl2.cuni.cz/pluginfile.php/76101/mod_resource/content/1/hts-qc.pdf)  
 
+- SAM/BAM
+  - mapovací formáty
+  - reference genome, pak namapované kratší sekvence
+- CRAM
+  - reference based compression of SAM/BAM - shows only differences from the reference sequence
+- VCF
+  - variant calling format - v principu může mít každá pozice v reference genomu vlastní řádek s variantami a popisem
 
+## 05 Pokračování předchozí (04)
+- **De novo sequencing** vs. **resequencing**
+  - sequence variation
+    - not de novo, we can see SNPs, indels & structural variation (**SV**)
+
+- mapování readů
+  - suffix tree -> suffix field -> **Burrow-Wheeler** transformation
+    - upravené suffixové pole, seřadit lexikograficky, pak se vezme poslední sloupec
+    - dvě pole - první výskyt daného znaku
+    - 

@@ -168,7 +168,6 @@
 
 - Database search
   - FASTA
-    - 
   - BLAST
     - BLOSSOM 62 table
 
@@ -199,5 +198,183 @@
         * podobná senzitivita jako BLAST, ale 10x rychlejší
         * výhodné pro giga databáze (BFD, MGnify)
 
+## 04 Other methods to obtain molecular data
 
-- 
+### DNA-DNA hibridization
+- Jak dobře na sebe nasednou různé DNA sekvence
+  - 5% sekvenční rozdíl
+  - pro 30% pokles **Tm** (medium melting temperature = kdy jsou schopné řetězce na sebe nasednout)
+  - **heteroduplex** - dvě různá DNA na sebe spárovaná
+    - měří se **Tm**
+  - pracné, musí se měřit každá sekvence s každou z datasetu
+
+### ORGI (Overall genome relatedness indices)
+- jednoduchá metoda na to, jak moc jsou si blízké sekvence
+- lepší (a rychlejší) než DNA-DNA hibridization
+
+- počítání metrik nad alignmenty/sekvencemi
+  - **ANI** index - dá se převést na výsledky DNA-DNA hibridizace
+    - průměrná sekvenční identita všech homologních regionů, které jsou zjištěné pomocí BLASTN
+    - hledají se frekvence 4-merů nukleotidů
+  - **GBDP** - průměrná genetická vzdálenost
+  - **MUMi** - ratio regionů, které se plně shodují
+    - počet regionů s perfektní sekvenční identitou děleno délkou sekvence
+
+### Restriction analyses
+- analýza, která zahrnuje štěpení DNA v určitých místech
+
+- **fingerprintové** analýzy
+  - postup:
+    - štěpení endonukleázou - přesně definovaná místa štěpení
+    - elektroforéza - separace - vznikne pattern, vypadá jako barcode, říká se mu **fingerprint**
+    - porovnávání různých fingerprintů
+  - nedá se moc používat na velké molekuly DNA - moc vysoká komplexita, fingerprint by byl jen velká čára
+
+- **VNTR**
+  - variable number of tandem repeats
+  - hledáme počty tandemových repetic v určitých místech a porovnáváme navzájem
+  - postup:
+    - rozštěpíme (lidskou DNA)
+    - labelujeme fragmenty obsahující repetice
+    - dáme na elektroforézu
+    - ty co doputují dál mají méně repetic
+    - zobrazí se nám jen repeticové úseky
+  - pomocí toho zjistíme příbuznost - repetice (počet) se dědí mendelovsky
+
+### Microsatelites
+- **Microsatelites** = **STR - short tandem repeats**
+- velmi často se na nich polymeráza "sklouzne" a prodlouží je
+- velmi precizní separace na délku
+  - polyacrylamide gel, fragment analysis
+- dobré pro **populační studie**
+- postup:
+  - PCR
+  - fluorescenční label
+  - zjištění kvantity
+    - kvůli slidu polymerázy z PCR vyjdou range více peaků - mírně různé počty repetic
+
+### RAPD
+- Random Amplified Polymorphic DNA
+- amplification - short random fragments
+- not good reproducibility - each run different results, not used today
+
+### AFLP
+- Amplified Fragment Length Polymorphism
+
+- využití Sangerovy kapilární elektroforézy
+
+- pro velmi blízce příbuzné druhy
+
+### Protein mass fingerprint
+- identifikace organismů
+
+- postup:
+  - organismus (bacteria)
+  - napipetovat je na něco - to rozšmelcuje, i peptidy jsou rozsekány na nějaké kusy
+  - udělá se hmotnostní spektrometrie fragmentů peptidů
+    - actually možná se ty peptidy nešmelcujou a zůstanou v původní délce
+  - získá se **fingerprint**
+    - ten je specifický pro každý druh organismu
+
+- často používané v nemocnici! -> jednoduchá a docela levná metoda
+
+### Presence of SINE elements
+- to, že je někde SINE ukazuje na synapomorfii -> sdílející druhy jsou pravděpodobně příbuzné
+- velmi dobře se díky tomu vytvářejí fylogenetické stromy
+
+### SNPs
+- single nucleotide polymorphism
+- na jednom místě v genomu druhu je variabilita
+- existuje databáze pro modelové i jiné organismy (NLPH of NCBI)
+
+- kategorizace
+  - hibridizace - **molecular beacon**
+    - hibridizace je indikovaná fluorescencí, proběhne pouze pro danou alelu SNP
+
+- existuje pro to čip, který charakterizuje cca 10^6 SNP v jednom experimentu
+- je možné snadno porovnat a najít spoustu SNPs
+
+## 05 Genetic distance estimation
+- distance from the fingerprints
+  - máme vzdálenost podle
+  - Identita - 2*(M - both fingerprints sharind)/(M all in first + M all in second)
+  - vzdálenost D ... 1-I
+
+- distance from alele frequencies
+  - **Roger's distance**
+    - postup:
+      - převedení homo/heterozygotů ma frekvenci alel
+      - výpočet ze čtverců rozdílů mezi frekvencemi jednotlivých alel
+      - $D = \sqrt{\frac{1}{2}\sum(x_{Ai}-x_{Bi}^2)}$
+- from sequences
+  - **p-distance**
+  - **Poisson-Corrected distance**
+    - lambda - očekávaný počet mutací za daný interval
+    - 
+  - Jukes-Cantor
+    - potřebujeme pravděpodobnost záměn - získáme z p-distance
+  - Kimura - tranzice, transverze
+  - 
+
+```py
+a='acdse'
+b='lcdge'
+diff = lambda a,b : sum(1 for x,y in zip(a, b) if x != y)
+p_dist = lambda a,b: diff(a,b)/len(a)
+#2, 0.4
+
+from math import e, factorial
+poiss = lambda l, k: (l**k * e**(-l))/factorial(k)
+
+jukes_cantor_dist = lambda u, t: (-3/4)*log(1-4/3*p)
+
+
+```
+
+## 6 Nucleotide frequencies
+- **Kimura's model**
+- **F84 model**
+  - equilibrium nucleotide frequencies
+    - *pi* values for every nucleotide
+    - then we multiply the Kimura matrix by the *pis*
+- **GTR**
+  - každá ze šesti možných mutací má vlastní parametr
+  - frekvence nukleotidů má také vlastní parametry
+
+- **LongDet distance**
+  - matice $F_{xy}$
+    - počty všech záměn do matice
+    - normalizae hodnot na počet
+  - pak $d_{xy} = -\ln(\det F_{xy})$
+
+- **PAM**
+  - jak vzniká, pro různé hodnoty (PAM 1, PAM 250)
+
+- rooted vs. unrooted tree
+- what is the best tree?
+  - scoring etc.
+
+- how to find the best tree?
+  - algorithms & heuristics
+
+- **UPGMA**
+  - postup
+    - získání matice vzdáleností mezi vstupními taxony
+    - pro každý krok (od 1 do počtu sekvencí)
+      - vybereme sekvence s nejmenší vzdáleností
+      - vytvoříme jejich rodiče
+      - spočítáme vzdálenosti všech sekvencí k rodičovi jako aritmetický průměr vzdáleností původních sekvencí
+  - má nevýhody - předpokládá stejnou rychlost evoluce
+
+- **Least Squares**
+  - dneska jen jak se počítají vzdálenosti
+  - čtverec vzdáleností mezi jedním a druhým stromem
+
+- **Minimum Evolution**
+  - vzdálenosti celkem ve stromu
+
+- **Neighbor Join**
+  - algorithm for minimum evolution
+  - starting with an unresolved tree
+  - creating inner branching
+  - we make a grouping, which minimises the distances in a tree

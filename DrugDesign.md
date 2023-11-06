@@ -222,5 +222,28 @@ Vaclav Veverka
 - require supercomputers, many calcs&huge amount of data
 - long molecular dynamics often require also days/weeks
 
+## 05
+
+1. chemoinformatics
+2. structure-activity relationship
+3. pharmacophore
+4. pharmacokinetics
 
 
+* Databases of chemical compounds
+  * "physical" - you can do reactions in lab with them
+    * pharma companies have their own physical ones
+    * Enamine, Sigma
+    * academy
+    * libraries are ment for different purposes/properties
+      * diverse, focused, fragment, covalent, FDA approved
+        * **FDA** ... food&drug agency
+  * virtual
+    * ZINC db, ChEMBL, ChEBI, PubChem
+    * in nice formats
+      * 1D: SMILES, IUPAC
+      * 2D: SDF
+      * 3D: XYZ, PDB etc., **MOL2** file - has partial charges
+
+* structure-activity relationship (SAR)
+  * 

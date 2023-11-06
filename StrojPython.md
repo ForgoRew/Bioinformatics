@@ -139,8 +139,77 @@ NPFL129
   - mnoho výsledků - nejen 1/0, každý má vlastní pravděpodobnost
 
 ### Information theory
-- self information
-- entropy
-  - střední hodnota "self information" v pravděpodobnosti veličiny
-- Cross-Entropy
-  - 
+- **self information** (*I(x)*)
+  - záporný logaritmus pravděpodobnosti náhodné proměnné
+- **entropie** (*H(P)*)
+  - "self information" přes celé rozdělení *P*
+  - střední hodnota "self information" v pravděpodobnosti veličiny, dá se spočítat jako $-E_{x~P}(log(P(x)))$
+  - stejná rovnice jako fyzikální entropie
+  - oficiálně se jmenuje *diferenciální*
+  - logaritmus je zpravidla *přirozený*
+    - z toho vychází, že potřebujeme pro poslání zprávy průměrně *$e*H(P)$* informace, říká se H(P) **natů** (pro binární logaritmy je to v *bitech*)
+- **Cross-Entropy**
+  - pro dvě distribuce - *P*, *Q*
+  - očekávám, že zprávy se řídí distribucí *Q*
+  - ale posílám s pravděpodobností *P*
+  - počítá se $-E_{x~P}(log(Q(x)))$
+  - funguje pro ní **Gibbsova nerovnost**
+    - $H(P, Q) \geq H(P)$
+    - $H(P, Q) = H(P)$ jen když $H=P$
+    - **Důkaz** (vysvětlený ve videu, 1:01:00)
+  - **KL-Divergence**
+    - Kullback-Leiber
+    - rozdíl cross-entropie a entropie
+    - $D_{K||L}H(P,Q)-H(P)$
+- proč chceme **normální rozdělení**
+  - centrální limitní věta
+  - pro danou střední hodnotu a rozptyl má **nejvyšší entropii**
+
+- **empirická datová distribuce**
+  - distribuce, která přesně popisuje *náš* dataset
+    - $p_{data}=\frac{|i:x_i=x|}{N}$
+
+- **maximal likelihood estimation**
+  - nová hezká ztrátová funkce
+  - rovná se
+    - **negative log likelihood**
+    - ***cross-entropy***
+- **logistická regrese**
+  - jakože nevim co přesně - perceptrony..?
+
+# 04
+- **zobecněné lineární modely**
+  - nejdřív proženeme *x*ka **aktivační funkcí**
+
+- **softmax**
+  - zobecnění sigmoidu
+
+- **poissonovská regrese**
+  - jiná aktivace než logistická regrese (`exp()`)
+
+- **multilayer perceptron**
+
+- **hiddem layer**
+  - aktivační funkce
+    - sigmoid(x)?
+    - 2*sigmoid(2x) - 1
+      - = **hyperbolický tangens (tanh(x))**
+    - ReLU
+      - pod nulu nula, pak identita pro kladné hodnoty
+
+# 05
+- **skrytá vrstva** nám z **lineárního modelu** udělá **generalizovaný lineární model**
+- **univerzální aproximační teorém**
+  - složitý polynom můžeme aproximovat pomocí **ReLU**
+  - **ReLU**(x) = max(0,x)
+
+- **constrained optimization**
+  - **Lagrangeovy multiplikátory**
+
+- **F1-skore**
+  - pro binární klasifikaci
+    - **precision**=sensitivita=počet falešně pozitivní/všichni označení za pozitivní
+    - **specificita**=počet falešných/všema idk asi **blbě!** 
+    - **recall**=falešně negativní/všichni pozitivní
+    - $F_{beta} = \frac{1 + \beta^2}{precision^{-1}+\beta^2*recall^{-1}}$
+

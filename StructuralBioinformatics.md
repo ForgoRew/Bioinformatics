@@ -1,4 +1,4 @@
-# Hodnocení předmětu
+## Hodnocení předmětu
 Šíleně dlouhé přednášky. Zvlášť ze začátku nebyly informace buďto relevantní, nebo by se výklad dal zkrátit
 
 ## 01
@@ -231,3 +231,153 @@ povrch makromolekul - rozdílný pro vodu a jiné molekuly
   * organizace
   * ... něco ještě
 
+## 04 Molekulární modelování
+Jiří Černý z Elixiru & Biocevu  
+
+### Základy modelování
+- Anfinsen
+  - platí, že nativní struktura biomolekuly odpovídá její globálně nejnižší energii
+    - do toho je třeba zahrnout rozpouštědlo (voda), membránu, ionty, ligandy, externí pole atd
+- problém je, že často nevíme, jak okolí molekuly přesně vypadá
+- kvantová/molekulární mechanika (mol. mechanika = mol. dynamika)
+- pozice atomů jsou definované pomocí kartézských souřadnic/interních souřadnic
+  - typicky `xyz` formát
+  - **Z-matrix** pro interní souřadnice
+
+- 3n-6 ... kolik má molekula stupňů volnosti
+
+### Kvantová mechanika
+- dost náročný na čas a prostor
+
+### Molekulová dynamika
+- trochu simpletonský
+
+### Programy
+- QM - kvantová mechanika
+  - Gaussian, TurboMole, Molpro - komerční
+  - **orca** - open-source implementace TurboMole
+  - **psi4** - vysvětluje vnitřní mechaniku simulací
+- MM (MD)
+  - Gromacs
+  - amber
+- Empirical
+  - FoldX
+  - Modeller
+  - Rosetta
+
+## 05 Strukturní alignment
+- **strukturní alignment**
+  - může být užitečný, pokud chceme rozhodnout o homologii dvou a více struktur
+  - pokus o co největší překryv dvou polymerních struktur
+
+- kdy dále se nám bude strukturní alignment hodit?
+  - možnost **structure based sequence alignment**
+  - hledání strukturních motivů
+  - anotace struktury
+  - popis konformačních změn
+  - benchmark pro sequence alignment
+  - základ pro structure based MSA
+
+- structure based sequence alignment
+  - má zpravila více mezer, než běžný alignment
+  - zpravidla o něco nižší sekvenční identita
+  - pomůže odhalit funkci, ale i příbuznost v midnight zóně
+
+- rychlosti evoluce
+  - proteinová jádra se vyvíjí lineárně
+  - struktura je 3-10x konzerovanější než sekvence
+  - rozdíl v rychlosti evoluce u nekonzervovaných struktur je až 5 řádů
+  - beta listy mají rychlejší evoluci než helixy
+
+- **superpozice** vs. strukturní alignment
+  - superpozice není alignment
+  - vyžaduje mít už sekvenční alignment
+  - často dvě struktury jednoho proteinu
+  - optimalizace vzdáleností a úhlů
+  - obvykle jen C-alpha atomy
+  - program SuperPose
+
+- **postup heuristiky**
+  - najdi alignment
+  - optimalizuj ho
+
+- heuristiky
+  - zjednodušení popisu struktury
+    - vytvoření matici vzdáleností
+    - ignorování všeho, kromě sekundárních struktur
+    - předělání na komix
+    - metody pro sekvenční srovnávání
+
+### Programy
+- **DALI**
+  - Holm&Sander 1993
+  - Distance-matrix ALIgnment tool
+  - pro dvě struktury (A,B)
+    - vezme strukturu A, B, změří jejich intrareziduální vzdálenosti
+    - porovnává obě matice mezi sebou
+    - podobné podmatice matic jsou pravděpodobně u sebe
+  - pomalá metoda, pro dvě struktury asi 2minuty
+  - existuje dobré mapování mezi strukturami v prostoru a reprezentované intrareziduálními vzdálenostmi
+- **VAST**
+  - Vector Alignment Search Tool
+  - srovnávání pouze sekundárních struktur reprezentovaných vektory
+- **SSM**
+  - podobné, jako VAST, v PDB
+
+- **3DBlast**
+  - rozsekání řetězce na cca 6 AK
+
+- **FATCAT**
+  - flexibilní alignment
+  - identifikace AFPs - aligned fragment pairs
+
+- **TM-align**
+  - používá jen CA atomy
+  - získání iniciálního alignmentu - dynamické programování
+  - iterativní heuristický algoritmus
+  - definuje TM-score
+    - template-modeling score
+    - vzdálenost atomů v superpozici
+    - normalizuje se na délku proteinu (nevadí dlouhý protein)
+    - cca >0.5 TM-skore je dobrý
+
+- **PhyreStorm**
+  - vyhledávání podobných struktur
+  - klastruje PDB proteiny
+  - nejdřív se protein srovná s clustery
+  - pak až jde k jednotlivým proteinům
+
+- **SSAP**
+  - velmi starý
+  - pro každý atom se dívá na několik okolních atomů
+    - CB atomy
+  - distanční vektory z nejbližších CB atomů
+
+- **FoldSeek**
+  - přístup FoldSeeku
+    - konstrukce knihovny
+      - 3D podstruktury (jakoby motivy)
+    - TMalign
+    - běžný sekvenční alignment
+  - vysoká citlivost - podobné struktury jsou určitě nalezeny
+
+### Optimalizace alignmentu
+- optimalizace superpozice atomů
+- superpozice jako RMSD CA atomů
+- rotuje se, minimalizují se vzdálenosti mezi atomy
+
+### Hejt na RMSD
+- globální parametr, ale citlivý na lokální změny
+- **SAS skore** - normalizované RMSD na počet alignovaných aminokyselin - lépe odpovída
+- **TM score** - normalizované na počet atomů v sekvenci
+  - zabývá se více jádrem - je lépe konzervované
+
+- **CASP**
+
+- **GDT-TS**
+  - kolik atomů je pod 1, 2, 4, 8Å
+  - měří se, kolik jednotlivých atomů je na správném místě
+
+### Rigidní vs. flexibilní alignment
+- nesmí nebo smí být struktury trochu změněny?
+  - v případě flexibilního - ve "spojích" (hinge) se proteiny smí hýbat
