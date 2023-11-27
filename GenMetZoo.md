@@ -186,3 +186,107 @@
       - je potřeba nějaká referenční DNA
   - **NICK translation**
     - něco jako FISH, ale s tím, že se obarvuje pomocí upravených AK inkorporovaných pomocí polymerázy
+
+# 06
+## **Transponabilní elementy**
+  - autonomní
+    - DNA transposony
+    - LINE
+    - LTR retrotranspozony
+  - neautonomní
+    - SINE
+
+- pseudogeny
+  - mohou vznikat třeba tím, že se RNA přepíše zpátky do DNA
+
+- nově replikovaná RNA má polyA konec, může se reverzně přepsat až do DNA asi..?
+
+- Transponibilní elementy se často množí **ve vlnách**
+  - pak jsou asi deaktivovány idk
+  - v genomu ale zůstanou napořád a jen asi mutují
+
+- transpozony jdou **poznat na elektroforéze** (mají až 200bp)
+
+- pomocí analýzy transponibilních elementů se zjistilo, že **kytovci jsou příbuzní hrochům**
+
+## Mikrosatelity
+- různé názvy pro to stejné
+  - **STR** (short tandem repeats), SSR, VNTR
+- tandemová opakování (vs. interspersed mikrosatelity)
+- např. (CTTT)×n, (CA)×n
+- cca 3% genomu (kódujících genů je cca 1%)
+- docela **málo** jich mají ptáci, **hodně** savci a ryby
+- v kódující oblasti jsou často délky 3 a 6 (nemění to čtecí rámec)
+- **mutace mikrosatelitů**
+  - myslí se tím to, že přibývají/ubývají opakování
+  - mnohem vyšší rychlost než u DNA
+- více typů v závislosti na komplexitě repetic
+
+- výzkum
+  - když to chceme amplifikovat třeba na elektroforézu, potřebujeme dát primery **vně** mikrosatelitu
+
+- **vznik**
+  - de novo ... spontánní mutace sekvence
+  - pomocí mobilních (transponabilních) elementů
+    - při reverzní transkripci TA se polyA řetízek taky vnoří -> mutuje -> může vzniknout repetice
+
+- **zánik**
+  - narušení struktury pomocí mutace
+  - zkrácení opakování
+  - málokdy jsou mikrosatelity delší než 50 opakování
+  - od oddělení člověka a šimpanze vzniklo a zaniklo cca 7000 lokusů s mikrosatelity
+  - často ale vydrží až miliony let
+
+- **funkce**?
+  - může způsobovat choroby
+    - nějaký random hraboš prériový
+      - podle toho, jak dlouhou alelu má v nějakym genu, tím víc se exprimuje vasopressin a samci mají větší tendenci se starat o mláďata
+  - psí plemena
+    - speciální mutace
+    - mohou měnit tvar lebky
+    - dát prst navíc atd.
+    - "zrychlení evoluce"
+  - cirkadiální rytmy
+    - někteří ptáci mají v exonech mikrosatelity
+    - určení délky alely je jednodušší než sekvenovat celý genom
+    - někdy se trochu něco ukázalo, ale trochu to bylo asi ne moc statisticky podložený
+    - studie na větších vzorcích to vyvrátili
+
+- zjišťování něčeho u mikrosatelitů
+  - sekvenování
+  - můžeme použít **často primery** pro expresi mikrosatelitů u příbuzných druhů stejné
+    - často ale to, že můžeme použít stejný primery znamená, že daná sekvence mutuje velmi pomalu (je např. pod selekčním tlakem)
+
+- databáze mikrosatelitů
+  - existují
+
+- alely mikrosatelitů se liší délkou
+
+- **fragmentační analýza**
+  - dělá se v sekvenátoru
+  - ale měří se jen délka sekvence
+  - dělá drobné nepřesnosti, ale rozdíly mezi dvěma vzorky jsou docela funkční
+  - může se použít modifikace **multiplex**
+    - sekvenace více vzorků **naráz**
+
+- mikrosatelity mají ideální mutační rychlost pro
+  - populační analýzy
+  - analýzu paternity a příbuznosti obecně
+
+- metody sběru vzorků
+  - srst - ostnatý drát pro medvědy
+  - trus
+
+- zajímavé studie
+  - pandy nechtějí plavat
+  - ropuchy v Itálii - zábor území
+  - ježci ... odlišení druhů
+
+- populační genomika
+  - pokud to finance umožňují, je lepší sekvenovat, **víc informací**
+
+# 7 Zpracování sekvenčních dat a fylogenetické analýzy
+Jiří Šmíd
+
+
+

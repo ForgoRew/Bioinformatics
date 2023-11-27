@@ -107,3 +107,6 @@ Lenka Gahurova - mole-rats
 - délka správně 15min
   - 13min lepší než 18min
 
+# 08 21.11.
+- nějakej cool nástroj na odhad závislosti expresí různých genů
+

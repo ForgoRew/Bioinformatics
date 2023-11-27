@@ -381,3 +381,194 @@ Jiří Černý z Elixiru & Biocevu
 ### Rigidní vs. flexibilní alignment
 - nesmí nebo smí být struktury trochu změněny?
   - v případě flexibilního - ve "spojích" (hinge) se proteiny smí hýbat
+
+## 06 Strukturní alignmenty II
+- **databáze** se **strukturními** alignmenty proteinů
+  - BALIBASE, SABMARK, HOMSTRAD, HOMFAM
+  - DASH ... využívá MAFFT a sum of pairs - zarovnané pozice, součet
+  - PASS2 ... verze 5, přestože verze 6 a 7 jsou publikované
+
+- strukturní alignmenty se hodí pro **přenos znalosti** části vlastností prozkoumaného proteinu na jemu homologní
+
+- strukturní alignment může být **reprezentovaný jako MSA**
+
+- **problémy**
+  - proteiny často **nemají známou strukturu**
+  - strukturní alignment je velmi dobrý pro **lokální struktury**, ale často **špatný pro globální alignment**
+    - i pro "domény" je to náročné - často nevíme, kde začíná a končí daná doména
+  - **malé změny** ve struktuře mohou udělat **velký rozdíl** v alignmentu
+    - i pro různé **krystalografické struktury** jednoho proteinu mohou být alignmenty dost odlišné
+  - nástroje mají velmi rychlý **"turn-over"**
+    - často nástroj stojí na jednom člověku, který ho udržuje - **odejde člověk, přestane být funkční nástroj**
+
+- **ideální nástroj**
+  - často je **více možných konfigurací**, je **těžké je odladit**
+  - často je ta "ideální konfigurace" na **webové verzi nástroje**
+  - Marian popisuje svůj benchmarkový výzkum
+  - závěr je, že je lepší **kombinovat více** služeb, dobře dopadla např. **DALI**
+
+### Klasifikace struktur
+- dělá se na **strukturním alignmentu domén**
+- **pro domény**, nikoli pro proteiny
+- otázky:
+  - **které tvary** jsou úspěšné?
+  - **proč** je úspěšný?
+- problémy:
+  - **rozsekat** proteiny na domény je náročné
+
+- doména
+  - jednotka evoluce
+  - často kompaktní a globulární struktura
+  - nezávislá při balení
+
+- systémy klasifikace
+  - FSSP
+    - automatický pomocí DALI
+  - SCOP
+    - manuální
+  - CATH
+    - poloautomatický, asi nejfunkčnější v současné chvíli
+
+- **SCOP**
+  - manuální klasifikace
+  - původně úplně lidsky, Alexej Durzin
+  - klasifikoval proteiny, prostě je určoval
+  - zahrnuje informace, které neplynou ze struktury, i četba literatury
+  - po 2000 nefunkční, protože struktur bylo už moc
+  - oživení v 2020, poloautomatická
+  - SCOP ... 4 úrovně klasifikace (původně)
+  - nyní SCOP 2, složitější ... potomek může mít více rodičů, složitější klasifikace
+
+- **CATH**
+  - nejvíc používaný
+  - Class Architecture Topology Homology
+  - CATH-Gene3D ... odhad struktury podle sekvence, na základě podobnosti, "mapování"
+  - proteiny v úrovni **"topology"**
+    - nízká sekvenční identita, ale často sdílená funkce
+  - klasifikace
+    - Class
+      - mají stejný typ sekundárních struktur
+    - Architecture
+      - kolik sekundárních struktur mají
+    - Topology
+      - propojení sekundárních struktur dohromady
+    - Homology
+      - velmi podobné proteiny
+      - uvnitř toho ještě **FunFams** - proteiny musí (pravděpodobně) sdílet funkci 
+    - (Superfamilies)
+      - proteiny, které jsou v podstatě stejné - velmi velmi podobné
+  - "algoritmus"
+    - jmenuje se CATHEDREL
+    - automatická identifikace domén ve struktuře
+    - v případě nejasnosti se struktura předá k vyřešení člověkem
+  - o doménách se generuje množství užitečné statistiky
+
+- podobnost foldů
+    - jak určit, jestli jsou podobné foldy dva, nebo jen jeden variabilní?
+    - určování struktury proteinů, které mají velmi nepodobnou strukturu se známými
+
+- funfact
+  - TIM barel je velmi odolný proti mutacím
+  - i pro zmutované AA uprostřed alpha helixů etc mají pořád stejný fold
+  - zároveň ale TIM barely mají velmi širokou škálu funkcí
+
+- pro 90% protein coding sekvencí z DNA existuje kategorie v CATH
+- nové foldy jsou vyloženě vzácné
+
+- přes AlphaFold se nacházely nové foldy
+  - některé nové byly nalezeny
+  - často multidoménové proteiny + špatně definované známé kategorie (false positive určení nové struktury)
+  - přesto 618 postoupilo do manuálního určování
+    - vyřadili všechny nevhodné
+  - našli asi reálně 25 nových foldů (cca +2% foldů, pokud by prošli všechny proteiny, cca +8% foldů)
+    - často jsou to velmi velké domény (100+ AAs)
+
+- ECOD
+  - systém klasifikace, na vzestupu
+  - proteinové struktury, spojení HMM, MSA a SA
+  - více kategorií než CATH
+  - pořád ale hierarchický systém
+  - částečně manuální
+
+### RNA struktury
+- často neznámé funkce
+- důležitý bude alignment
+- non protein coding RNA - je jich vlastně víc, než protein coding
+- jsou i velmi velké <=> výpočetně náročné
+
+- jedna z metod pro RNA je SETTER
+- webové rozhraní
+- srovnávání RNA (SA)
+
+### DNA struktury
+- hledá se způsob sbalení DNA
+- např. TF Compare
+
+- US-Align
+  - srovnají všechno, co se jim zadá
+
+## 7 Predikce struktury
+- Anfinsenovo dogma
+- Levinthal ... predikce = simulace balení proteinu
+
+- způsoby (od nejpříbuznějších k nejméně příbuzným)
+  - homologní modelování
+  - threading
+  - ab initio modelování
+
+- **homologní modelování**
+  - využití
+    - pro **molekulární nahrazení** pro vyřešení fázového problému u krystalografie
+    - pro zaplnění prázdných míst u neurčených struktur
+      - aby se o tom dalo alespoň nějak přemýšlet
+  - postup
+    - **výběr templatu**
+      - BLAST, FASTA, i HMM (citlivější na vzdálenější sekvence)
+        - pokud jsou ale sekvence moc vzdálené, je lepší použít Alpha Fold 2
+      - template s lepší kvalitou udělá lepší model
+      - template musí být biologicky správný
+        - správná kvartérní struktura, ligandy a komplexy
+    - **alignment**
+      - kvalitní set ortologických sekvencí
+      - můžeme zchecknout mezery v alinmentu
+        - nepravděpodobná např. inzerce v alpha helixu
+    - **stavba modelu**
+    - snížení energie molekuly (molekulová dynamika)
+    - modelování smyček - cca do 10 AK, větší už nejdou predikovat spolehlivě
+    - hledání konformací postranních řetězců
+
+  - programy
+    - Modeller
+      - vytváření podmínek pro model
+        - probability density functions
+        - hledání co nejmenšího konfliktu s templatovou strukturou
+    - Swiss-Model
+      - plně automatický = nemůžeme ovlivnit, co bude model
+    - WhatIf
+    - Rosseta
+    - I-Tasser
+      - někdy lepší modely, umí udělat nějaké strukturní srovnání
+    - někdy je fajn zkusit víc nástrojů, zjistíme, jestli mají shodu
+
+  - problémy
+    - nemáme template/máme jich příliš mnoho
+    - template je nekvalitní
+      - molprobity >2 je spíš špatný
+
+
+## 08 Predikce proteinové struktury
+### Profilové metody
+- Phyre
+  - převedení sekvence do 1D
+    - každá aminokyselina patří do jedné z 18 kategorií
+    - podle toho, v jaké je sekundární struktuře (3 typy) a jak moc je "na povrchu či v jádru molekuly"
+    - porovnává sekvenci bez struktury se známými strukturami
+  - Phyre je velmi rychlý, funguje podobně jako homologní modelování
+  - pro úplně neznámé proteiny bohužel nedá žádný výsledek
+  - pro každou pozici dává její "důvěryhodnost"
+### Threading
+- X-Raptor
+
+### Alpha Fold 2
+- pLDDT score
+  - skóre pro lokální strukturu

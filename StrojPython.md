@@ -213,3 +213,79 @@ NPFL129
     - **recall**=falešně negativní/všichni pozitivní
     - $F_{beta} = \frac{1 + \beta^2}{precision^{-1}+\beta^2*recall^{-1}}$
 
+# 06 Ve skutečnosti byly Word2Vec metody!! ((Kernel methods))
+(SVM ... zkratka pro Kernel methods)  
+
+kernely ... manuální feature ingeneeringu
+
+rozdělím si funkci na vytváření featur do nové funkce
+
+**duální formulace** ... alternativní lineární regrese
+
+polynomiální kernel stupně D = homologní polynomiální kernel  
+polynomiální kernel stupně nejvýš D = nehomologní polynomiální kernel  
+
+Gaussian Radial Basis function = polynomiální kernel všech řádů
+
+Support Vector Machines ... SVM  
+- perceptronová technika na binární separaci
+- hledá nadrovinu s největší vzdáleností od všech dat
+
+Karush-Kuhn-Tucker (KKT) conditions  
+- podmínky pro vznik Lagrangeovy funkce s nulovou derivací v bodě x
+- g(x)>=0
+- lambda >=0
+- lambda g(x)=0
+
+# 07
+- k-nearest neighbors
+  - regrese a klasifikace
+- $L_p$ norma, vážení pomocí "rozdělení" uniformního, inverzního a softmax
+- $L^2$ regularizace může být obdržena z vhodného předchůdce pomocí Bayesovské inference (z MAP odhadu)
+- pravděpodobnost $p(C_k,x)$ pomocí Naive Bayes classifieru
+- Naive Bayes Classifier má nějaké předpoklady
+- Jakým způsobem NBC predikuje?
+- Gaussiánský a Bernoulliho naive Bayes s ohledem na $p(x_d, C_k)$
+
+### K-nearest neighbors
+- vezme se K nejbližších sousedů k *x*
+- je možné to použít pro klasifikaci i pro regresi (přiřazení číselné hodnoty na základě příznaků)
+- **hyperparametry**
+  - ***k*** ... kolik nejbližších sousedů vezmeme
+  - **metrika** ... jak spočítáme vzdálenost sousedů
+    - zpravidla $L^p$ **normy**
+    - $||x||^p=(\sum_i x_i^p)^{1/p}$
+  - **váhy** sousedů
+    - uniformní ... všichni mají stejnou váhu
+    - inverzní ... váha se se vzdáleností snižuje
+    - softmax ... váhy jsou vypočítány ze softmaxu jejich vzdáleností ($w_{softmax}(x)=softmax(-d(x_{1,2,3,...},t))$)
+- **regrese** ... vážený průměr hodnot sousedů
+- **klasifikace** ... opět průměr, ale vážených kategorií sousedů a následně výběr nejpravděpodobnější (argmax)
+- **problémem** je rychlost predikce - skoro vždy se musí spočítat vzdálenost ke všem ostatním `x`, abychom dostali k-nejbližších
+  - je možné to zrychlit pomocí *k-d* stromů,
+  - R-trees, ...
+
+- aplikace
+  - collaborative něco
+    - doporučování seriálů na Netflixu, na co se dívají další uživatelé
+  - GPhotos
+    - sdružování fotek podle reprezentací obličejů
+
+## Bayesian Probability
+- pravděpodobnost jako míra nejistoty
+  - prior a posterior pravděpodobnosti
+  - ekvivalent sdružené pravděpodobnosti
+
+- **Naive Bayes Classifier**
+  - předpoklad ... $x_d$ jsou nezávislé pro $C_k$
+
+
+## Generativní a diskriminativní model
+- diskriminativní model
+  - pravděpodobnost daného targetu pro daný vstup
+- generativní modely odhadují podmíněnou pravděpodobnost na základě sdružené pravděpodobnosti
+  - učí se distribuci dat
+- LLM - generativní modely jsou generativní jen v určitym slova smyslu -- učím se pravděpodobnost toho, že další slovo bude *t*
+- 
+
+

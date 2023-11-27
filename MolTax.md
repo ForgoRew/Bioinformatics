@@ -331,7 +331,7 @@ jukes_cantor_dist = lambda u, t: (-3/4)*log(1-4/3*p)
 
 ```
 
-## 6 Nucleotide frequencies
+## 6 Nucleotide frequencies & trees
 - **Kimura's model**
 - **F84 model**
   - equilibrium nucleotide frequencies
@@ -378,3 +378,85 @@ jukes_cantor_dist = lambda u, t: (-3/4)*log(1-4/3*p)
   - starting with an unresolved tree
   - creating inner branching
   - we make a grouping, which minimises the distances in a tree
+
+# 07
+- site substitution rates differ a lot
+  - some are more conserved e.g. because of the natural selection
+- rozdělení pozic na více kategorií
+  - každá kategorie má vlastní rychlost mutace
+
+- **Jin & Nei model**
+  - Jukes-Cantor model pro 2 různé rychlosti mutací
+
+### How to search tree space
+- někam dáme zkušební
+- podíváme se po okolí + popojdeme
+- jak se chodí?
+  - **NNI**
+    - vygeneruje pro daný strom sesterské stromy tím, že prohodí větve
+    - ale pro každý "internal node"
+  - **SPR**
+    - rozdělí strom na dvě části
+    - každou část zkusí dát na jiné místo (trochu nechápu)
+  - **TBR**
+    - podobný jako SPR, trochu jinýý (taky nechápu)
+  - **how to choose** the **starting point?**
+    - branch & bound space
+
+### Maximum parsimony
+- hledá nejmenší množství záměn pro alignment sekvencí
+- **Fitch algorithm**
+  - pracuje dobře pro rooted i unrooted tree
+- **Weighted-Parsimony**
+  - jiné skóre pro různé typy záměn
+- **Dollo parsimony**
+  - používá se pro něco v morfologii
+- **Camin-Sokal parsimony**
+  - změny pouze v jednom směru (zná původní stav a jak se to později vyvinulo, odhaduje, co se stalo mezi tím)
+
+## 9
+* consistent value for maximum likelihood is only in one region while counting the lengths
+  * Felsenstein zone
+
+* jak vylepšit (relaxovat modely)?
+  * rozdělení míst v sekvenci do několika kategorií - pro každou vytvořím substituční matici
+  * kovariace - MrBayes
+    * relaxing and freezing
+      * různé větve mohou prostě zamrznout na určitých pozicích - pak už nemutují
+
+* consensus tree
+  * můžeme střihnout větev stromu
+  * nápíšeme si, co za množiny taxonů se nám vytvořilo
+  * pokud pro různé stromy vyjdou stejné množiny, jedná se o stejné stromy
+  * můžeme vytvořit pomocí 3 pravidel
+    * strict consensus - pro více stromů musí být splity úplně stejné, jinak zůstane "unresolved"
+    * majority rules
+    * extended majority rule
+
+* resampling methods
+  * změníme permutací vstupní data
+  * mnohokrát (1000x)
+  * porovnáme, kolikrát náš první strom bude přítomen
+  * some positions will be there multiple times
+  * some will be absent
+
+* bootstrap
+  * uděláme resampling (cca 1000x)
+  * zjistíme, v kolika procentech případů byl přítomen daný split
+  * procenta nejsou p-value, ale můžeme je do p-value transformovat (adjustedBP)
+  * nevýhody
+    * velmi time-consuming
+      * kompenzuje např. UFboot
+
+* jackknife
+  * jako bootstrapping
+  * jen se jenom vyhazují určitý sloupce
+  * není už používaný
+
+* Testy stromů
+  * delta test - rozdíl likelihoodů dvou stromů
+  * můžeme udělat AU test
+    * spočítáme likelyhoodů pro jednotlivé části stromů
+    * mnohokrát spočítáme celkový likelyhood s resamplingovanými množinami likelihoodů
+    * z toho uděláme delta test
+    * procento případů, kdy delta vyšší než nula je p-value

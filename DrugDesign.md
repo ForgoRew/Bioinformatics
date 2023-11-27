@@ -247,3 +247,84 @@ Vaclav Veverka
 
 * structure-activity relationship (SAR)
   * 
+
+## 08 Biologics
+* Vaccines
+* Cell therapies
+* Gene therapies, RNA-based therapies
+* recombinant proteins
+* monoclonal antibodies
+
+### Vaccines
+* viry mají variabilní glykosilaci na povrchu
+  * je těžké zacílit vakcíny, na každý kmen influenzy je potřeba jiný typ vakcíny
+    * i ta glykosylace evolvuje
+
+### Cell Therapies
+* CAR-T cell therapy - léčba rakoviny
+* Stem Cells - pro opravu a obnovu poškozených tkání
+
+### Gene Therapy
+* vložení nového genetického materiálu
+* replacement, editing, addition, silencing
+* oncolytic virotherapy
+
+### RNA-based therapies
+* mRNA vaccines !?
+* RNAi therapies
+  * silencing of virus RNA
+  * využívá přirozeného procesu likvidace a silencování dsRNA virů
+
+* výzvy
+  * stabilizace dsRNA, aby se nedegradovalo tak rychle
+    * ((glykosilace?))
+    * změna části nukleotidů na DNA formu
+  * doprava dsRNA do jádra
+    * ((lipid nanoparticles))
+  * 
+
+### Gene Therapies
+* především CRISPR
+  * je možný zavést pro člověka?? možná, FDA ještě neaproovla ani jednu terapii pomocí CRISPRu
+  * v procesu je něco ohledně hemoglobinu, nějaký fetální hemoglobin pro dospělého člověka či cooo
+
+* možná se najde nějaký lepší enzym (existuje kandidát), který nestříhá divně DNA, takže bude bezpečnější pro použití v genové terapii
+
+### Recombinant proteins
+* proteiny produkované pomocí geneticky modifikovaných organismů
+* produkce inzulinu, růstového hormonu a clotting factors (srážení krve)
+
+* inzulin je možné seskládat jinak, aby měl jinou křivku nástupu po injekci
+  * kovalentní modifikace lysinu na jednom místě
+  * inzulin má schopnost tvořit zásobní tělíska, které mají nějaký poločas rozpadu a buňky je mohou vázat postupně
+  * ((inzulinový receptor je tyrosin kináza))
+
+### Monoclonal antibodies (mAbs)
+* extracelulární cíle
+* rychlejší approval (cca 60% doby pro uznání malé molekuly) - má míň "neznámých" vlastností
+
+* značení zumab, umab, ximab, momab
+
+* je potřeba vytvořit Ab tak, aby byla kompatibilní s organizmen
+  * humanized/human antibodies
+  * využívány humanized myši, které mají lidské protilátky
+
+* často stačí malá část Ab - třeba jen tu binding site (Fab fragment)
+
+* jde to používat i na nošení radionukleotidů
+  * ničení target cells pomocí radiace
+* linkování nějakých léčiv na Ab - nosiče
+* linkování na immunoliposome
+* použití přes T-Cell
+
+* příklad jak působí
+  * TNF - trimer, tumor necrosis receptor
+
+### Targeted degradation of proteins
+* je možné vytvořit molekulu, která se naváže na protein a indukuje ubiquitinaci. to vede k degradaci proteinu
+  * PROTAC
+
+* molekuly vedoucí k degradaci proteinu mohou být
+  * rationally designed - vážou se kovalentně (PROTAC)
+  * oportunistické - nenavážou se, ale indukují degradaci jen tak
+

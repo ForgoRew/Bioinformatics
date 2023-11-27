@@ -150,4 +150,98 @@ Martin Převorovský
   - suffix tree -> suffix field -> **Burrow-Wheeler** transformation
     - upravené suffixové pole, seřadit lexikograficky, pak se vezme poslední sloupec
     - dvě pole - první výskyt daného znaku
-    - 
+
+## 6 RNA-seq II
+- RNAs
+  - splicing in eukaryots
+  - reverse transcription to DNA
+  - single stranded - it has it's polarity to remember from which strand of DNA it came from
+  - not so stable
+
+### getting RNA
+- typy RNA
+  - nejvíc ribozomální (>90%)
+  - translační RNA
+  - mRNA
+
+- snaha **zbavit se rRNA** - je hodně konzervované a tím pádem nezajímavé
+  - jen pár genů, pořád se opakují
+- příklad s koronavirem
+  - chceme jen koronavir, ne lidské RNA
+  - musíme vytvořit specifické primery - vytvoříme amplikony - získáme jen to, co chceme
+
+- kontrola kvality amplifikované RNA
+  - na elektroforéze se podíváme, kolik čeho je
+  - získáme nějakou hodnotu kvality
+
+- rRNA problém
+  - můžeme ho **biotinovat** - biotin je na nějaké specifické sekvenci
+  - na biotin pak použijeme třeba **streptavidin**,, který se na něj naváže
+    - na **streptavidin** je navázaný nějaký magnetek
+    - magnetem ho dostaneme z roztoku
+  - můžeme to udělat i **naopak pro mRNA** - dáme biotin na sekvenci TTTTTTT, která je komplementární s polyA ocáskem mRNA
+    - pak naopak magnetem přitáhneme mRNA a zbytek vylejeme
+
+- někdy chceme ale získat úplně specifická RNA, takže pak to je **složitější**
+
+- **cDNA priming**
+  - musíme vzít náhodné hexamery jako primery
+    - hexamery nejsou úplně náhodné
+    - dělá to na začátku zvláštní šum
+    - pak už to je ale náhodný
+  - vhodné, pokud chceme mít obecný přehled o "všem"
+  - pokud chceme získat jen něco specifického, musíme zvolit jinou techniku, např. amplikony
+
+- vrámci přípravy RNA library se zachová informace o tom, který strand byl původní
+
+- kontaminace **jadernou RNA**
+  - použijeme DNázu, která to od něj pročistí
+
+# RNA-seq for quantification
+- we map the sequences on the reference molecule
+- has 2 rounds
+  - 1. we map as many reads as possible
+  - 2. we map the reads, which should have some gap inside - have some kind of exon etc.
+
+- metriky
+  - RPKM (SE)
+    - reads per kilobase per million reads mapped
+  - FPKM (PE)
+    - fragments per kilobase per million reads mapped
+  - TPM
+    - transcripts per milion
+
+# 07 Variant calling
+- naivní variant calling
+  - postup
+    - počítáme, kolik namapovaných sekvencí má stejnou/alternativní alelu jako reference sekvence
+    - vyhodíme namapovaný read, který se hodně liší od referenční sekvence
+  - problémy
+    - i read s malou kvalitu 
+- Bayesův teorém
+
+- mpileup
+  - pileup - máme mapované sekvence
+  - děláme z nich vcf
+
+- filtrování
+  - snaha odstranit chyby
+    - kontaminace
+    - PCR errors
+    - mapping errors
+    - etc.
+
+- **Fisher's test**
+  - kontingenční tabulka
+
+|   | >  | < |
+|---|----|---|
+| R | 1  | 4 |
+| A | 12 | 0 |
+
+Je to pravděpodobný? Asi ne.
+
+
+
+
+`Hardy-Weinberg & natural selection?`
