@@ -110,3 +110,10 @@ Lenka Gahurova - mole-rats
 # 08 21.11.
 - nějakej cool nástroj na odhad závislosti expresí různých genů
 
+# 12. 12. Najmanovich
+- fyzika polymerů a simulace dockingu (FlexAID)
+- aproximace jako kuličky
+- překryv solventních koulí je brán jako míra interakce mezi atomy (co mají slabou vazebnou interakci)
+- NRGDock ... zjednodušený FlexAid
+- DUD-E ... database of useful decoys ... je možné ji využít jako benchmark pro dockovací metody
+- 

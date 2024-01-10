@@ -189,6 +189,7 @@ povrch makromolekul - rozdílný pro vodu a jiné molekuly
 - **RMSZ**
   - normalizovaná RMSD
     - ale asi je to blbost..?
+    - beef na normalizaci
 
 ## 03 Databáze
 - **CSD** & PDB

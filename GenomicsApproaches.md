@@ -16,6 +16,7 @@
 
 ## 01 Next Generation Sequencing
 Martin Převorovský  
+Petr Daněček  
 
 - cvičení
   - samostatná práce
@@ -197,7 +198,7 @@ Martin Převorovský
 - kontaminace **jadernou RNA**
   - použijeme DNázu, která to od něj pročistí
 
-# RNA-seq for quantification
+### RNA-seq for quantification
 - we map the sequences on the reference molecule
 - has 2 rounds
   - 1. we map as many reads as possible
@@ -211,7 +212,7 @@ Martin Převorovský
   - TPM
     - transcripts per milion
 
-# 07 Variant calling
+## 07 Variant calling
 - naivní variant calling
   - postup
     - počítáme, kolik namapovaných sekvencí má stejnou/alternativní alelu jako reference sekvence
@@ -245,3 +246,70 @@ Je to pravděpodobný? Asi ne.
 
 
 `Hardy-Weinberg & natural selection?`
+
+## 10 ChIP-seq
+((Chromosome Imuno-Percipitation))
+
+- chromatin
+  - histones
+  - regulators
+  - chromatin remodeling enzymes
+  - proteins for modification of histones
+  - ...
+- 
+
+- pomocí ChIP sequ můžeme zjistit, na jaká místa v genomu se navázal (např. transkripční faktor)
+- můžeme zjistit, jaké geny reguluje
+- můžeme shromáždit informace o tom genu
+
+- postup
+  - fixace chromatinu buňky pomocí formaldehydu
+  - rozbití genomu na kousky
+  - pomocí IgG označení fragmentů s targetovaným proteinem
+  - vytáhnutí (fish-out) IgA označených částí
+  - odpoutání DNA od proteinů
+  - sekvenace DNA -> získáme znalosti o daných úsecích DNA, které byly navázány na náš protein
+
+- postup podrobně
+  - fixace chromatinu buňky
+    - pomocí
+      - formaldehydu
+      - nemusí tam být i nic, pokud se jedná o histony
+    - problémy
+      - nedostatek kroslinkingu - nevytáhneme všechny kousky s naším proteinem (odpadne)
+      - příliš kroslinkingu - vytáhneme i to, co nechceme, noise
+  - rozbití genomu na kousky
+    - musíme rozbít na dobře definované kousky
+    - způsoby
+      - ultrazvuk (sonication)
+      - microcoal nuclease
+        - dokáže sníst všechno DNA, které není chráněné nukleozomem
+        - více diskrétní - 1 nukleozom chrání cca 146 bp
+  - pomocí IgG označení fragmentů s targetovaným proteinem
+    - antibodies musí být validované na ChIP-seq - ne každá to umí
+    - na IgG se naváže A/G protein z bakterie (A/G dobře vážou protilátky)
+      - mají ještě na sobě malý magnetek
+      - pomocí magnetu se vytáhnou z kapaliny
+    - 
+  - vytáhnutí (fish-out) IgA označených částí
+    - magnetek, někdy stačí centrifugace
+  - odpoutání DNA od proteinů
+    - zahřátí na cca 65˚C
+  - sekvenace DNA -> získáme znalosti o daných úsecích DNA, které byly navázány na náš protein
+    - vrámci toho bude i faakt hodně noisu
+  - uděláme statistickou analýzu toho, z jakých pozic na DNA jsme získali kolik readů -> víme, které frekvence byli enhancnuté pomocí těch prvních kroků ChIPu
+
+- kontrola ChIP sequ
+  - kontrolované kroky
+    - input DNA
+    - irrelevantní protilátky
+    - KO
+  - můžeme udělat negativní kontrolu
+  - typické artifakty
+    - "phantom" peaks
+      - hodně transkribované geny se nějakým způsobem objevují jako více sekvenované
+      - hodně aktivní promotory - dobře vážou cokoliv, takže mohou být snadno fishovány ven
+
+
+## 11
+

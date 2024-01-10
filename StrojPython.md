@@ -286,6 +286,56 @@ Karush-Kuhn-Tucker (KKT) conditions
 - generativní modely odhadují podmíněnou pravděpodobnost na základě sdružené pravděpodobnosti
   - učí se distribuci dat
 - LLM - generativní modely jsou generativní jen v určitym slova smyslu -- učím se pravděpodobnost toho, že další slovo bude *t*
-- 
 
 
+# Rozhodovací stromy
+- automatická konstrukce stromů pomocí dat
+- klasifikační a regresní stromy
+- rozdělování prostoru na oblasti
+  - hranice dané malým théta parametrem $\theta$
+- predikce
+  - dané x putuje stromem, nakonec doputuje do listu, kde je predikovaná hodnota
+  - daný node předpovídá průměrnou hodnotu dat, která jsou v něm
+
+
+- **budování stromu**
+  - začínáme s jedním listem v jednom stromu
+  - pak dokud nemáme hezký strom
+    - vezmeme ošklivý list
+    - rozdělíme ho na dva pomocí nějaké podmínky
+      - pro oba jeho potomky zjistíme, jestli nejsou ošklivé
+
+- podmínky, kdy rozdělíme list
+  - máme **kriterium** $c_\Theta$
+    - je v prezentaci
+  - spočítáme si pro každou featuru její hodnotu
+  - spočítáme si pro každou možnost rozdělení listu, jak moc se změní hodnota featur
+  - hledáme, rozdělení, které udělá největší rozdíl
+
+- omezení stromu (3)
+  - **maximum tree depth**
+    - listy na určité hloubce už dál nedělíme
+  - **maximum example split**
+    - listy musí mít určitý počet trénovacích dat, jinak ho nedělíme
+  - **maximum number of leaf nodes**
+  - vlastně je to regularizace
+    - bráníme přetrénování
+
+- klasifikace rozhodovacích stromů
+  - **Gini index**
+  - **Entropie**
+
+- Teorie za Splitting Criterion
+  - Gini index je MeanSquareError na pravděpodobnost
+
+- **Random forests**
+  - stromy jednotlivě nejsou zas tak dobré klasifikátory
+  - jde je ale dobře ensemblovat
+  - každý strom se natrénuje baggingem - bootstrapujeme dataset
+  - na konci stromy votujou
+
+- **Gradien Boosted Decision Trees**
+  - kolekce rozhodovacích stromů
+  - jsou poskládané za sebou
+
+# 11 SVD, PCA, k-means

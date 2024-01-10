@@ -288,5 +288,13 @@
 # 7 Zpracování sekvenčních dat a fylogenetické analýzy
 Jiří Šmíd
 
+# 8 RNASeq - Romana Stopková
+
+Útržky...
+
+* Real Time PCR (qRT-PCR)
+* CYBR-Green - barvivo se váže na dvouřetězcovou DNA
+
+Kde kvantifikovat CT - cycle treshold - zpravidla bod v maximu druhé derivace křivky fluorescence - dělá se tání DNA
 
 
